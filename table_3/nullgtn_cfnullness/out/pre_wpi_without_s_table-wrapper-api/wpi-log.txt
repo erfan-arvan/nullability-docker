@@ -1,0 +1,69 @@
++ PROJECT_PATH=../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected
++ CF_BINARY=../scripts/tools/checker-framework-3.34.0/checker/bin/javac
++ COMPILED_CLASSES_FOLDER=../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classes
++ LIB_FOLDER=../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/lib
++ SRC_FILES=../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/cf_srcs.txt
++ CLASSPATH_DIR=../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classpath
++ echo 'CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac'
+CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac
++ unzip_jars ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/lib ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classpath
++ local lib_folder=../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/lib
++ local extract_to=../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classpath
++ '[' -d ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classpath ']'
++ rm -rf ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classpath
++ mkdir -p ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/lib/jsr305-3.0.2.jar -d ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/lib/lombok-1.18.24.jar -d ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/lib/slf4j-api-1.7.36.jar -d ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classpath
++ find ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src -name '*.java'
++ BUILD_CMD='../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classes -cp ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classpath @../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/cf_srcs.txt'
++ CLEAN_CMD='rm -rf ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classes'
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classes -cp ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/classpath @../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/cf_srcs.txt
+An exception has occurred in the compiler (11.0.22). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program and the following diagnostic in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.Error: Problem while parsing ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/wpi-out/org/spacious_team/table_wrapper/api/TableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/TableCell.java
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:832)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1371)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:973)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)
+Caused by: java.lang.Error: Problem while parsing ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/wpi-out/org/spacious_team/table_wrapper/api/TableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to ../dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/TableCell.java
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1015)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:685)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1074)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)
+	... 8 more
+Caused by: org.checkerframework.javacutil.BugInCF: org.checkerframework.framework.stub.AnnotationFileParser.AjavaAnnotationCollectorVisitor.visitLists(import javax.annotation.Nullable;
+,import java.math.BigDecimal;
+,import java.time.Instant;
+,import java.time.LocalDateTime;
+ [size 4], [import java.math.BigDecimal;
+, import java.time.Instant;
+, import java.time.LocalDateTime;
+] [size 3])
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2297)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:668)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processCompilationUnit(AnnotationFileParser.java:825)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processStubUnit(AnnotationFileParser.java:790)
+	at org.checkerframework.framework.stub.AnnotationFileParser.process(AnnotationFileParser.java:779)
+	at org.checkerframework.framework.stub.AnnotationFileParser.parseAjavaFile(AnnotationFileParser.java:696)
+	at org.checkerframework.framework.stub.AnnotationFileElementTypes.parseAjavaFileWithTree(AnnotationFileElementTypes.java:286)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1013)
+	... 17 more
+Caused by: java.lang.Throwable
+	at org.checkerframework.javacutil.BugInCF.<init>(BugInCF.java:38)
+	... 27 more

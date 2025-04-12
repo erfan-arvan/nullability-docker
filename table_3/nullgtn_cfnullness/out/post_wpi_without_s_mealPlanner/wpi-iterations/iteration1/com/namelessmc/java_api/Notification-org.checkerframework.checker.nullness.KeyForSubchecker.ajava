@@ -1,0 +1,54 @@
+package com.namelessmc.java_api;
+
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public class Notification {
+
+    private final  String message;
+
+    private final  String url;
+
+    private final  NotificationType type;
+
+    @org.checkerframework.dataflow.qual.SideEffectFree
+    public Notification(final  String message, final  String url, final  NotificationType type) {
+        this.message = message;
+        this.url = url;
+        this.type = type;
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  String getMessage() {
+        return this.message;
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  String getUrl() {
+        return this.url;
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  NotificationType getType() {
+        return this.type;
+    }
+
+    public enum NotificationType {
+
+        TAG,
+        MESSAGE,
+        LIKE,
+        PROFILE_COMMENT,
+        COMMENT_REPLY,
+        THREAD_REPLY,
+        FOLLOW,
+        UNKNOWN;
+
+        @org.checkerframework.dataflow.qual.Impure
+        public static  NotificationType fromString(final  String string) {
+            try {
+                return NotificationType.valueOf(string.replace('-', '_').toUpperCase());
+            } catch (final IllegalArgumentException e) {
+                return NotificationType.UNKNOWN;
+            }
+        }
+    }
+}

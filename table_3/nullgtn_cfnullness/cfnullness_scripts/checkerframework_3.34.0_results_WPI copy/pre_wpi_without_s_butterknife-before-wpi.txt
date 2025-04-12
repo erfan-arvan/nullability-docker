@@ -1,0 +1,167 @@
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:17: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 591, 595 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColor", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:19: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 746, 750 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColor", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:21: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 903, 907 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColorStateList", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:24: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 1095, 1099 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColorStateList", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:46: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 1888, 1892 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+      methods = singletonList(new ResourceMethod(null, methodName, true, 1));
+                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+Note: Multiple elements named 'com.sun.tools.javac.comp.Attr' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.AttrContext' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.Env' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCAnnotation' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCFieldAccess' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCVariableDecl' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.Tag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.List' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.Name' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Flags' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Kinds' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.TypeTag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm.ByteCodes' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Symbol' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/Id.java:19: warning: (argument) $$ 4 $$ rSymbol $$ Id constructor $$ null (NullType) $$ @Initialized @NonNull Symbol $$ ( 441, 445 ) $$ incompatible argument for parameter rSymbol of Id constructor.
+    this(value, null);
+                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Symbol
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/Id.java:39: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Id $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Id this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1074, 1082 ) $$ Incompatible parameter type for o.
+  @Override public boolean equals(Object o) {
+                                         ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Id
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Id this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:33: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TypefaceStyles $$ ( 1000, 1004 ) $$ incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TypefaceStyles
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:118: warning: (initialization.field.uninitialized) $$ 1 $$ typeUtils $$ ( 4707, 4731 ) $$ the default constructor does not initialize field typeUtils
+  private Types typeUtils;
+                ^
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:119: warning: (initialization.field.uninitialized) $$ 1 $$ filer $$ ( 4734, 4754 ) $$ the default constructor does not initialize field filer
+  private Filer filer;
+                ^
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:120: warning: (initialization.field.uninitialized) $$ 1 $$ trees $$ ( 4757, 4777 ) $$ the default constructor does not initialize field trees
+  private Trees trees;
+                ^
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:161: warning: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 6038, 6067 ) $$ incompatible argument for parameter arg0 of Set.add.
+      types.add(annotation.getCanonicalName());
+                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:198: warning: (argument) $$ 4 $$ args $$ ButterKnifeProcessor.error $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 7377, 7391 ) $$ incompatible argument for parameter args of ButterKnifeProcessor.error.
+        error(typeElement, "Unable to write binding for type %s: %s", typeElement, e.getMessage());
+                                                                                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:568: warning: (argument) $$ 4 $$ mirror $$ TypeName.get $$ @Initialized @Nullable TypeMirror $$ @Initialized @NonNull TypeMirror $$ ( 22200, 22208 ) $$ incompatible argument for parameter mirror of TypeName.get.
+    TypeName type = TypeName.get(viewType);
+                                 ^
+  found   : @Initialized @Nullable TypeMirror
+  required: @Initialized @NonNull TypeMirror
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:572: warning: (argument) $$ 4 $$ kind $$ FieldCollectionViewBinding constructor $$ @Initialized @Nullable Kind $$ @Initialized @NonNull Kind $$ ( 22425, 22429 ) $$ incompatible argument for parameter kind of FieldCollectionViewBinding constructor.
+    builder.addFieldCollection(new FieldCollectionViewBinding(name, type, kind,
+                                                                          ^
+  found   : @Initialized @Nullable Kind
+  required: @Initialized @NonNull Kind
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:783: warning: (argument) $$ 4 $$ id $$ FieldDrawableBinding constructor $$ @Initialized @Nullable Id $$ @Initialized @NonNull Id $$ ( 31046, 31065 ) $$ incompatible argument for parameter id of FieldDrawableBinding constructor.
+    builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint),
+                                                                ^
+  found   : @Initialized @Nullable Id
+  required: @Initialized @NonNull Id
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:783: warning: (argument) $$ 4 $$ tintAttributeId $$ FieldDrawableBinding constructor $$ @Initialized @Nullable Id $$ @Initialized @NonNull Id $$ ( 31073, 31094 ) $$ incompatible argument for parameter tintAttributeId of FieldDrawableBinding constructor.
+    builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint),
+                                                                                           ^
+  found   : @Initialized @Nullable Id
+  required: @Initialized @NonNull Id
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:977: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Type $$ ( 38912, 38916 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Type
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:990: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Integer $$ ( 39250, 39254 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Integer
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1048: warning: (argument) $$ 4 $$ array $$ ButterKnifeProcessor.findDuplicate $$ @Initialized @NonNull int @Initialized @Nullable [] $$ @Initialized @NonNull int @Initialized @NonNull [] $$ ( 41918, 41921 ) $$ incompatible argument for parameter array of ButterKnifeProcessor.findDuplicate.
+    Integer duplicateId = findDuplicate(ids);
+                                        ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1095: warning: (dereference.of.nullable) $$ 1 $$ callback $$ ( 43835, 43843 ) $$ dereference of possibly-null reference callback
+      Field callbackField = callback.getDeclaringClass().getField(callback.name());
+                            ^
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1277: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TypeElement $$ ( 51192, 51196 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TypeElement
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1360: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull AnnotationMirror $$ ( 54058, 54062 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull AnnotationMirror
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:516: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20759, 20809 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            listener.setter(), requiresRemoval ? listenerField : callback.build());
+                                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:519: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20909, 20959 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            requiresRemoval ? listenerField : callback.build());
+                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:536: warning: (iterating.over.nullable) $$ 1 $$ callbacks.getEnumConstants() $$ ( 21392, 21420 ) $$ iterating over possibly-null reference callbacks.getEnumConstants()
+      for (Enum<?> callbackMethod : callbacks.getEnumConstants()) {
+                                                              ^
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:541: warning: (dereference.of.nullable) $$ 1 $$ callbacks.getEnclosingClass() $$ ( 21719, 21748 ) $$ dereference of possibly-null reference callbacks.getEnclosingClass()
+              callbacks.getEnclosingClass().getSimpleName(), callbacks.getSimpleName(),
+                                         ^
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:638: warning: (argument) $$ 4 $$ arg0 $$ Map.containsKey $$ @Initialized @Nullable ListenerClass $$ @Initialized @NonNull Object $$ ( 24959, 25007 ) $$ incompatible argument for parameter arg0 of Map.containsKey.
+          .containsKey(OnTouch.class.getAnnotation(ListenerClass.class))) {
+                                                  ^
+  found   : @Initialized @Nullable ListenerClass
+  required: @Initialized @NonNull Object
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:717: warning: (initialization.fields.uninitialized) $$ 1 $$ parentBinding $$ ( 27573, 27946 ) $$ the constructor does not initialize fields: parentBinding
+    private Builder(TypeName targetTypeName, ClassName bindingClassName, boolean isFinal,
+            ^
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:759: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 28922, 28926 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:763: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 29045, 29049 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:78: warning: (initialization.fields.uninitialized) $$ 1 $$ fieldBinding $$ ( 2154, 2196 ) $$ the constructor does not initialize fields: fieldBinding
+    Builder(Id id) {
+    ^
+32 warnings

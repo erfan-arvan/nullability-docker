@@ -1,0 +1,44 @@
+../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:100: warning: (override.param) $$ 7 $$ cellValuePredicate $$ @Initialized @NonNull Predicate<@Initialized @NonNull Object> $$ @Initialized @NonNull Predicate<@Initialized @Nullable Object> $$ @Initialized @NonNull CsvReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @NonNull Object> p4) $$ @Initialized @NonNull ReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4) $$ ( 3813, 3850 ) $$ Incompatible parameter type for cellValuePredicate.
+                                 Predicate< Object> cellValuePredicate) {
+                                                    ^
+  found   : @Initialized @NonNull Predicate<@Initialized @NonNull Object>
+  required: @Initialized @NonNull Predicate<@Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull CsvReportPage
+    @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @NonNull Object> p4)
+  cannot override method in @Initialized @NonNull ReportPage
+    @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4)
+../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:106: warning: (return) $$ 2 $$ @Initialized @Nullable CsvTableRow $$ @Initialized @NonNull CsvTableRow $$ ( 4040, 4103 ) $$ incompatible types in return.
+        return (i < 0 || i >= rows.length) ? null : CsvTableRow.of(rows[i], i);
+                                           ^
+  type of expression: @Initialized @Nullable CsvTableRow
+  method return type: @Initialized @NonNull CsvTableRow
+../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:48: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TableCell $$ ( 1832, 1836 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TableCell
+../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:60: warning: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 2085, 2127 ) $$ incompatible types in return.
+        return (i < 0 || i >= row.length) ? null : row[i];
+                                          ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:74: warning: (override.param) $$ 7 $$ value $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull CsvTableRow $$ @Initialized @NonNull boolean rowContains(@Initialized @NonNull CsvTableRow this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull ReportPageRow $$ @Initialized @NonNull boolean rowContains(@Initialized @NonNull ReportPageRow this, @Initialized @Nullable Object p0) $$ ( 2366, 2378 ) $$ Incompatible parameter type for value.
+    public boolean rowContains( Object value) {
+                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CsvTableRow
+    @Initialized @NonNull boolean rowContains(@Initialized @NonNull CsvTableRow this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull ReportPageRow
+    @Initialized @NonNull boolean rowContains(@Initialized @NonNull ReportPageRow this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:42: warning: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1774, 1848 ) $$ incompatible types in return.
+        return (columnIndex >= 0) && (columnIndex < row.length) ? row[columnIndex] : null;
+                                                                ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:36: warning: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1580, 1636 ) $$ incompatible types in return.
+        return (cellIndex == null) ? null : row.getCellValue(cellIndex);
+                                   ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+7 warnings

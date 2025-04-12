@@ -1,0 +1,128 @@
+Note: Multiple elements named 'com.sun.tools.javac.code.Symbol' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_with_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Imported type not found: com.sun.tools.javac.code.Symbol
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_with_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Imported type not found: com.sun.tools.javac.tree.JCTree
+Note: Multiple elements named 'com.sun.tools.javac.tree.TreeScanner' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_with_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Imported type not found: com.sun.tools.javac.tree.TreeScanner
+Note: Multiple elements named 'com.sun.tools.javac.comp.Attr' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.AttrContext' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.Env' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCAnnotation' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCFieldAccess' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCVariableDecl' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.Tag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.List' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.Name' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Flags' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Kinds' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.TypeTag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm.ByteCodes' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:63: warning: (argument) $$ 4 $$ args $$ CodeBlock.of $$ @Initialized @MonotonicNonNull TypefaceStyles $$ @Initialized @NonNull Object $$ ( 1855, 1860 ) $$ incompatible argument for parameter args of CodeBlock.of.
+      typeface = CodeBlock.of("$1T.create($2L, $1T.$3L)", TYPEFACE, typeface, style);
+                                                                              ^
+  found   : @Initialized @MonotonicNonNull TypefaceStyles
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:163: warning: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 6175, 6204 ) $$ incompatible argument for parameter arg0 of Set.add.
+      types.add(annotation.getCanonicalName());
+                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:198: warning: (argument) $$ 4 $$ filer $$ JavaFile.writeTo $$ @Initialized @MonotonicNonNull Filer $$ @Initialized @NonNull Filer $$ ( 7391, 7396 ) $$ incompatible argument for parameter filer of JavaFile.writeTo.
+        javaFile.writeTo(filer);
+                         ^
+  found   : @Initialized @MonotonicNonNull Filer
+  required: @Initialized @NonNull Filer
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:569: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TypeMirror $$ @Initialized @NonNull TypeMirror $$ ( 22273, 22281 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    TypeName type = TypeName.get(requireNonNull(viewType));
+                                                ^
+  found   : @Initialized @Nullable TypeMirror
+  required: @Initialized @NonNull TypeMirror
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:573: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Kind $$ @Initialized @NonNull Kind $$ ( 22514, 22518 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    builder.addFieldCollection(new FieldCollectionViewBinding(name, type, requireNonNull(kind),
+                                                                                         ^
+  found   : @Initialized @Nullable Kind
+  required: @Initialized @NonNull Kind
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:953: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Type $$ @Initialized @NonNull Type $$ ( 38015, 38019 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    builder.addResource(new FieldResourceBinding(resourceId, name, requireNonNull(type)));
+                                                                                  ^
+  found   : @Initialized @Nullable Type
+  required: @Initialized @NonNull Type
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:985: warning: (iterating.over.nullable) $$ 1 $$ array $$ ( 39259, 39264 ) $$ iterating over possibly-null reference array
+    for (int element : array) {
+                       ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:996: warning: (dereference.of.nullable) $$ 1 $$ typeUtils $$ ( 39537, 39546 ) $$ dereference of possibly-null reference typeUtils
+    String name = typeUtils.erasure(elementType).toString();
+                  ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1064: warning: (iterating.over.nullable) $$ 1 $$ ids $$ ( 42615, 42618 ) $$ iterating over possibly-null reference ids
+    for (int id : ids) {
+                  ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1066: warning: (dereference.of.nullable) $$ 1 $$ ids $$ ( 42665, 42668 ) $$ dereference of possibly-null reference ids
+        if (ids.length == 1) {
+            ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1096: warning: (dereference.of.nullable) $$ 1 $$ callback $$ ( 43943, 43951 ) $$ dereference of possibly-null reference callback
+      Field callbackField = callback.getDeclaringClass().getField(callback.name());
+                            ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1308: warning: (dereference.of.nullable) $$ 1 $$ trees $$ ( 52245, 52250 ) $$ dereference of possibly-null reference trees
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                           ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1308: warning: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 52268, 52298 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                           ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1322: warning: (dereference.of.nullable) $$ 1 $$ trees $$ ( 52808, 52813 ) $$ dereference of possibly-null reference trees
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                           ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1322: warning: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 52831, 52861 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                           ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1330: warning: (iterating.over.nullable) $$ 1 $$ values $$ ( 53130, 53136 ) $$ iterating over possibly-null reference values
+    for (int value : values) {
+                     ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:368: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable FieldViewBinding $$ @Initialized @NonNull FieldViewBinding $$ ( 14608, 14633 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+      FieldViewBinding fieldBinding = requireNonNull(binding.getFieldBinding());
+                                                                            ^
+  found   : @Initialized @Nullable FieldViewBinding
+  required: @Initialized @NonNull FieldViewBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:518: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20859, 20909 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            listener.setter(), requiresRemoval ? listenerField : callback.build());
+                                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:521: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 21009, 21059 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            requiresRemoval ? listenerField : callback.build());
+                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:538: warning: (iterating.over.nullable) $$ 1 $$ callbacks.getEnumConstants() $$ ( 21492, 21520 ) $$ iterating over possibly-null reference callbacks.getEnumConstants()
+      for (Enum<?> callbackMethod : callbacks.getEnumConstants()) {
+                                                              ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:543: warning: (dereference.of.nullable) $$ 1 $$ callbacks.getEnclosingClass() $$ ( 21819, 21848 ) $$ dereference of possibly-null reference callbacks.getEnclosingClass()
+              callbacks.getEnclosingClass().getSimpleName(), callbacks.getSimpleName(),
+                                         ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:611: warning: (dereference.of.nullable) $$ 1 $$ binding.id() $$ ( 24317, 24329 ) $$ dereference of possibly-null reference binding.id()
+      if (!binding.id().qualifed) {
+                     ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:640: warning: (argument) $$ 4 $$ arg0 $$ Map.containsKey $$ @Initialized @Nullable ListenerClass $$ @Initialized @NonNull Object $$ ( 25059, 25107 ) $$ incompatible argument for parameter arg0 of Map.containsKey.
+          .containsKey(OnTouch.class.getAnnotation(ListenerClass.class))) {
+                                                  ^
+  found   : @Initialized @Nullable ListenerClass
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:32: warning: (dereference.of.nullable) $$ 1 $$ tintAttributeId $$ ( 891, 906 ) $$ dereference of possibly-null reference tintAttributeId
+    if (tintAttributeId.value != NO_RES_ID) {
+        ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:33: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1021, 1023 ) $$ dereference of possibly-null reference id
+      return CodeBlock.of("target.$L = $T.getTintedDrawable(context, $L, $L)", name, UTILS, id.code,
+                                                                                            ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:37: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1161, 1163 ) $$ dereference of possibly-null reference id
+      return CodeBlock.of("target.$L = context.getDrawable($L)", name, id.code);
+                                                                       ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:40: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1311, 1313 ) $$ dereference of possibly-null reference id
+        androidX ? CONTEXT_COMPAT_ANDROIDX : CONTEXT_COMPAT, id.code);
+                                                             ^
+30 warnings

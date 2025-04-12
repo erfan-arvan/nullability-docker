@@ -1,0 +1,116 @@
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:134: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TableCell $$ @Initialized @NonNull TableCell $$ ( 5956, 5989 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+                    TableCell cell = requireNonNull(reportPage.getCell(tableNameCell));
+                                                                      ^
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:162: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TableCell $$ @Initialized @NonNull TableCell $$ ( 7266, 7299 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+                    TableCell cell = requireNonNull(reportPage.getCell(tableNameCell));
+                                                                      ^
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:166: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [default] $$ ( 6581, 7224 ) $$ write type annotation @Nullable() immediately before type, after modifiers [default]
+    @Nullable default Object getNextColumnValue(String firstColumnValuePrefix) {
+                             ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:196: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [default] $$ ( 7608, 7804 ) $$ write type annotation @Nullable() immediately before type, after modifiers [default]
+    @Nullable default TableCell getCell(TableCellAddress address) {
+                                ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableRow.java:82: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [default] $$ ( 2516, 2753 ) $$ write type annotation @Nullable() immediately before type, after modifiers [default]
+    @Nullable default Object getCellValueOrDefault(TableColumnDescription column,  Object defaultValue) {
+                             ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:129: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [default] $$ ( 4323, 4488 ) $$ write type annotation @Nullable() immediately before type, after modifiers [default]
+    @Nullable default Object getValue(R row, Integer cellIndex) {
+                             ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:34: warning: (type.anno.before.decl.anno) $$ 2 $$ [@Nullable()] $$ @Override() $$ ( 1195, 1307 ) $$ write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+    public TableCell getCell(TableColumnDescription column) {
+                     ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:34: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [public] $$ ( 1195, 1307 ) $$ write type annotation @Nullable() immediately before type, after modifiers [public]
+    public TableCell getCell(TableColumnDescription column) {
+                     ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:34: warning: (type.anno.before.decl.anno) $$ 2 $$ [@Nullable()] $$ @Override() $$ ( 1195, 1307 ) $$ write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+    public TableCell getCell(TableColumnDescription column) {
+                     ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:40: warning: (type.anno.before.decl.anno) $$ 2 $$ [@Nullable()] $$ @Override() $$ ( 1313, 1401 ) $$ write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+    public TableCell getCell(int i) {
+                     ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:40: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [public] $$ ( 1313, 1401 ) $$ write type annotation @Nullable() immediately before type, after modifiers [public]
+    public TableCell getCell(int i) {
+                     ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:40: warning: (type.anno.before.decl.anno) $$ 2 $$ [@Nullable()] $$ @Override() $$ ( 1313, 1401 ) $$ write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+    public TableCell getCell(int i) {
+                     ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:66: warning: (type.anno.before.decl.anno) $$ 2 $$ [@Nullable()] $$ @Override() $$ ( 1746, 1860 ) $$ write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+    public Object getCellValue(TableColumnDescription column) {
+                  ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:66: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [public] $$ ( 1746, 1860 ) $$ write type annotation @Nullable() immediately before type, after modifiers [public]
+    public Object getCellValue(TableColumnDescription column) {
+                  ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:89: error: (argument) $$ 4 $$ array $$ Arrays.stream $$ capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable [] $$ @Initialized @NonNull TableColumnDescription @Initialized @NonNull [] $$ ( 4448, 4484 ) $$ incompatible argument for parameter array of Arrays.stream.
+        TableColumn[] columns = Arrays.stream(headerDescription.getEnumConstants()).map(TableColumnDescription::getColumn).toArray(TableColumn[]::new);
+                                                                                ^
+  found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
+  required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:144: error: (assignment) $$ 2 $$ null (NullType) $$ T extends @UnknownInitialization @NonNull Object $$ ( 6822, 6826 ) $$ incompatible types in assignment.
+        T equalsObject = null;
+                         ^
+  found   : null (NullType)
+  required: T extends @UnknownInitialization @NonNull Object
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:217: warning: (type.anno.before.decl.anno) $$ 2 $$ [@Nullable()] $$ @Override() $$ ( 9034, 9210 ) $$ write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+    public TableRow findRow(Object value) {
+                    ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:217: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [public] $$ ( 9034, 9210 ) $$ write type annotation @Nullable() immediately before type, after modifiers [public]
+    public TableRow findRow(Object value) {
+                    ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:217: warning: (type.anno.before.decl.anno) $$ 2 $$ [@Nullable()] $$ @Override() $$ ( 9034, 9210 ) $$ write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+    public TableRow findRow(Object value) {
+                    ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:224: warning: (type.anno.before.decl.anno) $$ 2 $$ [@Nullable()] $$ @Override() $$ ( 9216, 9410 ) $$ write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+    public TableRow findRowByPrefix(String prefix) {
+                    ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:224: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [public] $$ ( 9216, 9410 ) $$ write type annotation @Nullable() immediately before type, after modifiers [public]
+    public TableRow findRowByPrefix(String prefix) {
+                    ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:224: warning: (type.anno.before.decl.anno) $$ 2 $$ [@Nullable()] $$ @Override() $$ ( 9216, 9410 ) $$ write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+    public TableRow findRowByPrefix(String prefix) {
+                    ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:230: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [private] $$ ( 9416, 9823 ) $$ write type annotation @Nullable() immediately before type, after modifiers [private]
+    private MutableTableRow<R> getMutableTableRow(TableCellAddress address) {
+                               ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:40: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [public] $$ ( 1651, 1774 ) $$ write type annotation @Nullable() immediately before type, after modifiers [public]
+    public TableCell getCell(TableColumnDescription column) {
+                     ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:46: warning: (type.anno.before.decl.anno) $$ 2 $$ [@Nullable()] $$ @Override() $$ ( 1780, 1878 ) $$ write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+    public TableCell getCell(int i) {
+                     ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:46: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [public] $$ ( 1780, 1878 ) $$ write type annotation @Nullable() immediately before type, after modifiers [public]
+    public TableCell getCell(int i) {
+                     ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:47: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 1857, 1860 ) $$ dereference of possibly-null reference row
+        return row.getCell(i);
+               ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:52: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 1938, 1941 ) $$ dereference of possibly-null reference row
+        return row.getRowNum();
+               ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:57: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2026, 2029 ) $$ dereference of possibly-null reference row
+        return row.getFirstCellNum();
+               ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:62: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2119, 2122 ) $$ dereference of possibly-null reference row
+        return row.getLastCellNum();
+               ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:67: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2227, 2230 ) $$ dereference of possibly-null reference row
+        return row.rowContains(expected);
+               ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:72: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2334, 2337 ) $$ dereference of possibly-null reference row
+        return row.iterator();
+               ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:76: warning: (type.anno.before.modifier) $$ 2 $$ @Nullable() $$ [public] $$ ( 2361, 2496 ) $$ write type annotation @Nullable() immediately before type, after modifiers [public]
+    public Object getCellValue(TableColumnDescription column) {
+                  ^
+../dataset/post_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:109: error: (assignment) $$ 2 $$ @Initialized @Nullable Integer $$ @UnknownInitialization @NonNull Integer $$ ( 3586, 3638 ) $$ incompatible types in assignment.
+        Integer cellIndex = table.getHeaderDescription().get(column.getColumn());
+                                                            ^
+  found   : @Initialized @Nullable Integer
+  required: @UnknownInitialization @NonNull Integer
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+11 errors
+23 warnings

@@ -1,0 +1,1514 @@
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:142: error: cannot find symbol
+    V get(@Nullable() K key);
+           ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:170: error: cannot find symbol
+    CacheEntry<K, V> getEntry(@Nullable() K key);
+                               ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:194: error: cannot find symbol
+    V peek(@Nullable() K key);
+            ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:217: error: cannot find symbol
+    CacheEntry<K, V> peekEntry(@Nullable() K key);
+                                ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:232: error: cannot find symbol
+    boolean containsKey(@Nullable() K key);
+                         ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:258: error: cannot find symbol
+    void put(@Nullable() K key, @Nullable() V value);
+              ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:258: error: cannot find symbol
+    void put(@Nullable() K key, @Nullable() V value);
+                                 ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:304: error: cannot find symbol
+    V computeIfAbsent(@Nullable() K key, @Nullable() Callable<V> callable);
+                       ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:304: error: cannot find symbol
+    V computeIfAbsent(@Nullable() K key, @Nullable() Callable<V> callable);
+                                          ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:340: error: cannot find symbol
+    boolean putIfAbsent(@Nullable() K key, @Nullable() V value);
+                         ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:340: error: cannot find symbol
+    boolean putIfAbsent(@Nullable() K key, @Nullable() V value);
+                                            ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:373: error: cannot find symbol
+    V peekAndReplace(@Nullable() K key, @Nullable() V value);
+                      ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:373: error: cannot find symbol
+    V peekAndReplace(@Nullable() K key, @Nullable() V value);
+                                         ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:406: error: cannot find symbol
+    boolean replace(@Nullable() K key, @Nullable() V value);
+                     ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:406: error: cannot find symbol
+    boolean replace(@Nullable() K key, @Nullable() V value);
+                                        ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:432: error: cannot find symbol
+    boolean replaceIfEquals(@Nullable() K key, @Nullable() V oldValue, @Nullable() V newValue);
+                             ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:432: error: cannot find symbol
+    boolean replaceIfEquals(@Nullable() K key, @Nullable() V oldValue, @Nullable() V newValue);
+                                                ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:432: error: cannot find symbol
+    boolean replaceIfEquals(@Nullable() K key, @Nullable() V oldValue, @Nullable() V newValue);
+                                                                        ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:467: error: cannot find symbol
+    V peekAndRemove(@Nullable() K key);
+                     ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:480: error: cannot find symbol
+    boolean containsAndRemove(@Nullable() K key);
+                               ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:505: error: cannot find symbol
+    void remove(@Nullable() K key);
+                 ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:521: error: cannot find symbol
+    boolean removeIfEquals(@Nullable() K key, @Nullable() V expectedValue);
+                            ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:521: error: cannot find symbol
+    boolean removeIfEquals(@Nullable() K key, @Nullable() V expectedValue);
+                                               ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:532: error: cannot find symbol
+    void removeAll(@Nullable() Iterable<? extends K> keys);
+                    ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:575: error: cannot find symbol
+    V peekAndPut(@Nullable() K key, @Nullable() V value);
+                  ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:575: error: cannot find symbol
+    V peekAndPut(@Nullable() K key, @Nullable() V value);
+                                     ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:603: error: cannot find symbol
+    void expireAt(@Nullable() K key, @Nullable() long millis);
+                   ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:603: error: cannot find symbol
+    void expireAt(@Nullable() K key, @Nullable() long millis);
+                                      ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:625: error: cannot find symbol
+    void loadAll(@Nullable() Iterable<? extends K> keys, @Nullable() CacheOperationCompletionListener listener);
+                  ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:625: error: cannot find symbol
+    void loadAll(@Nullable() Iterable<? extends K> keys, @Nullable() CacheOperationCompletionListener listener);
+                                                          ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:647: error: cannot find symbol
+    void reloadAll(@Nullable() Iterable<? extends K> keys, @Nullable() CacheOperationCompletionListener listener);
+                    ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:647: error: cannot find symbol
+    void reloadAll(@Nullable() Iterable<? extends K> keys, @Nullable() CacheOperationCompletionListener listener);
+                                                            ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:666: error: cannot find symbol
+    CompletableFuture<Void> loadAll(@Nullable() Iterable<? extends K> keys);
+                                     ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:685: error: cannot find symbol
+    CompletableFuture<Void> reloadAll(@Nullable() Iterable<? extends K> keys);
+                                       ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:702: error: cannot find symbol
+    <R> R invoke(@Nullable() K key, @Nullable() EntryProcessor<K, V, R> entryProcessor);
+                  ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:702: error: cannot find symbol
+    <R> R invoke(@Nullable() K key, @Nullable() EntryProcessor<K, V, R> entryProcessor);
+                                     ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:721: error: cannot find symbol
+    <R> Map<K, EntryProcessingResult<R>> invokeAll(@Nullable() Iterable<? extends K> keys, @Nullable() EntryProcessor<K, V, R> entryProcessor);
+                                                    ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:721: error: cannot find symbol
+    <R> Map<K, EntryProcessingResult<R>> invokeAll(@Nullable() Iterable<? extends K> keys, @Nullable() EntryProcessor<K, V, R> entryProcessor);
+                                                                                            ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:745: error: cannot find symbol
+    Map<K, V> getAll(@Nullable() Iterable<? extends K> keys);
+                      ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:765: error: cannot find symbol
+    Map<K, V> peekAll(@Nullable() Iterable<? extends K> keys);
+                       ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:777: error: cannot find symbol
+    void putAll(@Nullable() Map<? extends K, ? extends V> valueMap);
+                 ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache.java:860: error: cannot find symbol
+    <T> T requestInterface(@Nullable() Class<T> type);
+                            ^
+  symbol:   class Nullable
+  location: interface Cache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Cache
+    V extends Object declared in interface Cache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/CacheManager.java:188: error: cannot find symbol
+    public abstract <K, V> Cache<K, V> getCache(@Nullable() String name);
+                                                 ^
+  symbol:   class Nullable
+  location: class CacheManager
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/CacheManager.java:200: error: cannot find symbol
+    public abstract <K, V> Cache<K, V> createCache(@Nullable() Cache2kConfig<K, V> cfg);
+                                                    ^
+  symbol:   class Nullable
+  location: class CacheManager
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kConfig.java:90: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kConfig<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kConfig
+    V extends Object declared in class Cache2kConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kConfig.java:93: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kConfig<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kConfig
+    V extends Object declared in class Cache2kConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kConfig.java:146: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kConfig<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kConfig
+    V extends Object declared in class Cache2kConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kConfig.java:149: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kConfig<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kConfig
+    V extends Object declared in class Cache2kConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kConfig.java:152: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kConfig<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kConfig
+    V extends Object declared in class Cache2kConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kConfig.java:155: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kConfig<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kConfig
+    V extends Object declared in class Cache2kConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kConfig.java:158: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kConfig<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kConfig
+    V extends Object declared in class Cache2kConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kConfig.java:286: error: cannot find symbol
+    @Nullable()
+     ^
+  symbol:   class Nullable
+  location: class Cache2kConfig<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kConfig
+    V extends Object declared in class Cache2kConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kConfig.java:317: error: cannot find symbol
+    @Nullable()
+     ^
+  symbol:   class Nullable
+  location: class Cache2kConfig<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kConfig
+    V extends Object declared in class Cache2kConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Feature.java:34: error: cannot find symbol
+    void enlist(@Nullable() CacheBuildContext<?, ?> ctx);
+                 ^
+  symbol:   class Nullable
+  location: interface Feature
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/CacheBuildContext.java:50: error: cannot find symbol
+    <T> T createCustomization(@Nullable() CustomizationSupplier<T> supplier);
+                               ^
+  symbol:   class Nullable
+  location: interface CacheBuildContext<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheBuildContext
+    V extends Object declared in interface CacheBuildContext
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/CustomizationCollection.java:43: error: cannot find symbol
+    boolean add(@Nullable() CustomizationSupplier<T> e);
+                 ^
+  symbol:   class Nullable
+  location: interface CustomizationCollection<T>
+  where T is a type-variable:
+    T extends Object declared in interface CustomizationCollection
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/CustomizationCollection.java:52: error: cannot find symbol
+    boolean addAll(@Nullable() Collection<? extends CustomizationSupplier<T>> c);
+                    ^
+  symbol:   class Nullable
+  location: interface CustomizationCollection<T>
+  where T is a type-variable:
+    T extends Object declared in interface CustomizationCollection
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Weigher.java:39: error: cannot find symbol
+    int weigh(@Nullable() K key, @Nullable() V value);
+               ^
+  symbol:   class Nullable
+  location: interface Weigher<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Weigher
+    V extends Object declared in interface Weigher
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Weigher.java:39: error: cannot find symbol
+    int weigh(@Nullable() K key, @Nullable() V value);
+                                  ^
+  symbol:   class Nullable
+  location: interface Weigher<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Weigher
+    V extends Object declared in interface Weigher
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/ExceptionPropagator.java:63: error: cannot find symbol
+    RuntimeException propagateException(@Nullable() LoadExceptionInfo<K> loadExceptionInfo);
+                                         ^
+  symbol:   class Nullable
+  location: interface ExceptionPropagator<K>
+  where K is a type-variable:
+    K extends Object declared in interface ExceptionPropagator
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/AsyncCacheLoader.java:49: error: cannot find symbol
+    void load(@Nullable() K key, @Nullable() Context<K, V> context, @Nullable() Callback<V> callback) throws Exception;
+               ^
+  symbol:   class Nullable
+  location: interface AsyncCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface AsyncCacheLoader
+    V extends Object declared in interface AsyncCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/AsyncCacheLoader.java:49: error: cannot find symbol
+    void load(@Nullable() K key, @Nullable() Context<K, V> context, @Nullable() Callback<V> callback) throws Exception;
+                                  ^
+  symbol:   class Nullable
+  location: interface AsyncCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface AsyncCacheLoader
+    V extends Object declared in interface AsyncCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/AsyncCacheLoader.java:49: error: cannot find symbol
+    void load(@Nullable() K key, @Nullable() Context<K, V> context, @Nullable() Callback<V> callback) throws Exception;
+                                                                     ^
+  symbol:   class Nullable
+  location: interface AsyncCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface AsyncCacheLoader
+    V extends Object declared in interface AsyncCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/AsyncCacheLoader.java:109: error: cannot find symbol
+        void onLoadSuccess(@Nullable() V value);
+                            ^
+  symbol:   class Nullable
+  location: interface Callback<V>
+  where V is a type-variable:
+    V extends Object declared in interface Callback
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/AsyncCacheLoader.java:117: error: cannot find symbol
+        void onLoadFailure(@Nullable() Throwable t);
+                            ^
+  symbol:   class Nullable
+  location: interface Callback<V>
+  where V is a type-variable:
+    V extends Object declared in interface Callback
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/AdvancedCacheLoader.java:57: error: cannot find symbol
+    V load(@Nullable() K key, @Nullable() long startTime, @Nullable() CacheEntry<K, V> currentEntry) throws Exception;
+            ^
+  symbol:   class Nullable
+  location: interface AdvancedCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface AdvancedCacheLoader
+    V extends Object declared in interface AdvancedCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/AdvancedCacheLoader.java:57: error: cannot find symbol
+    V load(@Nullable() K key, @Nullable() long startTime, @Nullable() CacheEntry<K, V> currentEntry) throws Exception;
+                               ^
+  symbol:   class Nullable
+  location: interface AdvancedCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface AdvancedCacheLoader
+    V extends Object declared in interface AdvancedCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/AdvancedCacheLoader.java:57: error: cannot find symbol
+    V load(@Nullable() K key, @Nullable() long startTime, @Nullable() CacheEntry<K, V> currentEntry) throws Exception;
+                                                           ^
+  symbol:   class Nullable
+  location: interface AdvancedCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface AdvancedCacheLoader
+    V extends Object declared in interface AdvancedCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/CacheWriter.java:47: error: cannot find symbol
+    void write(@Nullable() K key, @Nullable() V value) throws Exception;
+                ^
+  symbol:   class Nullable
+  location: interface CacheWriter<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheWriter
+    V extends Object declared in interface CacheWriter
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/CacheWriter.java:47: error: cannot find symbol
+    void write(@Nullable() K key, @Nullable() V value) throws Exception;
+                                   ^
+  symbol:   class Nullable
+  location: interface CacheWriter<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheWriter
+    V extends Object declared in interface CacheWriter
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/CacheWriter.java:58: error: cannot find symbol
+    void delete(@Nullable() K key) throws Exception;
+                 ^
+  symbol:   class Nullable
+  location: interface CacheWriter<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheWriter
+    V extends Object declared in interface CacheWriter
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/CacheLoader.java:87: error: cannot find symbol
+    V load(@Nullable() K key) throws Exception;
+            ^
+  symbol:   class Nullable
+  location: interface CacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheLoader
+    V extends Object declared in interface CacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/ResiliencePolicy.java:88: error: cannot find symbol
+    long suppressExceptionUntil(@Nullable() K key, @Nullable() LoadExceptionInfo<K> loadExceptionInfo, @Nullable() CacheEntry<K, V> cachedEntry);
+                                 ^
+  symbol:   class Nullable
+  location: interface ResiliencePolicy<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface ResiliencePolicy
+    V extends Object declared in interface ResiliencePolicy
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/ResiliencePolicy.java:88: error: cannot find symbol
+    long suppressExceptionUntil(@Nullable() K key, @Nullable() LoadExceptionInfo<K> loadExceptionInfo, @Nullable() CacheEntry<K, V> cachedEntry);
+                                                    ^
+  symbol:   class Nullable
+  location: interface ResiliencePolicy<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface ResiliencePolicy
+    V extends Object declared in interface ResiliencePolicy
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/ResiliencePolicy.java:88: error: cannot find symbol
+    long suppressExceptionUntil(@Nullable() K key, @Nullable() LoadExceptionInfo<K> loadExceptionInfo, @Nullable() CacheEntry<K, V> cachedEntry);
+                                                                                                        ^
+  symbol:   class Nullable
+  location: interface ResiliencePolicy<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface ResiliencePolicy
+    V extends Object declared in interface ResiliencePolicy
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/ResiliencePolicy.java:94: error: cannot find symbol
+    long retryLoadAfter(@Nullable() K key, @Nullable() LoadExceptionInfo<K> loadExceptionInfo);
+                         ^
+  symbol:   class Nullable
+  location: interface ResiliencePolicy<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface ResiliencePolicy
+    V extends Object declared in interface ResiliencePolicy
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/ResiliencePolicy.java:94: error: cannot find symbol
+    long retryLoadAfter(@Nullable() K key, @Nullable() LoadExceptionInfo<K> loadExceptionInfo);
+                                            ^
+  symbol:   class Nullable
+  location: interface ResiliencePolicy<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface ResiliencePolicy
+    V extends Object declared in interface ResiliencePolicy
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/expiry/ExpiryPolicy.java:109: error: cannot find symbol
+    long calculateExpiryTime(@Nullable() K key, @Nullable() V value, @Nullable() long loadTime, @Nullable() CacheEntry<K, V> currentEntry);
+                              ^
+  symbol:   class Nullable
+  location: interface ExpiryPolicy<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface ExpiryPolicy
+    V extends Object declared in interface ExpiryPolicy
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/expiry/ExpiryPolicy.java:109: error: cannot find symbol
+    long calculateExpiryTime(@Nullable() K key, @Nullable() V value, @Nullable() long loadTime, @Nullable() CacheEntry<K, V> currentEntry);
+                                                 ^
+  symbol:   class Nullable
+  location: interface ExpiryPolicy<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface ExpiryPolicy
+    V extends Object declared in interface ExpiryPolicy
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/expiry/ExpiryPolicy.java:109: error: cannot find symbol
+    long calculateExpiryTime(@Nullable() K key, @Nullable() V value, @Nullable() long loadTime, @Nullable() CacheEntry<K, V> currentEntry);
+                                                                      ^
+  symbol:   class Nullable
+  location: interface ExpiryPolicy<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface ExpiryPolicy
+    V extends Object declared in interface ExpiryPolicy
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/expiry/ExpiryPolicy.java:109: error: cannot find symbol
+    long calculateExpiryTime(@Nullable() K key, @Nullable() V value, @Nullable() long loadTime, @Nullable() CacheEntry<K, V> currentEntry);
+                                                                                                 ^
+  symbol:   class Nullable
+  location: interface ExpiryPolicy<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface ExpiryPolicy
+    V extends Object declared in interface ExpiryPolicy
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/CustomizationSupplier.java:46: error: cannot find symbol
+    T supply(@Nullable() CacheBuildContext<?, ?> buildContext);
+              ^
+  symbol:   class Nullable
+  location: interface CustomizationSupplier<T>
+  where T is a type-variable:
+    T extends Object declared in interface CustomizationSupplier
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache2kBuilder.java:124: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kBuilder<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kBuilder
+    V extends Object declared in class Cache2kBuilder
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache2kBuilder.java:127: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kBuilder<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kBuilder
+    V extends Object declared in class Cache2kBuilder
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache2kBuilder.java:130: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kBuilder<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kBuilder
+    V extends Object declared in class Cache2kBuilder
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache2kBuilder.java:133: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kBuilder<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kBuilder
+    V extends Object declared in class Cache2kBuilder
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache2kBuilder.java:178: error: cannot find symbol
+    @Nullable()
+     ^
+  symbol:   class Nullable
+  location: class Cache2kBuilder<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kBuilder
+    V extends Object declared in class Cache2kBuilder
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache2kBuilder.java:1008: error: cannot find symbol
+    @Nullable()
+     ^
+  symbol:   class Nullable
+  location: class Cache2kBuilder<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kBuilder
+    V extends Object declared in class Cache2kBuilder
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/Cache2kBuilder.java:1024: error: cannot find symbol
+    @Nullable()
+     ^
+  symbol:   class Nullable
+  location: class Cache2kBuilder<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class Cache2kBuilder
+    V extends Object declared in class Cache2kBuilder
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/ToggleFeature.java:70: error: cannot find symbol
+    @Nullable()
+     ^
+  symbol:   class Nullable
+  location: class ToggleFeature
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/ToggleFeature.java:103: error: cannot find symbol
+    protected abstract void doEnlist(@Nullable() CacheBuildContext<?, ?> ctx);
+                                      ^
+  symbol:   class Nullable
+  location: class ToggleFeature
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheClosedListener.java:40: error: cannot find symbol
+    CompletableFuture<Void> onCacheClosed(@Nullable() Cache<?, ?> cache);
+                                           ^
+  symbol:   class Nullable
+  location: interface CacheClosedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/LoadDetail.java:42: error: cannot find symbol
+    @Nullable()
+     ^
+  symbol:   class Nullable
+  location: class LoadDetail<V>
+  where V is a type-variable:
+    V extends Object declared in class LoadDetail
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/AsyncCacheLoader.java:47: error: cannot find symbol
+    void load(@Nullable() K key, @Nullable() Context<K, V> context, @Nullable() Callback<V> callback) throws Exception;
+               ^
+  symbol:   class Nullable
+  location: interface AsyncCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface AsyncCacheLoader
+    V extends Object declared in interface AsyncCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/AsyncCacheLoader.java:47: error: cannot find symbol
+    void load(@Nullable() K key, @Nullable() Context<K, V> context, @Nullable() Callback<V> callback) throws Exception;
+                                  ^
+  symbol:   class Nullable
+  location: interface AsyncCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface AsyncCacheLoader
+    V extends Object declared in interface AsyncCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/AsyncCacheLoader.java:47: error: cannot find symbol
+    void load(@Nullable() K key, @Nullable() Context<K, V> context, @Nullable() Callback<V> callback) throws Exception;
+                                                                     ^
+  symbol:   class Nullable
+  location: interface AsyncCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface AsyncCacheLoader
+    V extends Object declared in interface AsyncCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/AsyncCacheLoader.java:107: error: cannot find symbol
+        void onLoadSuccess(@Nullable() V value);
+                            ^
+  symbol:   class Nullable
+  location: interface Callback<V>
+  where V is a type-variable:
+    V extends Object declared in interface Callback
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/AsyncCacheLoader.java:115: error: cannot find symbol
+        void onLoadFailure(@Nullable() Throwable t);
+                            ^
+  symbol:   class Nullable
+  location: interface Callback<V>
+  where V is a type-variable:
+    V extends Object declared in interface Callback
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/CustomizationReferenceSupplier.java:43: error: cannot find symbol
+    public T supply(@Nullable() CacheBuildContext ignored) {
+                     ^
+  symbol:   class Nullable
+  location: class CustomizationReferenceSupplier<T>
+  where T is a type-variable:
+    T extends Object declared in class CustomizationReferenceSupplier
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/ExceptionPropagator.java:37: error: cannot find symbol
+    RuntimeException propagateException(@Nullable() K key, @Nullable() ExceptionInformation exceptionInformation);
+                                         ^
+  symbol:   class Nullable
+  location: interface ExceptionPropagator<K>
+  where K is a type-variable:
+    K extends Object declared in interface ExceptionPropagator
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/ExceptionPropagator.java:37: error: cannot find symbol
+    RuntimeException propagateException(@Nullable() K key, @Nullable() ExceptionInformation exceptionInformation);
+                                                            ^
+  symbol:   class Nullable
+  location: interface ExceptionPropagator<K>
+  where K is a type-variable:
+    K extends Object declared in interface ExceptionPropagator
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/spi/Cache2kCoreProvider.java:37: error: cannot find symbol
+    void setDefaultManagerName(@Nullable() ClassLoader cl, @Nullable() String s);
+                                ^
+  symbol:   class Nullable
+  location: interface Cache2kCoreProvider
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/spi/Cache2kCoreProvider.java:37: error: cannot find symbol
+    void setDefaultManagerName(@Nullable() ClassLoader cl, @Nullable() String s);
+                                                            ^
+  symbol:   class Nullable
+  location: interface Cache2kCoreProvider
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/spi/Cache2kCoreProvider.java:42: error: cannot find symbol
+    String getDefaultManagerName(@Nullable() ClassLoader cl);
+                                  ^
+  symbol:   class Nullable
+  location: interface Cache2kCoreProvider
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/spi/Cache2kCoreProvider.java:47: error: cannot find symbol
+    CacheManager getManager(@Nullable() ClassLoader cl, @Nullable() String name);
+                             ^
+  symbol:   class Nullable
+  location: interface Cache2kCoreProvider
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/spi/Cache2kCoreProvider.java:47: error: cannot find symbol
+    CacheManager getManager(@Nullable() ClassLoader cl, @Nullable() String name);
+                                                         ^
+  symbol:   class Nullable
+  location: interface Cache2kCoreProvider
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/spi/Cache2kCoreProvider.java:62: error: cannot find symbol
+    void close(@Nullable() ClassLoader l);
+                ^
+  symbol:   class Nullable
+  location: interface Cache2kCoreProvider
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/spi/Cache2kCoreProvider.java:67: error: cannot find symbol
+    void close(@Nullable() ClassLoader l, @Nullable() String managerName);
+                ^
+  symbol:   class Nullable
+  location: interface Cache2kCoreProvider
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/spi/Cache2kCoreProvider.java:67: error: cannot find symbol
+    void close(@Nullable() ClassLoader l, @Nullable() String managerName);
+                                           ^
+  symbol:   class Nullable
+  location: interface Cache2kCoreProvider
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/spi/Cache2kCoreProvider.java:72: error: cannot find symbol
+    <K, V> Cache<K, V> createCache(@Nullable() CacheManager m, @Nullable() Cache2kConfig<K, V> cfg);
+                                    ^
+  symbol:   class Nullable
+  location: interface Cache2kCoreProvider
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/spi/Cache2kCoreProvider.java:72: error: cannot find symbol
+    <K, V> Cache<K, V> createCache(@Nullable() CacheManager m, @Nullable() Cache2kConfig<K, V> cfg);
+                                                                ^
+  symbol:   class Nullable
+  location: interface Cache2kCoreProvider
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/spi/Cache2kCoreProvider.java:81: error: cannot find symbol
+    Cache2kConfig getDefaultConfig(@Nullable() CacheManager m);
+                                    ^
+  symbol:   class Nullable
+  location: interface Cache2kCoreProvider
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/processor/EntryProcessor.java:87: error: cannot find symbol
+    R process(@Nullable() MutableCacheEntry<K, V> entry) throws Exception;
+               ^
+  symbol:   class Nullable
+  location: interface EntryProcessor<K,V,R>
+  where K,V,R are type-variables:
+    K extends Object declared in interface EntryProcessor
+    V extends Object declared in interface EntryProcessor
+    R extends Object declared in interface EntryProcessor
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/processor/MutableCacheEntry.java:149: error: cannot find symbol
+    MutableCacheEntry<K, V> setValue(@Nullable() V v);
+                                      ^
+  symbol:   class Nullable
+  location: interface MutableCacheEntry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface MutableCacheEntry
+    V extends Object declared in interface MutableCacheEntry
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/processor/MutableCacheEntry.java:191: error: cannot find symbol
+    MutableCacheEntry<K, V> setException(@Nullable() Throwable ex);
+                                          ^
+  symbol:   class Nullable
+  location: interface MutableCacheEntry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface MutableCacheEntry
+    V extends Object declared in interface MutableCacheEntry
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/processor/MutableCacheEntry.java:205: error: cannot find symbol
+    MutableCacheEntry<K, V> setExpiryTime(@Nullable() long t);
+                                           ^
+  symbol:   class Nullable
+  location: interface MutableCacheEntry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface MutableCacheEntry
+    V extends Object declared in interface MutableCacheEntry
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/processor/MutableCacheEntry.java:241: error: cannot find symbol
+    MutableCacheEntry<K, V> setModificationTime(@Nullable() long t);
+                                                 ^
+  symbol:   class Nullable
+  location: interface MutableCacheEntry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface MutableCacheEntry
+    V extends Object declared in interface MutableCacheEntry
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/CacheOperationCompletionListener.java:48: error: cannot find symbol
+    void onException(@Nullable() Throwable exception);
+                      ^
+  symbol:   class Nullable
+  location: interface CacheOperationCompletionListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/CacheEntry.java:74: error: cannot find symbol
+    @Nullable()
+     ^
+  symbol:   class Nullable
+  location: interface CacheEntry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntry
+    V extends Object declared in interface CacheEntry
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/KeyValueStore.java:44: error: cannot find symbol
+    void put(@Nullable() K key, @Nullable() V value);
+              ^
+  symbol:   class Nullable
+  location: interface KeyValueStore<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface KeyValueStore
+    V extends Object declared in interface KeyValueStore
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/KeyValueStore.java:44: error: cannot find symbol
+    void put(@Nullable() K key, @Nullable() V value);
+                                 ^
+  symbol:   class Nullable
+  location: interface KeyValueStore<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface KeyValueStore
+    V extends Object declared in interface KeyValueStore
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/KeyValueStore.java:52: error: cannot find symbol
+    void putAll(@Nullable() Map<? extends K, ? extends V> valueMap);
+                 ^
+  symbol:   class Nullable
+  location: interface KeyValueStore<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface KeyValueStore
+    V extends Object declared in interface KeyValueStore
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/KeyValueStore.java:68: error: cannot find symbol
+    void remove(@Nullable() K key);
+                 ^
+  symbol:   class Nullable
+  location: interface KeyValueStore<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface KeyValueStore
+    V extends Object declared in interface KeyValueStore
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/KeyValueStore.java:76: error: cannot find symbol
+    void removeAll(@Nullable() Iterable<? extends K> keys);
+                    ^
+  symbol:   class Nullable
+  location: interface KeyValueStore<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface KeyValueStore
+    V extends Object declared in interface KeyValueStore
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AdvancedKeyValueSource.java:38: error: cannot find symbol
+    Map<K, V> getAll(@Nullable() Iterable<? extends K> keys);
+                      ^
+  symbol:   class Nullable
+  location: interface AdvancedKeyValueSource<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface AdvancedKeyValueSource
+    V extends Object declared in interface AdvancedKeyValueSource
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/KeyValueSource.java:36: error: cannot find symbol
+    V get(@Nullable() K key);
+           ^
+  symbol:   class Nullable
+  location: interface KeyValueSource<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface KeyValueSource
+    V extends Object declared in interface KeyValueSource
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/operation/CacheOperation.java:64: error: cannot find symbol
+    void changeCapacity(@Nullable() long entryCountOrWeight);
+                         ^
+  symbol:   class Nullable
+  location: interface CacheOperation
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java:30: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class CustomizationSupplierByClassName<T>
+  where T is a type-variable:
+    T extends Object declared in class CustomizationSupplierByClassName
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kManagerConfig.java:30: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kManagerConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kManagerConfig.java:33: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class Cache2kManagerConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kManagerConfig.java:53: error: cannot find symbol
+    @Nullable()
+     ^
+  symbol:   class Nullable
+  location: class Cache2kManagerConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/config/Cache2kManagerConfig.java:65: error: cannot find symbol
+    @Nullable()
+     ^
+  symbol:   class Nullable
+  location: class Cache2kManagerConfig
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/AdvancedCacheLoader.java:51: error: cannot find symbol
+    public abstract V load(@Nullable() K key, @Nullable() long startTime, @Nullable() CacheEntry<K, V> currentEntry) throws Exception;
+                            ^
+  symbol:   class Nullable
+  location: class AdvancedCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AdvancedCacheLoader
+    V extends Object declared in class AdvancedCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/AdvancedCacheLoader.java:51: error: cannot find symbol
+    public abstract V load(@Nullable() K key, @Nullable() long startTime, @Nullable() CacheEntry<K, V> currentEntry) throws Exception;
+                                               ^
+  symbol:   class Nullable
+  location: class AdvancedCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AdvancedCacheLoader
+    V extends Object declared in class AdvancedCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/AdvancedCacheLoader.java:51: error: cannot find symbol
+    public abstract V load(@Nullable() K key, @Nullable() long startTime, @Nullable() CacheEntry<K, V> currentEntry) throws Exception;
+                                                                           ^
+  symbol:   class Nullable
+  location: class AdvancedCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AdvancedCacheLoader
+    V extends Object declared in class AdvancedCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/CacheWriter.java:43: error: cannot find symbol
+    public abstract void write(@Nullable() K key, @Nullable() V value) throws Exception;
+                                ^
+  symbol:   class Nullable
+  location: class CacheWriter<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class CacheWriter
+    V extends Object declared in class CacheWriter
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/CacheWriter.java:43: error: cannot find symbol
+    public abstract void write(@Nullable() K key, @Nullable() V value) throws Exception;
+                                                   ^
+  symbol:   class Nullable
+  location: class CacheWriter<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class CacheWriter
+    V extends Object declared in class CacheWriter
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/CacheWriter.java:54: error: cannot find symbol
+    public abstract void delete(@Nullable() K key) throws Exception;
+                                 ^
+  symbol:   class Nullable
+  location: class CacheWriter<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class CacheWriter
+    V extends Object declared in class CacheWriter
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/CacheLoader.java:50: error: cannot find symbol
+    public abstract V load(@Nullable() K key) throws Exception;
+                            ^
+  symbol:   class Nullable
+  location: class CacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class CacheLoader
+    V extends Object declared in class CacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/CacheLoader.java:70: error: cannot find symbol
+    public Map<K, V> loadAll(@Nullable() Iterable<? extends K> keys, @Nullable() Executor executor) throws Exception {
+                              ^
+  symbol:   class Nullable
+  location: class CacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class CacheLoader
+    V extends Object declared in class CacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/CacheLoader.java:70: error: cannot find symbol
+    public Map<K, V> loadAll(@Nullable() Iterable<? extends K> keys, @Nullable() Executor executor) throws Exception {
+                                                                      ^
+  symbol:   class Nullable
+  location: class CacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class CacheLoader
+    V extends Object declared in class CacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/integration/FunctionalCacheLoader.java:32: error: cannot find symbol
+    V load(@Nullable() K key) throws Exception;
+            ^
+  symbol:   class Nullable
+  location: interface FunctionalCacheLoader<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface FunctionalCacheLoader
+    V extends Object declared in interface FunctionalCacheLoader
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:43: error: cannot find symbol
+    public V get(@Nullable() K key) {
+                  ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:48: error: cannot find symbol
+    public CacheEntry<K, V> getEntry(@Nullable() K key) {
+                                      ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:53: error: cannot find symbol
+    public V peek(@Nullable() K key) {
+                   ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:58: error: cannot find symbol
+    public CacheEntry<K, V> peekEntry(@Nullable() K key) {
+                                       ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:63: error: cannot find symbol
+    public boolean containsKey(@Nullable() K key) {
+                                ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:68: error: cannot find symbol
+    public void put(@Nullable() K key, @Nullable() V value) {
+                     ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:68: error: cannot find symbol
+    public void put(@Nullable() K key, @Nullable() V value) {
+                                        ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:73: error: cannot find symbol
+    public V computeIfAbsent(@Nullable() K key, @Nullable() Callable<V> callable) {
+                              ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:73: error: cannot find symbol
+    public V computeIfAbsent(@Nullable() K key, @Nullable() Callable<V> callable) {
+                                                 ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:78: error: cannot find symbol
+    public boolean putIfAbsent(@Nullable() K key, @Nullable() V value) {
+                                ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:78: error: cannot find symbol
+    public boolean putIfAbsent(@Nullable() K key, @Nullable() V value) {
+                                                   ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:83: error: cannot find symbol
+    public V peekAndReplace(@Nullable() K key, @Nullable() V value) {
+                             ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:83: error: cannot find symbol
+    public V peekAndReplace(@Nullable() K key, @Nullable() V value) {
+                                                ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:88: error: cannot find symbol
+    public boolean replace(@Nullable() K key, @Nullable() V value) {
+                            ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:88: error: cannot find symbol
+    public boolean replace(@Nullable() K key, @Nullable() V value) {
+                                               ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:93: error: cannot find symbol
+    public boolean replaceIfEquals(@Nullable() K key, @Nullable() V oldValue, @Nullable() V newValue) {
+                                    ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:93: error: cannot find symbol
+    public boolean replaceIfEquals(@Nullable() K key, @Nullable() V oldValue, @Nullable() V newValue) {
+                                                       ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:93: error: cannot find symbol
+    public boolean replaceIfEquals(@Nullable() K key, @Nullable() V oldValue, @Nullable() V newValue) {
+                                                                               ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:98: error: cannot find symbol
+    public V peekAndRemove(@Nullable() K key) {
+                            ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:103: error: cannot find symbol
+    public boolean containsAndRemove(@Nullable() K key) {
+                                      ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:108: error: cannot find symbol
+    public void remove(@Nullable() K key) {
+                        ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:113: error: cannot find symbol
+    public boolean removeIfEquals(@Nullable() K key, @Nullable() V expectedValue) {
+                                   ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:113: error: cannot find symbol
+    public boolean removeIfEquals(@Nullable() K key, @Nullable() V expectedValue) {
+                                                      ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:118: error: cannot find symbol
+    public void removeAll(@Nullable() Iterable<? extends K> keys) {
+                           ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:123: error: cannot find symbol
+    public V peekAndPut(@Nullable() K key, @Nullable() V value) {
+                         ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:123: error: cannot find symbol
+    public V peekAndPut(@Nullable() K key, @Nullable() V value) {
+                                            ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:128: error: cannot find symbol
+    public void expireAt(@Nullable() K key, @Nullable() long millis) {
+                          ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:128: error: cannot find symbol
+    public void expireAt(@Nullable() K key, @Nullable() long millis) {
+                                             ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:133: error: cannot find symbol
+    public void loadAll(@Nullable() Iterable<? extends K> keys, @Nullable() CacheOperationCompletionListener listener) {
+                         ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:133: error: cannot find symbol
+    public void loadAll(@Nullable() Iterable<? extends K> keys, @Nullable() CacheOperationCompletionListener listener) {
+                                                                 ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:138: error: cannot find symbol
+    public void reloadAll(@Nullable() Iterable<? extends K> keys, @Nullable() CacheOperationCompletionListener listener) {
+                           ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:138: error: cannot find symbol
+    public void reloadAll(@Nullable() Iterable<? extends K> keys, @Nullable() CacheOperationCompletionListener listener) {
+                                                                   ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:143: error: cannot find symbol
+    public CompletableFuture<Void> loadAll(@Nullable() Iterable<? extends K> keys) {
+                                            ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:148: error: cannot find symbol
+    public CompletableFuture<Void> reloadAll(@Nullable() Iterable<? extends K> keys) {
+                                              ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:153: error: cannot find symbol
+    public <R> R invoke(@Nullable() K key, @Nullable() EntryProcessor<K, V, R> entryProcessor) {
+                         ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:153: error: cannot find symbol
+    public <R> R invoke(@Nullable() K key, @Nullable() EntryProcessor<K, V, R> entryProcessor) {
+                                            ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:158: error: cannot find symbol
+    public <R> Map<K, EntryProcessingResult<R>> invokeAll(@Nullable() Iterable<? extends K> keys, @Nullable() EntryProcessor<K, V, R> entryProcessor) {
+                                                           ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:158: error: cannot find symbol
+    public <R> Map<K, EntryProcessingResult<R>> invokeAll(@Nullable() Iterable<? extends K> keys, @Nullable() EntryProcessor<K, V, R> entryProcessor) {
+                                                                                                   ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:163: error: cannot find symbol
+    public Map<K, V> getAll(@Nullable() Iterable<? extends K> keys) {
+                             ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:168: error: cannot find symbol
+    public Map<K, V> peekAll(@Nullable() Iterable<? extends K> keys) {
+                              ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:173: error: cannot find symbol
+    public void putAll(@Nullable() Map<? extends K, ? extends V> valueMap) {
+                        ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/AbstractCache.java:218: error: cannot find symbol
+    public <X> X requestInterface(@Nullable() Class<X> type) {
+                                   ^
+  symbol:   class Nullable
+  location: class AbstractCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class AbstractCache
+    V extends Object declared in class AbstractCache
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheEntryEvictedListener.java:40: error: cannot find symbol
+    void onEntryEvicted(@Nullable() Cache<K, V> cache, @Nullable() CacheEntry<K, V> entry);
+                         ^
+  symbol:   class Nullable
+  location: interface CacheEntryEvictedListener<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntryEvictedListener
+    V extends Object declared in interface CacheEntryEvictedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheEntryEvictedListener.java:40: error: cannot find symbol
+    void onEntryEvicted(@Nullable() Cache<K, V> cache, @Nullable() CacheEntry<K, V> entry);
+                                                        ^
+  symbol:   class Nullable
+  location: interface CacheEntryEvictedListener<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntryEvictedListener
+    V extends Object declared in interface CacheEntryEvictedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheEntryRemovedListener.java:43: error: cannot find symbol
+    void onEntryRemoved(@Nullable() Cache<K, V> cache, @Nullable() CacheEntry<K, V> entry);
+                         ^
+  symbol:   class Nullable
+  location: interface CacheEntryRemovedListener<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntryRemovedListener
+    V extends Object declared in interface CacheEntryRemovedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheEntryRemovedListener.java:43: error: cannot find symbol
+    void onEntryRemoved(@Nullable() Cache<K, V> cache, @Nullable() CacheEntry<K, V> entry);
+                                                        ^
+  symbol:   class Nullable
+  location: interface CacheEntryRemovedListener<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntryRemovedListener
+    V extends Object declared in interface CacheEntryRemovedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheEntryCreatedListener.java:46: error: cannot find symbol
+    void onEntryCreated(@Nullable() Cache<K, V> cache, @Nullable() CacheEntry<K, V> entry);
+                         ^
+  symbol:   class Nullable
+  location: interface CacheEntryCreatedListener<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntryCreatedListener
+    V extends Object declared in interface CacheEntryCreatedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheEntryCreatedListener.java:46: error: cannot find symbol
+    void onEntryCreated(@Nullable() Cache<K, V> cache, @Nullable() CacheEntry<K, V> entry);
+                                                        ^
+  symbol:   class Nullable
+  location: interface CacheEntryCreatedListener<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntryCreatedListener
+    V extends Object declared in interface CacheEntryCreatedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheEntryUpdatedListener.java:48: error: cannot find symbol
+    void onEntryUpdated(@Nullable() Cache<K, V> cache, @Nullable() CacheEntry<K, V> currentEntry, @Nullable() CacheEntry<K, V> entryWithNewData);
+                         ^
+  symbol:   class Nullable
+  location: interface CacheEntryUpdatedListener<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntryUpdatedListener
+    V extends Object declared in interface CacheEntryUpdatedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheEntryUpdatedListener.java:48: error: cannot find symbol
+    void onEntryUpdated(@Nullable() Cache<K, V> cache, @Nullable() CacheEntry<K, V> currentEntry, @Nullable() CacheEntry<K, V> entryWithNewData);
+                                                        ^
+  symbol:   class Nullable
+  location: interface CacheEntryUpdatedListener<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntryUpdatedListener
+    V extends Object declared in interface CacheEntryUpdatedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheEntryUpdatedListener.java:48: error: cannot find symbol
+    void onEntryUpdated(@Nullable() Cache<K, V> cache, @Nullable() CacheEntry<K, V> currentEntry, @Nullable() CacheEntry<K, V> entryWithNewData);
+                                                                                                   ^
+  symbol:   class Nullable
+  location: interface CacheEntryUpdatedListener<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntryUpdatedListener
+    V extends Object declared in interface CacheEntryUpdatedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheCreatedListener.java:31: error: cannot find symbol
+    <K, V> CompletableFuture<Void> onCacheCreated(@Nullable() Cache<K, V> cache, @Nullable() CacheBuildContext<K, V> ctx);
+                                                   ^
+  symbol:   class Nullable
+  location: interface CacheCreatedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheCreatedListener.java:31: error: cannot find symbol
+    <K, V> CompletableFuture<Void> onCacheCreated(@Nullable() Cache<K, V> cache, @Nullable() CacheBuildContext<K, V> ctx);
+                                                                                  ^
+  symbol:   class Nullable
+  location: interface CacheCreatedListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheEntryExpiredListener.java:47: error: cannot find symbol
+    void onEntryExpired(@Nullable() Cache<K, V> cache, @Nullable() CacheEntry<K, V> entry);
+                         ^
+  symbol:   class Nullable
+  location: interface CacheEntryExpiredListener<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntryExpiredListener
+    V extends Object declared in interface CacheEntryExpiredListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/event/CacheEntryExpiredListener.java:47: error: cannot find symbol
+    void onEntryExpired(@Nullable() Cache<K, V> cache, @Nullable() CacheEntry<K, V> entry);
+                                                        ^
+  symbol:   class Nullable
+  location: interface CacheEntryExpiredListener<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface CacheEntryExpiredListener
+    V extends Object declared in interface CacheEntryExpiredListener
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/ResiliencePolicy.java:44: error: cannot find symbol
+        public long suppressExceptionUntil(@Nullable() Object key, @Nullable() LoadExceptionInfo<Object> loadExceptionInfo, @Nullable() CacheEntry<Object, Object> cachedEntry) {
+                                            ^
+  symbol: class Nullable
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/ResiliencePolicy.java:44: error: cannot find symbol
+        public long suppressExceptionUntil(@Nullable() Object key, @Nullable() LoadExceptionInfo<Object> loadExceptionInfo, @Nullable() CacheEntry<Object, Object> cachedEntry) {
+                                                                    ^
+  symbol: class Nullable
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/ResiliencePolicy.java:44: error: cannot find symbol
+        public long suppressExceptionUntil(@Nullable() Object key, @Nullable() LoadExceptionInfo<Object> loadExceptionInfo, @Nullable() CacheEntry<Object, Object> cachedEntry) {
+                                                                                                                             ^
+  symbol: class Nullable
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/ResiliencePolicy.java:49: error: cannot find symbol
+        public long retryLoadAfter(@Nullable() Object key, @Nullable() LoadExceptionInfo<Object> loadExceptionInfo) {
+                                    ^
+  symbol: class Nullable
+../dataset/pre_nullgtn_without_s_cache2k-nullaway/src/main/java/org/cache2k/io/ResiliencePolicy.java:49: error: cannot find symbol
+        public long retryLoadAfter(@Nullable() Object key, @Nullable() LoadExceptionInfo<Object> loadExceptionInfo) {
+                                                            ^
+  symbol: class Nullable
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+202 errors

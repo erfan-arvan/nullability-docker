@@ -1,0 +1,17 @@
+package de.zuellich.meal_planner.exception;
+
+/**
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public class RecipeParseException extends RuntimeException {
+
+    @org.checkerframework.dataflow.qual.SideEffectFree
+    public RecipeParseException( String message,  Throwable cause) {
+        super(message, cause);
+    }
+
+    @org.checkerframework.dataflow.qual.SideEffectFree
+    public RecipeParseException( String message) {
+        super(message);
+    }
+}

@@ -1,0 +1,32 @@
+package de.zuellich.meal_planner.algorithms;
+
+import de.zuellich.meal_planner.datatypes.RecipeFormat;
+
+/**
+ * Interface that describes a type to detect a recipe format.
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public interface FormatDetector {
+
+    /**
+     * Try to detect a format.
+     *
+     * @return True if the format is of the given type.
+     */
+    @org.checkerframework.dataflow.qual.Impure
+      boolean isSupported( FormatDetector this,  String source);
+
+    /**
+     * Return the format supported by this detector.
+     *
+     * @return A recipe format.
+     */
+    @org.checkerframework.dataflow.qual.Pure
+     RecipeFormat getFormat();
+
+    /**
+     * @return Returns an instance of RecipeParser that can parse the provided source.
+     */
+    @org.checkerframework.dataflow.qual.Pure
+     RecipeParser getParserInstance( FormatDetector this);
+}

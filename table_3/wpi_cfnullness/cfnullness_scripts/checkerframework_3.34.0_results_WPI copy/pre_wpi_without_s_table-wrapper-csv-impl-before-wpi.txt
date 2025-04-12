@@ -1,0 +1,30 @@
+../dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:81: warning: (return) $$ 2 $$ @Initialized @Nullable CsvTableRow $$ @Initialized @NonNull CsvTableRow $$ ( 2995, 3050 ) $$ incompatible types in return.
+        return (i >= rows.length) ? null : new CsvTableRow(rows[i], i);
+                                  ^
+  type of expression: @Initialized @Nullable CsvTableRow
+  method return type: @Initialized @NonNull CsvTableRow
+../dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:42: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull CsvTableCell $$ ( 1653, 1657 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CsvTableCell
+../dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:56: warning: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1979, 2017 ) $$ incompatible types in return.
+            return checkIndex() ? row[columnIndex] : null;
+                                ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:64: warning: (override.param) $$ 7 $$ obj $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull RowAndIndex $$ @Initialized @NonNull boolean equals(@Initialized @NonNull RowAndIndex this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 2193, 2203 ) $$ Incompatible parameter type for obj.
+        public boolean equals(Object obj) {
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull RowAndIndex
+    @Initialized @NonNull boolean equals(@Initialized @NonNull RowAndIndex this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:30: warning: (argument) $$ 4 $$ dateTimeFormatter $$ CsvCellDataAccessObject constructor $$ null (NullType) $$ @Initialized @NonNull DateTimeFormatter $$ ( 1339, 1343 ) $$ incompatible argument for parameter dateTimeFormatter of CsvCellDataAccessObject constructor.
+    public static final CsvCellDataAccessObject INSTANCE = new CsvCellDataAccessObject(null);
+                                                                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DateTimeFormatter
+5 warnings

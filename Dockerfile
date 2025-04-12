@@ -98,4 +98,20 @@ RUN echo "source $DAIKONDIR/scripts/daikon.bashrc" >> /root/.bashrc
 # Copy dynamic nullability
 COPY ./DynamicNullability /opt/dynamic-nullability
 
+# === Install cache2k-java11-parent as 2.0-SNAPSHOT ===
+RUN mkdir -p /opt/libs/cache2k
+WORKDIR /opt/libs/cache2k
+RUN git clone https://github.com/cache2k/cache2k.git
+
+WORKDIR /opt/libs/cache2k/cache2k-java11-parent
+RUN mvn versions:set -DnewVersion=2.0-SNAPSHOT && mvn clean install
+
+# === Install custom checker-framework ===
+WORKDIR /opt/libs
+RUN git clone https://github.com/erfan-arvan/checker-framework.git
+
+WORKDIR /opt/libs/checker-framework
+RUN ./gradlew assemble && ./gradlew publishToMavenLocal
+
+
 CMD ["tail", "-f", "/dev/null"]

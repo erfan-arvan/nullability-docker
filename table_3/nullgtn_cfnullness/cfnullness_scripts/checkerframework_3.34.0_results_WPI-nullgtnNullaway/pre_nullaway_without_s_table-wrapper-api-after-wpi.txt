@@ -1,0 +1,70 @@
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:132: error: (dereference.of.nullable) $$ 1 $$ reportPage.getCell(tableNameCell) $$ ( 5920, 5953 ) $$ dereference of possibly-null reference reportPage.getCell(tableNameCell)
+                    tableName = reportPage.getCell(tableNameCell).getStringValue();
+                                                  ^
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:159: error: (dereference.of.nullable) $$ 1 $$ reportPage.getCell(tableNameCell) $$ ( 7204, 7237 ) $$ dereference of possibly-null reference reportPage.getCell(tableNameCell)
+                    tableName = reportPage.getCell(tableNameCell).getStringValue();
+                                                  ^
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:135: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 4594, 4617 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:143: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 4852, 4875 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:151: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5117, 5140 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:159: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5396, 5419 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:167: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5667, 5690 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:175: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5937, 5960 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:183: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 6228, 6251 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:87: error: (argument) $$ 4 $$ array $$ Arrays.stream $$ capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable [] $$ @Initialized @NonNull TableColumnDescription @Initialized @NonNull [] $$ ( 4272, 4308 ) $$ incompatible argument for parameter array of Arrays.stream.
+        TableColumn[] columns = Arrays.stream(headerDescription.getEnumConstants()).map(TableColumnDescription::getColumn).toArray(TableColumn[]::new);
+                                                                                ^
+  found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
+  required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:40: error: (unboxing.of.nullable) $$ 1 $$ getCellIndex(column) $$ ( 1672, 1692 ) $$ unboxing a possibly-null reference getCellIndex(column)
+        return getCell(getCellIndex(column));
+                                   ^
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:46: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 1783, 1786 ) $$ dereference of possibly-null reference row
+        return row.getCell(i);
+               ^
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:51: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 1864, 1867 ) $$ dereference of possibly-null reference row
+        return row.getRowNum();
+               ^
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:56: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 1952, 1955 ) $$ dereference of possibly-null reference row
+        return row.getFirstCellNum();
+               ^
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:61: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2045, 2048 ) $$ dereference of possibly-null reference row
+        return row.getLastCellNum();
+               ^
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:66: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2153, 2156 ) $$ dereference of possibly-null reference row
+        return row.rowContains(expected);
+               ^
+../dataset/pre_nullaway_without_s_table-wrapper-api/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:71: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2260, 2263 ) $$ dereference of possibly-null reference row
+        return row.iterator();
+               ^
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+17 errors

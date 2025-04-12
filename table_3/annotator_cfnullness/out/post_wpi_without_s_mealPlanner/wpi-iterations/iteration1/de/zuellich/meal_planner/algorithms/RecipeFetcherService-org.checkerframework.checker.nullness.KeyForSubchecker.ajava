@@ -1,0 +1,17 @@
+package de.zuellich.meal_planner.algorithms;
+
+import java.io.IOException;
+import org.jsoup.Jsoup;
+import org.springframework.stereotype.Service;
+
+/**
+ * Implements methods to fetch a recipe.
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public class RecipeFetcherService {
+
+    @org.checkerframework.dataflow.qual.Impure
+    public  String fetchByURL( RecipeFetcherService this,  String url) throws IOException {
+        return Jsoup.connect(url).get().html();
+    }
+}

@@ -1,0 +1,26 @@
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
+    String rawUnit = matcher.group(2).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
+    String rawName = matcher.group(3).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:21: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 592, 615 ) $$ call to setupLookupTable() not allowed on the given receiver.
+    this.setupLookupTable();
+                         ^
+  found   : @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup
+  required: @Initialized @NonNull IngredientUnitLookup
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:57: warning: (dereference.of.nullable) $$ 1 $$ this.byShorthand $$ ( 1682, 1698 ) $$ dereference of possibly-null reference this.byShorthand
+    IngredientUnit result = this.byShorthand.get(shorthand);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:73: warning: (dereference.of.nullable) $$ 1 $$ this.byPlural $$ ( 2065, 2078 ) $$ dereference of possibly-null reference this.byPlural
+    IngredientUnit result = this.byPlural.get(plural);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:110: warning: (dereference.of.nullable) $$ 1 $$ this.bySingular $$ ( 3068, 3083 ) $$ dereference of possibly-null reference this.bySingular
+    IngredientUnit result = this.bySingular.get(search);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
+          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
+                                                                      ^
+Note: ../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+7 warnings

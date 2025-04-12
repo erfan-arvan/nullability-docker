@@ -1,0 +1,162 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.spacious-team:table-wrapper-csv-impl[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API CSV Implementation 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_pre_nullaway/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module! :source
+[[1;34mINFO[m] Compiling 8 source files with javac [forked debug target 11] to target/classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;33mWARNING[m] COMPILATION WARNING : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;33mWARNING[m] The following options were not recognized by any processor: '[detailedmsgtex]'
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 40,col 27): Field defaultZone not found in type org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 47,col 5): Constructor <init>(DateTimeFormatter,ZoneId) not found in type org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 26,col 1): Imported type not found: org.spacious_team.table_wrapper.api.TableHeaderColumn
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 53,col 5): Method setCellDataAccessObject(CellDataAccessObject) not found in type org.spacious_team.table_wrapper.csv.CsvTable
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 33,col 5): annotateTypeParameters: mismatched sizes:  typeParameters (size 1)=[T extends Enum<T> & TableHeaderColumn];  typeArguments (size 0)=[];  decl=@org.checkerframework.dataflow.qual.Impure protected <T extends Enum<T> & TableHeaderColumn> CsvTable(AbstractReportPage<CsvTableRow> reportPage, String tableName, TableCellRange tableRange, Class<T> headerDescription, int headersRowCount) {     super(reportPage, tableName, tableRange, headerDescription, headersRowCount); };  elt=CsvTable(org.spacious_team.table_wrapper.api.AbstractReportPage<org.spacious_team.table_wrapper.csv.CsvTableRow>,java.lang.String,org.spacious_team.table_wrapper.api.TableCellRange,java.lang.Class<? extends org.spacious_team.table_wrapper.api.TableColumnDescription>,int) (class com.sun.tools.javac.code.Symbol$MethodSymbol).; for more details, run with -AstubDebug
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 34,col 157): Wildcard type <? extends TableColumnDescription> does not match type in stubs file/tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava: <T> while parsing org.spacious_team.table_wrapper.csv.CsvTable
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.NullnessChecker.ajava:(line 33,col 5): annotateTypeParameters: mismatched sizes:  typeParameters (size 1)=[T extends Enum<T> & TableHeaderColumn];  typeArguments (size 0)=[];  decl=@org.checkerframework.dataflow.qual.Impure protected <T extends Enum<T> & TableHeaderColumn> CsvTable(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractReportPage<CsvTableRow> reportPage, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String tableName, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableCellRange tableRange, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<T> headerDescription, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int headersRowCount) {     super(reportPage, tableName, tableRange, headerDescription, headersRowCount); };  elt=CsvTable(org.spacious_team.table_wrapper.api.AbstractReportPage<org.spacious_team.table_wrapper.csv.CsvTableRow>,java.lang.String,org.spacious_team.table_wrapper.api.TableCellRange,java.lang.Class<? extends org.spacious_team.table_wrapper.api.TableColumnDescription>,int) (class com.sun.tools.javac.code.Symbol$MethodSymbol).; for more details, run with -AstubDebug
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.NullnessChecker.ajava:(line 34,col 495): Wildcard type <? extends TableColumnDescription> does not match type in stubs file/tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.NullnessChecker.ajava: <T> while parsing org.spacious_team.table_wrapper.csv.CsvTable
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTable.ajava:(line 32,col 5): annotateTypeParameters: mismatched sizes:  typeParameters (size 1)=[T extends Enum<T> & TableHeaderColumn];  typeArguments (size 0)=[];  decl=protected <T extends Enum<T> & TableHeaderColumn> CsvTable(AbstractReportPage<CsvTableRow> reportPage, String tableName, TableCellRange tableRange, Class<T> headerDescription, int headersRowCount) {     super(reportPage, tableName, tableRange, headerDescription, headersRowCount); };  elt=CsvTable(org.spacious_team.table_wrapper.api.AbstractReportPage<org.spacious_team.table_wrapper.csv.CsvTableRow>,java.lang.String,org.spacious_team.table_wrapper.api.TableCellRange,java.lang.Class<? extends org.spacious_team.table_wrapper.api.TableColumnDescription>,int) (class com.sun.tools.javac.code.Symbol$MethodSymbol).; for more details, run with -AstubDebug
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTable.ajava:(line 32,col 153): Wildcard type <? extends TableColumnDescription> does not match type in stubs file/tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTable.ajava: <T> while parsing org.spacious_team.table_wrapper.csv.CsvTable
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 36,col 5): Method of(String[],int,CsvCellDataAccessObject) not found in type org.spacious_team.table_wrapper.csv.CsvTableCell
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 46,col 5): Constructor <init>(RowAndIndex,CsvCellDataAccessObject) not found in type org.spacious_team.table_wrapper.csv.CsvTableCell
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableFactory-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 34,col 5): annotateTypeParameters: mismatched sizes:  typeParameters (size 1)=[T extends Enum<T> & TableHeaderColumn];  typeArguments (size 0)=[];  decl=@org.checkerframework.dataflow.qual.Impure public <T extends Enum<T> & TableHeaderColumn> Table create(CsvTableFactory this, ReportPage reportPage, String tableName, TableCellRange tableRange, Class<T> headerDescription, int headersRowCount) {     return new CsvTable(cast(reportPage), tableName, tableRange, headerDescription, headersRowCount); };  elt=create(org.spacious_team.table_wrapper.api.ReportPage,java.lang.String,org.spacious_team.table_wrapper.api.TableCellRange,java.lang.Class<? extends org.spacious_team.table_wrapper.api.TableColumnDescription>,int) (class com.sun.tools.javac.code.Symbol$MethodSymbol).; for more details, run with -AstubDebug
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableFactory-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 35,col 161): Wildcard type <? extends TableColumnDescription> does not match type in stubs file/tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableFactory-org.checkerframework.checker.nullness.KeyForSubchecker.ajava: <T> while parsing org.spacious_team.table_wrapper.csv.CsvTableFactory
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableFactory-org.checkerframework.checker.nullness.NullnessChecker.ajava:(line 34,col 5): annotateTypeParameters: mismatched sizes:  typeParameters (size 1)=[T extends Enum<T> & TableHeaderColumn];  typeArguments (size 0)=[];  decl=@org.checkerframework.dataflow.qual.Impure @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull public <T extends Enum<T> & TableHeaderColumn> Table create(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CsvTableFactory this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ReportPage reportPage, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String tableName, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TableCellRange tableRange, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<T> headerDescription, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int headersRowCount) {     return new CsvTable(cast(reportPage), tableName, tableRange, headerDescription, headersRowCount); };  elt=create(org.spacious_team.table_wrapper.api.ReportPage,java.lang.String,org.spacious_team.table_wrapper.api.TableCellRange,java.lang.Class<? extends org.spacious_team.table_wrapper.api.TableColumnDescription>,int) (class com.sun.tools.javac.code.Symbol$MethodSymbol).; for more details, run with -AstubDebug
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableFactory-org.checkerframework.checker.nullness.NullnessChecker.ajava:(line 35,col 725): Wildcard type <? extends TableColumnDescription> does not match type in stubs file/tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableFactory-org.checkerframework.checker.nullness.NullnessChecker.ajava: <T> while parsing org.spacious_team.table_wrapper.csv.CsvTableFactory
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableFactory.ajava:(line 32,col 5): annotateTypeParameters: mismatched sizes:  typeParameters (size 1)=[T extends Enum<T> & TableHeaderColumn];  typeArguments (size 0)=[];  decl=@Override public <T extends Enum<T> & TableHeaderColumn> Table create(ReportPage reportPage, String tableName, TableCellRange tableRange, Class<T> headerDescription, int headersRowCount) {     return new CsvTable(cast(reportPage), tableName, tableRange, headerDescription, headersRowCount); };  elt=create(org.spacious_team.table_wrapper.api.ReportPage,java.lang.String,org.spacious_team.table_wrapper.api.TableCellRange,java.lang.Class<? extends org.spacious_team.table_wrapper.api.TableColumnDescription>,int) (class com.sun.tools.javac.code.Symbol$MethodSymbol).; for more details, run with -AstubDebug
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableFactory.ajava:(line 33,col 133): Wildcard type <? extends TableColumnDescription> does not match type in stubs file/tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableFactory.ajava: <T> while parsing org.spacious_team.table_wrapper.csv.CsvTableFactory
+[[1;33mWARNING[m] /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 110,col 5): Method canEqual(Object) not found in type org.spacious_team.table_wrapper.csv.CsvTableRow
+[[1;34mINFO[m] 20 warnings 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] An exception has occurred in the compiler (11.0.22). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program and the following diagnostic in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.Error: Problem while parsing /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:832)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1371)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:973)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)
+Caused by: java.lang.Error: Problem while parsing /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1014)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:689)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1071)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)
+	... 8 more
+Caused by: org.checkerframework.javacutil.BugInCF: org.checkerframework.framework.stub.AnnotationFileParser.AjavaAnnotationCollectorVisitor.visitLists(RowAndIndex rowAndIndex [size 1], [String[] row, int columnIndex, CsvCellDataAccessObject dao] [size 3])
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2297)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitMethodForMethodDeclaration(JointJavacJavaParserVisitor.java:1032)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitMethod(JointJavacJavaParserVisitor.java:989)
+	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitMethod(AnnotationFileParser.java:3161)
+	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitMethod(AnnotationFileParser.java:3113)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:573)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:480)
+	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitClass(AnnotationFileParser.java:3123)
+	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitClass(AnnotationFileParser.java:3113)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:808)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2301)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:669)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processCompilationUnit(AnnotationFileParser.java:825)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processStubUnit(AnnotationFileParser.java:790)
+	at org.checkerframework.framework.stub.AnnotationFileParser.process(AnnotationFileParser.java:779)
+	at org.checkerframework.framework.stub.AnnotationFileParser.parseAjavaFile(AnnotationFileParser.java:696)
+	at org.checkerframework.framework.stub.AnnotationFileElementTypes.parseAjavaFileWithTree(AnnotationFileElementTypes.java:286)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1012)
+	... 17 more
+Caused by: java.lang.Throwable
+	at org.checkerframework.javacutil.BugInCF.<init>(BugInCF.java:38)
+	... 38 more
+
+[[1;34mINFO[m] 1 error
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  4.411 s
+[[1;34mINFO[m] Finished at: 2025-04-11T19:16:33Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m on project [36mtable-wrapper-csv-impl[m: [1;31mCompilation failure[m
+[[1;31mERROR[m] [1;31mAn exception has occurred in the compiler (11.0.22). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program and the following diagnostic in your report. Thank you.[m
+[[1;31mERROR[m] [1;31mcom.sun.tools.javac.util.ClientCodeException: java.lang.Error: Problem while parsing /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:832)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1371)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:973)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)[m
+[[1;31mERROR[m] [1;31mCaused by: java.lang.Error: Problem while parsing /tmp/WPITEMP-table-wrapper-csv-impl/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1014)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:689)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1071)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)[m
+[[1;31mERROR[m] [1;31m	... 8 more[m
+[[1;31mERROR[m] [1;31mCaused by: org.checkerframework.javacutil.BugInCF: org.checkerframework.framework.stub.AnnotationFileParser.AjavaAnnotationCollectorVisitor.visitLists(RowAndIndex rowAndIndex [size 1], [String[] row, int columnIndex, CsvCellDataAccessObject dao] [size 3])[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2297)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitMethodForMethodDeclaration(JointJavacJavaParserVisitor.java:1032)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitMethod(JointJavacJavaParserVisitor.java:989)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitMethod(AnnotationFileParser.java:3161)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitMethod(AnnotationFileParser.java:3113)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:573)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:480)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitClass(AnnotationFileParser.java:3123)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitClass(AnnotationFileParser.java:3113)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:808)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2301)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:669)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:189)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.processCompilationUnit(AnnotationFileParser.java:825)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.processStubUnit(AnnotationFileParser.java:790)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.process(AnnotationFileParser.java:779)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.parseAjavaFile(AnnotationFileParser.java:696)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileElementTypes.parseAjavaFileWithTree(AnnotationFileElementTypes.java:286)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1012)[m
+[[1;31mERROR[m] [1;31m	... 17 more[m
+[[1;31mERROR[m] [1;31mCaused by: java.lang.Throwable[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.javacutil.BugInCF.<init>(BugInCF.java:38)[m
+[[1;31mERROR[m] [1;31m	... 38 more[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+==== Count Script Output ====
+
+16 errors

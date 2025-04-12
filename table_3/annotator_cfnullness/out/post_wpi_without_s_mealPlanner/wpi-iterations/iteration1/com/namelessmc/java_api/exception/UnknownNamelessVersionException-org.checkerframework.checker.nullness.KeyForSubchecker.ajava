@@ -1,0 +1,12 @@
+package com.namelessmc.java_api.exception;
+
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public class UnknownNamelessVersionException extends Exception {
+
+    private static final   long serialVersionUID = 1L;
+
+    @org.checkerframework.dataflow.qual.SideEffectFree
+    public UnknownNamelessVersionException(final  String versionString) {
+        super("Cannot parse version string '" + versionString + "'. Try updating the API or the software using it.");
+    }
+}

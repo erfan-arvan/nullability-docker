@@ -1,0 +1,904 @@
++ PROJECT_PATH=../dataset/post_wpi_without_s_mealPlanner
++ CF_BINARY=../scripts/tools/checker-framework-3.34.0/checker/bin/javac
++ COMPILED_CLASSES_FOLDER=../dataset/post_wpi_without_s_mealPlanner/classes
++ LIB_FOLDER=../dataset/post_wpi_without_s_mealPlanner/lib
++ SRC_FILES=../dataset/post_wpi_without_s_mealPlanner/cf_srcs.txt
++ CLASSPATH_DIR=../dataset/post_wpi_without_s_mealPlanner/classpath
++ echo 'CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac'
+CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac
++ unzip_jars ../dataset/post_wpi_without_s_mealPlanner/lib ../dataset/post_wpi_without_s_mealPlanner/classpath
++ local lib_folder=../dataset/post_wpi_without_s_mealPlanner/lib
++ local extract_to=../dataset/post_wpi_without_s_mealPlanner/classpath
++ '[' -d ../dataset/post_wpi_without_s_mealPlanner/classpath ']'
++ rm -rf ../dataset/post_wpi_without_s_mealPlanner/classpath
++ mkdir -p ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/accessors-smart-1.1.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/android-json-0.0.20131108.vaadin1.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/animal-sniffer-annotations-1.14.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/aopalliance-1.0.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/asm-5.0.3.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/assertj-core-2.6.0.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/byte-buddy-1.6.14.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/byte-buddy-agent-1.6.14.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/classmate-1.3.3.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/commons-beanutils-1.9.3.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/commons-codec-1.10.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/commons-collections-3.2.2.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/commons-digester-2.1.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/commons-logging-1.3.2.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/commons-validator-1.9.0.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/diffutils-1.3.0.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/error_prone_annotations-2.1.3.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/guava-23.4-android.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/hamcrest-core-1.3.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/hamcrest-library-1.3.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/hibernate-validator-5.3.4.Final.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/j2objc-annotations-1.1.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/jackson-annotations-2.8.0.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/jackson-core-2.8.7.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/jackson-core-asl-1.9.13.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/jackson-databind-2.8.7.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/jackson-mapper-asl-1.9.13.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/javassist-3.21.0-GA.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/jboss-logging-3.3.0.Final.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/jcl-over-slf4j-1.7.24.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/json-path-2.2.0.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/json-smart-2.2.1.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/jsonassert-1.4.0.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/jsoup-1.10.2.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/jsr305-1.3.9.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/jul-to-slf4j-1.7.24.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/junit-4.13.2.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/log4j-over-slf4j-1.7.24.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/logback-classic-1.1.11.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/logback-core-1.1.11.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/mockito-core-2.8.9.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/objenesis-2.5.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/powermock-api-mockito-common-1.7.4.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/powermock-api-mockito2-1.7.4.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/powermock-api-support-1.7.4.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/powermock-core-1.7.4.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/powermock-module-junit4-1.7.4.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/powermock-module-junit4-common-1.7.4.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/powermock-reflect-1.7.4.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/slf4j-api-1.7.24.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/snakeyaml-1.17.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-aop-4.3.7.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-beans-4.3.7.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-boot-1.5.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-boot-autoconfigure-1.5.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-boot-starter-1.5.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-boot-starter-logging-1.5.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-boot-starter-test-1.5.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-boot-starter-tomcat-1.5.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-boot-starter-web-1.5.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-boot-test-1.5.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-boot-test-autoconfigure-1.5.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-context-4.3.7.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-core-4.3.7.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-expression-4.3.7.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-security-config-4.2.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-security-core-4.2.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-security-oauth2-2.1.1.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-security-web-4.2.2.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-test-4.3.7.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-web-4.3.7.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/spring-webmvc-4.3.7.RELEASE.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/tomcat-embed-core-8.5.11.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/tomcat-embed-el-8.5.11.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/tomcat-embed-websocket-8.5.11.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/truth-0.40.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/truth-java8-extension-0.40.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_mealPlanner/lib/validation-api-1.1.0.Final.jar -d ../dataset/post_wpi_without_s_mealPlanner/classpath
++ find ../dataset/post_wpi_without_s_mealPlanner/src -name '*.java'
++ BUILD_CMD='../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_mealPlanner/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_mealPlanner/classes -cp ../dataset/post_wpi_without_s_mealPlanner/classpath @../dataset/post_wpi_without_s_mealPlanner/cf_srcs.txt'
++ CLEAN_CMD='rm -rf ../dataset/post_wpi_without_s_mealPlanner/classes'
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_mealPlanner/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_mealPlanner/classes -cp ../dataset/post_wpi_without_s_mealPlanner/classpath @../dataset/post_wpi_without_s_mealPlanner/cf_srcs.txt
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
+    String rawUnit = matcher.group(2).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
+    String rawName = matcher.group(3).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:21: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 592, 615 ) $$ call to setupLookupTable() not allowed on the given receiver.
+    this.setupLookupTable();
+                         ^
+  found   : @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup
+  required: @Initialized @NonNull IngredientUnitLookup
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:57: warning: (dereference.of.nullable) $$ 1 $$ this.byShorthand $$ ( 1682, 1698 ) $$ dereference of possibly-null reference this.byShorthand
+    IngredientUnit result = this.byShorthand.get(shorthand);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:73: warning: (dereference.of.nullable) $$ 1 $$ this.byPlural $$ ( 2065, 2078 ) $$ dereference of possibly-null reference this.byPlural
+    IngredientUnit result = this.byPlural.get(plural);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:110: warning: (dereference.of.nullable) $$ 1 $$ this.bySingular $$ ( 3068, 3083 ) $$ dereference of possibly-null reference this.bySingular
+    IngredientUnit result = this.bySingular.get(search);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
+          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
+                                                                      ^
+Note: ../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+7 warnings
++ WPITEMPDIR=../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ WPIOUTDIR=build/whole-program-inference
++ DEBUG=1
++ rm -rf ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ mkdir -p ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ rm -f iteration1.diff iteration2.diff iteration3.diff iteration4.diff
++ WPIITERATIONOUTPUTS=../dataset/post_wpi_without_s_mealPlanner/wpi-iterations
++ rm -rf ../dataset/post_wpi_without_s_mealPlanner/wpi-iterations
++ mkdir -p ../dataset/post_wpi_without_s_mealPlanner/wpi-iterations
++ count=1
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 1'
+entering iteration 1
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_mealPlanner/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_mealPlanner/classes -cp ../dataset/post_wpi_without_s_mealPlanner/classpath @../dataset/post_wpi_without_s_mealPlanner/cf_srcs.txt
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:39: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Board $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Board this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 555, 563 ) $$ Incompatible parameter type for o.
+  public boolean equals(Object o) {
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Board
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Board this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:43: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getId $$ ( 717, 724 ) $$ call to non-deterministic side-effecting getId not allowed in deterministic side-effect-free method
+    return Objects.equals(getId(), board.getId())
+                               ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:43: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ board.getId $$ ( 726, 739 ) $$ call to non-deterministic side-effecting board.getId not allowed in deterministic side-effect-free method
+    return Objects.equals(getId(), board.getId())
+                                              ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:44: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getName $$ ( 767, 776 ) $$ call to non-deterministic side-effecting getName not allowed in deterministic side-effect-free method
+        && Objects.equals(getName(), board.getName())
+                                 ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:44: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ board.getName $$ ( 778, 793 ) $$ call to non-deterministic side-effecting board.getName not allowed in deterministic side-effect-free method
+        && Objects.equals(getName(), board.getName())
+                                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:45: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getUrl $$ ( 821, 829 ) $$ call to non-deterministic side-effecting getUrl not allowed in deterministic side-effect-free method
+        && Objects.equals(getUrl(), board.getUrl());
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:45: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ board.getUrl $$ ( 831, 845 ) $$ call to non-deterministic side-effecting board.getUrl not allowed in deterministic side-effect-free method
+        && Objects.equals(getUrl(), board.getUrl());
+                                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:50: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getId $$ ( 915, 922 ) $$ call to non-deterministic side-effecting getId not allowed in deterministic side-effect-free method
+    return Objects.hash(getId(), getName(), getUrl());
+                             ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:50: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getName $$ ( 924, 933 ) $$ call to non-deterministic side-effecting getName not allowed in deterministic side-effect-free method
+    return Objects.hash(getId(), getName(), getUrl());
+                                        ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:50: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getUrl $$ ( 935, 943 ) $$ call to non-deterministic side-effecting getUrl not allowed in deterministic side-effect-free method
+    return Objects.hash(getId(), getName(), getUrl());
+                                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:53: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Pin $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Pin this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1231, 1239 ) $$ Incompatible parameter type for o.
+  public boolean equals(Object o) {
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Pin
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Pin this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:57: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getId $$ ( 1387, 1394 ) $$ call to non-deterministic side-effecting getId not allowed in deterministic side-effect-free method
+    return Objects.equals(getId(), pin.getId())
+                               ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:57: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ pin.getId $$ ( 1396, 1407 ) $$ call to non-deterministic side-effecting pin.getId not allowed in deterministic side-effect-free method
+    return Objects.equals(getId(), pin.getId())
+                                            ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:58: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getOriginalLink $$ ( 1435, 1452 ) $$ call to non-deterministic side-effecting getOriginalLink not allowed in deterministic side-effect-free method
+        && Objects.equals(getOriginalLink(), pin.getOriginalLink());
+                                         ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:58: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ pin.getOriginalLink $$ ( 1454, 1475 ) $$ call to non-deterministic side-effecting pin.getOriginalLink not allowed in deterministic side-effect-free method
+        && Objects.equals(getOriginalLink(), pin.getOriginalLink());
+                                                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:63: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getId $$ ( 1545, 1552 ) $$ call to non-deterministic side-effecting getId not allowed in deterministic side-effect-free method
+    return Objects.hash(getId(), getOriginalLink());
+                             ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:63: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getOriginalLink $$ ( 1554, 1571 ) $$ call to non-deterministic side-effecting getOriginalLink not allowed in deterministic side-effect-free method
+    return Objects.hash(getId(), getOriginalLink());
+                                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:33: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Ingredient $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Ingredient this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 555, 563 ) $$ Incompatible parameter type for o.
+  public boolean equals(Object o) {
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Ingredient
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Ingredient this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:37: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ that.getAmount $$ ( 725, 741 ) $$ call to non-deterministic side-effecting that.getAmount not allowed in deterministic side-effect-free method
+    return Float.compare(that.getAmount(), getAmount()) == 0
+                                       ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:37: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getAmount $$ ( 743, 754 ) $$ call to non-deterministic side-effecting getAmount not allowed in deterministic side-effect-free method
+    return Float.compare(that.getAmount(), getAmount()) == 0
+                                                    ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:38: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getUnit $$ ( 772, 781 ) $$ call to non-deterministic side-effecting getUnit not allowed in deterministic side-effect-free method
+        && getUnit() == that.getUnit()
+                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:38: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ that.getUnit $$ ( 785, 799 ) $$ call to non-deterministic side-effecting that.getUnit not allowed in deterministic side-effect-free method
+        && getUnit() == that.getUnit()
+                                    ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:39: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getType $$ ( 826, 835 ) $$ call to non-deterministic side-effecting getType not allowed in deterministic side-effect-free method
+        && Objects.equals(getType(), that.getType());
+                                 ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:39: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ that.getType $$ ( 837, 851 ) $$ call to non-deterministic side-effecting that.getType not allowed in deterministic side-effect-free method
+        && Objects.equals(getType(), that.getType());
+                                                 ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:44: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getUnit $$ ( 921, 930 ) $$ call to non-deterministic side-effecting getUnit not allowed in deterministic side-effect-free method
+    return Objects.hash(getUnit(), getType(), getAmount());
+                               ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:44: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getType $$ ( 932, 941 ) $$ call to non-deterministic side-effecting getType not allowed in deterministic side-effect-free method
+    return Objects.hash(getUnit(), getType(), getAmount());
+                                          ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:44: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getAmount $$ ( 943, 954 ) $$ call to non-deterministic side-effecting getAmount not allowed in deterministic side-effect-free method
+    return Objects.hash(getUnit(), getType(), getAmount());
+                                                       ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:25: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Recipe $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Recipe this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 610, 618 ) $$ Incompatible parameter type for o.
+  public boolean equals(Object o) {
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Recipe
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Recipe this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:29: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getName $$ ( 775, 784 ) $$ call to non-deterministic side-effecting getName not allowed in deterministic side-effect-free method
+    return Objects.equals(getName(), recipe.getName())
+                                 ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:29: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ recipe.getName $$ ( 786, 802 ) $$ call to non-deterministic side-effecting recipe.getName not allowed in deterministic side-effect-free method
+    return Objects.equals(getName(), recipe.getName())
+                                                   ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:30: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getIngredients $$ ( 830, 846 ) $$ call to non-deterministic side-effecting getIngredients not allowed in deterministic side-effect-free method
+        && Objects.equals(getIngredients(), recipe.getIngredients())
+                                        ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:30: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ recipe.getIngredients $$ ( 848, 871 ) $$ call to non-deterministic side-effecting recipe.getIngredients not allowed in deterministic side-effect-free method
+        && Objects.equals(getIngredients(), recipe.getIngredients())
+                                                                 ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:31: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getSource $$ ( 899, 910 ) $$ call to non-deterministic side-effecting getSource not allowed in deterministic side-effect-free method
+        && Objects.equals(getSource(), recipe.getSource());
+                                   ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:31: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ recipe.getSource $$ ( 912, 930 ) $$ call to non-deterministic side-effecting recipe.getSource not allowed in deterministic side-effect-free method
+        && Objects.equals(getSource(), recipe.getSource());
+                                                       ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:36: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getName $$ ( 1000, 1009 ) $$ call to non-deterministic side-effecting getName not allowed in deterministic side-effect-free method
+    return Objects.hash(getName(), getIngredients(), getSource());
+                               ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:36: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getIngredients $$ ( 1011, 1027 ) $$ call to non-deterministic side-effecting getIngredients not allowed in deterministic side-effect-free method
+    return Objects.hash(getName(), getIngredients(), getSource());
+                                                 ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:36: warning: (purity.not.deterministic.not.sideeffectfree.call) $$ 1 $$ getSource $$ ( 1029, 1040 ) $$ call to non-deterministic side-effecting getSource not allowed in deterministic side-effect-free method
+    return Objects.hash(getName(), getIngredients(), getSource());
+                                                              ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
+    String rawUnit = matcher.group(2).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
+    String rawName = matcher.group(3).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:13: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull IngredientUnitLookup $$ ( 337, 341 ) $$ incompatible types in assignment.
+   private static IngredientUnitLookup instance = null;
+                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull IngredientUnitLookup
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:20: warning: (initialization.fields.uninitialized) $$ 1 $$ byShorthand, byPlural, bySingular $$ ( 555, 620 ) $$ the constructor does not initialize fields: byShorthand, byPlural, bySingular
+  private IngredientUnitLookup() {
+          ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:21: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 592, 615 ) $$ call to setupLookupTable() not allowed on the given receiver.
+    this.setupLookupTable();
+                         ^
+  found   : @UnderInitialization @NonNull IngredientUnitLookup
+  required: @Initialized @NonNull IngredientUnitLookup
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgFormatDetector.java:56: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull SchemaOrgFormatDetector $$ @Initialized @NonNull boolean equals(@Initialized @NonNull SchemaOrgFormatDetector this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1689, 1697 ) $$ Incompatible parameter type for o.
+  public boolean equals(Object o) {
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull SchemaOrgFormatDetector
+    @Initialized @NonNull boolean equals(@Initialized @NonNull SchemaOrgFormatDetector this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
+          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
+                                                                      ^
+Note: ../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+44 warnings
++ rm -rf ../dataset/post_wpi_without_s_mealPlanner/classes
++ mkdir -p ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out build/whole-program-inference
+++ true
++ DIFF_RESULT='Only in build/whole-program-inference: com
+Only in build/whole-program-inference: de'
++ [[ 1 == 1 ]]
+++ realpath iteration1.diff
+realpath: iteration1.diff: No such file or directory
++ echo 'putting the diff for iteration 1 into '
+putting the diff for iteration 1 into 
++ echo Only in build/whole-program-inference: com Only in build/whole-program-inference: de
++ [[ Only in build/whole-program-inference: com
+Only in build/whole-program-inference: de != '' ]]
++ rm -rf ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ mv build/whole-program-inference ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ mkdir -p ../dataset/post_wpi_without_s_mealPlanner/wpi-iterations/iteration1
++ cp -rf ../dataset/post_wpi_without_s_mealPlanner/wpi-out/com ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de ../dataset/post_wpi_without_s_mealPlanner/wpi-iterations/iteration1
++ echo 'ending iteration 1, time taken: 4 seconds'
+ending iteration 1, time taken: 4 seconds
++ echo
+
++ (( count++ ))
++ '[' 2 -eq 11 ']'
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 2'
+entering iteration 2
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_mealPlanner/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_mealPlanner/classes -cp ../dataset/post_wpi_without_s_mealPlanner/classpath @../dataset/post_wpi_without_s_mealPlanner/cf_srcs.txt
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/base/UnsafeAccess-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Package not found: com.github.benmanes.caffeine.base
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/base/UnsafeAccess-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Type not found: com.github.benmanes.caffeine.base.UnsafeAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/AbstractLinkedDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Package not found: com.github.benmanes.caffeine.cache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/AbstractLinkedDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Type not found: com.github.benmanes.caffeine.cache.AbstractLinkedDeque
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/AccessOrderDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Imported type not found: com.github.benmanes.caffeine.cache.AccessOrderDeque.AccessOrder
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/AccessOrderDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 29,col 1): Type not found: com.github.benmanes.caffeine.cache.AccessOrderDeque
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Async-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Type not found: com.github.benmanes.caffeine.cache.Async
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/AsyncCacheLoader-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 40,col 1): Type not found: com.github.benmanes.caffeine.cache.AsyncCacheLoader
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/AsyncLoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Type not found: com.github.benmanes.caffeine.cache.AsyncLoadingCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field OFFSET not found: com.github.benmanes.caffeine.cache.BoundedBuffer
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Imported type not found: com.github.benmanes.caffeine.base.UnsafeAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 29,col 1): Type not found: com.github.benmanes.caffeine.cache.BoundedBuffer
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 130,col 1): Type not found: com.github.benmanes.caffeine.cache.BBHeader
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field requireArgument not found: com.github.benmanes.caffeine.cache.Caffeine
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 19,col 1): Enclosing type of static field requireState not found: com.github.benmanes.caffeine.cache.Caffeine
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Enclosing type of static field EDEN not found: com.github.benmanes.caffeine.cache.Node
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Enclosing type of static field PROBATION not found: com.github.benmanes.caffeine.cache.Node
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Enclosing type of static field PROTECTED not found: com.github.benmanes.caffeine.cache.Node
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 69,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Async.AsyncExpiry
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 70,col 1): Imported type not found: com.github.benmanes.caffeine.cache.LinkedDeque.PeekingIterator
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 71,col 1): Imported type not found: com.github.benmanes.caffeine.cache.References.InternalReference
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 72,col 1): Imported type not found: com.github.benmanes.caffeine.cache.stats.StatsCounter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 86,col 1): Type not found: com.github.benmanes.caffeine.cache.BoundedLocalCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 3626,col 1): Type not found: com.github.benmanes.caffeine.cache.BLCHeader
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Buffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 33,col 1): Type not found: com.github.benmanes.caffeine.cache.Buffer
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Buffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 97,col 1): Type not found: com.github.benmanes.caffeine.cache.DisabledBuffer
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Cache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 25,col 1): Imported type not found: com.github.benmanes.caffeine.cache.stats.CacheStats
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Cache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Type not found: com.github.benmanes.caffeine.cache.Cache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/CacheLoader-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 42,col 1): Type not found: com.github.benmanes.caffeine.cache.CacheLoader
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/CacheWriter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 33,col 1): Type not found: com.github.benmanes.caffeine.cache.CacheWriter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/CacheWriter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 74,col 1): Type not found: com.github.benmanes.caffeine.cache.DisabledWriter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Async.AsyncRemovalListener
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Async.AsyncWeigher
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 41,col 1): Imported type not found: com.github.benmanes.caffeine.cache.stats.ConcurrentStatsCounter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 127,col 1): Type not found: com.github.benmanes.caffeine.cache.Caffeine
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/CaffeineSpec-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field UNSET_INT not found: com.github.benmanes.caffeine.cache.Caffeine
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/CaffeineSpec-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 25,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Caffeine.Strength
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/CaffeineSpec-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 67,col 1): Type not found: com.github.benmanes.caffeine.cache.CaffeineSpec
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Expiry-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: com.github.benmanes.caffeine.cache.Expiry
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/FrequencySketch-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Type not found: com.github.benmanes.caffeine.cache.FrequencySketch
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/LinkedDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 47,col 1): Type not found: com.github.benmanes.caffeine.cache.LinkedDeque
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/LoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 35,col 1): Type not found: com.github.benmanes.caffeine.cache.LoadingCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/LocalAsyncLoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 54,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalAsyncLoadingCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/LocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 34,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/LocalLoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalLoadingCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/LocalManualCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalManualCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Enclosing type of static field UNSAFE not found: com.github.benmanes.caffeine.base.UnsafeAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 17,col 1): Enclosing type of static field ceilingPowerOfTwo not found: com.github.benmanes.caffeine.cache.BoundedLocalCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field REF_ARRAY_BASE not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 19,col 1): Enclosing type of static field REF_ELEMENT_SHIFT not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Enclosing type of static field lvElement not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Enclosing type of static field soElement not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Type not found: com.github.benmanes.caffeine.cache.MpscGrowableArrayQueue
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 68,col 1): Type not found: com.github.benmanes.caffeine.cache.MpscChunkedArrayQueue
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 101,col 1): Type not found: com.github.benmanes.caffeine.cache.MpscChunkedArrayQueueColdProducerFields
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 119,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueuePad1
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 127,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueProducerFields
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 133,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueuePad2
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 141,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueConsumerFields
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 151,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueuePad3
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 159,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueColdProducerFields
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 169,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueue
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 624,col 1): Type not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Node-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 24,col 1): Imported type not found: com.github.benmanes.caffeine.cache.WriteOrderDeque.WriteOrder
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Node-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Type not found: com.github.benmanes.caffeine.cache.Node
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Policy-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 34,col 1): Type not found: com.github.benmanes.caffeine.cache.Policy
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/References-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Type not found: com.github.benmanes.caffeine.cache.References
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/RemovalCause-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Type not found: com.github.benmanes.caffeine.cache.RemovalCause
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/RemovalListener-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Type not found: com.github.benmanes.caffeine.cache.RemovalListener
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/SerializationProxy-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Type not found: com.github.benmanes.caffeine.cache.SerializationProxy
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/StripedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Type not found: com.github.benmanes.caffeine.cache.StripedBuffer
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Ticker-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 27,col 1): Type not found: com.github.benmanes.caffeine.cache.Ticker
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Ticker-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 59,col 1): Type not found: com.github.benmanes.caffeine.cache.SystemTicker
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Ticker-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 69,col 1): Type not found: com.github.benmanes.caffeine.cache.DisabledTicker
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/TimerWheel-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Type not found: com.github.benmanes.caffeine.cache.TimerWheel
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/UnboundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 51,col 1): Type not found: com.github.benmanes.caffeine.cache.UnboundedLocalCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Weigher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Type not found: com.github.benmanes.caffeine.cache.Weigher
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Weigher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 73,col 1): Type not found: com.github.benmanes.caffeine.cache.SingletonWeigher
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/Weigher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 83,col 1): Type not found: com.github.benmanes.caffeine.cache.BoundedWeigher
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/WriteOrderDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 29,col 1): Type not found: com.github.benmanes.caffeine.cache.WriteOrderDeque
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/WriteThroughEntry-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 27,col 1): Type not found: com.github.benmanes.caffeine.cache.WriteThroughEntry
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Cache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Imported type not found: com.github.benmanes.caffeine.cache.LoadingCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Package not found: com.github.benmanes.caffeine.cache.stats
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 57,col 1): Type not found: com.github.benmanes.caffeine.cache.stats.CacheStats
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/stats/GuardedStatsCounter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: com.github.benmanes.caffeine.cache.stats.GuardedStatsCounter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/github/benmanes/caffeine/cache/stats/StatsCounter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 29,col 1): Type not found: com.github.benmanes.caffeine.cache.stats.StatsCounter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/Announcement-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 3,col 1): Imported type not found: com.google.gson.JsonElement
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/Announcement-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 4,col 1): Imported type not found: com.google.gson.JsonObject
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/Announcement-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 1,col 1): Package not found: com.namelessmc.java_api
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/Announcement-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 11,col 1): Type not found: com.namelessmc.java_api.Announcement
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 7,col 1): Type not found: com.namelessmc.java_api.ApiError
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/CustomProfileField-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 7,col 1): Type not found: com.namelessmc.java_api.CustomProfileField
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/CustomProfileFieldType-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 3,col 1): Type not found: com.namelessmc.java_api.CustomProfileFieldType
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/CustomProfileFieldValue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 6,col 1): Type not found: com.namelessmc.java_api.CustomProfileFieldValue
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/FilteredUserListBuilder-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 3,col 1): Imported type not found: com.google.gson.JsonArray
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/FilteredUserListBuilder-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 10,col 1): Type not found: com.namelessmc.java_api.FilteredUserListBuilder
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/Group-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 8,col 1): Type not found: com.namelessmc.java_api.Group
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/LanguageCodeMap-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 8,col 1): Type not found: com.namelessmc.java_api.LanguageCodeMap
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_mealPlanner/wpi-out/com/namelessmc/java_api/LanguageEntity-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 6,col 1): Type not found: com.namelessmc.java_api.LanguageEntity
+Note: ../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
++ rm -rf ../dataset/post_wpi_without_s_mealPlanner/classes
++ mkdir -p ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out build/whole-program-inference
+++ true
++ DIFF_RESULT='Only in ../dataset/post_wpi_without_s_mealPlanner/wpi-out: com
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+85c85
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.NullnessChecker.ajava
+85c85
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+94c94
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.NullnessChecker.ajava
+94c94
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+11c11
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.NullnessChecker.ajava
+11c11
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+28c28
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.NullnessChecker.ajava
+28c28
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+12c12
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.NullnessChecker.ajava
+12c12
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+39c39
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+49c49
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.NullnessChecker.ajava
+39c39
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+49c49
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+34c34
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+44c44
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.NullnessChecker.ajava
+34c34
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+44c44
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+46c46
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+56c56
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.NullnessChecker.ajava
+46c46
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+56c56
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+61c61
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+71c71
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.NullnessChecker.ajava
+61c61
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+71c71
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure'
++ [[ 1 == 1 ]]
+++ realpath iteration2.diff
+realpath: iteration2.diff: No such file or directory
++ echo 'putting the diff for iteration 2 into '
+putting the diff for iteration 2 into 
++ echo Only in ../dataset/post_wpi_without_s_mealPlanner/wpi-out: com diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 85c85 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.NullnessChecker.ajava 85c85 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 94c94 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.NullnessChecker.ajava 94c94 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 11c11 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.NullnessChecker.ajava 11c11 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 28c28 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.NullnessChecker.ajava 28c28 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 12c12 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.NullnessChecker.ajava 12c12 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 39c39 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 49c49 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.NullnessChecker.ajava 39c39 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 49c49 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 34c34 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 44c44 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.NullnessChecker.ajava 34c34 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 44c44 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 46c46 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 56c56 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.NullnessChecker.ajava 46c46 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 56c56 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 61c61 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 71c71 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.NullnessChecker.ajava 61c61 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 71c71 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure
++ [[ Only in ../dataset/post_wpi_without_s_mealPlanner/wpi-out: com
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+85c85
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/AmountParser-org.checkerframework.checker.nullness.NullnessChecker.ajava
+85c85
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+94c94
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientUnitLookup-org.checkerframework.checker.nullness.NullnessChecker.ajava
+94c94
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+11c11
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/NullRecipe-org.checkerframework.checker.nullness.NullnessChecker.ajava
+11c11
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+28c28
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner-org.checkerframework.checker.nullness.NullnessChecker.ajava
+28c28
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+12c12
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser-org.checkerframework.checker.nullness.NullnessChecker.ajava
+12c12
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+39c39
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+49c49
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Ingredient-org.checkerframework.checker.nullness.NullnessChecker.ajava
+39c39
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+49c49
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+34c34
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+44c44
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/datatypes/Recipe-org.checkerframework.checker.nullness.NullnessChecker.ajava
+34c34
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+44c44
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+46c46
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+56c56
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Board-org.checkerframework.checker.nullness.NullnessChecker.ajava
+46c46
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+56c56
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+61c61
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+71c71
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/pinterest/datatypes/Pin-org.checkerframework.checker.nullness.NullnessChecker.ajava
+61c61
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+71c71
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure != '' ]]
++ rm -rf ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ mv build/whole-program-inference ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ mkdir -p ../dataset/post_wpi_without_s_mealPlanner/wpi-iterations/iteration2
++ cp -rf ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de ../dataset/post_wpi_without_s_mealPlanner/wpi-iterations/iteration2
++ echo 'ending iteration 2, time taken: 4 seconds'
+ending iteration 2, time taken: 4 seconds
++ echo
+
++ (( count++ ))
++ '[' 3 -eq 11 ']'
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 3'
+entering iteration 3
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_mealPlanner/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_mealPlanner/classes -cp ../dataset/post_wpi_without_s_mealPlanner/classpath @../dataset/post_wpi_without_s_mealPlanner/cf_srcs.txt
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
+    String rawUnit = matcher.group(2).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
+    String rawName = matcher.group(3).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:21: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 592, 615 ) $$ call to setupLookupTable() not allowed on the given receiver.
+    this.setupLookupTable();
+                         ^
+  found   : @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup
+  required: @Initialized @NonNull IngredientUnitLookup
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:57: warning: (dereference.of.nullable) $$ 1 $$ this.byShorthand $$ ( 1682, 1698 ) $$ dereference of possibly-null reference this.byShorthand
+    IngredientUnit result = this.byShorthand.get(shorthand);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:73: warning: (dereference.of.nullable) $$ 1 $$ this.byPlural $$ ( 2065, 2078 ) $$ dereference of possibly-null reference this.byPlural
+    IngredientUnit result = this.byPlural.get(plural);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:110: warning: (dereference.of.nullable) $$ 1 $$ this.bySingular $$ ( 3068, 3083 ) $$ dereference of possibly-null reference this.bySingular
+    IngredientUnit result = this.bySingular.get(search);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
+          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
+                                                                      ^
+Note: ../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+7 warnings
++ rm -rf ../dataset/post_wpi_without_s_mealPlanner/classes
++ mkdir -p ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out build/whole-program-inference
+++ true
++ DIFF_RESULT='diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+93c93
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.NullnessChecker.ajava
+93c93
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure'
++ [[ 1 == 1 ]]
+++ realpath iteration3.diff
+realpath: iteration3.diff: No such file or directory
++ echo 'putting the diff for iteration 3 into '
+putting the diff for iteration 3 into 
++ echo diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 93c93 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.NullnessChecker.ajava 93c93 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure
++ [[ diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+93c93
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/de/zuellich/meal_planner/algorithms/IngredientMatcher-org.checkerframework.checker.nullness.NullnessChecker.ajava
+93c93
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure != '' ]]
++ rm -rf ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ mv build/whole-program-inference ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ mkdir -p ../dataset/post_wpi_without_s_mealPlanner/wpi-iterations/iteration3
++ cp -rf ../dataset/post_wpi_without_s_mealPlanner/wpi-out/de ../dataset/post_wpi_without_s_mealPlanner/wpi-iterations/iteration3
++ echo 'ending iteration 3, time taken: 4 seconds'
+ending iteration 3, time taken: 4 seconds
++ echo
+
++ (( count++ ))
++ '[' 4 -eq 11 ']'
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 4'
+entering iteration 4
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_mealPlanner/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_mealPlanner/classes -cp ../dataset/post_wpi_without_s_mealPlanner/classpath @../dataset/post_wpi_without_s_mealPlanner/cf_srcs.txt
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
+    String rawUnit = matcher.group(2).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
+    String rawName = matcher.group(3).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:21: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 592, 615 ) $$ call to setupLookupTable() not allowed on the given receiver.
+    this.setupLookupTable();
+                         ^
+  found   : @UnderInitialization(de.zuellich.meal_planner.algorithms.IngredientUnitLookup.class) @NonNull IngredientUnitLookup
+  required: @Initialized @NonNull IngredientUnitLookup
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:57: warning: (dereference.of.nullable) $$ 1 $$ this.byShorthand $$ ( 1682, 1698 ) $$ dereference of possibly-null reference this.byShorthand
+    IngredientUnit result = this.byShorthand.get(shorthand);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:73: warning: (dereference.of.nullable) $$ 1 $$ this.byPlural $$ ( 2065, 2078 ) $$ dereference of possibly-null reference this.byPlural
+    IngredientUnit result = this.byPlural.get(plural);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:110: warning: (dereference.of.nullable) $$ 1 $$ this.bySingular $$ ( 3068, 3083 ) $$ dereference of possibly-null reference this.bySingular
+    IngredientUnit result = this.bySingular.get(search);
+                                ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
+          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
+                                                                      ^
+Note: ../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+7 warnings
++ rm -rf ../dataset/post_wpi_without_s_mealPlanner/classes
++ mkdir -p ../dataset/post_wpi_without_s_mealPlanner/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/post_wpi_without_s_mealPlanner/wpi-out build/whole-program-inference
++ DIFF_RESULT=
++ [[ 1 == 1 ]]
+++ realpath iteration4.diff
+realpath: iteration4.diff: No such file or directory
++ echo 'putting the diff for iteration 4 into '
+putting the diff for iteration 4 into 
++ echo
++ [[ '' != '' ]]
++ break

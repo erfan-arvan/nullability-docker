@@ -1,0 +1,67 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< org.spacious-team:table-wrapper-api >-----------------
+[INFO] Building Table Wrapper API 2022.4
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ table-wrapper-api ---
+[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-api ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 28 source files with javac [forked debug target 11] to target/classes
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[179,15] [return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[198,29] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable TableCell
+  method return type: @Initialized @NonNull TableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[105,47] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable Integer
+  method return type: @Initialized @NonNull Integer
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[128,30] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[135,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[143,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[151,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[159,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[167,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[175,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[183,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[89,80] [argument] incompatible argument for parameter array of Arrays.stream.
+  found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
+  required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[230,15] [return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull MutableTableRow<R extends @Initialized @NonNull ReportPageRow>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[34,15] [return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[39,15] [return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[64,15] [return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.283 s
+[INFO] Finished at: 2024-08-26T03:59:28-04:00
+[INFO] ------------------------------------------------------------------------

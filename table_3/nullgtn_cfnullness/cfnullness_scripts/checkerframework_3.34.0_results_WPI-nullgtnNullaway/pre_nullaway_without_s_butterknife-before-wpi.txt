@@ -1,0 +1,136 @@
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:85: error: (assignment) $$ 2 $$ @Initialized @Nullable Type $$ @Initialized @NonNull Type $$ ( 2917, 2921 ) $$ incompatible types in assignment.
+    this.type = type;
+                ^
+  found   : @Initialized @Nullable Type
+  required: @Initialized @NonNull Type
+Note: Multiple elements named 'com.sun.tools.javac.comp.Attr' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.AttrContext' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.Env' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCAnnotation' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCFieldAccess' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCVariableDecl' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.Tag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.List' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.Name' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Flags' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Kinds' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.TypeTag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm.ByteCodes' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Symbol' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/Id.java:40: error: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Id $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Id this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1118, 1126 ) $$ Incompatible parameter type for o.
+  @Override public boolean equals(Object o) {
+                                         ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Id
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Id this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:63: error: (argument) $$ 4 $$ args $$ CodeBlock.of $$ @Initialized @Nullable TypefaceStyles $$ @Initialized @NonNull Object $$ ( 1875, 1880 ) $$ incompatible argument for parameter args of CodeBlock.of.
+      typeface = CodeBlock.of("$1T.create($2L, $1T.$3L)", TYPEFACE, typeface, style);
+                                                                              ^
+  found   : @Initialized @Nullable TypefaceStyles
+  required: @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:119: error: (initialization.field.uninitialized) $$ 1 $$ typeUtils $$ ( 4741, 4765 ) $$ the default constructor does not initialize field typeUtils
+  private Types typeUtils;
+                ^
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:120: error: (initialization.field.uninitialized) $$ 1 $$ filer $$ ( 4768, 4788 ) $$ the default constructor does not initialize field filer
+  private Filer filer;
+                ^
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:121: error: (initialization.field.uninitialized) $$ 1 $$ trees $$ ( 4791, 4811 ) $$ the default constructor does not initialize field trees
+  private Trees trees;
+                ^
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:162: error: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 6072, 6101 ) $$ incompatible argument for parameter arg0 of Set.add.
+      types.add(annotation.getCanonicalName());
+                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:199: error: (argument) $$ 4 $$ args $$ ButterKnifeProcessor.error $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 7411, 7425 ) $$ incompatible argument for parameter args of ButterKnifeProcessor.error.
+        error(typeElement, "Unable to write binding for type %s: %s", typeElement, e.getMessage());
+                                                                                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:569: error: (argument) $$ 4 $$ mirror $$ TypeName.get $$ @Initialized @Nullable TypeMirror $$ @Initialized @NonNull TypeMirror $$ ( 22234, 22242 ) $$ incompatible argument for parameter mirror of TypeName.get.
+    TypeName type = TypeName.get(viewType);
+                                 ^
+  found   : @Initialized @Nullable TypeMirror
+  required: @Initialized @NonNull TypeMirror
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1049: error: (argument) $$ 4 $$ array $$ ButterKnifeProcessor.findDuplicate $$ @Initialized @NonNull int @Initialized @Nullable [] $$ @Initialized @NonNull int @Initialized @NonNull [] $$ ( 41972, 41975 ) $$ incompatible argument for parameter array of ButterKnifeProcessor.findDuplicate.
+    Integer duplicateId = findDuplicate(ids);
+                                        ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1096: error: (dereference.of.nullable) $$ 1 $$ callback $$ ( 43889, 43897 ) $$ dereference of possibly-null reference callback
+      Field callbackField = callback.getDeclaringClass().getField(callback.name());
+                            ^
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1264: error: (argument) $$ 4 $$ arg0 $$ Map.get $$ @Initialized @Nullable TypeElement $$ @Initialized @NonNull Object $$ ( 50774, 50790 ) $$ incompatible argument for parameter arg0 of Map.get.
+    BindingSet.Builder builder = builderMap.get(enclosingElement);
+                                                ^
+  found   : @Initialized @Nullable TypeElement
+  required: @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1300: error: (dereference.of.nullable) $$ 1 $$ args $$ ( 51928, 51932 ) $$ dereference of possibly-null reference args
+    if (args.length > 0) {
+        ^
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1308: error: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 52220, 52250 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                           ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1322: error: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 52783, 52813 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                           ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:369: error: (dereference.of.nullable) $$ 1 $$ fieldBinding $$ ( 14675, 14687 ) $$ dereference of possibly-null reference fieldBinding
+          .add("target.$L = ", fieldBinding.getName());
+                               ^
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:517: error: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20813, 20863 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            listener.setter(), requiresRemoval ? listenerField : callback.build());
+                                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:520: error: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20963, 21013 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            requiresRemoval ? listenerField : callback.build());
+                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:537: error: (iterating.over.nullable) $$ 1 $$ callbacks.getEnumConstants() $$ ( 21446, 21474 ) $$ iterating over possibly-null reference callbacks.getEnumConstants()
+      for (Enum<?> callbackMethod : callbacks.getEnumConstants()) {
+                                                              ^
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:542: error: (dereference.of.nullable) $$ 1 $$ callbacks.getEnclosingClass() $$ ( 21773, 21802 ) $$ dereference of possibly-null reference callbacks.getEnclosingClass()
+              callbacks.getEnclosingClass().getSimpleName(), callbacks.getSimpleName(),
+                                         ^
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:639: error: (argument) $$ 4 $$ arg0 $$ Map.containsKey $$ @Initialized @Nullable ListenerClass $$ @Initialized @NonNull Object $$ ( 25013, 25061 ) $$ incompatible argument for parameter arg0 of Map.containsKey.
+          .containsKey(OnTouch.class.getAnnotation(ListenerClass.class))) {
+                                                  ^
+  found   : @Initialized @Nullable ListenerClass
+  required: @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:683: error: (dereference.of.nullable) $$ 1 $$ enclosingElement $$ ( 26134, 26150 ) $$ dereference of possibly-null reference enclosingElement
+    TypeMirror typeMirror = enclosingElement.asType();
+                            ^
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:770: error: (argument) $$ 4 $$ arg0 $$ Map.get $$ @Initialized @Nullable Id $$ @Initialized @NonNull Object $$ ( 29321, 29323 ) $$ incompatible argument for parameter arg0 of Map.get.
+      ViewBinding.Builder viewId = viewIdMap.get(id);
+                                                 ^
+  found   : @Initialized @Nullable Id
+  required: @Initialized @NonNull Object
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:20: error: (assignment) $$ 2 $$ @Initialized @Nullable Id $$ @Initialized @NonNull Id $$ ( 689, 691 ) $$ incompatible types in assignment.
+    this.id = id;
+              ^
+  found   : @Initialized @Nullable Id
+  required: @Initialized @NonNull Id
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/FieldCollectionViewBinding.java:41: error: (dereference.of.nullable) $$ 1 $$ kind $$ ( 1099, 1103 ) $$ dereference of possibly-null reference kind
+        .add("target.$L = $T.$L(", name, UTILS, kind.factoryName);
+                                                ^
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:18: error: (assignment) $$ 2 $$ @Initialized @Nullable Id $$ @Initialized @NonNull Id $$ ( 664, 666 ) $$ incompatible types in assignment.
+    this.id = id;
+              ^
+  found   : @Initialized @Nullable Id
+  required: @Initialized @NonNull Id
+../dataset/pre_nullaway_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:33: error: (dereference.of.nullable) $$ 1 $$ tintAttributeId $$ ( 955, 970 ) $$ dereference of possibly-null reference tintAttributeId
+    if (tintAttributeId.value != NO_RES_ID) {
+        ^
+27 errors

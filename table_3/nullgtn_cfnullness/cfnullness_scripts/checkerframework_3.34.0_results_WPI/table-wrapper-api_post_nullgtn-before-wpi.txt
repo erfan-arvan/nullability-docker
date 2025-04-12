@@ -1,0 +1,324 @@
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/TableColumn.java:26: error: (return) $$ 2 $$ @Initialized @Nullable int $$ @Initialized @NonNull int $$ ( 1016, 1036 ) $$ incompatible types in return.
+    TableColumn LEFTMOST_COLUMN = (firstColumnForSearch, $) -> firstColumnForSearch;
+                                                               ^
+  type of expression: @Initialized @Nullable int
+  method return type: @Initialized @NonNull int
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AnyOfTableColumn.java:32: error: (override.param) $$ 7 $$ firstColumnForSearch $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull AnyOfTableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull AnyOfTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1) $$ @Initialized @NonNull TableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1) $$ ( 1174, 1198 ) $$ Incompatible parameter type for firstColumnForSearch.
+    public int getColumnIndex(int firstColumnForSearch, ReportPageRow... headerRows) {
+                                  ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull AnyOfTableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull AnyOfTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1)
+  cannot override method in @Initialized @NonNull TableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AnyOfTableColumn.java:32: error: (override.param) $$ 7 $$ headerRows $$ @Initialized @NonNull ReportPageRow @Initialized @NonNull [] $$ @Initialized @NonNull ReportPageRow @Initialized @Nullable [] $$ @Initialized @NonNull AnyOfTableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull AnyOfTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1) $$ @Initialized @NonNull TableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1) $$ ( 1200, 1227 ) $$ Incompatible parameter type for headerRows.
+    public int getColumnIndex(int firstColumnForSearch, ReportPageRow... headerRows) {
+                                                                         ^
+  found   : @Initialized @NonNull ReportPageRow @Initialized @NonNull []
+  required: @Initialized @NonNull ReportPageRow @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull AnyOfTableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull AnyOfTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1)
+  cannot override method in @Initialized @NonNull TableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:41: error: (override.param) $$ 7 $$ column $$ @Initialized @NonNull TableColumnDescription $$ @Initialized @Nullable TableColumnDescription $$ @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull TableCell getCell(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0) $$ @Initialized @NonNull TableRow $$ @Initialized @NonNull TableCell getCell(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0) $$ ( 1652, 1681 ) $$ Incompatible parameter type for column.
+    public TableCell getCell(TableColumnDescription column) {
+                                                    ^
+  found   : @Initialized @NonNull TableColumnDescription
+  required: @Initialized @Nullable TableColumnDescription
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull TableCell getCell(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0)
+  cannot override method in @Initialized @NonNull TableRow
+    @Initialized @NonNull TableCell getCell(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:46: error: (override.param) $$ 7 $$ i $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull TableCell getCell(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull int p0) $$ @Initialized @NonNull ReportPageRow $$ @Initialized @NonNull TableCell getCell(@Initialized @NonNull ReportPageRow this, @Initialized @Nullable int p0) $$ ( 1781, 1786 ) $$ Incompatible parameter type for i.
+    public TableCell getCell(int i) {
+                                 ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull TableCell getCell(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ReportPageRow
+    @Initialized @NonNull TableCell getCell(@Initialized @NonNull ReportPageRow this, @Initialized @Nullable int p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:66: error: (override.param) $$ 7 $$ expected $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull boolean rowContains(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull ReportPageRow $$ @Initialized @NonNull boolean rowContains(@Initialized @NonNull ReportPageRow this, @Initialized @Nullable Object p0) $$ ( 2141, 2156 ) $$ Incompatible parameter type for expected.
+    public boolean rowContains(Object expected) {
+                                      ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull boolean rowContains(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull ReportPageRow
+    @Initialized @NonNull boolean rowContains(@Initialized @NonNull ReportPageRow this, @Initialized @Nullable Object p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:75: error: (override.param) $$ 7 $$ column $$ @Initialized @NonNull TableColumnDescription $$ @Initialized @Nullable TableColumnDescription $$ @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull Object getCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0) $$ @Initialized @NonNull TableRow $$ @Initialized @NonNull Object getCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0) $$ ( 2336, 2365 ) $$ Incompatible parameter type for column.
+    public Object getCellValue(TableColumnDescription column) {
+                                                      ^
+  found   : @Initialized @NonNull TableColumnDescription
+  required: @Initialized @Nullable TableColumnDescription
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull Object getCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0)
+  cannot override method in @Initialized @NonNull TableRow
+    @Initialized @NonNull Object getCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:76: error: (return) $$ 2 $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 2384, 2423 ) $$ incompatible types in return.
+        return dao.getValue(row, getCellIndex(column));
+                           ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:79: error: (override.param) $$ 7 $$ column $$ @Initialized @NonNull TableColumnDescription $$ @Initialized @Nullable TableColumnDescription $$ @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull int getIntCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0) $$ @Initialized @NonNull TableRow $$ @Initialized @NonNull int getIntCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0) $$ ( 2463, 2492 ) $$ Incompatible parameter type for column.
+    public int getIntCellValue(TableColumnDescription column) {
+                                                      ^
+  found   : @Initialized @NonNull TableColumnDescription
+  required: @Initialized @Nullable TableColumnDescription
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull int getIntCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0)
+  cannot override method in @Initialized @NonNull TableRow
+    @Initialized @NonNull int getIntCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:83: error: (override.param) $$ 7 $$ column $$ @Initialized @NonNull TableColumnDescription $$ @Initialized @Nullable TableColumnDescription $$ @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull long getLongCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0) $$ @Initialized @NonNull TableRow $$ @Initialized @NonNull long getLongCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0) $$ ( 2595, 2624 ) $$ Incompatible parameter type for column.
+    public long getLongCellValue(TableColumnDescription column) {
+                                                        ^
+  found   : @Initialized @NonNull TableColumnDescription
+  required: @Initialized @Nullable TableColumnDescription
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull long getLongCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0)
+  cannot override method in @Initialized @NonNull TableRow
+    @Initialized @NonNull long getLongCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:87: error: (override.param) $$ 7 $$ column $$ @Initialized @NonNull TableColumnDescription $$ @Initialized @Nullable TableColumnDescription $$ @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull double getDoubleCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0) $$ @Initialized @NonNull TableRow $$ @Initialized @NonNull double getDoubleCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0) $$ ( 2732, 2761 ) $$ Incompatible parameter type for column.
+    public double getDoubleCellValue(TableColumnDescription column) {
+                                                            ^
+  found   : @Initialized @NonNull TableColumnDescription
+  required: @Initialized @Nullable TableColumnDescription
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull double getDoubleCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0)
+  cannot override method in @Initialized @NonNull TableRow
+    @Initialized @NonNull double getDoubleCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:91: error: (override.param) $$ 7 $$ column $$ @Initialized @NonNull TableColumnDescription $$ @Initialized @Nullable TableColumnDescription $$ @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull BigDecimal getBigDecimalCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0) $$ @Initialized @NonNull TableRow $$ @Initialized @NonNull BigDecimal getBigDecimalCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0) $$ ( 2879, 2908 ) $$ Incompatible parameter type for column.
+    public BigDecimal getBigDecimalCellValue(TableColumnDescription column) {
+                                                                    ^
+  found   : @Initialized @NonNull TableColumnDescription
+  required: @Initialized @Nullable TableColumnDescription
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull BigDecimal getBigDecimalCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0)
+  cannot override method in @Initialized @NonNull TableRow
+    @Initialized @NonNull BigDecimal getBigDecimalCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:95: error: (override.param) $$ 7 $$ column $$ @Initialized @NonNull TableColumnDescription $$ @Initialized @Nullable TableColumnDescription $$ @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull String getStringCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0) $$ @Initialized @NonNull TableRow $$ @Initialized @NonNull String getStringCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0) $$ ( 3022, 3051 ) $$ Incompatible parameter type for column.
+    public String getStringCellValue(TableColumnDescription column) {
+                                                            ^
+  found   : @Initialized @NonNull TableColumnDescription
+  required: @Initialized @Nullable TableColumnDescription
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull String getStringCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0)
+  cannot override method in @Initialized @NonNull TableRow
+    @Initialized @NonNull String getStringCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:99: error: (override.param) $$ 7 $$ column $$ @Initialized @NonNull TableColumnDescription $$ @Initialized @Nullable TableColumnDescription $$ @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull Instant getInstantCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0) $$ @Initialized @NonNull TableRow $$ @Initialized @NonNull Instant getInstantCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0) $$ ( 3163, 3192 ) $$ Incompatible parameter type for column.
+    public Instant getInstantCellValue(TableColumnDescription column) {
+                                                              ^
+  found   : @Initialized @NonNull TableColumnDescription
+  required: @Initialized @Nullable TableColumnDescription
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull Instant getInstantCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0)
+  cannot override method in @Initialized @NonNull TableRow
+    @Initialized @NonNull Instant getInstantCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:103: error: (override.param) $$ 7 $$ column $$ @Initialized @NonNull TableColumnDescription $$ @Initialized @Nullable TableColumnDescription $$ @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull LocalDateTime getLocalDateTimeCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0) $$ @Initialized @NonNull TableRow $$ @Initialized @NonNull LocalDateTime getLocalDateTimeCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0) $$ ( 3317, 3346 ) $$ Incompatible parameter type for column.
+    public LocalDateTime getLocalDateTimeCellValue(TableColumnDescription column) {
+                                                                          ^
+  found   : @Initialized @NonNull TableColumnDescription
+  required: @Initialized @Nullable TableColumnDescription
+  Consequence: method in @Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow>
+    @Initialized @NonNull LocalDateTime getLocalDateTimeCellValue(@Initialized @NonNull MutableTableRow<T extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull TableColumnDescription p0)
+  cannot override method in @Initialized @NonNull TableRow
+    @Initialized @NonNull LocalDateTime getLocalDateTimeCellValue(@Initialized @NonNull TableRow this, @Initialized @Nullable TableColumnDescription p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:108: error: (assignment) $$ 2 $$ @Initialized @Nullable Integer $$ @UnknownInitialization @NonNull Integer $$ ( 3520, 3572 ) $$ incompatible types in assignment.
+        Integer cellIndex = table.getHeaderDescription().get(column.getColumn());
+                                                            ^
+  found   : @Initialized @Nullable Integer
+  required: @UnknownInitialization @NonNull Integer
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:96: error: (argument) $$ 4 $$ array $$ Arrays.stream $$ capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable [] $$ @Initialized @NonNull TableColumnDescription @Initialized @NonNull [] $$ ( 4436, 4472 ) $$ incompatible argument for parameter array of Arrays.stream.
+        TableColumn[] columns = Arrays.stream(headerDescription.getEnumConstants()).map(TableColumnDescription::getColumn).toArray(TableColumn[]::new);
+                                                                                ^
+  found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
+  required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:107: error: (override.param) $$ 7 $$ report $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getData(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object> p1) $$ @Initialized @NonNull Table $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getData(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object> p1) $$ ( 4982, 4995 ) $$ Incompatible parameter type for report.
+    public <T> List<T> getData(Object report, Function<TableRow, T> rowExtractor) {
+                                      ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow>
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getData(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object> p1)
+  cannot override method in @Initialized @NonNull Table
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getData(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object> p1)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:107: error: (override.param) $$ 7 $$ rowExtractor $$ @Initialized @NonNull Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object> $$ @Initialized @Nullable Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object> $$ @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getData(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object> p1) $$ @Initialized @NonNull Table $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getData(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object> p1) $$ ( 4997, 5031 ) $$ Incompatible parameter type for rowExtractor.
+    public <T> List<T> getData(Object report, Function<TableRow, T> rowExtractor) {
+                                                                    ^
+  found   : @Initialized @NonNull Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object>
+  required: @Initialized @Nullable Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object>
+  Consequence: method in @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow>
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getData(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object> p1)
+  cannot override method in @Initialized @NonNull Table
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getData(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, T extends @Initialized @NonNull Object> p1)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:116: error: (override.param) $$ 7 $$ report $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1) $$ @Initialized @NonNull Table $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1) $$ ( 5283, 5296 ) $$ Incompatible parameter type for report.
+    public <T> List<T> getDataCollection(Object report, Function<TableRow, Collection<T>> rowExtractor) {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow>
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1)
+  cannot override method in @Initialized @NonNull Table
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:116: error: (override.param) $$ 7 $$ rowExtractor $$ @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> $$ @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> $$ @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1) $$ @Initialized @NonNull Table $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1) $$ ( 5298, 5344 ) $$ Incompatible parameter type for rowExtractor.
+    public <T> List<T> getDataCollection(Object report, Function<TableRow, Collection<T>> rowExtractor) {
+                                                                                          ^
+  found   : @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>>
+  required: @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>>
+  Consequence: method in @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow>
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1)
+  cannot override method in @Initialized @NonNull Table
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:125: error: (override.param) $$ 7 $$ report $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @NonNull BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @NonNull BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3) $$ @Initialized @NonNull Table $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @Nullable BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @Nullable BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3) $$ ( 5611, 5624 ) $$ Incompatible parameter type for report.
+    public <T> List<T> getDataCollection(Object report, Function<TableRow, Collection<T>> rowExtractor, BiPredicate<T, T> equalityChecker, BiFunction<T, T, Collection<T>> mergeDuplicates) {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow>
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @NonNull BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @NonNull BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3)
+  cannot override method in @Initialized @NonNull Table
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @Nullable BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @Nullable BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:125: error: (override.param) $$ 7 $$ rowExtractor $$ @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> $$ @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> $$ @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @NonNull BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @NonNull BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3) $$ @Initialized @NonNull Table $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @Nullable BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @Nullable BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3) $$ ( 5626, 5672 ) $$ Incompatible parameter type for rowExtractor.
+    public <T> List<T> getDataCollection(Object report, Function<TableRow, Collection<T>> rowExtractor, BiPredicate<T, T> equalityChecker, BiFunction<T, T, Collection<T>> mergeDuplicates) {
+                                                                                          ^
+  found   : @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>>
+  required: @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>>
+  Consequence: method in @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow>
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @NonNull BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @NonNull BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3)
+  cannot override method in @Initialized @NonNull Table
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @Nullable BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @Nullable BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:125: error: (override.param) $$ 7 $$ equalityChecker $$ @Initialized @NonNull BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> $$ @Initialized @Nullable BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> $$ @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @NonNull BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @NonNull BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3) $$ @Initialized @NonNull Table $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @Nullable BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @Nullable BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3) $$ ( 5674, 5707 ) $$ Incompatible parameter type for equalityChecker.
+    public <T> List<T> getDataCollection(Object report, Function<TableRow, Collection<T>> rowExtractor, BiPredicate<T, T> equalityChecker, BiFunction<T, T, Collection<T>> mergeDuplicates) {
+                                                                                                                          ^
+  found   : @Initialized @NonNull BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object>
+  required: @Initialized @Nullable BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object>
+  Consequence: method in @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow>
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @NonNull BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @NonNull BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3)
+  cannot override method in @Initialized @NonNull Table
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @Nullable BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @Nullable BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:125: error: (override.param) $$ 7 $$ mergeDuplicates $$ @Initialized @NonNull BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> $$ @Initialized @Nullable BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> $$ @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @NonNull BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @NonNull BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3) $$ @Initialized @NonNull Table $$ <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @Nullable BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @Nullable BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3) $$ ( 5709, 5756 ) $$ Incompatible parameter type for mergeDuplicates.
+    public <T> List<T> getDataCollection(Object report, Function<TableRow, Collection<T>> rowExtractor, BiPredicate<T, T> equalityChecker, BiFunction<T, T, Collection<T>> mergeDuplicates) {
+                                                                                                                                                                           ^
+  found   : @Initialized @NonNull BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>>
+  required: @Initialized @Nullable BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>>
+  Consequence: method in @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow>
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull Object p0, @Initialized @NonNull Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @NonNull BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @NonNull BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3)
+  cannot override method in @Initialized @NonNull Table
+    <T extends @Initialized @NonNull Object> @Initialized @NonNull List<T extends @Initialized @NonNull Object> getDataCollection(@Initialized @NonNull Table this, @Initialized @Nullable Object p0, @Initialized @Nullable Function<@Initialized @NonNull TableRow, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p1, @Initialized @Nullable BiPredicate<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object> p2, @Initialized @Nullable BiFunction<T extends @Initialized @NonNull Object, T extends @Initialized @NonNull Object, @Initialized @NonNull Collection<T extends @Initialized @NonNull Object>> p3)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:151: error: (assignment) $$ 2 $$ null (NullType) $$ T extends @UnknownInitialization @NonNull Object $$ ( 6810, 6814 ) $$ incompatible types in assignment.
+        T equalsObject = null;
+                         ^
+  found   : null (NullType)
+  required: T extends @UnknownInitialization @NonNull Object
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:220: error: (override.param) $$ 7 $$ i $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> $$ R extends @Initialized @NonNull ReportPageRow getRow(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull int p0) $$ @Initialized @NonNull Table $$ @Initialized @NonNull ReportPageRow getRow(@Initialized @NonNull Table this, @Initialized @Nullable int p0) $$ ( 8967, 8972 ) $$ Incompatible parameter type for i.
+    public R getRow(int i) {
+                        ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow>
+    R extends @Initialized @NonNull ReportPageRow getRow(@Initialized @NonNull AbstractTable<R extends @Initialized @NonNull ReportPageRow> this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull Table
+    @Initialized @NonNull ReportPageRow getRow(@Initialized @NonNull Table this, @Initialized @Nullable int p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:227: error: (return) $$ 2 $$ @Initialized @Nullable MutableTableRow<R extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull TableRow $$ ( 9152, 9179 ) $$ incompatible types in return.
+        return getMutableTableRow(address);
+                                 ^
+  type of expression: @Initialized @Nullable MutableTableRow<R extends @Initialized @NonNull ReportPageRow>
+  method return type: @Initialized @NonNull TableRow
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:233: error: (return) $$ 2 $$ @Initialized @Nullable MutableTableRow<R extends @Initialized @NonNull ReportPageRow> $$ @Initialized @NonNull TableRow $$ ( 9338, 9365 ) $$ incompatible types in return.
+        return getMutableTableRow(address);
+                                 ^
+  type of expression: @Initialized @Nullable MutableTableRow<R extends @Initialized @NonNull ReportPageRow>
+  method return type: @Initialized @NonNull TableRow
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/TableColumnImpl.java:39: error: (override.param) $$ 7 $$ firstColumnForSearch $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull TableColumnImpl $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumnImpl this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1) $$ @Initialized @NonNull TableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1) $$ ( 1475, 1499 ) $$ Incompatible parameter type for firstColumnForSearch.
+    public int getColumnIndex(int firstColumnForSearch, ReportPageRow... headerRows) {
+                                  ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull TableColumnImpl
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumnImpl this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1)
+  cannot override method in @Initialized @NonNull TableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/TableColumnImpl.java:39: error: (override.param) $$ 7 $$ headerRows $$ @Initialized @NonNull ReportPageRow @Initialized @NonNull [] $$ @Initialized @NonNull ReportPageRow @Initialized @Nullable [] $$ @Initialized @NonNull TableColumnImpl $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumnImpl this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1) $$ @Initialized @NonNull TableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1) $$ ( 1501, 1528 ) $$ Incompatible parameter type for headerRows.
+    public int getColumnIndex(int firstColumnForSearch, ReportPageRow... headerRows) {
+                                                                         ^
+  found   : @Initialized @NonNull ReportPageRow @Initialized @NonNull []
+  required: @Initialized @NonNull ReportPageRow @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull TableColumnImpl
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumnImpl this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1)
+  cannot override method in @Initialized @NonNull TableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/AbstractTableFactory.java:30: error: (override.param) $$ 7 $$ reportPage $$ @Initialized @NonNull ReportPage $$ @Initialized @Nullable ReportPage $$ @Initialized @NonNull AbstractTableFactory<T extends @Initialized @NonNull ReportPage> $$ @Initialized @NonNull boolean canHandle(@Initialized @NonNull AbstractTableFactory<T extends @Initialized @NonNull ReportPage> this, @Initialized @NonNull ReportPage p0) $$ @Initialized @NonNull TableFactory $$ @Initialized @NonNull boolean canHandle(@Initialized @NonNull TableFactory this, @Initialized @Nullable ReportPage p0) $$ ( 1220, 1241 ) $$ Incompatible parameter type for reportPage.
+    public boolean canHandle(ReportPage reportPage) {
+                                        ^
+  found   : @Initialized @NonNull ReportPage
+  required: @Initialized @Nullable ReportPage
+  Consequence: method in @Initialized @NonNull AbstractTableFactory<T extends @Initialized @NonNull ReportPage>
+    @Initialized @NonNull boolean canHandle(@Initialized @NonNull AbstractTableFactory<T extends @Initialized @NonNull ReportPage> this, @Initialized @NonNull ReportPage p0)
+  cannot override method in @Initialized @NonNull TableFactory
+    @Initialized @NonNull boolean canHandle(@Initialized @NonNull TableFactory this, @Initialized @Nullable ReportPage p0)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:101: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TableCell $$ @Initialized @NonNull TableCell $$ ( 5303, 5336 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+                    TableCell cell = requireNonNull(reportPage.getCell(tableNameCell));
+                                                                      ^
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:124: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TableCell $$ @Initialized @NonNull TableCell $$ ( 6497, 6530 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+                    TableCell cell = requireNonNull(reportPage.getCell(tableNameCell));
+                                                                      ^
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:35: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TableCell $$ ( 1267, 1271 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TableCell
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:40: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TableCell $$ ( 1357, 1361 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TableCell
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:65: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Object $$ ( 1822, 1826 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/RelativePositionTableColumn.java:28: error: (override.param) $$ 7 $$ firstColumnForSearch $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull RelativePositionTableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull RelativePositionTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1) $$ @Initialized @NonNull TableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1) $$ ( 1094, 1118 ) $$ Incompatible parameter type for firstColumnForSearch.
+    public int getColumnIndex(int firstColumnForSearch, ReportPageRow... headerRows) {
+                                  ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull RelativePositionTableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull RelativePositionTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1)
+  cannot override method in @Initialized @NonNull TableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/RelativePositionTableColumn.java:28: error: (override.param) $$ 7 $$ headerRows $$ @Initialized @NonNull ReportPageRow @Initialized @NonNull [] $$ @Initialized @NonNull ReportPageRow @Initialized @Nullable [] $$ @Initialized @NonNull RelativePositionTableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull RelativePositionTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1) $$ @Initialized @NonNull TableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1) $$ ( 1120, 1147 ) $$ Incompatible parameter type for headerRows.
+    public int getColumnIndex(int firstColumnForSearch, ReportPageRow... headerRows) {
+                                                                         ^
+  found   : @Initialized @NonNull ReportPageRow @Initialized @NonNull []
+  required: @Initialized @NonNull ReportPageRow @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull RelativePositionTableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull RelativePositionTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1)
+  cannot override method in @Initialized @NonNull TableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MultiLineTableColumn.java:51: error: (override.param) $$ 7 $$ firstColumnForSearch $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull MultiLineTableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull MultiLineTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1) $$ @Initialized @NonNull TableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1) $$ ( 1909, 1933 ) $$ Incompatible parameter type for firstColumnForSearch.
+    public int getColumnIndex(int firstColumnForSearch, ReportPageRow... headerRows) {
+                                  ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MultiLineTableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull MultiLineTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1)
+  cannot override method in @Initialized @NonNull TableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1)
+../dataset/table-wrapper-api_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/api/MultiLineTableColumn.java:51: error: (override.param) $$ 7 $$ headerRows $$ @Initialized @NonNull ReportPageRow @Initialized @NonNull [] $$ @Initialized @NonNull ReportPageRow @Initialized @Nullable [] $$ @Initialized @NonNull MultiLineTableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull MultiLineTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1) $$ @Initialized @NonNull TableColumn $$ @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1) $$ ( 1935, 1962 ) $$ Incompatible parameter type for headerRows.
+    public int getColumnIndex(int firstColumnForSearch, ReportPageRow... headerRows) {
+                                                                         ^
+  found   : @Initialized @NonNull ReportPageRow @Initialized @NonNull []
+  required: @Initialized @NonNull ReportPageRow @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull MultiLineTableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull MultiLineTableColumn this, @Initialized @NonNull int p0, @Initialized @NonNull ReportPageRow @Initialized @NonNull [] p1)
+  cannot override method in @Initialized @NonNull TableColumn
+    @Initialized @NonNull int getColumnIndex(@Initialized @NonNull TableColumn this, @Initialized @Nullable int p0, @Initialized @NonNull ReportPageRow @Initialized @Nullable [] p1)
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+41 errors

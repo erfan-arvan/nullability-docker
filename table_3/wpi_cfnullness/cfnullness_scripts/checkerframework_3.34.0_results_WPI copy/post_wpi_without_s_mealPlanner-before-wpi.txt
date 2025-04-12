@@ -1,0 +1,72 @@
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:39: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Board $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Board this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 555, 563 ) $$ Incompatible parameter type for o.
+  public boolean equals(Object o) {
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Board
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Board this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:53: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Pin $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Pin this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1231, 1239 ) $$ Incompatible parameter type for o.
+  public boolean equals(Object o) {
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Pin
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Pin this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:33: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Ingredient $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Ingredient this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 555, 563 ) $$ Incompatible parameter type for o.
+  public boolean equals(Object o) {
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Ingredient
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Ingredient this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:25: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Recipe $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Recipe this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 610, 618 ) $$ Incompatible parameter type for o.
+  public boolean equals(Object o) {
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Recipe
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Recipe this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:49: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 1886, 1902 ) $$ dereference of possibly-null reference matcher.group(2)
+    String rawUnit = matcher.group(2).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:50: warning: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 1932, 1948 ) $$ dereference of possibly-null reference matcher.group(3)
+    String rawName = matcher.group(3).trim();
+                                  ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:13: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull IngredientUnitLookup $$ ( 337, 341 ) $$ incompatible types in assignment.
+   private static IngredientUnitLookup instance = null;
+                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull IngredientUnitLookup
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:20: warning: (initialization.fields.uninitialized) $$ 1 $$ byShorthand, byPlural, bySingular $$ ( 555, 620 ) $$ the constructor does not initialize fields: byShorthand, byPlural, bySingular
+  private IngredientUnitLookup() {
+          ^
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:21: warning: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 592, 615 ) $$ call to setupLookupTable() not allowed on the given receiver.
+    this.setupLookupTable();
+                         ^
+  found   : @UnderInitialization @NonNull IngredientUnitLookup
+  required: @Initialized @NonNull IngredientUnitLookup
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgFormatDetector.java:56: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull SchemaOrgFormatDetector $$ @Initialized @NonNull boolean equals(@Initialized @NonNull SchemaOrgFormatDetector this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1689, 1697 ) $$ Incompatible parameter type for o.
+  public boolean equals(Object o) {
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull SchemaOrgFormatDetector
+    @Initialized @NonNull boolean equals(@Initialized @NonNull SchemaOrgFormatDetector this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3066, 3078 ) $$ dereference of possibly-null reference e.getCause()
+          System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
+                                                                      ^
+warning: Implicitly compiled files were not subject to annotation processing.
+  Use -implicit to specify a policy for implicit compilation.
+Note: ../dataset/post_wpi_without_s_mealPlanner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+12 warnings

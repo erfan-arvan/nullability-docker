@@ -1,0 +1,12 @@
+package com.namelessmc.java_api.exception;
+
+import com.namelessmc.java_api.NamelessException;
+
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public class ApiDisabledException extends NamelessException {
+
+    @org.checkerframework.dataflow.qual.SideEffectFree
+    public ApiDisabledException() {
+        super("API is disabled, please enable it in StaffCP > Configuration > API");
+    }
+}

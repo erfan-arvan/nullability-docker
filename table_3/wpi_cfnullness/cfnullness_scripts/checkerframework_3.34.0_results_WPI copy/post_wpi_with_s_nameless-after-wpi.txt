@@ -1,0 +1,16 @@
+../dataset/post_wpi_with_s_nameless/src/com/namelessmc/java_api/FilteredUserListBuilder.java:27: warning: (argument) $$ 4 $$ arg1 $$ Map.put $$ T extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 696, 701 ) $$ incompatible argument for parameter arg1 of Map.put.
+		filters.put(filter, value);
+		                    ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_with_s_nameless/src/com/namelessmc/java_api/integrations/DetailedDiscordIntegrationData.java:12: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 398, 418 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.idLong = Integer.parseInt(this.getIdentifier());
+		                                                 ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+../dataset/post_wpi_with_s_nameless/src/com/namelessmc/java_api/integrations/DetailedMinecraftIntegrationData.java:15: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 486, 506 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.uuid = NamelessAPI.websiteUuidToJavaUuid(this.getIdentifier());
+		                                                                ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+3 warnings

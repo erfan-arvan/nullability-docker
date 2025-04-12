@@ -1,0 +1,271 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M2:enforce[m [1m(enforce-versions)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(java-8-compile)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Compiling 96 source files with javac [forked debug release 8] to target/classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;33mWARNING[m] COMPILATION WARNING : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;33mWARNING[m] The following options were not recognized by any processor: '[detailedmsgtex]'
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/CacheEntry.java:[76,31] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/CacheEntry.java:[76,31] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[242,23] [nullness:type.argument] incompatible type argument for type parameter K of ConcurrentMap.
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[242,26] [nullness:type.argument] incompatible type argument for type parameter V of ConcurrentMap.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[251,40] [keyfor:purity.not.sideeffectfree.call] call to side-effecting this.getClass().getSimpleName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[251,40] [nullness:purity.not.sideeffectfree.call] call to side-effecting this.getClass().getSimpleName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache.java:[933,16] [nullness:type.argument] incompatible type argument for type parameter K of ConcurrentMap.
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache.java:[933,19] [nullness:type.argument] incompatible type argument for type parameter V of ConcurrentMap.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;33mWARNING[m] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.checkerframework.javacutil.Resolver (file:/home/ubuntu/.m2/repository/org/checkerframework/checker/3.47.1-SNAPSHOT/checker-3.47.1-SNAPSHOT.jar) to method com.sun.tools.javac.comp.Resolve.findMethod(com.sun.tools.javac.comp.Env,com.sun.tools.javac.code.Type,com.sun.tools.javac.util.Name,com.sun.tools.javac.util.List,com.sun.tools.javac.util.List,boolean,boolean)
+WARNING: Please consider reporting this to the maintainers of org.checkerframework.javacutil.Resolver
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+/home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[83,28] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[83,28] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[85,34] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[85,34] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[86,34] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[86,34] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[88,30] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[88,30] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[89,30] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[89,30] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[107,63] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[107,63] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[108,63] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[108,63] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[109,63] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[109,63] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[110,63] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[110,63] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[111,73] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[111,73] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[112,77] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[112,77] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[113,72] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[113,72] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[114,72] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[114,72] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[115,80] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[115,80] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[116,77] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[116,77] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[117,77] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[117,77] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[118,68] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[118,68] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[120,80] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[120,80] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[121,80] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[121,80] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[122,79] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[122,79] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[123,34] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[123,34] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[124,38] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[124,38] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[157,27] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[157,27] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[204,33] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[204,33] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[232,33] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[232,33] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[251,29] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[251,29] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[273,29] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[273,29] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[353,71] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[353,71] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[361,79] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[361,79] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[372,76] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[372,76] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[391,72] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[391,72] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[399,71] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[399,71] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[421,76] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[421,76] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[546,76] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[546,76] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[590,62] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[590,62] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[612,62] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[612,62] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[623,62] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[623,62] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[634,62] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[634,62] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[645,67] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[645,67] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[684,30] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[684,30] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[131,34] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[131,34] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[132,34] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[132,34] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[133,41] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[133,41] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[134,34] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[134,34] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[137,14] [nullness:method.invocation] call to withConfig(org.cache2k.config.Cache2kConfig<K,V>) not allowed on the given receiver.
+  found   : @UnderInitialization(org.cache2k.Cache2kBuilder.class) @NonNull Cache2kBuilder</*RAW*/>
+  required: @Initialized @NonNull Cache2kBuilder</*RAW*/>
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[1017,35] [nullness:contracts.precondition.override] Subclass precondition is stronger for 'this.config' in config.
+    In superclass org.cache2k.config.ConfigBuilder: no information
+    In subclass org.cache2k.Cache2kBuilder: @Nullable
+[[1;34mINFO[m] 99 warnings 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] An exception has occurred in the compiler (11.0.22). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program and the following diagnostic in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.Error: Problem while parsing /tmp/WPITEMP-cache2k/org/cache2k/config/SectionContainer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:832)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1371)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:973)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)
+Caused by: java.lang.Error: Problem while parsing /tmp/WPITEMP-cache2k/org/cache2k/config/SectionContainer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1014)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:689)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1071)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)
+	... 8 more
+Caused by: org.checkerframework.javacutil.BugInCF: org.checkerframework.framework.stub.AnnotationFileParser.AjavaAnnotationCollectorVisitor.visitLists(import java.io.Serializable;
+,import java.util.AbstractCollection;
+,import java.util.Collection;
+,import java.util.HashMap;
+,import java.util.Iterator;
+,import java.util.Map;
+,import javax.annotation.Nullable;
+ [size 7], [import java.io.Serializable;
+, import java.util.AbstractCollection;
+, import java.util.Collection;
+, import java.util.HashMap;
+, import java.util.Iterator;
+, import java.util.Map;
+] [size 6])
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2297)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:668)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processCompilationUnit(AnnotationFileParser.java:825)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processStubUnit(AnnotationFileParser.java:790)
+	at org.checkerframework.framework.stub.AnnotationFileParser.process(AnnotationFileParser.java:779)
+	at org.checkerframework.framework.stub.AnnotationFileParser.parseAjavaFile(AnnotationFileParser.java:696)
+	at org.checkerframework.framework.stub.AnnotationFileElementTypes.parseAjavaFileWithTree(AnnotationFileElementTypes.java:286)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1012)
+	... 17 more
+Caused by: java.lang.Throwable
+	at org.checkerframework.javacutil.BugInCF.<init>(BugInCF.java:38)
+	... 27 more
+
+[[1;34mINFO[m] 1 error
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  21.006 s
+[[1;34mINFO[m] Finished at: 2025-04-11T19:17:11Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile[m [1m(java-8-compile)[m on project [36mcache2k-api[m: [1;31mCompilation failure[m
+[[1;31mERROR[m] [1;31mAn exception has occurred in the compiler (11.0.22). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program and the following diagnostic in your report. Thank you.[m
+[[1;31mERROR[m] [1;31mcom.sun.tools.javac.util.ClientCodeException: java.lang.Error: Problem while parsing /tmp/WPITEMP-cache2k/org/cache2k/config/SectionContainer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:832)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1371)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:973)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)[m
+[[1;31mERROR[m] [1;31mCaused by: java.lang.Error: Problem while parsing /tmp/WPITEMP-cache2k/org/cache2k/config/SectionContainer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/cache2k-CFNullness_pre_nullaway/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1014)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:689)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1071)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)[m
+[[1;31mERROR[m] [1;31m	... 8 more[m
+[[1;31mERROR[m] [1;31mCaused by: org.checkerframework.javacutil.BugInCF: org.checkerframework.framework.stub.AnnotationFileParser.AjavaAnnotationCollectorVisitor.visitLists(import java.io.Serializable;[m
+[[1;31mERROR[m] [1;31m,import java.util.AbstractCollection;[m
+[[1;31mERROR[m] [1;31m,import java.util.Collection;[m
+[[1;31mERROR[m] [1;31m,import java.util.HashMap;[m
+[[1;31mERROR[m] [1;31m,import java.util.Iterator;[m
+[[1;31mERROR[m] [1;31m,import java.util.Map;[m
+[[1;31mERROR[m] [1;31m,import javax.annotation.Nullable;[m
+[[1;31mERROR[m] [1;31m [size 7], [import java.io.Serializable;[m
+[[1;31mERROR[m] [1;31m, import java.util.AbstractCollection;[m
+[[1;31mERROR[m] [1;31m, import java.util.Collection;[m
+[[1;31mERROR[m] [1;31m, import java.util.HashMap;[m
+[[1;31mERROR[m] [1;31m, import java.util.Iterator;[m
+[[1;31mERROR[m] [1;31m, import java.util.Map;[m
+[[1;31mERROR[m] [1;31m] [size 6])[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2297)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:668)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:189)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.processCompilationUnit(AnnotationFileParser.java:825)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.processStubUnit(AnnotationFileParser.java:790)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.process(AnnotationFileParser.java:779)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.parseAjavaFile(AnnotationFileParser.java:696)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileElementTypes.parseAjavaFileWithTree(AnnotationFileElementTypes.java:286)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1012)[m
+[[1;31mERROR[m] [1;31m	... 17 more[m
+[[1;31mERROR[m] [1;31mCaused by: java.lang.Throwable[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.javacutil.BugInCF.<init>(BugInCF.java:38)[m
+[[1;31mERROR[m] [1;31m	... 27 more[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+==== Count Script Output ====
+
+29

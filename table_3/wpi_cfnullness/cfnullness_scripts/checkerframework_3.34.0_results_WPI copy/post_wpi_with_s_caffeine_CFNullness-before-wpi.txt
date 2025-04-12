@@ -1,0 +1,501 @@
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/base/UnsafeAccess.java:22: warning: Unsafe is internal proprietary API and may be removed in a future release
+import sun.misc.Unsafe;
+               ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/base/UnsafeAccess.java:22: warning: Unsafe is internal proprietary API and may be removed in a future release
+import sun.misc.Unsafe;
+               ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/base/UnsafeAccess.java:22: warning: Unsafe is internal proprietary API and may be removed in a future release
+import sun.misc.Unsafe;
+               ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:168: warning: (initialization.fields.uninitialized) $$ 1 $$ removalListener, statsCounterSupplier, writer, weigher, expiry, executor, ticker, keyStrength, valueStrength $$ ( 8380, 8401 ) $$ the constructor does not initialize fields: removalListener, statsCounterSupplier, writer, weigher, expiry, executor, ticker, keyStrength, valueStrength
+  private Caffeine() {}
+          ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:44: warning: (initialization.field.uninitialized) $$ 1 $$ first $$ ( 1762, 1770 ) $$ the default constructor does not initialize field first
+   E first;
+     ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:51: warning: (initialization.field.uninitialized) $$ 1 $$ last $$ ( 1901, 1908 ) $$ the default constructor does not initialize field last
+   E last;
+     ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:92: warning: (argument) $$ 4 $$ next $$ LinkedDeque.setNext $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 2702, 2706 ) $$ incompatible argument for parameter next of LinkedDeque.setNext.
+    setNext(f, null);
+               ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:96: warning: (assignment) $$ 2 $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 2765, 2769 ) $$ incompatible types in assignment.
+      last = null;
+             ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:98: warning: (argument) $$ 4 $$ prev $$ LinkedDeque.setPrevious $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 2808, 2812 ) $$ incompatible argument for parameter prev of LinkedDeque.setPrevious.
+      setPrevious(next, null);
+                        ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:108: warning: (argument) $$ 4 $$ prev $$ LinkedDeque.setPrevious $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 3011, 3015 ) $$ incompatible argument for parameter prev of LinkedDeque.setPrevious.
+    setPrevious(l, null);
+                   ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:111: warning: (assignment) $$ 2 $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 3073, 3077 ) $$ incompatible types in assignment.
+      first = null;
+              ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:113: warning: (argument) $$ 4 $$ next $$ LinkedDeque.setNext $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 3112, 3116 ) $$ incompatible argument for parameter next of LinkedDeque.setNext.
+      setNext(prev, null);
+                    ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:127: warning: (argument) $$ 4 $$ prev $$ LinkedDeque.setPrevious $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 3376, 3380 ) $$ incompatible argument for parameter prev of LinkedDeque.setPrevious.
+      setPrevious(e, null);
+                     ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:131: warning: (assignment) $$ 2 $$ E[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ E[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 3427, 3431 ) $$ incompatible types in assignment.
+      last = prev;
+             ^
+  found   : E[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: E[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:133: warning: (argument) $$ 4 $$ prev $$ LinkedDeque.setPrevious $$ E[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ E[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 3470, 3474 ) $$ incompatible argument for parameter prev of LinkedDeque.setPrevious.
+      setPrevious(next, prev);
+                        ^
+  found   : E[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: E[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:134: warning: (argument) $$ 4 $$ next $$ LinkedDeque.setNext $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 3494, 3498 ) $$ incompatible argument for parameter next of LinkedDeque.setNext.
+      setNext(e, null);
+                 ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:167: warning: (argument) $$ 4 $$ prev $$ LinkedDeque.setPrevious $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 4091, 4095 ) $$ incompatible argument for parameter prev of LinkedDeque.setPrevious.
+      setPrevious(e, null);
+                     ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:168: warning: (argument) $$ 4 $$ next $$ LinkedDeque.setNext $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 4115, 4119 ) $$ incompatible argument for parameter next of LinkedDeque.setNext.
+      setNext(e, null);
+                 ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:171: warning: (assignment) $$ 2 $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 4163, 4167 ) $$ incompatible types in assignment.
+    first = last = null;
+                   ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:244: warning: (argument) $$ 4 $$ o $$ AbstractLinkedDeque.contains $$ E extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 5251, 5252 ) $$ incompatible argument for parameter o of AbstractLinkedDeque.contains.
+    if (contains(e)) {
+                 ^
+  found   : E extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:253: warning: (argument) $$ 4 $$ o $$ AbstractLinkedDeque.contains $$ E extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 5386, 5387 ) $$ incompatible argument for parameter o of AbstractLinkedDeque.contains.
+    if (contains(e)) {
+                 ^
+  found   : E extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:286: warning: (return) $$ 2 $$ E[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ E[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 5882, 5914 ) $$ incompatible types in return.
+    return isEmpty() ? null : unlinkFirst();
+                     ^
+  type of expression: E[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: E[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:291: warning: (return) $$ 2 $$ E[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ E[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 5969, 6000 ) $$ incompatible types in return.
+    return isEmpty() ? null : unlinkLast();
+                     ^
+  type of expression: E[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: E[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:327: warning: (argument) $$ 4 $$ o $$ AbstractCollection.remove $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 6629, 6630 ) $$ incompatible argument for parameter o of AbstractCollection.remove.
+      modified |= remove(o);
+                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:371: warning: (initialization.fields.uninitialized) $$ 1 $$ previous $$ ( 7502, 7564 ) $$ the constructor does not initialize fields: previous
+    AbstractLinkedIterator( E start) {
+    ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:405: warning: (assignment) $$ 2 $$ null (NullType) $$ E extends @Initialized @Nullable Object $$ ( 8266, 8270 ) $$ incompatible types in assignment.
+      previous = null;
+                 ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/Node.java:75: warning: (type.anno.before.decl.anno) $$ 2 $$ [@NonNegative()] $$ @GuardedBy(value = "this") $$ ( 2736, 2814 ) $$ write type annotations [@NonNegative()] immediately before type, after declaration annotation @GuardedBy(value = "this")
+  public int getWeight() {
+             ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/Node.java:75: warning: (type.anno.before.modifier) $$ 2 $$ @NonNegative() $$ [public] $$ ( 2736, 2814 ) $$ write type annotation @NonNegative() immediately before type, after modifiers [public]
+  public int getWeight() {
+             ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/Node.java:75: warning: (type.anno.before.decl.anno) $$ 2 $$ [@NonNegative()] $$ @GuardedBy(value = "this") $$ ( 2736, 2814 ) $$ write type annotations [@NonNegative()] immediately before type, after declaration annotation @GuardedBy(value = "this")
+  public int getWeight() {
+             ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/Node.java:86: warning: (type.anno.before.decl.anno) $$ 2 $$ [@NonNegative()] $$ @GuardedBy(value = "evictionLock") $$ ( 3020, 3112 ) $$ write type annotations [@NonNegative()] immediately before type, after declaration annotation @GuardedBy(value = "evictionLock")
+  public int getPolicyWeight() {
+             ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/Node.java:86: warning: (type.anno.before.modifier) $$ 2 $$ @NonNegative() $$ [public] $$ ( 3020, 3112 ) $$ write type annotation @NonNegative() immediately before type, after modifiers [public]
+  public int getPolicyWeight() {
+             ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/Node.java:207: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 6506, 6510 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/Node.java:219: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 6767, 6771 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/Node.java:252: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 7663, 7667 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/Node.java:264: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 7922, 7926 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/References.java:89: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ E extends @Initialized @Nullable Object $$ E extends @Initialized @NonNull Object $$ ( 3210, 3211 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+      this.e = requireNonNull(e);
+                              ^
+  found   : E extends @Initialized @Nullable Object
+  required: E extends @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/References.java:103: warning: (override.param) $$ 7 $$ object $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull LookupKeyReference<E extends @Initialized @Nullable Object> $$ @Initialized @NonNull boolean equals(@Initialized @NonNull LookupKeyReference<E extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 3397, 3410 ) $$ Incompatible parameter type for object.
+    public boolean equals(Object object) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull LookupKeyReference<E extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull LookupKeyReference<E extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/References.java:132: warning: (override.param) $$ 7 $$ object $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull WeakKeyReference<K extends @Initialized @Nullable Object> $$ @Initialized @NonNull boolean equals(@Initialized @NonNull WeakKeyReference<K extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 4147, 4160 ) $$ Incompatible parameter type for object.
+    public boolean equals(Object object) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull WeakKeyReference<K extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull WeakKeyReference<K extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/References.java:163: warning: (override.param) $$ 7 $$ object $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull WeakValueReference<V extends @Initialized @Nullable Object> $$ @Initialized @NonNull boolean equals(@Initialized @NonNull WeakValueReference<V extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 4955, 4968 ) $$ Incompatible parameter type for object.
+    public boolean equals(Object object) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull WeakValueReference<V extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull WeakValueReference<V extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/References.java:195: warning: (override.param) $$ 7 $$ object $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull SoftValueReference<V extends @Initialized @Nullable Object> $$ @Initialized @NonNull boolean equals(@Initialized @NonNull SoftValueReference<V extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 5824, 5837 ) $$ Incompatible parameter type for object.
+    public boolean equals(Object object) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull SoftValueReference<V extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull SoftValueReference<V extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:177: warning: (initialization.fields.uninitialized) $$ 1 $$ keySet, values, entrySet $$ ( 9123, 9930 ) $$ the constructor does not initialize fields: keySet, values, entrySet
+  protected BoundedLocalCache(Caffeine<K, V> builder,
+            ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:188: warning: (method.invocation) $$ 3 $$ evicts() $$ @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/> $$ @Initialized @NonNull BoundedLocalCache</*RAW*/> $$ ( 9648, 9656 ) $$ call to evicts() not allowed on the given receiver.
+    readBuffer = evicts() || collectKeys() || collectValues() || expiresAfterAccess()
+                       ^
+  found   : @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/>
+  required: @Initialized @NonNull BoundedLocalCache</*RAW*/>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:188: warning: (method.invocation) $$ 3 $$ collectKeys() $$ @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/> $$ @Initialized @NonNull BoundedLocalCache</*RAW*/> $$ ( 9660, 9673 ) $$ call to collectKeys() not allowed on the given receiver.
+    readBuffer = evicts() || collectKeys() || collectValues() || expiresAfterAccess()
+                                        ^
+  found   : @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/>
+  required: @Initialized @NonNull BoundedLocalCache</*RAW*/>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:188: warning: (method.invocation) $$ 3 $$ collectValues() $$ @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/> $$ @Initialized @NonNull BoundedLocalCache</*RAW*/> $$ ( 9677, 9692 ) $$ call to collectValues() not allowed on the given receiver.
+    readBuffer = evicts() || collectKeys() || collectValues() || expiresAfterAccess()
+                                                           ^
+  found   : @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/>
+  required: @Initialized @NonNull BoundedLocalCache</*RAW*/>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:188: warning: (method.invocation) $$ 3 $$ expiresAfterAccess() $$ @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/> $$ @Initialized @NonNull BoundedLocalCache</*RAW*/> $$ ( 9696, 9716 ) $$ call to expiresAfterAccess() not allowed on the given receiver.
+    readBuffer = evicts() || collectKeys() || collectValues() || expiresAfterAccess()
+                                                                                   ^
+  found   : @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/>
+  required: @Initialized @NonNull BoundedLocalCache</*RAW*/>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:191: warning: (method.invocation) $$ 3 $$ evicts() $$ @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/> $$ @Initialized @NonNull BoundedLocalCache</*RAW*/> $$ ( 9798, 9806 ) $$ call to evicts() not allowed on the given receiver.
+    accessPolicy = (evicts() || expiresAfterAccess()) ? this::onAccess : e -> {};
+                          ^
+  found   : @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/>
+  required: @Initialized @NonNull BoundedLocalCache</*RAW*/>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:191: warning: (method.invocation) $$ 3 $$ expiresAfterAccess() $$ @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/> $$ @Initialized @NonNull BoundedLocalCache</*RAW*/> $$ ( 9810, 9830 ) $$ call to expiresAfterAccess() not allowed on the given receiver.
+    accessPolicy = (evicts() || expiresAfterAccess()) ? this::onAccess : e -> {};
+                                                  ^
+  found   : @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/>
+  required: @Initialized @NonNull BoundedLocalCache</*RAW*/>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:191: warning: (methodref.receiver.bound) $$ 5 $$ @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ @Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ @NonNull void onAccess(@Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> p0) $$ ( 9834, 9848 ) $$ Incompatible receiver type
+    accessPolicy = (evicts() || expiresAfterAccess()) ? this::onAccess : e -> {};
+                                                        ^
+  found   : @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+  Consequence: method
+    @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+  is not a valid method reference for method in @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+    @NonNull void onAccess(@Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> p0)
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:193: warning: (method.invocation) $$ 3 $$ evicts() $$ @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/> $$ @Initialized @NonNull BoundedLocalCache</*RAW*/> $$ ( 9869, 9877 ) $$ call to evicts() not allowed on the given receiver.
+    if (evicts()) {
+              ^
+  found   : @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/>
+  required: @Initialized @NonNull BoundedLocalCache</*RAW*/>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:194: warning: (method.invocation) $$ 3 $$ setMaximum(long) $$ @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/> $$ @Initialized @NonNull BoundedLocalCache</*RAW*/> $$ ( 9887, 9919 ) $$ call to setMaximum(long) not allowed on the given receiver.
+      setMaximum(builder.getMaximum());
+                ^
+  found   : @UnderInitialization(com.github.benmanes.caffeine.cache.BLCHeader.DrainStatusRef.class) @NonNull BoundedLocalCache</*RAW*/>
+  required: @Initialized @NonNull BoundedLocalCache</*RAW*/>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:207: warning: (argument) $$ 4 $$ future $$ Async.isReady $$ @Initialized @Nullable CompletableFuture<capture#0334 extends @Initialized @Nullable Object> $$ @Initialized @NonNull CompletableFuture<? extends @Initialized @Nullable Object> $$ ( 10311, 10349 ) $$ incompatible argument for parameter future of Async.isReady.
+    return isAsync && !Async.isReady((CompletableFuture<?>) node.getValue());
+                                     ^
+  found   : @Initialized @Nullable CompletableFuture<capture#0334 extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull CompletableFuture<? extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:271: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull RemovalListener<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 11916, 11920 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull RemovalListener<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:311: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ReferenceQueue<K extends @Initialized @Nullable Object> $$ ( 12993, 12997 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ReferenceQueue<K extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:316: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ReferenceQueue<V extends @Initialized @Nullable Object> $$ ( 13101, 13105 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ReferenceQueue<V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:375: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Expiry<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 14868, 14872 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Expiry<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:588: warning: (dereference.of.nullable) $$ 1 $$ candidate $$ ( 21909, 21918 ) $$ dereference of possibly-null reference candidate
+        Node<K, V> previous = candidate.getPreviousInAccessOrder();
+                              ^
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:784: warning: (argument) $$ 4 $$ key $$ CacheWriter.delete $$ K[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ K[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 28943, 28946 ) $$ incompatible argument for parameter key of CacheWriter.delete.
+        writer.delete(key, value[0], actualCause[0]);
+                      ^
+  found   : K[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: K[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:788: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 29042, 29046 ) $$ incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1082: warning: (argument) $$ 4 $$ task $$ BoundedLocalCache.maintenance $$ null (NullType) $$ @Initialized @NonNull Runnable $$ ( 39337, 39341 ) $$ incompatible argument for parameter task of BoundedLocalCache.maintenance.
+        maintenance(/* ignored */ null);
+                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Runnable
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1092: warning: (argument) $$ 4 $$ task $$ BoundedLocalCache.performCleanUp $$ null (NullType) $$ @Initialized @NonNull Runnable $$ ( 39495, 39499 ) $$ incompatible argument for parameter task of BoundedLocalCache.performCleanUp.
+      performCleanUp(/* ignored */ null);
+                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Runnable
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1342: warning: (argument) $$ 4 $$ future $$ Async.isReady $$ @Initialized @Nullable CompletableFuture<capture#0340 extends @Initialized @Nullable Object> $$ @Initialized @NonNull CompletableFuture<? extends @Initialized @Nullable Object> $$ ( 47096, 47134 ) $$ incompatible argument for parameter future of Async.isReady.
+          if (!Async.isReady((CompletableFuture<?>) node.getValue())) {
+                             ^
+  found   : @Initialized @Nullable CompletableFuture<capture#0340 extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull CompletableFuture<? extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1481: warning: (argument) $$ 4 $$ key $$ CacheWriter.delete $$ K[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ K[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 50791, 50794 ) $$ incompatible argument for parameter key of CacheWriter.delete.
+        writer.delete(key, value[0], cause[0]);
+                      ^
+  found   : K[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: K[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1483: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 50853, 50857 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1510: warning: (contracts.conditional.postcondition) $$ 4 $$ containsKey $$ true $$ key is @UnknownKeyFor $$ key is @KeyFor("this") $$ ( 51556, 51663 ) $$ conditional postcondition is not satisfied when containsKey returns true.
+    return (node != null) && (node.getValue() != null)
+    ^
+  found   : key is @UnknownKeyFor
+  required: key is @KeyFor("this")
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1539: warning: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 52339, 52343 ) $$ incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1549: warning: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 52614, 52618 ) $$ incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1568: warning: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 53205, 53209 ) $$ incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1578: warning: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 53448, 53451 ) $$ incompatible argument for parameter arg0 of Set.add.
+      uniqueKeys.add(key);
+                     ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1610: warning: (contracts.postcondition) $$ 3 $$ put $$ no information about key $$ key is @KeyFor("this") $$ ( 54418, 54554 ) $$ postcondition of put is not satisfied.
+  public  V put(K key, V value) {
+            ^
+  found   : no information about key
+  required: key is @KeyFor("this")
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1620: warning: (contracts.postcondition) $$ 3 $$ putIfAbsent $$ no information about key $$ key is @KeyFor("this") $$ ( 54709, 54852 ) $$ postcondition of putIfAbsent is not satisfied.
+  public  V putIfAbsent(K key, V value) {
+            ^
+  found   : no information about key
+  required: key is @KeyFor("this")
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1636: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ K extends @Initialized @Nullable Object $$ K extends @Initialized @NonNull Object $$ ( 55555, 55558 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    requireNonNull(key);
+                   ^
+  found   : K extends @Initialized @Nullable Object
+  required: K extends @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1637: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ V extends @Initialized @Nullable Object $$ V extends @Initialized @NonNull Object $$ ( 55580, 55585 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    requireNonNull(value);
+                   ^
+  found   : V extends @Initialized @Nullable Object
+  required: V extends @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1658: warning: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 56389, 56393 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1664: warning: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 56594, 56598 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1683: warning: (argument) $$ 4 $$ value $$ CacheWriter.delete $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 57083, 57087 ) $$ incompatible argument for parameter value of CacheWriter.delete.
+          writer.delete(key, null, RemovalCause.COLLECTED);
+                             ^
+  found   : null (NullType)
+  required: V extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1712: warning: (argument) $$ 4 $$ value $$ BoundedLocalCache.notifyRemoval $$ V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 58091, 58099 ) $$ incompatible argument for parameter value of BoundedLocalCache.notifyRemoval.
+          notifyRemoval(key, oldValue, RemovalCause.EXPIRED);
+                             ^
+  found   : V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1714: warning: (argument) $$ 4 $$ value $$ BoundedLocalCache.notifyRemoval $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 58207, 58211 ) $$ incompatible argument for parameter value of BoundedLocalCache.notifyRemoval.
+          notifyRemoval(key, /* oldValue */ null, RemovalCause.COLLECTED);
+                                            ^
+  found   : null (NullType)
+  required: V extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1732: warning: (return) $$ 2 $$ V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 58883, 58908 ) $$ incompatible types in return.
+      return expired ? null : oldValue;
+                     ^
+  type of expression: V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1752: warning: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 59390, 59394 ) $$ incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1775: warning: (argument) $$ 4 $$ value $$ BoundedLocalCache.notifyRemoval $$ V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 59915, 59923 ) $$ incompatible argument for parameter value of BoundedLocalCache.notifyRemoval.
+      notifyRemoval(castKey, oldValue, cause);
+                             ^
+  found   : V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1778: warning: (return) $$ 2 $$ V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 59989, 60039 ) $$ incompatible types in return.
+    return (cause == RemovalCause.EXPLICIT) ? oldValue : null;
+                                            ^
+  type of expression: V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1810: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 61048, 61052 ) $$ incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1819: warning: (return) $$ 2 $$ V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 61249, 61305 ) $$ incompatible types in return.
+    return (cause[0] == RemovalCause.EXPLICIT) ? oldValue[0] : null;
+                                               ^
+  type of expression: V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1853: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 62365, 62369 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1868: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ K extends @Initialized @Nullable Object $$ K extends @Initialized @NonNull Object $$ ( 62705, 62708 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    requireNonNull(key);
+                   ^
+  found   : K extends @Initialized @Nullable Object
+  required: K extends @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1869: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ V extends @Initialized @Nullable Object $$ V extends @Initialized @NonNull Object $$ ( 62730, 62735 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    requireNonNull(value);
+                   ^
+  found   : V extends @Initialized @Nullable Object
+  required: V extends @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1885: warning: (assignment) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 63365, 63369 ) $$ incompatible types in assignment.
+          oldValue[0] = null;
+                        ^
+  found   : null (NullType)
+  required: V extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1904: warning: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 63829, 63833 ) $$ incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1922: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ K extends @Initialized @Nullable Object $$ K extends @Initialized @NonNull Object $$ ( 64341, 64344 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    requireNonNull(key);
+                   ^
+  found   : K extends @Initialized @Nullable Object
+  required: K extends @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1923: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ V extends @Initialized @Nullable Object $$ V extends @Initialized @NonNull Object $$ ( 64366, 64374 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    requireNonNull(oldValue);
+                   ^
+  found   : V extends @Initialized @Nullable Object
+  required: V extends @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1924: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ V extends @Initialized @Nullable Object $$ V extends @Initialized @NonNull Object $$ ( 64396, 64404 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    requireNonNull(newValue);
+                   ^
+  found   : V extends @Initialized @Nullable Object
+  required: V extends @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1981: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ V extends @Initialized @Nullable Object $$ V extends @Initialized @NonNull Object $$ ( 66213, 66242 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+      V newValue = requireNonNull(function.apply(key, oldValue));
+                                                ^
+  found   : V extends @Initialized @Nullable Object
+  required: V extends @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1989: warning: (argument) $$ 4 $$ key $$ NodeFactory.newLookupKey $$ K extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 66483, 66486 ) $$ incompatible argument for parameter key of NodeFactory.newLookupKey.
+      Object lookupKey = nodeFactory.newLookupKey(key);
+                                                  ^
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:1997: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ K extends @Initialized @Nullable Object $$ K extends @Initialized @NonNull Object $$ ( 66747, 66750 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    requireNonNull(key);
+                   ^
+  found   : K extends @Initialized @Nullable Object
+  required: K extends @Initialized @NonNull Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2040: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 68356, 68360 ) $$ incompatible types in return.
+          return null;
+                 ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2067: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ ( 69283, 69287 ) $$ incompatible types in return.
+          return null;
+                 ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2085: warning: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 69796, 69800 ) $$ incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2113: warning: (override.return) $$ 6 $$ V extends @Initialized @Nullable Object $$ V extends @Initialized @PolyNull Object $$ @Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ V extends @Initialized @Nullable Object computeIfPresent(@Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, K extends @Initialized @Nullable Object p0, @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @Nullable Object> p1) $$ @Initialized @NonNull ConcurrentMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ V extends @Initialized @PolyNull Object computeIfPresent(@Initialized @NonNull ConcurrentMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, K extends @Initialized @Nullable Object p0, @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @PolyNull Object> p1) $$ ( 70569, 70570 ) $$ Incompatible return type.
+  public  V computeIfPresent(K key,
+          ^
+  found   : V extends @Initialized @Nullable Object
+  required: V extends @Initialized @PolyNull Object
+  Consequence: method in @Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+    V extends @Initialized @Nullable Object computeIfPresent(@Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, K extends @Initialized @Nullable Object p0, @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull ConcurrentMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+    V extends @Initialized @PolyNull Object computeIfPresent(@Initialized @NonNull ConcurrentMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, K extends @Initialized @Nullable Object p0, @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @PolyNull Object> p1)
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2114: warning: (override.param) $$ 7 $$ remappingFunction $$ @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @Nullable Object> $$ @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @PolyNull Object> $$ @Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ V extends @Initialized @Nullable Object computeIfPresent(@Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, K extends @Initialized @Nullable Object p0, @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @Nullable Object> p1) $$ @Initialized @NonNull ConcurrentMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> $$ V extends @Initialized @PolyNull Object computeIfPresent(@Initialized @NonNull ConcurrentMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, K extends @Initialized @Nullable Object p0, @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @PolyNull Object> p1) $$ ( 70601, 70664 ) $$ Incompatible parameter type for remappingFunction.
+      BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
+                                                    ^
+  found   : @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @PolyNull Object>
+  Consequence: method in @Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+    V extends @Initialized @Nullable Object computeIfPresent(@Initialized @NonNull BoundedLocalCache<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, K extends @Initialized @Nullable Object p0, @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull ConcurrentMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+    V extends @Initialized @PolyNull Object computeIfPresent(@Initialized @NonNull ConcurrentMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, K extends @Initialized @Nullable Object p0, @Initialized @NonNull BiFunction<? extends @Initialized @Nullable Object super K extends @Initialized @Nullable Object, ? extends @Initialized @Nullable Object super V extends @Initialized @Nullable Object, ? extends V extends @Initialized @PolyNull Object> p1)
+../dataset/post_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2115: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ K extends @Initialized @Nullable Object $$ K extends @Initialized @NonNull Object $$ ( 70687, 70690 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    requireNonNull(key);
+                   ^
+  found   : K extends @Initialized @Nullable Object
+  required: K extends @Initialized @NonNull Object
+100 warnings

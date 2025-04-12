@@ -1,0 +1,23 @@
+package de.zuellich.meal_planner.pinterest.datatypes;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**
+ * A helper POJO to handle the board result wrapped in data. Jackson configuration doesn't seem so
+ * simple...
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public class BoardRequest {
+
+    private  Board board = new Board();
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  Board getBoard( BoardRequest this) {
+        return board;
+    }
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void setBoard(Board board) {
+        this.board = board;
+    }
+}

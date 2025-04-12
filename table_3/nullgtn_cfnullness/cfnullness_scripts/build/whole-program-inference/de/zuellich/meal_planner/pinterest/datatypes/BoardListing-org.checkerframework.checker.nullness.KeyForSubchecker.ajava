@@ -1,0 +1,36 @@
+package de.zuellich.meal_planner.pinterest.datatypes;
+
+import com.google.common.collect.ImmutableList;
+import java.util.List;
+
+/**
+ * Represents the listing of a board. Includes the board with its information and the list of pins
+ * included.
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public class BoardListing {
+
+    private  Board board = new Board();
+
+    private  List<Pin> pins = ImmutableList.of();
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  Board getBoard() {
+        return this.board;
+    }
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void setBoard( BoardListing this, final  Board board) {
+        this.board = board;
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  List<Pin> getPins() {
+        return this.pins;
+    }
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void setPins( BoardListing this, final  List<Pin> pins) {
+        this.pins = pins;
+    }
+}

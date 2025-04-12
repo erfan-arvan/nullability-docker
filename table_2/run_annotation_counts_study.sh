@@ -16,7 +16,7 @@ if [[ "$1" == "fresh" ]]; then
   echo "🔄 Fresh run requested. Removing existing projects directory..."
   rm -rf "$PROJECTS_DIR"
 elif [[ -d "$PROJECTS_DIR" ]]; then
-  echo "! Projects directory already exists. If you want a clean run, use: $0 fresh"
+  echo "ℹ️  Projects directory already exists. If you want a clean run, use: $0 fresh"
   echo "✅ Existing results are in:"
   echo "   Counts: $COUNTS_DIR"
   echo "   Diffs:  $DIFFS_DIR"
@@ -124,7 +124,7 @@ for project in "${!LINKS[@]}"; do
     python3 removeAnnotations.py --remove_suppress_warnings && \
     python3 removeCommentsLinesImports.py)
 
-  # Remove test folders inside src before commit
+  # 🚫 Remove test folders inside src before commit
   find "$run_dir/src" -type d \( -iname "test" -o -iname "tests" -o -iname "testing" \) -exec rm -rf {} +
   
   git add .
@@ -141,7 +141,7 @@ for project in "${!LINKS[@]}"; do
     python3 removeAnnotations.py --remove_suppress_warnings && \
     python3 removeCommentsLinesImports.py)
 
-  # Remove test folders inside src before commit
+  # 🚫 Remove test folders inside src before commit
   find "$run_dir/src" -type d \( -iname "test" -o -iname "tests" -o -iname "testing" \) -exec rm -rf {} +
 
   git add .
@@ -155,14 +155,14 @@ for project in "${!LINKS[@]}"; do
   fi
 
   if [[ ! -d "$diff_path" ]]; then
-    echo " Directory '$diff_path' not found. Skipping diff."
+    echo "⚠️  Directory '$diff_path' not found. Skipping diff."
     cd ..
     continue
   fi
 
   diff_file="$DIFFS_DIR/${project}_diff.txt"
   git diff -w pre_check post_check -- "$diff_path/**/*.java" > "$diff_file"
-  echo " Diff saved to $diff_file"
+  echo "✅ Diff saved to $diff_file"
 
   cd ..
 done

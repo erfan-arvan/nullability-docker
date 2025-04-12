@@ -1,0 +1,145 @@
+Removed /tmp/WPITEMP-table-wrapper-csv-impl
+Created /tmp/WPITEMP-table-wrapper-csv-impl
+Checking for the first time
+------------------------
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.spacious-team:table-wrapper-csv-impl[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API CSV Implementation 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.235 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:10:40Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.spacious-team:table-wrapper-csv-impl[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API CSV Implementation 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.223 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:10:50Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+------------------------
+Removed /tmp/WPITEMP-table-wrapper-csv-impl
+Created /tmp/WPITEMP-table-wrapper-csv-impl
+entering iteration 1
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.spacious-team:table-wrapper-csv-impl[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API CSV Implementation 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.266 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:11:00Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 1 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/iteration1.diff
+entering iteration 2
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.spacious-team:table-wrapper-csv-impl[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API CSV Implementation 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.225 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:11:10Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 2 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/iteration2.diff
+entering iteration 3
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.spacious-team:table-wrapper-csv-impl[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API CSV Implementation 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.238 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:11:20Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 3 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/iteration3.diff
+entering iteration 4
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.spacious-team:table-wrapper-csv-impl[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API CSV Implementation 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.265 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:11:30Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 4 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/iteration4.diff
+entering iteration 5
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.spacious-team:table-wrapper-csv-impl[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API CSV Implementation 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.239 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:11:41Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 5 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/iteration5.diff
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.spacious-team:table-wrapper-csv-impl[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API CSV Implementation 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.309 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:11:43Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.spacious-team:table-wrapper-csv-impl[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API CSV Implementation 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-csv-impl_post/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.247 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:11:53Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+
+==== Count Script Output ====
+
+6 errors

@@ -1,0 +1,1380 @@
++ PROJECT_PATH=../dataset/post_wpi_without_s_butterknife
++ CF_BINARY=../scripts/tools/checker-framework-3.34.0/checker/bin/javac
++ COMPILED_CLASSES_FOLDER=../dataset/post_wpi_without_s_butterknife/classes
++ LIB_FOLDER=../dataset/post_wpi_without_s_butterknife/lib
++ SRC_FILES=../dataset/post_wpi_without_s_butterknife/cf_srcs.txt
++ CLASSPATH_DIR=../dataset/post_wpi_without_s_butterknife/classpath
++ echo 'CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac'
+CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac
++ unzip_jars ../dataset/post_wpi_without_s_butterknife/lib ../dataset/post_wpi_without_s_butterknife/classpath
++ local lib_folder=../dataset/post_wpi_without_s_butterknife/lib
++ local extract_to=../dataset/post_wpi_without_s_butterknife/classpath
++ '[' -d ../dataset/post_wpi_without_s_butterknife/classpath ']'
++ rm -rf ../dataset/post_wpi_without_s_butterknife/classpath
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/android.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/animal-sniffer-annotations-1.14.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/auto-common-0.10.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/auto-service-1.0-rc4.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/auto-value-annotations-1.6.2.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/butterknife-annotations-9.0.0-SNAPSHOT-javadoc.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/butterknife-annotations-9.0.0-SNAPSHOT-sources.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/butterknife-annotations-9.0.0-SNAPSHOT.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/butterknife-compiler-9.0.0-SNAPSHOT-javadoc.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/butterknife-compiler-9.0.0-SNAPSHOT-sources.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/butterknife-compiler-9.0.0-SNAPSHOT.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/butterknife-reflect-9.0.0-SNAPSHOT-javadoc.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/butterknife-reflect-9.0.0-SNAPSHOT-sources.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/butterknife-runtime-9.0.0-SNAPSHOT-javadoc.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/butterknife-runtime-9.0.0-SNAPSHOT-sources.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/checker-compat-qual-2.0.0.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/checker-compat-qual-2.5.3.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/checker-qual-2.5.3.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/classes.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/common-1.1.0.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/diffutils-1.3.0.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/error_prone_annotations-2.1.3.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/error_prone_annotations-2.3.1.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/guava-24.0-jre.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/guava-25.1-android.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/hamcrest-core-1.3.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/j2objc-annotations-1.1.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/javapoet-1.10.0.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/jsr305-1.3.9.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/jsr305-3.0.2.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/junit-4.12.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/kxml2-2.3.0.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/support-annotations-27.1.1.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/tools.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_wpi_without_s_butterknife/lib/truth-0.42.jar -d ../dataset/post_wpi_without_s_butterknife/classpath
++ find ../dataset/post_wpi_without_s_butterknife/src -name '*.java'
++ BUILD_CMD='../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_butterknife/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_butterknife/classes -cp ../dataset/post_wpi_without_s_butterknife/classpath @../dataset/post_wpi_without_s_butterknife/cf_srcs.txt'
++ CLEAN_CMD='rm -rf ../dataset/post_wpi_without_s_butterknife/classes'
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_butterknife/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_butterknife/classes -cp ../dataset/post_wpi_without_s_butterknife/classpath @../dataset/post_wpi_without_s_butterknife/cf_srcs.txt
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:17: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 629, 633 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColor", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:19: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 784, 788 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColor", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:21: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 941, 945 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColorStateList", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:24: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 1133, 1137 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColorStateList", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:46: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 1942, 1946 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+      methods = ImmutableList.of(new ResourceMethod(null, methodName, true, 1));
+                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+Note: Multiple elements named 'com.sun.tools.javac.comp.Attr' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.AttrContext' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.Env' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCAnnotation' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCFieldAccess' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCVariableDecl' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.Tag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.List' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.Name' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Flags' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Kinds' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.TypeTag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm.ByteCodes' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Symbol' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/Id.java:20: warning: (argument) $$ 4 $$ rSymbol $$ Id constructor $$ null (NullType) $$ @Initialized @NonNull Symbol $$ ( 485, 489 ) $$ incompatible argument for parameter rSymbol of Id constructor.
+    this(value, null);
+                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Symbol
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/Id.java:40: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Id $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Id this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1119, 1127 ) $$ Incompatible parameter type for o.
+  @Override public boolean equals(Object o) {
+                                         ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Id
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Id this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:33: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TypefaceStyles $$ ( 1000, 1004 ) $$ incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TypefaceStyles
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:120: warning: (initialization.field.uninitialized) $$ 1 $$ typeUtils $$ ( 4814, 4838 ) $$ the default constructor does not initialize field typeUtils
+  private Types typeUtils;
+                ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:121: warning: (initialization.field.uninitialized) $$ 1 $$ filer $$ ( 4841, 4861 ) $$ the default constructor does not initialize field filer
+  private Filer filer;
+                ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:122: warning: (initialization.field.uninitialized) $$ 1 $$ trees $$ ( 4864, 4885 ) $$ the default constructor does not initialize field trees
+  private  Trees trees;
+                 ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:163: warning: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 6146, 6175 ) $$ incompatible argument for parameter arg0 of Set.add.
+      types.add(annotation.getCanonicalName());
+                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:200: warning: (argument) $$ 4 $$ args $$ ButterKnifeProcessor.error $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 7485, 7499 ) $$ incompatible argument for parameter args of ButterKnifeProcessor.error.
+        error(typeElement, "Unable to write binding for type %s: %s", typeElement, e.getMessage());
+                                                                                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:569: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TypeMirror $$ @Initialized @NonNull TypeMirror $$ ( 22244, 22252 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    TypeName type = TypeName.get(requireNonNull(viewType));
+                                                ^
+  found   : @Initialized @Nullable TypeMirror
+  required: @Initialized @NonNull TypeMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:573: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Kind $$ @Initialized @NonNull Kind $$ ( 22485, 22489 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    builder.addFieldCollection(new FieldCollectionViewBinding(name, type, requireNonNull(kind),
+                                                                                         ^
+  found   : @Initialized @Nullable Kind
+  required: @Initialized @NonNull Kind
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:784: warning: (argument) $$ 4 $$ id $$ FieldDrawableBinding constructor $$ @Initialized @Nullable Id $$ @Initialized @NonNull Id $$ ( 31107, 31126 ) $$ incompatible argument for parameter id of FieldDrawableBinding constructor.
+    builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint),
+                                                                ^
+  found   : @Initialized @Nullable Id
+  required: @Initialized @NonNull Id
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:784: warning: (argument) $$ 4 $$ tintAttributeId $$ FieldDrawableBinding constructor $$ @Initialized @Nullable Id $$ @Initialized @NonNull Id $$ ( 31134, 31155 ) $$ incompatible argument for parameter tintAttributeId of FieldDrawableBinding constructor.
+    builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint),
+                                                                                           ^
+  found   : @Initialized @Nullable Id
+  required: @Initialized @NonNull Id
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:978: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Type $$ ( 38990, 38994 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Type
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:991: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Integer $$ ( 39329, 39333 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Integer
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1049: warning: (argument) $$ 4 $$ array $$ ButterKnifeProcessor.findDuplicate $$ @Initialized @NonNull int @Initialized @Nullable [] $$ @Initialized @NonNull int @Initialized @NonNull [] $$ ( 41997, 42000 ) $$ incompatible argument for parameter array of ButterKnifeProcessor.findDuplicate.
+    Integer duplicateId = findDuplicate(ids);
+                                        ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1096: warning: (dereference.of.nullable) $$ 1 $$ callback $$ ( 43914, 43922 ) $$ dereference of possibly-null reference callback
+      Field callbackField = callback.getDeclaringClass().getField(callback.name());
+                            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1278: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TypeElement $$ ( 51305, 51309 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TypeElement
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1361: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull AnnotationMirror $$ ( 54172, 54176 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull AnnotationMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:518: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20859, 20909 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            listener.setter(), requiresRemoval ? listenerField : callback.build());
+                                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:521: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 21009, 21059 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            requiresRemoval ? listenerField : callback.build());
+                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:538: warning: (iterating.over.nullable) $$ 1 $$ callbacks.getEnumConstants() $$ ( 21492, 21520 ) $$ iterating over possibly-null reference callbacks.getEnumConstants()
+      for (Enum<?> callbackMethod : callbacks.getEnumConstants()) {
+                                                              ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:543: warning: (dereference.of.nullable) $$ 1 $$ callbacks.getEnclosingClass() $$ ( 21819, 21848 ) $$ dereference of possibly-null reference callbacks.getEnclosingClass()
+              callbacks.getEnclosingClass().getSimpleName(), callbacks.getSimpleName(),
+                                         ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:640: warning: (argument) $$ 4 $$ arg0 $$ Map.containsKey $$ @Initialized @Nullable ListenerClass $$ @Initialized @NonNull Object $$ ( 25059, 25107 ) $$ incompatible argument for parameter arg0 of Map.containsKey.
+          .containsKey(OnTouch.class.getAnnotation(ListenerClass.class))) {
+                                                  ^
+  found   : @Initialized @Nullable ListenerClass
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:719: warning: (initialization.fields.uninitialized) $$ 1 $$ parentBinding $$ ( 27676, 28049 ) $$ the constructor does not initialize fields: parentBinding
+    private Builder(TypeName targetTypeName, ClassName bindingClassName, boolean isFinal,
+            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:761: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 29026, 29030 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:765: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 29149, 29153 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:79: warning: (initialization.fields.uninitialized) $$ 1 $$ fieldBinding $$ ( 2192, 2234 ) $$ the constructor does not initialize fields: fieldBinding
+    Builder(Id id) {
+    ^
+32 warnings
++ WPITEMPDIR=../dataset/post_wpi_without_s_butterknife/wpi-out
++ WPIOUTDIR=build/whole-program-inference
++ DEBUG=1
++ rm -rf ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/wpi-out
++ rm -f iteration1.diff iteration2.diff iteration3.diff
++ WPIITERATIONOUTPUTS=../dataset/post_wpi_without_s_butterknife/wpi-iterations
++ rm -rf ../dataset/post_wpi_without_s_butterknife/wpi-iterations
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/wpi-iterations
++ count=1
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 1'
+entering iteration 1
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_butterknife/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_butterknife/classes -cp ../dataset/post_wpi_without_s_butterknife/classpath @../dataset/post_wpi_without_s_butterknife/cf_srcs.txt
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:17: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 629, 633 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColor", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:19: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 784, 788 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColor", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:21: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 941, 945 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColorStateList", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:24: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 1133, 1137 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        new ResourceMethod(null, "getColorStateList", false, 23)),
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:46: warning: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 1942, 1946 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+      methods = ImmutableList.of(new ResourceMethod(null, methodName, true, 1));
+                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+Note: Multiple elements named 'com.sun.tools.javac.comp.Attr' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.AttrContext' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.Env' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCAnnotation' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCFieldAccess' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCVariableDecl' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.Tag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.List' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.Name' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Flags' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Kinds' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.TypeTag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm.ByteCodes' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Symbol' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/Id.java:20: warning: (argument) $$ 4 $$ rSymbol $$ Id constructor $$ null (NullType) $$ @Initialized @NonNull Symbol $$ ( 485, 489 ) $$ incompatible argument for parameter rSymbol of Id constructor.
+    this(value, null);
+                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Symbol
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/Id.java:40: warning: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Id $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Id this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1119, 1127 ) $$ Incompatible parameter type for o.
+  @Override public boolean equals(Object o) {
+                                         ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Id
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Id this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:33: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TypefaceStyles $$ ( 1000, 1004 ) $$ incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TypefaceStyles
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:120: warning: (initialization.field.uninitialized) $$ 1 $$ typeUtils $$ ( 4814, 4838 ) $$ the default constructor does not initialize field typeUtils
+  private Types typeUtils;
+                ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:121: warning: (initialization.field.uninitialized) $$ 1 $$ filer $$ ( 4841, 4861 ) $$ the default constructor does not initialize field filer
+  private Filer filer;
+                ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:122: warning: (initialization.field.uninitialized) $$ 1 $$ trees $$ ( 4864, 4885 ) $$ the default constructor does not initialize field trees
+  private  Trees trees;
+                 ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:163: warning: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 6146, 6175 ) $$ incompatible argument for parameter arg0 of Set.add.
+      types.add(annotation.getCanonicalName());
+                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:200: warning: (argument) $$ 4 $$ args $$ ButterKnifeProcessor.error $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 7485, 7499 ) $$ incompatible argument for parameter args of ButterKnifeProcessor.error.
+        error(typeElement, "Unable to write binding for type %s: %s", typeElement, e.getMessage());
+                                                                                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:569: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TypeMirror $$ @Initialized @NonNull TypeMirror $$ ( 22244, 22252 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    TypeName type = TypeName.get(requireNonNull(viewType));
+                                                ^
+  found   : @Initialized @Nullable TypeMirror
+  required: @Initialized @NonNull TypeMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:573: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Kind $$ @Initialized @NonNull Kind $$ ( 22485, 22489 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    builder.addFieldCollection(new FieldCollectionViewBinding(name, type, requireNonNull(kind),
+                                                                                         ^
+  found   : @Initialized @Nullable Kind
+  required: @Initialized @NonNull Kind
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:784: warning: (argument) $$ 4 $$ id $$ FieldDrawableBinding constructor $$ @Initialized @Nullable Id $$ @Initialized @NonNull Id $$ ( 31107, 31126 ) $$ incompatible argument for parameter id of FieldDrawableBinding constructor.
+    builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint),
+                                                                ^
+  found   : @Initialized @Nullable Id
+  required: @Initialized @NonNull Id
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:784: warning: (argument) $$ 4 $$ tintAttributeId $$ FieldDrawableBinding constructor $$ @Initialized @Nullable Id $$ @Initialized @NonNull Id $$ ( 31134, 31155 ) $$ incompatible argument for parameter tintAttributeId of FieldDrawableBinding constructor.
+    builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint),
+                                                                                           ^
+  found   : @Initialized @Nullable Id
+  required: @Initialized @NonNull Id
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:978: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Type $$ ( 38990, 38994 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Type
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:991: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Integer $$ ( 39329, 39333 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Integer
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1049: warning: (argument) $$ 4 $$ array $$ ButterKnifeProcessor.findDuplicate $$ @Initialized @NonNull int @Initialized @Nullable [] $$ @Initialized @NonNull int @Initialized @NonNull [] $$ ( 41997, 42000 ) $$ incompatible argument for parameter array of ButterKnifeProcessor.findDuplicate.
+    Integer duplicateId = findDuplicate(ids);
+                                        ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1096: warning: (dereference.of.nullable) $$ 1 $$ callback $$ ( 43914, 43922 ) $$ dereference of possibly-null reference callback
+      Field callbackField = callback.getDeclaringClass().getField(callback.name());
+                            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1278: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TypeElement $$ ( 51305, 51309 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TypeElement
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1361: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull AnnotationMirror $$ ( 54172, 54176 ) $$ incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull AnnotationMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:518: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20859, 20909 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            listener.setter(), requiresRemoval ? listenerField : callback.build());
+                                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:521: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 21009, 21059 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            requiresRemoval ? listenerField : callback.build());
+                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:538: warning: (iterating.over.nullable) $$ 1 $$ callbacks.getEnumConstants() $$ ( 21492, 21520 ) $$ iterating over possibly-null reference callbacks.getEnumConstants()
+      for (Enum<?> callbackMethod : callbacks.getEnumConstants()) {
+                                                              ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:543: warning: (dereference.of.nullable) $$ 1 $$ callbacks.getEnclosingClass() $$ ( 21819, 21848 ) $$ dereference of possibly-null reference callbacks.getEnclosingClass()
+              callbacks.getEnclosingClass().getSimpleName(), callbacks.getSimpleName(),
+                                         ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:640: warning: (argument) $$ 4 $$ arg0 $$ Map.containsKey $$ @Initialized @Nullable ListenerClass $$ @Initialized @NonNull Object $$ ( 25059, 25107 ) $$ incompatible argument for parameter arg0 of Map.containsKey.
+          .containsKey(OnTouch.class.getAnnotation(ListenerClass.class))) {
+                                                  ^
+  found   : @Initialized @Nullable ListenerClass
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:719: warning: (initialization.fields.uninitialized) $$ 1 $$ parentBinding $$ ( 27676, 28049 ) $$ the constructor does not initialize fields: parentBinding
+    private Builder(TypeName targetTypeName, ClassName bindingClassName, boolean isFinal,
+            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:761: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 29026, 29030 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:765: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 29149, 29153 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:79: warning: (initialization.fields.uninitialized) $$ 1 $$ fieldBinding $$ ( 2192, 2234 ) $$ the constructor does not initialize fields: fieldBinding
+    Builder(Id id) {
+    ^
+32 warnings
++ rm -rf ../dataset/post_wpi_without_s_butterknife/classes
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out build/whole-program-inference
+++ true
++ DIFF_RESULT='Only in build/whole-program-inference: butterknife
+Only in build/whole-program-inference: com
+Only in build/whole-program-inference: org'
++ [[ 1 == 1 ]]
+++ realpath iteration1.diff
+realpath: iteration1.diff: No such file or directory
++ echo 'putting the diff for iteration 1 into '
+putting the diff for iteration 1 into 
++ echo Only in build/whole-program-inference: butterknife Only in build/whole-program-inference: com Only in build/whole-program-inference: org
++ [[ Only in build/whole-program-inference: butterknife
+Only in build/whole-program-inference: com
+Only in build/whole-program-inference: org != '' ]]
++ rm -rf ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mv build/whole-program-inference ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/wpi-iterations/iteration1
++ cp -rf ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife ../dataset/post_wpi_without_s_butterknife/wpi-out/com ../dataset/post_wpi_without_s_butterknife/wpi-out/org ../dataset/post_wpi_without_s_butterknife/wpi-iterations/iteration1
++ echo 'ending iteration 1, time taken: 6 seconds'
+ending iteration 1, time taken: 6 seconds
++ echo
+
++ (( count++ ))
++ '[' 2 -eq 11 ']'
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 2'
+entering iteration 2
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_butterknife/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_butterknife/classes -cp ../dataset/post_wpi_without_s_butterknife/classpath @../dataset/post_wpi_without_s_butterknife/cf_srcs.txt
+Note: Multiple elements named 'com.sun.tools.javac.code.Symbol' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Imported type not found: com.sun.tools.javac.code.Symbol
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Imported type not found: com.sun.tools.javac.tree.JCTree
+Note: Multiple elements named 'com.sun.tools.javac.tree.TreeScanner' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Imported type not found: com.sun.tools.javac.tree.TreeScanner
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/base/UnsafeAccess-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Package not found: com.github.benmanes.caffeine.base
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/base/UnsafeAccess-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Type not found: com.github.benmanes.caffeine.base.UnsafeAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/AbstractLinkedDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Package not found: com.github.benmanes.caffeine.cache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/AbstractLinkedDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Type not found: com.github.benmanes.caffeine.cache.AbstractLinkedDeque
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/AccessOrderDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Imported type not found: com.github.benmanes.caffeine.cache.AccessOrderDeque.AccessOrder
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/AccessOrderDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: com.github.benmanes.caffeine.cache.AccessOrderDeque
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Async-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Type not found: com.github.benmanes.caffeine.cache.Async
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/AsyncCacheLoader-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 40,col 1): Type not found: com.github.benmanes.caffeine.cache.AsyncCacheLoader
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/AsyncLoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Type not found: com.github.benmanes.caffeine.cache.AsyncLoadingCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field OFFSET not found: com.github.benmanes.caffeine.cache.BoundedBuffer
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Imported type not found: com.github.benmanes.caffeine.base.UnsafeAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 29,col 1): Type not found: com.github.benmanes.caffeine.cache.BoundedBuffer
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 130,col 1): Type not found: com.github.benmanes.caffeine.cache.BBHeader
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field requireArgument not found: com.github.benmanes.caffeine.cache.Caffeine
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 19,col 1): Enclosing type of static field requireState not found: com.github.benmanes.caffeine.cache.Caffeine
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Enclosing type of static field EDEN not found: com.github.benmanes.caffeine.cache.Node
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Enclosing type of static field PROBATION not found: com.github.benmanes.caffeine.cache.Node
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Enclosing type of static field PROTECTED not found: com.github.benmanes.caffeine.cache.Node
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 69,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Async.AsyncExpiry
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 70,col 1): Imported type not found: com.github.benmanes.caffeine.cache.LinkedDeque.PeekingIterator
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 71,col 1): Imported type not found: com.github.benmanes.caffeine.cache.References.InternalReference
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 72,col 1): Imported type not found: com.github.benmanes.caffeine.cache.stats.StatsCounter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 86,col 1): Type not found: com.github.benmanes.caffeine.cache.BoundedLocalCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 3623,col 1): Type not found: com.github.benmanes.caffeine.cache.BLCHeader
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Buffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 33,col 1): Type not found: com.github.benmanes.caffeine.cache.Buffer
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Buffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 97,col 1): Type not found: com.github.benmanes.caffeine.cache.DisabledBuffer
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Cache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 25,col 1): Imported type not found: com.github.benmanes.caffeine.cache.stats.CacheStats
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Cache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Type not found: com.github.benmanes.caffeine.cache.Cache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/CacheLoader-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 42,col 1): Type not found: com.github.benmanes.caffeine.cache.CacheLoader
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/CacheWriter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 33,col 1): Type not found: com.github.benmanes.caffeine.cache.CacheWriter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/CacheWriter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 74,col 1): Type not found: com.github.benmanes.caffeine.cache.DisabledWriter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Async.AsyncRemovalListener
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Async.AsyncWeigher
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 40,col 1): Imported type not found: com.github.benmanes.caffeine.cache.stats.ConcurrentStatsCounter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 126,col 1): Type not found: com.github.benmanes.caffeine.cache.Caffeine
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/CaffeineSpec-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field UNSET_INT not found: com.github.benmanes.caffeine.cache.Caffeine
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/CaffeineSpec-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 25,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Caffeine.Strength
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/CaffeineSpec-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 67,col 1): Type not found: com.github.benmanes.caffeine.cache.CaffeineSpec
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Expiry-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: com.github.benmanes.caffeine.cache.Expiry
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/FrequencySketch-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Type not found: com.github.benmanes.caffeine.cache.FrequencySketch
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/LinkedDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 46,col 1): Type not found: com.github.benmanes.caffeine.cache.LinkedDeque
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/LoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 35,col 1): Type not found: com.github.benmanes.caffeine.cache.LoadingCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/LocalAsyncLoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 53,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalAsyncLoadingCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/LocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 34,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/LocalLoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalLoadingCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/LocalManualCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalManualCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Enclosing type of static field UNSAFE not found: com.github.benmanes.caffeine.base.UnsafeAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 17,col 1): Enclosing type of static field ceilingPowerOfTwo not found: com.github.benmanes.caffeine.cache.BoundedLocalCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field REF_ARRAY_BASE not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 19,col 1): Enclosing type of static field REF_ELEMENT_SHIFT not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Enclosing type of static field lvElement not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Enclosing type of static field soElement not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Type not found: com.github.benmanes.caffeine.cache.MpscGrowableArrayQueue
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 68,col 1): Type not found: com.github.benmanes.caffeine.cache.MpscChunkedArrayQueue
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 101,col 1): Type not found: com.github.benmanes.caffeine.cache.MpscChunkedArrayQueueColdProducerFields
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 119,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueuePad1
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 127,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueProducerFields
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 133,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueuePad2
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 141,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueConsumerFields
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 151,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueuePad3
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 159,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueColdProducerFields
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 169,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueue
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 624,col 1): Type not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Node-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 24,col 1): Imported type not found: com.github.benmanes.caffeine.cache.WriteOrderDeque.WriteOrder
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Node-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Type not found: com.github.benmanes.caffeine.cache.Node
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Policy-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 34,col 1): Type not found: com.github.benmanes.caffeine.cache.Policy
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/References-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Type not found: com.github.benmanes.caffeine.cache.References
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/RemovalCause-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Type not found: com.github.benmanes.caffeine.cache.RemovalCause
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/RemovalListener-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Type not found: com.github.benmanes.caffeine.cache.RemovalListener
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/SerializationProxy-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: com.github.benmanes.caffeine.cache.SerializationProxy
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/StripedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Type not found: com.github.benmanes.caffeine.cache.StripedBuffer
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Ticker-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 27,col 1): Type not found: com.github.benmanes.caffeine.cache.Ticker
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Ticker-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 59,col 1): Type not found: com.github.benmanes.caffeine.cache.SystemTicker
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Ticker-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 69,col 1): Type not found: com.github.benmanes.caffeine.cache.DisabledTicker
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/TimerWheel-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Type not found: com.github.benmanes.caffeine.cache.TimerWheel
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/UnboundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 51,col 1): Type not found: com.github.benmanes.caffeine.cache.UnboundedLocalCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Weigher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Type not found: com.github.benmanes.caffeine.cache.Weigher
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Weigher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 73,col 1): Type not found: com.github.benmanes.caffeine.cache.SingletonWeigher
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/Weigher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 83,col 1): Type not found: com.github.benmanes.caffeine.cache.BoundedWeigher
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/WriteOrderDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: com.github.benmanes.caffeine.cache.WriteOrderDeque
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/WriteThroughEntry-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 27,col 1): Type not found: com.github.benmanes.caffeine.cache.WriteThroughEntry
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Cache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Imported type not found: com.github.benmanes.caffeine.cache.LoadingCache
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Package not found: com.github.benmanes.caffeine.cache.stats
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 57,col 1): Type not found: com.github.benmanes.caffeine.cache.stats.CacheStats
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/stats/GuardedStatsCounter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: com.github.benmanes.caffeine.cache.stats.GuardedStatsCounter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/com/github/benmanes/caffeine/cache/stats/StatsCounter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 29,col 1): Type not found: com.github.benmanes.caffeine.cache.stats.StatsCounter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/org/spacious_team/table_wrapper/csv/CloseIgnoringInputStream-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Package not found: org.spacious_team.table_wrapper.csv
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/org/spacious_team/table_wrapper/csv/CloseIgnoringInputStream-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Type not found: org.spacious_team.table_wrapper.csv.CloseIgnoringInputStream
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Imported type not found: org.spacious_team.table_wrapper.api.CellDataAccessObject
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Imported type not found: org.spacious_team.table_wrapper.api.InstantParser
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Imported type not found: com.univocity.parsers.csv.CsvParser
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Imported type not found: com.univocity.parsers.csv.CsvParserSettings
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 24,col 1): Imported type not found: org.spacious_team.table_wrapper.api.AbstractReportPage
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 25,col 1): Imported type not found: org.spacious_team.table_wrapper.api.TableCellAddress
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Type not found: org.spacious_team.table_wrapper.csv.CsvReportPage
+Note: Multiple elements named 'com.sun.tools.javac.comp.Attr' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.AttrContext' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.Env' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCAnnotation' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCFieldAccess' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCVariableDecl' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.Tag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.List' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.Name' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Flags' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Kinds' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.TypeTag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm.ByteCodes' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+100 warnings
++ rm -rf ../dataset/post_wpi_without_s_butterknife/classes
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out build/whole-program-inference
+++ true
++ DIFF_RESULT='diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+555c555
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+578c578
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+598c598
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+721c721
+<         @org.checkerframework.dataflow.qual.Impure
+---
+>         @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava
+95c95
+<     private BindingSet(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TypeName targetTypeName, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassName bindingClassName,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isFinal,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isView,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isActivity,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isDialog, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<ViewBinding> viewBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<FieldCollectionViewBinding> collectionBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<ResourceBinding> resourceBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BindingSet parentBinding) {
+---
+>     private BindingSet(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TypeName targetTypeName, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassName bindingClassName,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isFinal,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isView,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isActivity,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isDialog, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<ViewBinding> viewBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<FieldCollectionViewBinding> collectionBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<ResourceBinding> resourceBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable BindingSet parentBinding) {
+555c555
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+578c578
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+598c598
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+721c721
+<         @org.checkerframework.dataflow.qual.Impure
+---
+>         @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.NullnessChecker.ajava
+1143c1143
+<     private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<Integer, Id> elementToIds(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Element element, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<? extends Annotation> annotation,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull [] values) {
+---
+>     private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<Integer, Id> elementToIds(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Element element, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<? extends Annotation> annotation,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable [] values) {
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+12c12
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull Id id;
+16c16
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id tintAttributeId;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull Id tintAttributeId;
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+102c102
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+62c62
+<         final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassName typeName;
+---
+>         final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull ClassName typeName;
+102c102
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+50c50
+<     FieldTypefaceBinding(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String name, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TypefaceStyles style,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean useAndroidX) {
+---
+>     FieldTypefaceBinding(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String name, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable TypefaceStyles style,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean useAndroidX) {
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+14c14
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+14c14
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+67c67
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+23c23
+<     ViewBinding(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<ListenerClass, Map<ListenerMethod, Set<MethodViewBinding>>> methodBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldViewBinding fieldBinding) {
+---
+>     ViewBinding(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<ListenerClass, Map<ListenerMethod, Set<MethodViewBinding>>> methodBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable FieldViewBinding fieldBinding) {
+67c67
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+Only in ../dataset/post_wpi_without_s_butterknife/wpi-out: com
+Only in ../dataset/post_wpi_without_s_butterknife/wpi-out: org'
++ [[ 1 == 1 ]]
+++ realpath iteration2.diff
+realpath: iteration2.diff: No such file or directory
++ echo 'putting the diff for iteration 2 into '
+putting the diff for iteration 2 into 
++ echo diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 555c555 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 578c578 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 598c598 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 721c721 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava 95c95 '<' private 'BindingSet(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull TypeName targetTypeName, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassName bindingClassName, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isFinal, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isView, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isActivity, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isDialog, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'ImmutableList<ViewBinding>' viewBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'ImmutableList<FieldCollectionViewBinding>' collectionBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'ImmutableList<ResourceBinding>' resourceBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BindingSet 'parentBinding)' '{' --- '>' private 'BindingSet(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull TypeName targetTypeName, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassName bindingClassName, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isFinal, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isView, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isActivity, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isDialog, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'ImmutableList<ViewBinding>' viewBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'ImmutableList<FieldCollectionViewBinding>' collectionBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'ImmutableList<ResourceBinding>' resourceBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable BindingSet 'parentBinding)' '{' 555c555 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 578c578 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 598c598 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 721c721 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.NullnessChecker.ajava 1143c1143 '<' private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'Map<Integer,' 'Id>' 'elementToIds(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull Element element, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'Class<?' extends 'Annotation>' annotation, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull '[]' 'values)' '{' --- '>' private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'Map<Integer,' 'Id>' 'elementToIds(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull Element element, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'Class<?' extends 'Annotation>' annotation, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable '[]' 'values)' '{' diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava 12c12 '<' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id 'id;' --- '>' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull Id 'id;' 16c16 '<' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id 'tintAttributeId;' --- '>' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull Id 'tintAttributeId;' diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 102c102 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava 62c62 '<' final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassName 'typeName;' --- '>' final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull ClassName 'typeName;' 102c102 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava 50c50 '<' 'FieldTypefaceBinding(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String name, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TypefaceStyles style, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean 'useAndroidX)' '{' --- '>' 'FieldTypefaceBinding(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String name, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable TypefaceStyles style, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean 'useAndroidX)' '{' diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 14c14 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava 14c14 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 67c67 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava 23c23 '<' 'ViewBinding(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'Map<ListenerClass,' 'Map<ListenerMethod,' 'Set<MethodViewBinding>>>' methodBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldViewBinding 'fieldBinding)' '{' --- '>' 'ViewBinding(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'Map<ListenerClass,' 'Map<ListenerMethod,' 'Set<MethodViewBinding>>>' methodBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable FieldViewBinding 'fieldBinding)' '{' 67c67 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure Only in ../dataset/post_wpi_without_s_butterknife/wpi-out: com Only in ../dataset/post_wpi_without_s_butterknife/wpi-out: org
++ [[ diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+555c555
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+578c578
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+598c598
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+721c721
+<         @org.checkerframework.dataflow.qual.Impure
+---
+>         @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava
+95c95
+<     private BindingSet(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TypeName targetTypeName, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassName bindingClassName,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isFinal,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isView,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isActivity,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isDialog, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<ViewBinding> viewBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<FieldCollectionViewBinding> collectionBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<ResourceBinding> resourceBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BindingSet parentBinding) {
+---
+>     private BindingSet(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TypeName targetTypeName, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassName bindingClassName,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isFinal,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isView,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isActivity,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isDialog, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<ViewBinding> viewBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<FieldCollectionViewBinding> collectionBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ImmutableList<ResourceBinding> resourceBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable BindingSet parentBinding) {
+555c555
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+578c578
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+598c598
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+721c721
+<         @org.checkerframework.dataflow.qual.Impure
+---
+>         @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.NullnessChecker.ajava
+1143c1143
+<     private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<Integer, Id> elementToIds(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Element element, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<? extends Annotation> annotation,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull [] values) {
+---
+>     private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<Integer, Id> elementToIds(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Element element, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<? extends Annotation> annotation,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable [] values) {
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+12c12
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull Id id;
+16c16
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id tintAttributeId;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull Id tintAttributeId;
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+102c102
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+62c62
+<         final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassName typeName;
+---
+>         final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull ClassName typeName;
+102c102
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+50c50
+<     FieldTypefaceBinding(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String name, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TypefaceStyles style,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean useAndroidX) {
+---
+>     FieldTypefaceBinding(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String name, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable TypefaceStyles style,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean useAndroidX) {
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+14c14
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+14c14
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+67c67
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+23c23
+<     ViewBinding(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<ListenerClass, Map<ListenerMethod, Set<MethodViewBinding>>> methodBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldViewBinding fieldBinding) {
+---
+>     ViewBinding(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<ListenerClass, Map<ListenerMethod, Set<MethodViewBinding>>> methodBindings, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable FieldViewBinding fieldBinding) {
+67c67
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+Only in ../dataset/post_wpi_without_s_butterknife/wpi-out: com
+Only in ../dataset/post_wpi_without_s_butterknife/wpi-out: org != '' ]]
++ rm -rf ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mv build/whole-program-inference ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/wpi-iterations/iteration2
++ cp -rf ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife ../dataset/post_wpi_without_s_butterknife/wpi-iterations/iteration2
++ echo 'ending iteration 2, time taken: 7 seconds'
+ending iteration 2, time taken: 7 seconds
++ echo
+
++ (( count++ ))
++ '[' 3 -eq 11 ']'
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 3'
+entering iteration 3
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_butterknife/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_butterknife/classes -cp ../dataset/post_wpi_without_s_butterknife/classpath @../dataset/post_wpi_without_s_butterknife/cf_srcs.txt
+Note: Multiple elements named 'com.sun.tools.javac.code.Symbol' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Imported type not found: com.sun.tools.javac.code.Symbol
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Imported type not found: com.sun.tools.javac.tree.JCTree
+Note: Multiple elements named 'com.sun.tools.javac.tree.TreeScanner' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Imported type not found: com.sun.tools.javac.tree.TreeScanner
+Note: Multiple elements named 'com.sun.tools.javac.comp.Attr' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.AttrContext' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.Env' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCAnnotation' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCFieldAccess' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCVariableDecl' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.Tag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.List' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.Name' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Flags' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Kinds' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.TypeTag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm.ByteCodes' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:45: warning: (assignment) $$ 2 $$ @Initialized @Nullable TypefaceStyles $$ @Initialized @NonNull TypefaceStyles $$ ( 1290, 1295 ) $$ incompatible types in assignment.
+    this.style = style;
+                 ^
+  found   : @Initialized @Nullable TypefaceStyles
+  required: @Initialized @NonNull TypefaceStyles
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:163: warning: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 6146, 6175 ) $$ incompatible argument for parameter arg0 of Set.add.
+      types.add(annotation.getCanonicalName());
+                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:198: warning: (argument) $$ 4 $$ filer $$ JavaFile.writeTo $$ @Initialized @MonotonicNonNull Filer $$ @Initialized @NonNull Filer $$ ( 7362, 7367 ) $$ incompatible argument for parameter filer of JavaFile.writeTo.
+        javaFile.writeTo(filer);
+                         ^
+  found   : @Initialized @MonotonicNonNull Filer
+  required: @Initialized @NonNull Filer
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:569: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TypeMirror $$ @Initialized @NonNull TypeMirror $$ ( 22244, 22252 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    TypeName type = TypeName.get(requireNonNull(viewType));
+                                                ^
+  found   : @Initialized @Nullable TypeMirror
+  required: @Initialized @NonNull TypeMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:573: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Kind $$ @Initialized @NonNull Kind $$ ( 22485, 22489 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    builder.addFieldCollection(new FieldCollectionViewBinding(name, type, requireNonNull(kind),
+                                                                                         ^
+  found   : @Initialized @Nullable Kind
+  required: @Initialized @NonNull Kind
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:953: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Type $$ @Initialized @NonNull Type $$ ( 37986, 37990 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    builder.addResource(new FieldResourceBinding(resourceId, name, requireNonNull(type)));
+                                                                                  ^
+  found   : @Initialized @Nullable Type
+  required: @Initialized @NonNull Type
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:985: warning: (iterating.over.nullable) $$ 1 $$ array $$ ( 39230, 39235 ) $$ iterating over possibly-null reference array
+    for (int element : array) {
+                       ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:996: warning: (dereference.of.nullable) $$ 1 $$ typeUtils $$ ( 39508, 39517 ) $$ dereference of possibly-null reference typeUtils
+    String name = typeUtils.erasure(elementType).toString();
+                  ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1064: warning: (iterating.over.nullable) $$ 1 $$ ids $$ ( 42586, 42589 ) $$ iterating over possibly-null reference ids
+    for (int id : ids) {
+                  ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1066: warning: (dereference.of.nullable) $$ 1 $$ ids $$ ( 42636, 42639 ) $$ dereference of possibly-null reference ids
+        if (ids.length == 1) {
+            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1096: warning: (dereference.of.nullable) $$ 1 $$ callback $$ ( 43914, 43922 ) $$ dereference of possibly-null reference callback
+      Field callbackField = callback.getDeclaringClass().getField(callback.name());
+                            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1308: warning: (dereference.of.nullable) $$ 1 $$ trees $$ ( 52216, 52221 ) $$ dereference of possibly-null reference trees
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                           ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1308: warning: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 52239, 52269 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                           ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1322: warning: (dereference.of.nullable) $$ 1 $$ trees $$ ( 52779, 52784 ) $$ dereference of possibly-null reference trees
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                           ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1322: warning: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 52802, 52832 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                           ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1330: warning: (iterating.over.nullable) $$ 1 $$ values $$ ( 53101, 53107 ) $$ iterating over possibly-null reference values
+    for (int value : values) {
+                     ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:90: warning: (assignment) $$ 2 $$ @Initialized @Nullable BindingSet $$ @Initialized @NonNull BindingSet $$ ( 4257, 4270 ) $$ incompatible types in assignment.
+    this.parentBinding = parentBinding;
+                         ^
+  found   : @Initialized @Nullable BindingSet
+  required: @Initialized @NonNull BindingSet
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:518: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20859, 20909 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            listener.setter(), requiresRemoval ? listenerField : callback.build());
+                                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:521: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 21009, 21059 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            requiresRemoval ? listenerField : callback.build());
+                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:538: warning: (iterating.over.nullable) $$ 1 $$ callbacks.getEnumConstants() $$ ( 21492, 21520 ) $$ iterating over possibly-null reference callbacks.getEnumConstants()
+      for (Enum<?> callbackMethod : callbacks.getEnumConstants()) {
+                                                              ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:543: warning: (dereference.of.nullable) $$ 1 $$ callbacks.getEnclosingClass() $$ ( 21819, 21848 ) $$ dereference of possibly-null reference callbacks.getEnclosingClass()
+              callbacks.getEnclosingClass().getSimpleName(), callbacks.getSimpleName(),
+                                         ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:640: warning: (argument) $$ 4 $$ arg0 $$ Map.containsKey $$ @Initialized @Nullable ListenerClass $$ @Initialized @NonNull Object $$ ( 25059, 25107 ) $$ incompatible argument for parameter arg0 of Map.containsKey.
+          .containsKey(OnTouch.class.getAnnotation(ListenerClass.class))) {
+                                                  ^
+  found   : @Initialized @Nullable ListenerClass
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:22: warning: (assignment) $$ 2 $$ @Initialized @Nullable FieldViewBinding $$ @Initialized @NonNull FieldViewBinding $$ ( 731, 743 ) $$ incompatible types in assignment.
+    this.fieldBinding = fieldBinding;
+                        ^
+  found   : @Initialized @Nullable FieldViewBinding
+  required: @Initialized @NonNull FieldViewBinding
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:24: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull Id $$ @Initialized @NonNull Id $$ ( 748, 750 ) $$ incompatible types in return.
+    return id;
+           ^
+  type of expression: @Initialized @MonotonicNonNull Id
+  method return type: @Initialized @NonNull Id
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:32: warning: (dereference.of.nullable) $$ 1 $$ tintAttributeId $$ ( 891, 906 ) $$ dereference of possibly-null reference tintAttributeId
+    if (tintAttributeId.value != NO_RES_ID) {
+        ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:33: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1021, 1023 ) $$ dereference of possibly-null reference id
+      return CodeBlock.of("target.$L = $T.getTintedDrawable(context, $L, $L)", name, UTILS, id.code,
+                                                                                            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:37: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1161, 1163 ) $$ dereference of possibly-null reference id
+      return CodeBlock.of("target.$L = context.getDrawable($L)", name, id.code);
+                                                                       ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:40: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1311, 1313 ) $$ dereference of possibly-null reference id
+        androidX ? CONTEXT_COMPAT_ANDROIDX : CONTEXT_COMPAT, id.code);
+                                                             ^
+31 warnings
++ rm -rf ../dataset/post_wpi_without_s_butterknife/classes
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out build/whole-program-inference
+++ true
++ DIFF_RESULT='diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+568c568
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+608c608
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+613c613
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava
+92c92
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BindingSet parentBinding;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull BindingSet parentBinding;
+568c568
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+608c608
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+613c613
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+29c29
+<     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldDrawableBinding this) {
+---
+>     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Id id(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldDrawableBinding this) {
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+45c45
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TypefaceStyles style;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull TypefaceStyles style;
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+9c9
+<     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id();
+---
+>     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Id id();
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+20c20
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldViewBinding fieldBinding;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull FieldViewBinding fieldBinding;'
++ [[ 1 == 1 ]]
+++ realpath iteration3.diff
+realpath: iteration3.diff: No such file or directory
++ echo 'putting the diff for iteration 3 into '
+putting the diff for iteration 3 into 
++ echo diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 568c568 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 608c608 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 613c613 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava 92c92 '<' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BindingSet 'parentBinding;' --- '>' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull BindingSet 'parentBinding;' 568c568 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 608c608 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 613c613 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava 29c29 '<' public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id 'id(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull FieldDrawableBinding 'this)' '{' --- '>' public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Id 'id(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull FieldDrawableBinding 'this)' '{' diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava 45c45 '<' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TypefaceStyles 'style;' --- '>' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull TypefaceStyles 'style;' diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava 9c9 '<' @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id 'id();' --- '>' @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Id 'id();' diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava 20c20 '<' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldViewBinding 'fieldBinding;' --- '>' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull FieldViewBinding 'fieldBinding;'
++ [[ diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+568c568
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+608c608
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+613c613
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.NullnessChecker.ajava
+92c92
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BindingSet parentBinding;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull BindingSet parentBinding;
+568c568
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+608c608
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+613c613
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+29c29
+<     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldDrawableBinding this) {
+---
+>     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Id id(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldDrawableBinding this) {
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+45c45
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TypefaceStyles style;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull TypefaceStyles style;
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+9c9
+<     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Id id();
+---
+>     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Id id();
+diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+20c20
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldViewBinding fieldBinding;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull FieldViewBinding fieldBinding; != '' ]]
++ rm -rf ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mv build/whole-program-inference ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/wpi-iterations/iteration3
++ cp -rf ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife ../dataset/post_wpi_without_s_butterknife/wpi-iterations/iteration3
++ echo 'ending iteration 3, time taken: 7 seconds'
+ending iteration 3, time taken: 7 seconds
++ echo
+
++ (( count++ ))
++ '[' 4 -eq 11 ']'
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 4'
+entering iteration 4
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_butterknife/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_butterknife/classes -cp ../dataset/post_wpi_without_s_butterknife/classpath @../dataset/post_wpi_without_s_butterknife/cf_srcs.txt
+Note: Multiple elements named 'com.sun.tools.javac.code.Symbol' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Imported type not found: com.sun.tools.javac.code.Symbol
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Imported type not found: com.sun.tools.javac.tree.JCTree
+Note: Multiple elements named 'com.sun.tools.javac.tree.TreeScanner' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Imported type not found: com.sun.tools.javac.tree.TreeScanner
+Note: Multiple elements named 'com.sun.tools.javac.comp.Attr' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.AttrContext' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.Env' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCAnnotation' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCFieldAccess' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCVariableDecl' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.Tag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.List' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.Name' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Flags' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Kinds' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.TypeTag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm.ByteCodes' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:63: warning: (argument) $$ 4 $$ args $$ CodeBlock.of $$ @Initialized @MonotonicNonNull TypefaceStyles $$ @Initialized @NonNull Object $$ ( 1855, 1860 ) $$ incompatible argument for parameter args of CodeBlock.of.
+      typeface = CodeBlock.of("$1T.create($2L, $1T.$3L)", TYPEFACE, typeface, style);
+                                                                              ^
+  found   : @Initialized @MonotonicNonNull TypefaceStyles
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:163: warning: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 6146, 6175 ) $$ incompatible argument for parameter arg0 of Set.add.
+      types.add(annotation.getCanonicalName());
+                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:198: warning: (argument) $$ 4 $$ filer $$ JavaFile.writeTo $$ @Initialized @MonotonicNonNull Filer $$ @Initialized @NonNull Filer $$ ( 7362, 7367 ) $$ incompatible argument for parameter filer of JavaFile.writeTo.
+        javaFile.writeTo(filer);
+                         ^
+  found   : @Initialized @MonotonicNonNull Filer
+  required: @Initialized @NonNull Filer
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:569: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TypeMirror $$ @Initialized @NonNull TypeMirror $$ ( 22244, 22252 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    TypeName type = TypeName.get(requireNonNull(viewType));
+                                                ^
+  found   : @Initialized @Nullable TypeMirror
+  required: @Initialized @NonNull TypeMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:573: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Kind $$ @Initialized @NonNull Kind $$ ( 22485, 22489 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    builder.addFieldCollection(new FieldCollectionViewBinding(name, type, requireNonNull(kind),
+                                                                                         ^
+  found   : @Initialized @Nullable Kind
+  required: @Initialized @NonNull Kind
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:953: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Type $$ @Initialized @NonNull Type $$ ( 37986, 37990 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    builder.addResource(new FieldResourceBinding(resourceId, name, requireNonNull(type)));
+                                                                                  ^
+  found   : @Initialized @Nullable Type
+  required: @Initialized @NonNull Type
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:985: warning: (iterating.over.nullable) $$ 1 $$ array $$ ( 39230, 39235 ) $$ iterating over possibly-null reference array
+    for (int element : array) {
+                       ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:996: warning: (dereference.of.nullable) $$ 1 $$ typeUtils $$ ( 39508, 39517 ) $$ dereference of possibly-null reference typeUtils
+    String name = typeUtils.erasure(elementType).toString();
+                  ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1064: warning: (iterating.over.nullable) $$ 1 $$ ids $$ ( 42586, 42589 ) $$ iterating over possibly-null reference ids
+    for (int id : ids) {
+                  ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1066: warning: (dereference.of.nullable) $$ 1 $$ ids $$ ( 42636, 42639 ) $$ dereference of possibly-null reference ids
+        if (ids.length == 1) {
+            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1096: warning: (dereference.of.nullable) $$ 1 $$ callback $$ ( 43914, 43922 ) $$ dereference of possibly-null reference callback
+      Field callbackField = callback.getDeclaringClass().getField(callback.name());
+                            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1308: warning: (dereference.of.nullable) $$ 1 $$ trees $$ ( 52216, 52221 ) $$ dereference of possibly-null reference trees
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                           ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1308: warning: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 52239, 52269 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                           ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1322: warning: (dereference.of.nullable) $$ 1 $$ trees $$ ( 52779, 52784 ) $$ dereference of possibly-null reference trees
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                           ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1322: warning: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 52802, 52832 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                           ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1330: warning: (iterating.over.nullable) $$ 1 $$ values $$ ( 53101, 53107 ) $$ iterating over possibly-null reference values
+    for (int value : values) {
+                     ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:518: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20859, 20909 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            listener.setter(), requiresRemoval ? listenerField : callback.build());
+                                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:521: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 21009, 21059 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            requiresRemoval ? listenerField : callback.build());
+                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:538: warning: (iterating.over.nullable) $$ 1 $$ callbacks.getEnumConstants() $$ ( 21492, 21520 ) $$ iterating over possibly-null reference callbacks.getEnumConstants()
+      for (Enum<?> callbackMethod : callbacks.getEnumConstants()) {
+                                                              ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:543: warning: (dereference.of.nullable) $$ 1 $$ callbacks.getEnclosingClass() $$ ( 21819, 21848 ) $$ dereference of possibly-null reference callbacks.getEnclosingClass()
+              callbacks.getEnclosingClass().getSimpleName(), callbacks.getSimpleName(),
+                                         ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:611: warning: (dereference.of.nullable) $$ 1 $$ binding.id() $$ ( 24317, 24329 ) $$ dereference of possibly-null reference binding.id()
+      if (!binding.id().qualifed) {
+                     ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:640: warning: (argument) $$ 4 $$ arg0 $$ Map.containsKey $$ @Initialized @Nullable ListenerClass $$ @Initialized @NonNull Object $$ ( 25059, 25107 ) $$ incompatible argument for parameter arg0 of Map.containsKey.
+          .containsKey(OnTouch.class.getAnnotation(ListenerClass.class))) {
+                                                  ^
+  found   : @Initialized @Nullable ListenerClass
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:30: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull FieldViewBinding $$ @Initialized @NonNull FieldViewBinding $$ ( 850, 862 ) $$ incompatible types in return.
+    return fieldBinding;
+           ^
+  type of expression: @Initialized @MonotonicNonNull FieldViewBinding
+  method return type: @Initialized @NonNull FieldViewBinding
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:32: warning: (dereference.of.nullable) $$ 1 $$ tintAttributeId $$ ( 891, 906 ) $$ dereference of possibly-null reference tintAttributeId
+    if (tintAttributeId.value != NO_RES_ID) {
+        ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:33: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1021, 1023 ) $$ dereference of possibly-null reference id
+      return CodeBlock.of("target.$L = $T.getTintedDrawable(context, $L, $L)", name, UTILS, id.code,
+                                                                                            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:37: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1161, 1163 ) $$ dereference of possibly-null reference id
+      return CodeBlock.of("target.$L = context.getDrawable($L)", name, id.code);
+                                                                       ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:40: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1311, 1313 ) $$ dereference of possibly-null reference id
+        androidX ? CONTEXT_COMPAT_ANDROIDX : CONTEXT_COMPAT, id.code);
+                                                             ^
+30 warnings
++ rm -rf ../dataset/post_wpi_without_s_butterknife/classes
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out build/whole-program-inference
+++ true
++ DIFF_RESULT='diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+35c35
+<     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldViewBinding getFieldBinding() {
+---
+>     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable FieldViewBinding getFieldBinding() {'
++ [[ 1 == 1 ]]
+++ realpath iteration4.diff
+realpath: iteration4.diff: No such file or directory
++ echo 'putting the diff for iteration 4 into '
+putting the diff for iteration 4 into 
++ echo diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava 35c35 '<' public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldViewBinding 'getFieldBinding()' '{' --- '>' public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable FieldViewBinding 'getFieldBinding()' '{'
++ [[ diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.NullnessChecker.ajava
+35c35
+<     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull FieldViewBinding getFieldBinding() {
+---
+>     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable FieldViewBinding getFieldBinding() { != '' ]]
++ rm -rf ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mv build/whole-program-inference ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/wpi-iterations/iteration4
++ cp -rf ../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife ../dataset/post_wpi_without_s_butterknife/wpi-iterations/iteration4
++ echo 'ending iteration 4, time taken: 6 seconds'
+ending iteration 4, time taken: 6 seconds
++ echo
+
++ (( count++ ))
++ '[' 5 -eq 11 ']'
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 5'
+entering iteration 5
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_butterknife/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_butterknife/classes -cp ../dataset/post_wpi_without_s_butterknife/classpath @../dataset/post_wpi_without_s_butterknife/cf_srcs.txt
+Note: Multiple elements named 'com.sun.tools.javac.code.Symbol' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Imported type not found: com.sun.tools.javac.code.Symbol
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Imported type not found: com.sun.tools.javac.tree.JCTree
+Note: Multiple elements named 'com.sun.tools.javac.tree.TreeScanner' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_butterknife/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Imported type not found: com.sun.tools.javac.tree.TreeScanner
+Note: Multiple elements named 'com.sun.tools.javac.comp.Attr' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.AttrContext' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.Env' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCAnnotation' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCFieldAccess' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCVariableDecl' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.Tag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.List' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.Name' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Flags' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Kinds' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.TypeTag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm.ByteCodes' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:63: warning: (argument) $$ 4 $$ args $$ CodeBlock.of $$ @Initialized @MonotonicNonNull TypefaceStyles $$ @Initialized @NonNull Object $$ ( 1855, 1860 ) $$ incompatible argument for parameter args of CodeBlock.of.
+      typeface = CodeBlock.of("$1T.create($2L, $1T.$3L)", TYPEFACE, typeface, style);
+                                                                              ^
+  found   : @Initialized @MonotonicNonNull TypefaceStyles
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:163: warning: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 6146, 6175 ) $$ incompatible argument for parameter arg0 of Set.add.
+      types.add(annotation.getCanonicalName());
+                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:198: warning: (argument) $$ 4 $$ filer $$ JavaFile.writeTo $$ @Initialized @MonotonicNonNull Filer $$ @Initialized @NonNull Filer $$ ( 7362, 7367 ) $$ incompatible argument for parameter filer of JavaFile.writeTo.
+        javaFile.writeTo(filer);
+                         ^
+  found   : @Initialized @MonotonicNonNull Filer
+  required: @Initialized @NonNull Filer
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:569: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TypeMirror $$ @Initialized @NonNull TypeMirror $$ ( 22244, 22252 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    TypeName type = TypeName.get(requireNonNull(viewType));
+                                                ^
+  found   : @Initialized @Nullable TypeMirror
+  required: @Initialized @NonNull TypeMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:573: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Kind $$ @Initialized @NonNull Kind $$ ( 22485, 22489 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    builder.addFieldCollection(new FieldCollectionViewBinding(name, type, requireNonNull(kind),
+                                                                                         ^
+  found   : @Initialized @Nullable Kind
+  required: @Initialized @NonNull Kind
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:953: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Type $$ @Initialized @NonNull Type $$ ( 37986, 37990 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+    builder.addResource(new FieldResourceBinding(resourceId, name, requireNonNull(type)));
+                                                                                  ^
+  found   : @Initialized @Nullable Type
+  required: @Initialized @NonNull Type
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:985: warning: (iterating.over.nullable) $$ 1 $$ array $$ ( 39230, 39235 ) $$ iterating over possibly-null reference array
+    for (int element : array) {
+                       ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:996: warning: (dereference.of.nullable) $$ 1 $$ typeUtils $$ ( 39508, 39517 ) $$ dereference of possibly-null reference typeUtils
+    String name = typeUtils.erasure(elementType).toString();
+                  ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1064: warning: (iterating.over.nullable) $$ 1 $$ ids $$ ( 42586, 42589 ) $$ iterating over possibly-null reference ids
+    for (int id : ids) {
+                  ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1066: warning: (dereference.of.nullable) $$ 1 $$ ids $$ ( 42636, 42639 ) $$ dereference of possibly-null reference ids
+        if (ids.length == 1) {
+            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1096: warning: (dereference.of.nullable) $$ 1 $$ callback $$ ( 43914, 43922 ) $$ dereference of possibly-null reference callback
+      Field callbackField = callback.getDeclaringClass().getField(callback.name());
+                            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1308: warning: (dereference.of.nullable) $$ 1 $$ trees $$ ( 52216, 52221 ) $$ dereference of possibly-null reference trees
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                           ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1308: warning: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 52239, 52269 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                           ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1322: warning: (dereference.of.nullable) $$ 1 $$ trees $$ ( 52779, 52784 ) $$ dereference of possibly-null reference trees
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                           ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1322: warning: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 52802, 52832 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+    JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                           ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1330: warning: (iterating.over.nullable) $$ 1 $$ values $$ ( 53101, 53107 ) $$ iterating over possibly-null reference values
+    for (int value : values) {
+                     ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:368: warning: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable FieldViewBinding $$ @Initialized @NonNull FieldViewBinding $$ ( 14608, 14633 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+      FieldViewBinding fieldBinding = requireNonNull(binding.getFieldBinding());
+                                                                            ^
+  found   : @Initialized @Nullable FieldViewBinding
+  required: @Initialized @NonNull FieldViewBinding
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:518: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20859, 20909 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            listener.setter(), requiresRemoval ? listenerField : callback.build());
+                                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:521: warning: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 21009, 21059 ) $$ incompatible argument for parameter args of Builder.addStatement.
+            requiresRemoval ? listenerField : callback.build());
+                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:538: warning: (iterating.over.nullable) $$ 1 $$ callbacks.getEnumConstants() $$ ( 21492, 21520 ) $$ iterating over possibly-null reference callbacks.getEnumConstants()
+      for (Enum<?> callbackMethod : callbacks.getEnumConstants()) {
+                                                              ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:543: warning: (dereference.of.nullable) $$ 1 $$ callbacks.getEnclosingClass() $$ ( 21819, 21848 ) $$ dereference of possibly-null reference callbacks.getEnclosingClass()
+              callbacks.getEnclosingClass().getSimpleName(), callbacks.getSimpleName(),
+                                         ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:611: warning: (dereference.of.nullable) $$ 1 $$ binding.id() $$ ( 24317, 24329 ) $$ dereference of possibly-null reference binding.id()
+      if (!binding.id().qualifed) {
+                     ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:640: warning: (argument) $$ 4 $$ arg0 $$ Map.containsKey $$ @Initialized @Nullable ListenerClass $$ @Initialized @NonNull Object $$ ( 25059, 25107 ) $$ incompatible argument for parameter arg0 of Map.containsKey.
+          .containsKey(OnTouch.class.getAnnotation(ListenerClass.class))) {
+                                                  ^
+  found   : @Initialized @Nullable ListenerClass
+  required: @Initialized @NonNull Object
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:32: warning: (dereference.of.nullable) $$ 1 $$ tintAttributeId $$ ( 891, 906 ) $$ dereference of possibly-null reference tintAttributeId
+    if (tintAttributeId.value != NO_RES_ID) {
+        ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:33: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1021, 1023 ) $$ dereference of possibly-null reference id
+      return CodeBlock.of("target.$L = $T.getTintedDrawable(context, $L, $L)", name, UTILS, id.code,
+                                                                                            ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:37: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1161, 1163 ) $$ dereference of possibly-null reference id
+      return CodeBlock.of("target.$L = context.getDrawable($L)", name, id.code);
+                                                                       ^
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:40: warning: (dereference.of.nullable) $$ 1 $$ id $$ ( 1311, 1313 ) $$ dereference of possibly-null reference id
+        androidX ? CONTEXT_COMPAT_ANDROIDX : CONTEXT_COMPAT, id.code);
+                                                             ^
+30 warnings
++ rm -rf ../dataset/post_wpi_without_s_butterknife/classes
++ mkdir -p ../dataset/post_wpi_without_s_butterknife/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/post_wpi_without_s_butterknife/wpi-out build/whole-program-inference
++ DIFF_RESULT=
++ [[ 1 == 1 ]]
+++ realpath iteration5.diff
+realpath: iteration5.diff: No such file or directory
++ echo 'putting the diff for iteration 5 into '
+putting the diff for iteration 5 into 
++ echo
++ [[ '' != '' ]]
++ break

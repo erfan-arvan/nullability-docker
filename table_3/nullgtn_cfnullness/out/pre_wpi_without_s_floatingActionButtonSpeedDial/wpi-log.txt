@@ -1,0 +1,296 @@
+CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac
+warning [../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:236: warning: (argument) $$ 4 $$ val $$ Parcel.writeString $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 7568, 7579 ) $$ incompatible argument for parameter val of Parcel.writeString.
+        dest.writeString(this.mLabel);
+                             ^
+  found   : @Initialized @MonotonicNonNull String
+  required: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:253: warning: (argument) $$ 4 $$ loader $$ Parcel.readParcelable $$ @Initialized @Nullable ClassLoader $$ @Initialized @NonNull ClassLoader $$ ( 8331, 8360 ) $$ incompatible argument for parameter loader of Parcel.readParcelable.
+                UiUtils.getDrawableFromBitmap((Bitmap) in.readParcelable(Bitmap.class.getClassLoader()));
+                                                                                                    ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+2 warnings
+An exception has occurred in the compiler (17.0.10). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program, the following diagnostic, and the parameters passed to the Java compiler in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.NullPointerException: Cannot read field "fields" because "enclosingClass" is null
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:858)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1394)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1351)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:946)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:317)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:176)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:64)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:50)
+Caused by: java.lang.NullPointerException: Cannot read field "fields" because "enclosingClass" is null
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage$1.processVariable(WholeProgramInferenceJavaParserStorage.java:866)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitVariable(JointJavacJavaParserVisitor.java:1414)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitVariable(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCVariableDecl.accept(JCTree.java:1045)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:565)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:499)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:860)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:573)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:480)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.createWrappersForClass(WholeProgramInferenceJavaParserStorage.java:871)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.addClassTree(WholeProgramInferenceJavaParserStorage.java:616)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.preprocessClassTree(WholeProgramInferenceJavaParserStorage.java:587)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceImplementation.preprocessClassTree(WholeProgramInferenceImplementation.java:1154)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:915)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:685)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1074)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:854)
+	... 8 more
+printing javac parameters to: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/javac.20240822_184752.args
+entering iteration 1
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:91: warning: (return) $$ 2 $$ @Initialized @Nullable Drawable $$ @Initialized @NonNull Drawable $$ ( 3085, 3143 ) $$ incompatible types in return.
+            return AppCompatResources.getDrawable(context, mFabImageResource);
+                                                 ^
+  type of expression: @Initialized @Nullable Drawable
+  method return type: @Initialized @NonNull Drawable
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:93: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Drawable $$ ( 3181, 3185 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Drawable
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:162: warning: (initialization.fields.uninitialized) $$ 1 $$ mLabel $$ ( 5220, 5406 ) $$ the constructor does not initialize fields: mLabel
+        public Builder(@IdRes int id, @DrawableRes int fabImageResource) {
+               ^
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:165: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Drawable $$ ( 5391, 5395 ) $$ incompatible types in assignment.
+            mFabImageDrawable = null;
+                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Drawable
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:175: warning: (initialization.fields.uninitialized) $$ 1 $$ mLabel $$ ( 5835, 6001 ) $$ the constructor does not initialize fields: mLabel
+        public Builder(@IdRes int id,  Drawable drawable) {
+               ^
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:253: warning: (argument) $$ 4 $$ loader $$ Parcel.readParcelable $$ @Initialized @Nullable ClassLoader $$ @Initialized @NonNull ClassLoader $$ ( 8331, 8360 ) $$ incompatible argument for parameter loader of Parcel.readParcelable.
+                UiUtils.getDrawableFromBitmap((Bitmap) in.readParcelable(Bitmap.class.getClassLoader()));
+                                                                                                    ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+6 warnings
+An exception has occurred in the compiler (17.0.10). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program, the following diagnostic, and the parameters passed to the Java compiler in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.NullPointerException: Cannot read field "fields" because "enclosingClass" is null
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:858)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1394)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1351)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:946)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:317)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:176)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:64)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:50)
+Caused by: java.lang.NullPointerException: Cannot read field "fields" because "enclosingClass" is null
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage$1.processVariable(WholeProgramInferenceJavaParserStorage.java:866)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitVariable(JointJavacJavaParserVisitor.java:1414)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitVariable(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCVariableDecl.accept(JCTree.java:1045)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:565)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:499)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:860)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:573)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:480)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.createWrappersForClass(WholeProgramInferenceJavaParserStorage.java:871)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.addClassTree(WholeProgramInferenceJavaParserStorage.java:616)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.preprocessClassTree(WholeProgramInferenceJavaParserStorage.java:587)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceImplementation.preprocessClassTree(WholeProgramInferenceImplementation.java:1154)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:915)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:685)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1074)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:854)
+	... 8 more
+printing javac parameters to: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/javac.20240822_184758.args
+realpath: iteration1.diff: No such file or directory
+putting the diff for iteration 1 into 
+ending iteration 1, time taken: 6 seconds
+
+entering iteration 2
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:60: warning: (assignment) $$ 2 $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 1984, 1998 ) $$ incompatible types in assignment.
+        mLabel = builder.mLabel;
+                        ^
+  found   : @Initialized @MonotonicNonNull String
+  required: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:63: warning: (assignment) $$ 2 $$ @Initialized @MonotonicNonNull Drawable $$ @Initialized @NonNull Drawable $$ ( 2140, 2165 ) $$ incompatible types in assignment.
+        mFabImageDrawable = builder.mFabImageDrawable;
+                                   ^
+  found   : @Initialized @MonotonicNonNull Drawable
+  required: @Initialized @NonNull Drawable
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:253: warning: (argument) $$ 4 $$ loader $$ Parcel.readParcelable $$ @Initialized @Nullable ClassLoader $$ @Initialized @NonNull ClassLoader $$ ( 8331, 8360 ) $$ incompatible argument for parameter loader of Parcel.readParcelable.
+                UiUtils.getDrawableFromBitmap((Bitmap) in.readParcelable(Bitmap.class.getClassLoader()));
+                                                                                                    ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+3 warnings
+An exception has occurred in the compiler (17.0.10). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program, the following diagnostic, and the parameters passed to the Java compiler in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.NullPointerException: Cannot read field "fields" because "enclosingClass" is null
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:858)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1394)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1351)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:946)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:317)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:176)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:64)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:50)
+Caused by: java.lang.NullPointerException: Cannot read field "fields" because "enclosingClass" is null
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage$1.processVariable(WholeProgramInferenceJavaParserStorage.java:866)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitVariable(JointJavacJavaParserVisitor.java:1414)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitVariable(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCVariableDecl.accept(JCTree.java:1045)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:565)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:499)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:860)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:573)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:480)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.createWrappersForClass(WholeProgramInferenceJavaParserStorage.java:871)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.addClassTree(WholeProgramInferenceJavaParserStorage.java:616)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.preprocessClassTree(WholeProgramInferenceJavaParserStorage.java:587)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceImplementation.preprocessClassTree(WholeProgramInferenceImplementation.java:1154)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:915)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:685)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1074)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:854)
+	... 8 more
+printing javac parameters to: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/javac.20240822_184805.args
+realpath: iteration2.diff: No such file or directory
+putting the diff for iteration 2 into 
+ending iteration 2, time taken: 7 seconds
+
+entering iteration 3
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:77: warning: (return) $$ 2 $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 2558, 2564 ) $$ incompatible types in return.
+        return mLabel;
+               ^
+  type of expression: @Initialized @MonotonicNonNull String
+  method return type: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:236: warning: (argument) $$ 4 $$ val $$ Parcel.writeString $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 7568, 7579 ) $$ incompatible argument for parameter val of Parcel.writeString.
+        dest.writeString(this.mLabel);
+                             ^
+  found   : @Initialized @MonotonicNonNull String
+  required: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:238: warning: (argument) $$ 4 $$ drawable $$ UiUtils.getBitmapFromDrawable $$ @Initialized @MonotonicNonNull Drawable $$ @Initialized @NonNull Drawable $$ ( 7688, 7710 ) $$ incompatible argument for parameter drawable of UiUtils.getBitmapFromDrawable.
+        dest.writeParcelable(UiUtils.getBitmapFromDrawable(this.mFabImageDrawable), flags);
+                                                               ^
+  found   : @Initialized @MonotonicNonNull Drawable
+  required: @Initialized @NonNull Drawable
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:253: warning: (argument) $$ 4 $$ loader $$ Parcel.readParcelable $$ @Initialized @Nullable ClassLoader $$ @Initialized @NonNull ClassLoader $$ ( 8331, 8360 ) $$ incompatible argument for parameter loader of Parcel.readParcelable.
+                UiUtils.getDrawableFromBitmap((Bitmap) in.readParcelable(Bitmap.class.getClassLoader()));
+                                                                                                    ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+4 warnings
+An exception has occurred in the compiler (17.0.10). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program, the following diagnostic, and the parameters passed to the Java compiler in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.NullPointerException: Cannot read field "fields" because "enclosingClass" is null
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:858)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1394)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1351)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:946)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:317)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:176)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:64)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:50)
+Caused by: java.lang.NullPointerException: Cannot read field "fields" because "enclosingClass" is null
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage$1.processVariable(WholeProgramInferenceJavaParserStorage.java:866)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitVariable(JointJavacJavaParserVisitor.java:1414)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitVariable(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCVariableDecl.accept(JCTree.java:1045)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:565)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:499)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:860)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:573)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:480)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.createWrappersForClass(WholeProgramInferenceJavaParserStorage.java:871)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.addClassTree(WholeProgramInferenceJavaParserStorage.java:616)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.preprocessClassTree(WholeProgramInferenceJavaParserStorage.java:587)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceImplementation.preprocessClassTree(WholeProgramInferenceImplementation.java:1154)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:915)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:685)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1074)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:854)
+	... 8 more
+printing javac parameters to: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/javac.20240822_184812.args
+realpath: iteration3.diff: No such file or directory
+putting the diff for iteration 3 into 
+ending iteration 3, time taken: 7 seconds
+
+entering iteration 4
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:236: warning: (argument) $$ 4 $$ val $$ Parcel.writeString $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 7568, 7579 ) $$ incompatible argument for parameter val of Parcel.writeString.
+        dest.writeString(this.mLabel);
+                             ^
+  found   : @Initialized @MonotonicNonNull String
+  required: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:253: warning: (argument) $$ 4 $$ loader $$ Parcel.readParcelable $$ @Initialized @Nullable ClassLoader $$ @Initialized @NonNull ClassLoader $$ ( 8331, 8360 ) $$ incompatible argument for parameter loader of Parcel.readParcelable.
+                UiUtils.getDrawableFromBitmap((Bitmap) in.readParcelable(Bitmap.class.getClassLoader()));
+                                                                                                    ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+2 warnings
+An exception has occurred in the compiler (17.0.10). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program, the following diagnostic, and the parameters passed to the Java compiler in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.NullPointerException: Cannot read field "fields" because "enclosingClass" is null
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:858)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1394)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1351)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:946)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:317)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:176)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:64)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:50)
+Caused by: java.lang.NullPointerException: Cannot read field "fields" because "enclosingClass" is null
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage$1.processVariable(WholeProgramInferenceJavaParserStorage.java:866)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitVariable(JointJavacJavaParserVisitor.java:1414)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitVariable(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCVariableDecl.accept(JCTree.java:1045)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:565)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:499)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:860)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:573)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:480)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.createWrappersForClass(WholeProgramInferenceJavaParserStorage.java:871)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.addClassTree(WholeProgramInferenceJavaParserStorage.java:616)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceJavaParserStorage.preprocessClassTree(WholeProgramInferenceJavaParserStorage.java:587)
+	at org.checkerframework.common.wholeprograminference.WholeProgramInferenceImplementation.preprocessClassTree(WholeProgramInferenceImplementation.java:1154)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:915)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:685)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1074)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:854)
+	... 8 more
+printing javac parameters to: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/javac.20240822_184819.args
+realpath: iteration4.diff: No such file or directory
+putting the diff for iteration 4 into 

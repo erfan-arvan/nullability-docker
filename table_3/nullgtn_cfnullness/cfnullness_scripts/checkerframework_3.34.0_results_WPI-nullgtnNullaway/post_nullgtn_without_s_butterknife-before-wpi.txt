@@ -1,0 +1,244 @@
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:17: error: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 626, 630 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        COLOR(new ResourceMethod(BindingSet.CONTEXT_COMPAT, "getColor", false, 1), new ResourceMethod(null, "getColor", false, 23)),
+                                                                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:18: error: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 777, 781 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        COLOR_ANDROIDX(new ResourceMethod(BindingSet.CONTEXT_COMPAT_ANDROIDX, "getColor", false, 1), new ResourceMethod(null, "getColor", false, 23)),
+                                                                                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:19: error: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 930, 934 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        COLOR_STATE_LIST(new ResourceMethod(BindingSet.CONTEXT_COMPAT, "getColorStateList", false, 1), new ResourceMethod(null, "getColorStateList", false, 23)),
+                                                                                                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:20: error: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 1110, 1114 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+        COLOR_STATE_LIST_ANDROIDX(new ResourceMethod(BindingSet.CONTEXT_COMPAT_ANDROIDX, "getColorStateList", false, 1), new ResourceMethod(null, "getColorStateList", false, 23)),
+                                                                                                                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:42: error: (argument) $$ 4 $$ typeName $$ ResourceMethod constructor $$ null (NullType) $$ @Initialized @NonNull ClassName $$ ( 2007, 2011 ) $$ incompatible argument for parameter typeName of ResourceMethod constructor.
+            methods = ImmutableList.of(new ResourceMethod(null, methodName, true, 1));
+                                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassName
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:97: error: (override.param) $$ 7 $$ sdk $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull FieldResourceBinding $$ @Initialized @NonNull boolean requiresResources(@Initialized @NonNull FieldResourceBinding this, @Initialized @NonNull int p0) $$ @Initialized @NonNull ResourceBinding $$ @Initialized @NonNull boolean requiresResources(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0) $$ ( 3270, 3277 ) $$ Incompatible parameter type for sdk.
+    public boolean requiresResources(int sdk) {
+                                         ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FieldResourceBinding
+    @Initialized @NonNull boolean requiresResources(@Initialized @NonNull FieldResourceBinding this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ResourceBinding
+    @Initialized @NonNull boolean requiresResources(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0)
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:102: error: (override.param) $$ 7 $$ sdk $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull FieldResourceBinding $$ @Initialized @NonNull CodeBlock render(@Initialized @NonNull FieldResourceBinding this, @Initialized @NonNull int p0) $$ @Initialized @NonNull ResourceBinding $$ @Initialized @NonNull CodeBlock render(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0) $$ ( 3387, 3394 ) $$ Incompatible parameter type for sdk.
+    public CodeBlock render(int sdk) {
+                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FieldResourceBinding
+    @Initialized @NonNull CodeBlock render(@Initialized @NonNull FieldResourceBinding this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ResourceBinding
+    @Initialized @NonNull CodeBlock render(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0)
+Note: Multiple elements named 'com.sun.tools.javac.comp.Attr' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.AttrContext' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.comp.Env' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCAnnotation' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCFieldAccess' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.JCVariableDecl' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.tree.JCTree.Tag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.List' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.util.Name' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Flags' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Kinds' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.TypeTag' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.jvm.ByteCodes' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+Note: Multiple elements named 'com.sun.tools.javac.code' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getPackageElement.
+Note: Multiple elements named 'com.sun.tools.javac.code.Symbol' in modules 'unnamed module, jdk.compiler' were found by javax.lang.model.util.Elements.getTypeElement.
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/Id.java:23: error: (argument) $$ 4 $$ rSymbol $$ Id constructor $$ null (NullType) $$ @Initialized @NonNull Symbol $$ ( 494, 498 ) $$ incompatible argument for parameter rSymbol of Id constructor.
+        this(value, null);
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Symbol
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/Id.java:40: error: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Id $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Id this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1164, 1172 ) $$ Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Id
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Id this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:59: error: (override.param) $$ 7 $$ sdk $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull FieldTypefaceBinding $$ @Initialized @NonNull boolean requiresResources(@Initialized @NonNull FieldTypefaceBinding this, @Initialized @NonNull int p0) $$ @Initialized @NonNull ResourceBinding $$ @Initialized @NonNull boolean requiresResources(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0) $$ ( 1565, 1572 ) $$ Incompatible parameter type for sdk.
+    public boolean requiresResources(int sdk) {
+                                         ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FieldTypefaceBinding
+    @Initialized @NonNull boolean requiresResources(@Initialized @NonNull FieldTypefaceBinding this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ResourceBinding
+    @Initialized @NonNull boolean requiresResources(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0)
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:64: error: (override.param) $$ 7 $$ sdk $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull FieldTypefaceBinding $$ @Initialized @NonNull CodeBlock render(@Initialized @NonNull FieldTypefaceBinding this, @Initialized @NonNull int p0) $$ @Initialized @NonNull ResourceBinding $$ @Initialized @NonNull CodeBlock render(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0) $$ ( 1651, 1658 ) $$ Incompatible parameter type for sdk.
+    public CodeBlock render(int sdk) {
+                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FieldTypefaceBinding
+    @Initialized @NonNull CodeBlock render(@Initialized @NonNull FieldTypefaceBinding this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ResourceBinding
+    @Initialized @NonNull CodeBlock render(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0)
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:136: error: (initialization.field.uninitialized) $$ 1 $$ typeUtils $$ ( 4856, 4880 ) $$ the default constructor does not initialize field typeUtils
+    private Types typeUtils;
+                  ^
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:138: error: (initialization.field.uninitialized) $$ 1 $$ filer $$ ( 4886, 4906 ) $$ the default constructor does not initialize field filer
+    private Filer filer;
+                  ^
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:140: error: (initialization.field.uninitialized) $$ 1 $$ trees $$ ( 4912, 4932 ) $$ the default constructor does not initialize field trees
+    private Trees trees;
+                  ^
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:181: error: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 6293, 6322 ) $$ incompatible argument for parameter arg0 of Set.add.
+            types.add(annotation.getCanonicalName());
+                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:211: error: (argument) $$ 4 $$ sdk $$ BindingSet.brewJava $$ @Initialized @Nullable int $$ @Initialized @NonNull int $$ ( 7547, 7550 ) $$ incompatible argument for parameter sdk of BindingSet.brewJava.
+            JavaFile javaFile = binding.brewJava(sdk, debuggable, useAndroidX);
+                                                 ^
+  found   : @Initialized @Nullable int
+  required: @Initialized @NonNull int
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:215: error: (argument) $$ 4 $$ args $$ ButterKnifeProcessor.error $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 7766, 7780 ) $$ incompatible argument for parameter args of ButterKnifeProcessor.error.
+                error(typeElement, "Unable to write binding for type %s: %s", typeElement, e.getMessage());
+                                                                                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:524: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TypeMirror $$ @Initialized @NonNull TypeMirror $$ ( 23880, 23888 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        TypeName type = TypeName.get(requireNonNull(viewType));
+                                                    ^
+  found   : @Initialized @Nullable TypeMirror
+  required: @Initialized @NonNull TypeMirror
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:527: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Kind $$ @Initialized @NonNull Kind $$ ( 24132, 24136 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        builder.addFieldCollection(new FieldCollectionViewBinding(name, type, requireNonNull(kind), new ArrayList<>(elementToIds(element, BindViews.class, ids).values()), required));
+                                                                                             ^
+  found   : @Initialized @Nullable Kind
+  required: @Initialized @NonNull Kind
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:676: error: (argument) $$ 4 $$ id $$ FieldDrawableBinding constructor $$ @Initialized @Nullable Id $$ @Initialized @NonNull Id $$ ( 33064, 33083 ) $$ incompatible argument for parameter id of FieldDrawableBinding constructor.
+        builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint), useAndroidX));
+                                                                    ^
+  found   : @Initialized @Nullable Id
+  required: @Initialized @NonNull Id
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:676: error: (argument) $$ 4 $$ tintAttributeId $$ FieldDrawableBinding constructor $$ @Initialized @Nullable Id $$ @Initialized @NonNull Id $$ ( 33091, 33112 ) $$ incompatible argument for parameter tintAttributeId of FieldDrawableBinding constructor.
+        builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint), useAndroidX));
+                                                                                               ^
+  found   : @Initialized @Nullable Id
+  required: @Initialized @NonNull Id
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:728: error: (argument) $$ 4 $$ style $$ FieldTypefaceBinding constructor $$ @Initialized @Nullable TypefaceStyles $$ @Initialized @NonNull TypefaceStyles $$ ( 36131, 36136 ) $$ incompatible argument for parameter style of FieldTypefaceBinding constructor.
+        builder.addResource(new FieldTypefaceBinding(resourceId, name, style, useAndroidX));
+                                                                       ^
+  found   : @Initialized @Nullable TypefaceStyles
+  required: @Initialized @NonNull TypefaceStyles
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:798: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable Type $$ @Initialized @NonNull Type $$ ( 40223, 40227 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        builder.addResource(new FieldResourceBinding(resourceId, name, requireNonNull(type)));
+                                                                                      ^
+  found   : @Initialized @Nullable Type
+  required: @Initialized @NonNull Type
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:885: error: (argument) $$ 4 $$ array $$ ButterKnifeProcessor.findDuplicate $$ @Initialized @NonNull int @Initialized @Nullable [] $$ @Initialized @NonNull int @Initialized @NonNull [] $$ ( 44565, 44568 ) $$ incompatible argument for parameter array of ButterKnifeProcessor.findDuplicate.
+        Integer duplicateId = findDuplicate(ids);
+                                            ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:919: error: (dereference.of.nullable) $$ 1 $$ callback $$ ( 46567, 46575 ) $$ dereference of possibly-null reference callback
+            Field callbackField = callback.getDeclaringClass().getField(callback.name());
+                                  ^
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1066: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TypeElement $$ ( 54423, 54427 ) $$ incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TypeElement
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1096: error: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 55450, 55480 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+        JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                               ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1110: error: (argument) $$ 4 $$ arg1 $$ Trees.getTree $$ @Initialized @Nullable AnnotationMirror $$ @Initialized @NonNull AnnotationMirror $$ ( 56075, 56105 ) $$ incompatible argument for parameter arg1 of Trees.getTree.
+        JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+                                                               ^
+  found   : @Initialized @Nullable AnnotationMirror
+  required: @Initialized @NonNull AnnotationMirror
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:438: error: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 22243, 22293 ) $$ incompatible argument for parameter args of Builder.addStatement.
+                result.addStatement("(($T) $N).$L($L)", bestGuess(listener.targetType()), bindName, listener.setter(), requiresRemoval ? listenerField : callback.build());
+                                                                                                                                       ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:440: error: (argument) $$ 4 $$ args $$ Builder.addStatement $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 22395, 22445 ) $$ incompatible argument for parameter args of Builder.addStatement.
+                result.addStatement("$N.$L($L)", bindName, listener.setter(), requiresRemoval ? listenerField : callback.build());
+                                                                                              ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:455: error: (iterating.over.nullable) $$ 1 $$ callbacks.getEnumConstants() $$ ( 22940, 22968 ) $$ iterating over possibly-null reference callbacks.getEnumConstants()
+            for (Enum<?> callbackMethod : callbacks.getEnumConstants()) {
+                                                                    ^
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:459: error: (dereference.of.nullable) $$ 1 $$ callbacks.getEnclosingClass() $$ ( 23287, 23316 ) $$ dereference of possibly-null reference callbacks.getEnclosingClass()
+                    throw new IllegalStateException(String.format("@%s's %s.%s missing @%s annotation.", callbacks.getEnclosingClass().getSimpleName(), callbacks.getSimpleName(), callbackMethod.name(), ListenerMethod.class.getSimpleName()));
+                                                                                                                                    ^
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:568: error: (argument) $$ 4 $$ arg0 $$ Map.containsKey $$ @Initialized @Nullable ListenerClass $$ @Initialized @NonNull Object $$ ( 27178, 27226 ) $$ incompatible argument for parameter arg0 of Map.containsKey.
+            if (bindings.getMethodBindings().containsKey(OnTouch.class.getAnnotation(ListenerClass.class))) {
+                                                                                    ^
+  found   : @Initialized @Nullable ListenerClass
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:690: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 31523, 31527 ) $$ incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:694: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 31672, 31676 ) $$ incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:713: error: (argument) $$ 4 $$ parentBinding $$ BindingSet constructor $$ @Initialized @Nullable BindingSet $$ @Initialized @NonNull BindingSet $$ ( 32491, 32504 ) $$ incompatible argument for parameter parentBinding of BindingSet constructor.
+            return new BindingSet(targetTypeName, bindingClassName, isFinal, isView, isActivity, isDialog, viewBindings.build(), collectionBindings.build(), resourceBindings.build(), parentBinding);
+                                                                                                                                                                                       ^
+  found   : @Initialized @Nullable BindingSet
+  required: @Initialized @NonNull BindingSet
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldAnimationBinding.java:23: error: (override.param) $$ 7 $$ sdk $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull FieldAnimationBinding $$ @Initialized @NonNull boolean requiresResources(@Initialized @NonNull FieldAnimationBinding this, @Initialized @NonNull int p0) $$ @Initialized @NonNull ResourceBinding $$ @Initialized @NonNull boolean requiresResources(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0) $$ ( 505, 512 ) $$ Incompatible parameter type for sdk.
+    public boolean requiresResources(int sdk) {
+                                         ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FieldAnimationBinding
+    @Initialized @NonNull boolean requiresResources(@Initialized @NonNull FieldAnimationBinding this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ResourceBinding
+    @Initialized @NonNull boolean requiresResources(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0)
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldAnimationBinding.java:28: error: (override.param) $$ 7 $$ sdk $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull FieldAnimationBinding $$ @Initialized @NonNull CodeBlock render(@Initialized @NonNull FieldAnimationBinding this, @Initialized @NonNull int p0) $$ @Initialized @NonNull ResourceBinding $$ @Initialized @NonNull CodeBlock render(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0) $$ ( 587, 594 ) $$ Incompatible parameter type for sdk.
+    public CodeBlock render(int sdk) {
+                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FieldAnimationBinding
+    @Initialized @NonNull CodeBlock render(@Initialized @NonNull FieldAnimationBinding this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ResourceBinding
+    @Initialized @NonNull CodeBlock render(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0)
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:32: error: (return) $$ 2 $$ @Initialized @Nullable FieldViewBinding $$ @Initialized @NonNull FieldViewBinding $$ ( 893, 905 ) $$ incompatible types in return.
+        return fieldBinding;
+               ^
+  type of expression: @Initialized @Nullable FieldViewBinding
+  method return type: @Initialized @NonNull FieldViewBinding
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:116: error: (argument) $$ 4 $$ fieldBinding $$ ViewBinding constructor $$ @Initialized @Nullable FieldViewBinding $$ @Initialized @NonNull FieldViewBinding $$ ( 3704, 3716 ) $$ incompatible argument for parameter fieldBinding of ViewBinding constructor.
+            return new ViewBinding(id, methodBindings, fieldBinding);
+                                                       ^
+  found   : @Initialized @Nullable FieldViewBinding
+  required: @Initialized @NonNull FieldViewBinding
+../dataset/post_nullgtn_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:37: error: (override.param) $$ 7 $$ sdk $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull FieldDrawableBinding $$ @Initialized @NonNull CodeBlock render(@Initialized @NonNull FieldDrawableBinding this, @Initialized @NonNull int p0) $$ @Initialized @NonNull ResourceBinding $$ @Initialized @NonNull CodeBlock render(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0) $$ ( 976, 983 ) $$ Incompatible parameter type for sdk.
+    public CodeBlock render(int sdk) {
+                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FieldDrawableBinding
+    @Initialized @NonNull CodeBlock render(@Initialized @NonNull FieldDrawableBinding this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ResourceBinding
+    @Initialized @NonNull CodeBlock render(@Initialized @NonNull ResourceBinding this, @Initialized @Nullable int p0)
+41 errors

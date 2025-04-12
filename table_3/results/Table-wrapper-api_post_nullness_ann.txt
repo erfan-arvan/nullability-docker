@@ -1,0 +1,107 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module! :source
+[[1;34mINFO[m] Compiling 27 source files with javac [forked debug deprecation target 11] to target/classes
+[[1;33mWARNING[m] The following options were not recognized by any processor: '[detailedmsgtex]'
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[134,70] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[162,70] [nullness:argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[166,29] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[166,29] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[196,32] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:[196,32] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/TableRow.java:[82,29] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/TableRow.java:[82,29] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[129,29] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[129,29] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [default]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[130,26] [nullness:argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[139,40] [nullness:argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[148,40] [nullness:argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[157,40] [nullness:argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[166,40] [nullness:argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[175,40] [nullness:argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[184,40] [nullness:argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[193,40] [nullness:argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[40,21] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[40,21] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[46,21] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[46,21] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[46,21] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[46,21] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[47,15] [nullness:dereference.of.nullable] dereference of possibly-null reference row
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[52,15] [nullness:dereference.of.nullable] dereference of possibly-null reference row
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[57,15] [nullness:dereference.of.nullable] dereference of possibly-null reference row
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[62,15] [nullness:dereference.of.nullable] dereference of possibly-null reference row
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[67,15] [nullness:dereference.of.nullable] dereference of possibly-null reference row
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[72,15] [nullness:dereference.of.nullable] dereference of possibly-null reference row
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[76,18] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[76,18] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[109,60] [nullness:assignment] incompatible types in assignment.
+  found   : @Initialized @Nullable Integer
+  required: @UnknownInitialization @NonNull Integer
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[89,80] [nullness:argument] incompatible argument for parameter array of Arrays.stream.
+  found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
+  required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[144,25] [nullness:assignment] incompatible types in assignment.
+  found   : null (NullType)
+  required: T extends @UnknownInitialization @NonNull Object
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[217,20] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[217,20] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[217,20] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[217,20] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[224,20] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[224,20] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[224,20] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[224,20] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[230,31] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[230,31] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[34,21] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[34,21] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[34,21] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[34,21] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[40,21] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[40,21] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[40,21] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[40,21] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[66,18] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[66,18] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[66,18] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-api_post_nullaway/src/main/java/org/spacious_team/table_wrapper/api/EmptyTableRow.java:[66,18] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  16.036 s
+[[1;34mINFO[m] Finished at: 2025-04-11T19:16:26Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+
+==== Count Script Output ====
+
+11

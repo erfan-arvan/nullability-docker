@@ -1,0 +1,100 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< org.spacious-team:table-wrapper-api >-----------------
+[INFO] Building Table Wrapper API 2022.4
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ table-wrapper-api ---
+[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-api ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 28 source files with javac [forked debug target 11] to target/classes
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[132,50] [dereference.of.nullable] dereference of possibly-null reference reportPage.getCell(tableNameCell)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:[159,50] [dereference.of.nullable] dereference of possibly-null reference reportPage.getCell(tableNameCell)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[39,35] [unboxing.of.nullable] unboxing a possibly-null reference getCellIndex(column)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[44,15] [dereference.of.nullable] dereference of possibly-null reference row
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[49,15] [dereference.of.nullable] dereference of possibly-null reference row
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[54,15] [dereference.of.nullable] dereference of possibly-null reference row
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[59,15] [dereference.of.nullable] dereference of possibly-null reference row
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[64,15] [dereference.of.nullable] dereference of possibly-null reference row
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[69,15] [dereference.of.nullable] dereference of possibly-null reference row
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[73,28] [argument] incompatible argument for parameter row of CellDataAccessObject.getValue.
+  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
+  required: T extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[77,31] [argument] incompatible argument for parameter row of CellDataAccessObject.getIntValue.
+  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
+  required: T extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[81,32] [argument] incompatible argument for parameter row of CellDataAccessObject.getLongValue.
+  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
+  required: T extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[85,34] [argument] incompatible argument for parameter row of CellDataAccessObject.getDoubleValue.
+  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
+  required: T extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[89,38] [argument] incompatible argument for parameter row of CellDataAccessObject.getBigDecimalValue.
+  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
+  required: T extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[93,34] [argument] incompatible argument for parameter row of CellDataAccessObject.getStringValue.
+  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
+  required: T extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[97,35] [argument] incompatible argument for parameter row of CellDataAccessObject.getInstantValue.
+  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
+  required: T extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:[101,41] [argument] incompatible argument for parameter row of CellDataAccessObject.getLocalDateTimeValue.
+  found   : T extends @FBCBottom @MonotonicNonNull ReportPageRow
+  required: T extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[127,26] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[135,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[135,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[143,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[143,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[151,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[151,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[159,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[159,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[167,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[167,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[175,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[175,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[183,39] [argument] incompatible argument for parameter obj of Objects.requireNonNull.
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:[183,40] [argument] incompatible argument for parameter row of CellDataAccessObject.getCell.
+  found   : R extends @Initialized @Nullable ReportPageRow
+  required: R extends @Initialized @NonNull ReportPageRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_with_s_table-wrapper-api-without-corrected/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:[89,80] [argument] incompatible argument for parameter array of Arrays.stream.
+  found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
+  required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.656 s
+[INFO] Finished at: 2024-08-26T04:00:17-04:00
+[INFO] ------------------------------------------------------------------------

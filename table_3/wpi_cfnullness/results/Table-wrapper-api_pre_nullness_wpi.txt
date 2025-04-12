@@ -1,0 +1,177 @@
+Removed /tmp/WPITEMP-table-wrapper-api
+Created /tmp/WPITEMP-table-wrapper-api
+Checking for the first time
+------------------------
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.281 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:04:37Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.282 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:04:51Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+------------------------
+Removed /tmp/WPITEMP-table-wrapper-api
+Created /tmp/WPITEMP-table-wrapper-api
+entering iteration 1
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.295 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:05:08Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 1 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/iteration1.diff
+entering iteration 2
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.272 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:05:23Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 2 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/iteration2.diff
+entering iteration 3
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.286 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:05:41Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 3 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/iteration3.diff
+entering iteration 4
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.236 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:05:58Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 4 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/iteration4.diff
+entering iteration 5
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.242 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:06:13Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 5 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/iteration5.diff
+entering iteration 6
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.228 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:06:30Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 6 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/iteration6.diff
+entering iteration 7
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.224 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:06:45Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 7 into /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/iteration7.diff
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.245 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:06:46Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/table-wrapper-api_pre/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.250 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:07:01Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+
+==== Count Script Output ====
+
+12 errors
