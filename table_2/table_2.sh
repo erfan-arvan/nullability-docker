@@ -9,9 +9,9 @@ if [[ "$1" == "fresh" ]]; then
   IS_FRESH=true
   echo "> Fresh run requested. Cleaning up old data..."
 
-  # Remove old project directories
-  rm -rf "$ROOT_DIR/projects_for_annotation_counts_study"
-  rm -rf "$ROOT_DIR/projects_for_diff_counts"
+  # Remove old project directories (uncomment these if you want to clone dirs)
+  #rm -rf "$ROOT_DIR/projects_for_annotation_counts_study"
+  #rm -rf "$ROOT_DIR/projects_for_diff_counts"
 
   # Remove contents of results subfolders if they exist
   rm -f "$ROOT_DIR/results/diffs/"*
