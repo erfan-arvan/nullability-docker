@@ -1,0 +1,113 @@
+diff --git a/butterknife-compiler/src/main/java/butterknife/compiler/BindingSet.java b/butterknife-compiler/src/main/java/butterknife/compiler/BindingSet.java
+index 7bd2f3cd..45f9e55c 100644
+--- a/butterknife-compiler/src/main/java/butterknife/compiler/BindingSet.java
++++ b/butterknife-compiler/src/main/java/butterknife/compiler/BindingSet.java
+@@ -280,7 +280,7 @@ final class BindingSet {
+   }
+   private void addViewBinding(MethodSpec.Builder result, ViewBinding binding, boolean debuggable) {
+     if (binding.isSingleFieldBinding()) {
+-      FieldViewBinding fieldBinding = binding.getFieldBinding();
++      FieldViewBinding fieldBinding = requireNonNull(binding.getFieldBinding());
+       CodeBlock.Builder builder = CodeBlock.builder()
+           .add("target.$L = ", fieldBinding.getName());
+       boolean requiresCast = requiresCast(fieldBinding.getType());
+@@ -548,7 +548,7 @@ final class BindingSet {
+   }
+   private boolean constructorNeedsView() {
+     return hasViewBindings() 
+-        || parentBinding != null && parentBinding.constructorNeedsView();
++        || (parentBinding != null && parentBinding.constructorNeedsView());
+   }
+   static boolean requiresCast(TypeName type) {
+     return !VIEW_TYPE.equals(type.toString());
+diff --git a/butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java b/butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java
+index 5619fdd8..509fb17f 100644
+--- a/butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java
++++ b/butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java
+@@ -1,5 +1,6 @@
+ package butterknife.compiler;
+ @AutoService(Processor.class)
++ 
+ public final class ButterKnifeProcessor extends AbstractProcessor {
+   private static final String OPTION_SDK_INT = "butterknife.minSdk";
+   private static final String OPTION_DEBUGGABLE = "butterknife.debuggable";
+@@ -387,11 +388,10 @@ public final class ButterKnifeProcessor extends AbstractProcessor {
+     if (hasError) {
+       return;
+     }
+-    assert viewType != null; 
+-    TypeName type = TypeName.get(viewType);
++    TypeName type = TypeName.get(requireNonNull(viewType));
+     boolean required = isFieldRequired(element);
+     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+-    builder.addFieldCollection(new FieldCollectionViewBinding(name, type, kind,
++    builder.addFieldCollection(new FieldCollectionViewBinding(name, type, requireNonNull(kind),
+         new ArrayList<>(elementToIds(element, BindViews.class, ids).values()), required));
+     erasedTargetNames.add(enclosingElement);
+   }
+@@ -667,7 +667,7 @@ public final class ButterKnifeProcessor extends AbstractProcessor {
+     int id = element.getAnnotation(BindArray.class).value();
+     Id resourceId = elementToId(element, BindArray.class, id);
+     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+-    builder.addResource(new FieldResourceBinding(resourceId, name, type));
++    builder.addResource(new FieldResourceBinding(resourceId, name, requireNonNull(type)));
+     erasedTargetNames.add(enclosingElement);
+   }
+   private static  FieldResourceBinding.Type getArrayResourceMethodName(Element element) {
+@@ -880,10 +880,10 @@ public final class ButterKnifeProcessor extends AbstractProcessor {
+     MethodViewBinding binding = new MethodViewBinding(name, Arrays.asList(parameters), required);
+     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+     Map<Integer, Id> resourceIds = elementToIds(element, annotationClass, ids);
+-    for (int id : resourceIds.keySet()) {
+-      if (!builder.addMethod(resourceIds.get(id), listener, method, binding)) {
++    for (Map.Entry<Integer, Id> entry : resourceIds.entrySet()) {
++      if (!builder.addMethod(entry.getValue(), listener, method, binding)) {
+         error(element, "Multiple listener methods with return value specified for ID %d. (%s.%s)",
+-            id, enclosingElement.getQualifiedName(), element.getSimpleName());
++            entry.getKey(), enclosingElement.getQualifiedName(), element.getSimpleName());
+         return;
+       }
+     }
+@@ -1036,7 +1036,7 @@ public final class ButterKnifeProcessor extends AbstractProcessor {
+           && symbol.getEnclosingElement().getEnclosingElement() != null
+           && symbol.getEnclosingElement().getEnclosingElement().enclClass() != null) {
+         try {
+-          int value = (Integer) ((Symbol.VarSymbol) symbol).getConstantValue();
++          int value = (Integer) requireNonNull(((Symbol.VarSymbol) symbol).getConstantValue());
+           resourceIds.put(value, new Id(value, symbol));
+         } catch (Exception ignored) { }
+       }
+diff --git a/butterknife-compiler/src/main/java/butterknife/compiler/FieldResourceBinding.java b/butterknife-compiler/src/main/java/butterknife/compiler/FieldResourceBinding.java
+index d05a82e3..fc923071 100644
+--- a/butterknife-compiler/src/main/java/butterknife/compiler/FieldResourceBinding.java
++++ b/butterknife-compiler/src/main/java/butterknife/compiler/FieldResourceBinding.java
+@@ -21,16 +21,16 @@ final class FieldResourceBinding implements ResourceBinding {
+     STRING_ARRAY("getStringArray"),
+     TEXT_ARRAY("getTextArray"),
+     TYPED_ARRAY("obtainTypedArray");
+-    private final List<ResourceMethod> methods;
++    private final ImmutableList<ResourceMethod> methods;
+     Type(ResourceMethod... methods) {
+       List<ResourceMethod> methodList = new ArrayList<>(methods.length);
+       Collections.addAll(methodList, methods);
+       Collections.sort(methodList);
+       Collections.reverse(methodList);
+-      this.methods = unmodifiableList(methodList);
++      this.methods = ImmutableList.copyOf(methodList);
+     }
+     Type(String methodName) {
+-      methods = singletonList(new ResourceMethod(null, methodName, true, 1));
++      methods = ImmutableList.of(new ResourceMethod(null, methodName, true, 1));
+     }
+     ResourceMethod methodForSdk(int sdk) {
+       for (ResourceMethod method : methods) {
+@@ -41,7 +41,9 @@ final class FieldResourceBinding implements ResourceBinding {
+       throw new AssertionError();
+     }
+   }
++  @Immutable
+   static final class ResourceMethod implements Comparable<ResourceMethod> {
++    
+     final  ClassName typeName;
+     final String name;
+     final boolean requiresResources;

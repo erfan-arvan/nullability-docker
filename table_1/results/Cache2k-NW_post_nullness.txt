@@ -1,0 +1,90 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M2:enforce[m [1m(enforce-versions)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(java-8-compile)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Compiling 96 source files with javac [forked debug release 8] to target/classes
+[[1;33mWARNING[m] The following options were not recognized by any processor: '[detailedmsgtex]'
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[137,14] [nullness:method.invocation] call to withConfig(org.cache2k.config.Cache2kConfig<K,V>) not allowed on the given receiver.
+  found   : @UnderInitialization(org.cache2k.Cache2kBuilder.class) @NonNull Cache2kBuilder</*RAW*/>
+  required: @Initialized @NonNull Cache2kBuilder</*RAW*/>
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[1017,35] [nullness:contracts.precondition.override] Subclass precondition is stronger for 'this.config' in config.
+    In superclass org.cache2k.config.ConfigBuilder: no information
+    In subclass org.cache2k.Cache2kBuilder: @Nullable
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/CustomizationReferenceSupplier.java:[39,28] [nullness:argument] incompatible argument for parameter obj of Cache2kConfig.checkNull.
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java:[82,15] [nullness:return] incompatible types in return.
+  type of expression: T extends @Initialized @NonNull ToggleFeature
+  method return type: T extends @Initialized @Nullable ToggleFeature
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java:[149,35] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java:[149,35] [nullness:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/Cache.java:[933,16] [nullness:type.argument] incompatible type argument for type parameter K of ConcurrentMap.
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/Cache.java:[933,19] [nullness:type.argument] incompatible type argument for type parameter V of ConcurrentMap.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java:[82,35] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java:[82,35] [nullness:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java:[80,19] [nullness:argument] incompatible argument for parameter arg0 of ClassLoader.loadClass.
+  found   : @Initialized @MonotonicNonNull String
+  required: @Initialized @NonNull String
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[50,6] [nullness:dereference.of.nullable] dereference of possibly-null reference ((ParameterizedType)this.getClass().getGenericSuperclass())
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[129,54] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getTypeName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[129,54] [nullness:purity.not.sideeffectfree.call] call to side-effecting getTypeName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[155,10] [nullness:dereference.of.nullable] dereference of possibly-null reference s
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[209,13] [nullness:dereference.of.nullable] dereference of possibly-null reference td
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[218,13] [nullness:dereference.of.nullable] dereference of possibly-null reference td
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/DefaultCustomizationCollection.java:[68,35] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/config/DefaultCustomizationCollection.java:[68,35] [nullness:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/AbstractCache.java:[220,23] [nullness:type.argument] incompatible type argument for type parameter K of ConcurrentMap.
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/AbstractCache.java:[220,26] [nullness:type.argument] incompatible type argument for type parameter V of ConcurrentMap.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[242,23] [nullness:type.argument] incompatible type argument for type parameter K of ConcurrentMap.
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[242,26] [nullness:type.argument] incompatible type argument for type parameter V of ConcurrentMap.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[251,40] [keyfor:purity.not.sideeffectfree.call] call to side-effecting this.getClass().getSimpleName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[251,40] [nullness:purity.not.sideeffectfree.call] call to side-effecting this.getClass().getSimpleName not allowed in side-effect-free method
+[[1;33mWARNING[m] /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_post/cache2k-api/src/main/java/org/cache2k/integration/Loaders.java:[42,39] [nullness:argument] incompatible argument for parameter value of RefreshedTimeWrapper constructor.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(java-11-compile)[m @ [36mcache2k-api[0;1m ---[m
+[[1;33mWARNING[m] ****************************************************************************************************************************************
+[[1;33mWARNING[m] * [1mRequired filename-based automodules detected: [jsr305-3.0.2.jar]. Please don't publish this project to a public artifact repository![m *
+[[1;33mWARNING[m] ****************************************************************************************************************************************
+[[1;34mINFO[m] Compiling 1 source file with javac [forked debug release 11 module-path] to target/classes
+[[1;33mWARNING[m] The following options were not recognized by any processor: '[detailedmsgtex]'
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  28.752 s
+[[1;34mINFO[m] Finished at: 2025-04-12T05:04:00Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+
+==== Count Script Output ====
+
+68

@@ -1,0 +1,60 @@
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 0
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 2
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java: @SuppressWarnings("DuplicatedCode")
+./src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java: @SuppressWarnings("unused")
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 17
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 3
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java: @SuppressWarnings("DuplicatedCode")
+./src/main/java/org/spacious_team/table_wrapper/csv/CsvTableHelper.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java: @SuppressWarnings("unused")
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 0
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 2
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java: @SuppressWarnings("DuplicatedCode")
+./src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java: @SuppressWarnings("unused")
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 17
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 3
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java: @SuppressWarnings("DuplicatedCode")
+./src/main/java/org/spacious_team/table_wrapper/csv/CsvTableHelper.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java: @SuppressWarnings("unused")

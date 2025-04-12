@@ -1,0 +1,412 @@
+diff --git a/cache2k-api/src/main/java/org/cache2k/AbstractCache.java b/cache2k-api/src/main/java/org/cache2k/AbstractCache.java
+index 69345dd1..27148b3b 100644
+--- a/cache2k-api/src/main/java/org/cache2k/AbstractCache.java
++++ b/cache2k-api/src/main/java/org/cache2k/AbstractCache.java
+@@ -93,7 +93,7 @@ public class AbstractCache<K, V> implements Cache<K, V> {
+     throw new UnsupportedOperationException();
+   }
+   @Override
+-  public <R> R invoke(K key, EntryProcessor<K, V, R> entryProcessor) {
++  public <R> R invoke(K key, EntryProcessor<K, V, R> processor) {
+     throw new UnsupportedOperationException();
+   }
+   @Override
+@@ -149,4 +149,8 @@ public class AbstractCache<K, V> implements Cache<K, V> {
+   public <X> X requestInterface(Class<X> type) {
+     throw new UnsupportedOperationException();
+   }
++  @Override
++  public String toString() {
++    throw new UnsupportedOperationException();
++  }
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/Cache.java b/cache2k-api/src/main/java/org/cache2k/Cache.java
+index 41b07f1e..953e6cd0 100644
+--- a/cache2k-api/src/main/java/org/cache2k/Cache.java
++++ b/cache2k-api/src/main/java/org/cache2k/Cache.java
+@@ -30,9 +30,15 @@ public interface Cache<K, V> extends KeyValueStore<K, V>, Closeable {
+   void reloadAll(Iterable<? extends K> keys, CacheOperationCompletionListener listener);
+   CompletableFuture<Void> loadAll(Iterable<? extends K> keys);
+   CompletableFuture<Void> reloadAll(Iterable<? extends K> keys);
+-  <R> R invoke(K key, EntryProcessor<K, V, R> entryProcessor);
++  <R>  R invoke(K key, EntryProcessor<K, V, R> processor);
++  default void mutate(K key, EntryMutator<K, V> mutator) {
++    invoke(key, entry -> { mutator.mutate(entry); return this; });
++  }
+   <R> Map< K,  EntryProcessingResult<R>> invokeAll(
+     Iterable<? extends K> keys, EntryProcessor<K, V, R> entryProcessor);
++  default void mutateAll(Iterable<? extends K> keys, EntryMutator<K, V> mutator) {
++    invokeAll(keys, entry -> { mutator.mutate(entry); return this; });
++  }
+   @Override
+   Map<K, V> getAll(Iterable<? extends K> keys);
+   Map<K, V> peekAll(Iterable<? extends K> keys);
+@@ -42,9 +48,11 @@ public interface Cache<K, V> extends KeyValueStore<K, V>, Closeable {
+   Iterable<CacheEntry<K, V>> entries();
+   void removeAll();
+   void clear();
++  @Override
+   void close();
+   CacheManager getCacheManager();
+   boolean isClosed();
++  @Override
+   String toString();
+   <T> T requestInterface(Class<T> type);
+   ConcurrentMap<K, V> asMap();
+diff --git a/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java b/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java
+index 8a4222c3..6a4cc702 100644
+--- a/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java
++++ b/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java
+@@ -42,10 +42,7 @@ public class Cache2kBuilder<K, V>
+   }
+   private Cache2kConfig<K, V> cfg() {
+     if (config == null) {
+-      if (manager == null) {
+-        manager = CacheManager.getInstance();
+-      }
+-      config = CacheManager.PROVIDER.getDefaultConfig(manager);
++      config = CacheManager.PROVIDER.getDefaultConfig(getManager());
+       if (keyType != null) {
+         config.setKeyType(keyType);
+       }
+@@ -379,7 +376,8 @@ public class Cache2kBuilder<K, V>
+   }
+   public <B extends ConfigBuilder<B, CFG>,
+           CFG extends ConfigBean<CFG, B>>
+-  Cache2kBuilder<K, V> setup(Function<Cache2kBuilder<K, V>, CFG> enabler, Consumer<B> builderAction) {
++  Cache2kBuilder<K, V> setup(Function<Cache2kBuilder<K, V>, CFG> enabler,
++                             Consumer<B> builderAction) {
+     builderAction.accept(enabler.apply(this).builder());
+     return this;
+   }
+@@ -401,9 +399,12 @@ public class Cache2kBuilder<K, V>
+     return cfg();
+   }
+   public final CacheManager getManager() {
++    if (manager == null) {
++      manager = CacheManager.getInstance();
++    }
+     return manager;
+   }
+   public final Cache<K, V> build() {
+-    return CacheManager.PROVIDER.createCache(manager, cfg());
++    return CacheManager.PROVIDER.createCache(getManager(), cfg());
+   }
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java b/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java
+index 555a302d..e13222bd 100644
+--- a/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java
++++ b/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java
+@@ -94,8 +94,12 @@ public abstract class ForwardingCache<K, V> implements Cache<K, V> {
+     return delegate().reloadAll(keys);
+   }
+   @Override
+-  public <R> R invoke(K key, EntryProcessor<K, V, R> entryProcessor) {
+-    return delegate().invoke(key, entryProcessor);
++  public <R> R invoke(K key, EntryProcessor<K, V, R> processor) {
++    return delegate().invoke(key, processor);
++  }
++  @Override
++  public void mutate(K key, EntryMutator<K, V> mutator) {
++    delegate().mutate(key, mutator);
+   }
+   @Override
+   public <R> Map<K, EntryProcessingResult<R>> invokeAll(
+@@ -103,6 +107,10 @@ public abstract class ForwardingCache<K, V> implements Cache<K, V> {
+     return delegate().invokeAll(keys, entryProcessor);
+   }
+   @Override
++  public void mutateAll(Iterable<? extends K> keys, EntryMutator<K, V> mutator) {
++    delegate().mutateAll(keys, mutator);
++  }
++  @Override
+   public Map<K, V> getAll(Iterable<? extends K> keys) {
+     return delegate().getAll(keys);
+   }
+@@ -143,10 +151,6 @@ public abstract class ForwardingCache<K, V> implements Cache<K, V> {
+     return delegate().isClosed();
+   }
+   @Override
+-  public String toString() {
+-    return this.getClass().getSimpleName() + "!" + delegate().toString();
+-  }
+-  @Override
+   public <X> X requestInterface(Class<X> type) {
+     return delegate().requestInterface(type);
+   }
+@@ -154,4 +158,8 @@ public abstract class ForwardingCache<K, V> implements Cache<K, V> {
+   public ConcurrentMap<K, V> asMap() {
+     return delegate().asMap();
+   }
++  @Override
++  public String toString() {
++    return this.getClass().getSimpleName() + "!" + delegate().toString();
++  }
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java b/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java
+index 3ea5ed96..d5e508f6 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java
+@@ -54,9 +54,7 @@ public class Cache2kConfig<K, V>
+     c.setValueType(valueType);
+     return c;
+   }
+-  public String getName() {
+-    return name;
+-  }
++  public  String getName() { return name; }
+   public void setName( String name) {
+     this.name = name;
+   }
+@@ -113,15 +111,7 @@ public class Cache2kConfig<K, V>
+     return expireAfterWrite;
+   }
+   public void setExpireAfterWrite( Duration v) {
+-    if (v == null) {
+-      v = null;
+-      return;
+-    }
+-    v = durationCeiling(v);
+-    if (v.isNegative()) {
+-      throw new IllegalArgumentException("Duration must be positive");
+-    }
+-    this.expireAfterWrite = v;
++    this.expireAfterWrite = durationCheckAndSanitize(v);
+   }
+   public boolean isEternal() {
+     return eternal;
+@@ -133,7 +123,7 @@ public class Cache2kConfig<K, V>
+     return timerLag;
+   }
+   public void setTimerLag( Duration v) {
+-    this.timerLag = durationCeiling(v);
++    this.timerLag = durationCheckAndSanitize(v);
+   }
+   public boolean isKeepDataAfterExpired() {
+     return keepDataAfterExpired;
+@@ -220,7 +210,8 @@ public class Cache2kConfig<K, V>
+   public void setExceptionPropagator( CustomizationSupplier<? extends ExceptionPropagator<K>> v) {
+     exceptionPropagator = v;
+   }
+-  public CustomizationCollection<CacheEntryOperationListener<K, V>> getListeners() {
++  public 
++  CustomizationCollection<CacheEntryOperationListener<K, V>> getListeners() {
+     if (listeners == null) {
+       listeners = new DefaultCustomizationCollection<CacheEntryOperationListener<K, V>>();
+     }
+@@ -233,7 +224,8 @@ public class Cache2kConfig<K, V>
+     Collection<CustomizationSupplier<CacheEntryOperationListener<K, V>>> c) {
+     getListeners().addAll(c);
+   }
+-  public CustomizationCollection<CacheEntryOperationListener<K, V>> getAsyncListeners() {
++  public 
++  CustomizationCollection<CacheEntryOperationListener<K, V>> getAsyncListeners() {
+     if (asyncListeners == null) {
+       asyncListeners = new DefaultCustomizationCollection<CacheEntryOperationListener<K, V>>();
+     }
+@@ -246,7 +238,8 @@ public class Cache2kConfig<K, V>
+     Collection<CustomizationSupplier<CacheEntryOperationListener<K, V>>> c) {
+     getAsyncListeners().addAll(c);
+   }
+-  public Collection<CustomizationSupplier<? extends CacheLifecycleListener>> getLifecycleListeners() {
++  public 
++  Collection<CustomizationSupplier<? extends CacheLifecycleListener>> getLifecycleListeners() {
+     if (lifecycleListeners == null) {
+       lifecycleListeners = new DefaultCustomizationCollection<CacheLifecycleListener>();
+     }
+@@ -256,11 +249,11 @@ public class Cache2kConfig<K, V>
+   public boolean hasLifecycleListeners() {
+     return lifecycleListeners != null && !lifecycleListeners.isEmpty();
+   }
+-  public void setLifecycleListeners(
+-    Collection<CustomizationSupplier<? extends CacheLifecycleListener>> c) {
++  public void setLifecycleListeners( Collection<CustomizationSupplier<? extends CacheLifecycleListener>> c) {
+     getLifecycleListeners().addAll(c);
+   }
+-  public Set<Feature> getFeatures() {
++  public 
++  Set<Feature> getFeatures() {
+     if (features == null) {
+       features = new HashSet<>();
+     }
+@@ -344,8 +337,14 @@ public class Cache2kConfig<K, V>
+   public void setDisableMonitoring(boolean disableMonitoring) {
+     this.disableMonitoring = disableMonitoring;
+   }
+-  private Duration durationCeiling(Duration v) {
+-    if (v != null && EXPIRY_ETERNAL.compareTo(v) <= 0) {
++  private  Duration durationCheckAndSanitize( Duration v) {
++    if (v == null) {
++      return null;
++    }
++    if (v.isNegative()) {
++      throw new IllegalArgumentException("Duration must be positive");
++    }
++    if (EXPIRY_ETERNAL.compareTo(v) <= 0) {
+       v = EXPIRY_ETERNAL;
+     }
+     return v;
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/Cache2kManagerConfig.java b/cache2k-api/src/main/java/org/cache2k/config/Cache2kManagerConfig.java
+index 6b59f1f4..d1955faa 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/Cache2kManagerConfig.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/Cache2kManagerConfig.java
+@@ -43,7 +43,7 @@ public class Cache2kManagerConfig
+   public static class Builder implements ConfigBuilder<Builder, Cache2kManagerConfig> {
+     @Override
+     public Cache2kManagerConfig config() {
+-      return null;
++      throw new UnsupportedOperationException();
+     }
+   }
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java b/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java
+index 93393d3e..11da4c0a 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java
+@@ -118,7 +118,7 @@ public class CacheTypeCapture<T> implements CacheType<T> {
+     public CacheType<?> getComponentType() {
+       return componentType;
+     }
+-    static int countDimensions(CacheType<?> td) {
++    private static int countDimensions(CacheType<?> td) {
+       int cnt = 0;
+       while (td.isArray()) {
+         td = td.getComponentType();
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java b/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java
+index a4c24054..24256e91 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java
+@@ -39,6 +39,9 @@ public final class CustomizationSupplierByClassName<T>
+     if (this == other) return true;
+     if (!(other instanceof CustomizationSupplierByClassName)) return false;
+     CustomizationSupplierByClassName<?> that = (CustomizationSupplierByClassName<?>) other;
++    if (className == null) {
++      return that.className == null;
++    }
+     return className.equals(that.className);
+   }
+   @Override
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java b/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java
+index 44ce2d75..997914fe 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java
+@@ -16,7 +16,8 @@ public class SectionContainer extends AbstractCollection<ConfigSection>
+     return section != null ? sectionType.cast(section) : defaultFallback;
+   }
+   public <T extends ConfigSection> T getSection(Class<T> sectionType) {
+-    return getSection(sectionType, null);
++    ConfigSection section = class2section.get(sectionType);
++    return sectionType.cast(section);
+   }
+   @Override
+   public Iterator<ConfigSection> iterator() {
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/package-info.java b/cache2k-api/src/main/java/org/cache2k/config/package-info.java
+index 846b4e0c..36c15f4b 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/package-info.java
+@@ -1 +1,2 @@
++@NonNullIsDefault
+ package org.cache2k.config;
+diff --git a/cache2k-api/src/main/java/org/cache2k/event/CacheCreatedListener.java b/cache2k-api/src/main/java/org/cache2k/event/CacheCreatedListener.java
+index ce07d27d..8e3e1213 100644
+--- a/cache2k-api/src/main/java/org/cache2k/event/CacheCreatedListener.java
++++ b/cache2k-api/src/main/java/org/cache2k/event/CacheCreatedListener.java
+@@ -1,4 +1,5 @@
+ package org.cache2k.event;
+ public interface CacheCreatedListener extends CacheLifecycleListener {
+-  <K, V> CompletableFuture<Void> onCacheCreated(Cache<K, V> cache, CacheBuildContext<K, V> ctx);
++  <K, V> CompletableFuture<Void> onCacheCreated(Cache<K, V> cache,
++                                                CacheBuildContext<K, V> ctx);
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/event/CacheLifecycleListener.java b/cache2k-api/src/main/java/org/cache2k/event/CacheLifecycleListener.java
+index accc73c3..e3c039a0 100644
+--- a/cache2k-api/src/main/java/org/cache2k/event/CacheLifecycleListener.java
++++ b/cache2k-api/src/main/java/org/cache2k/event/CacheLifecycleListener.java
+@@ -1,2 +1,10 @@
+ package org.cache2k.event;
+-public interface CacheLifecycleListener extends EventListener { }
++public interface CacheLifecycleListener extends EventListener {
++  CompletableFuture<Void> COMPLETE = new CompletableFuture<Void>() {
++    public CompletableFuture<Void> newIncompleteFuture() {
++      return this;
++    }
++    public void obtrudeValue(Void value) { throw new UnsupportedOperationException(); }
++    public void obtrudeException(Throwable ex) { throw new UnsupportedOperationException(); }
++  };
++}
+diff --git a/cache2k-api/src/main/java/org/cache2k/event/package-info.java b/cache2k-api/src/main/java/org/cache2k/event/package-info.java
+index 42a08925..436da6fd 100644
+--- a/cache2k-api/src/main/java/org/cache2k/event/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/event/package-info.java
+@@ -1 +1,2 @@
++@NonNullIsDefault
+ package org.cache2k.event;
+diff --git a/cache2k-api/src/main/java/org/cache2k/expiry/ExpiryPolicy.java b/cache2k-api/src/main/java/org/cache2k/expiry/ExpiryPolicy.java
+index 8ed39c7d..3b479e42 100644
+--- a/cache2k-api/src/main/java/org/cache2k/expiry/ExpiryPolicy.java
++++ b/cache2k-api/src/main/java/org/cache2k/expiry/ExpiryPolicy.java
+@@ -1,8 +1,4 @@
+ package org.cache2k.expiry;
+ public interface ExpiryPolicy<K, V> extends ExpiryTimeValues {
+-  long calculateExpiryTime(
+-      K key,
+-      V value,
+-      long loadTime,
+-      CacheEntry<K, V> currentEntry);
++  long calculateExpiryTime(K key, V value, long loadTime,  CacheEntry<K, V> currentEntry);
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/expiry/package-info.java b/cache2k-api/src/main/java/org/cache2k/expiry/package-info.java
+index cd10cb39..e75a4bfd 100644
+--- a/cache2k-api/src/main/java/org/cache2k/expiry/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/expiry/package-info.java
+@@ -1 +1,2 @@
++@NonNullIsDefault
+ package org.cache2k.expiry;
+diff --git a/cache2k-api/src/main/java/org/cache2k/io/package-info.java b/cache2k-api/src/main/java/org/cache2k/io/package-info.java
+index c73ff894..538452a9 100644
+--- a/cache2k-api/src/main/java/org/cache2k/io/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/io/package-info.java
+@@ -1 +1,2 @@
++@NonNullIsDefault
+ package org.cache2k.io;
+diff --git a/cache2k-api/src/main/java/org/cache2k/operation/package-info.java b/cache2k-api/src/main/java/org/cache2k/operation/package-info.java
+index b6a10be6..d7d004ed 100644
+--- a/cache2k-api/src/main/java/org/cache2k/operation/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/operation/package-info.java
+@@ -1 +1,2 @@
++@NonNullIsDefault
+ package org.cache2k.operation;
+diff --git a/cache2k-api/src/main/java/org/cache2k/package-info.java b/cache2k-api/src/main/java/org/cache2k/package-info.java
+index ffa597c7..579cb432 100644
+--- a/cache2k-api/src/main/java/org/cache2k/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/package-info.java
+@@ -1 +1,2 @@
++@NonNullIsDefault
+ package org.cache2k;
+diff --git a/cache2k-api/src/main/java/org/cache2k/processor/package-info.java b/cache2k-api/src/main/java/org/cache2k/processor/package-info.java
+index 8f630c01..69f45f1a 100644
+--- a/cache2k-api/src/main/java/org/cache2k/processor/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/processor/package-info.java
+@@ -1 +1,2 @@
++@NonNullIsDefault
+ package org.cache2k.processor;
+diff --git a/cache2k-api/src/main/java/org/cache2k/spi/package-info.java b/cache2k-api/src/main/java/org/cache2k/spi/package-info.java
+index a117ca10..9b0cd630 100644
+--- a/cache2k-api/src/main/java/org/cache2k/spi/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/spi/package-info.java
+@@ -1 +1,2 @@
++@NonNullIsDefault
+ package org.cache2k.spi;
+diff --git a/cache2k-api/src/main/java11/module-info.java b/cache2k-api/src/main/java11/module-info.java
+index 312c6fc1..659c599c 100644
+--- a/cache2k-api/src/main/java11/module-info.java
++++ b/cache2k-api/src/main/java11/module-info.java
+@@ -1,6 +1,8 @@
+ module org.cache2k.api {
++  requires static jsr305;
+   exports org.cache2k;
+   exports org.cache2k.config;
++  exports org.cache2k.annotation;
+   exports org.cache2k.event;
+   exports org.cache2k.expiry;
+   exports org.cache2k.integration;

@@ -1,0 +1,217 @@
+Removed /tmp/WPITEMP-cache2k
+Created /tmp/WPITEMP-cache2k
+Checking for the first time
+------------------------
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.578 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:11:57Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.421 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:12:19Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+------------------------
+Removed /tmp/WPITEMP-cache2k
+Created /tmp/WPITEMP-cache2k
+entering iteration 1
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.587 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:12:43Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 1 into /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/iteration1.diff
+entering iteration 2
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.578 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:13:11Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 2 into /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/iteration2.diff
+entering iteration 3
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.410 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:13:42Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 3 into /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/iteration3.diff
+entering iteration 4
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.519 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:14:13Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 4 into /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/iteration4.diff
+entering iteration 5
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.617 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:14:45Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+putting the diff for iteration 5 into /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/iteration5.diff
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.616 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:14:46Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/table_3/wpi_cfnullness/dataset/cache2k-CFNullness_pre/cache2k-api/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.607 s
+[[1;34mINFO[m] Finished at: 2025-04-12T03:15:18Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+
+==== Count Script Output ====
+
+21 errors

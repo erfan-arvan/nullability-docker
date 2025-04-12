@@ -1,0 +1,73 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.spacious-team:table-wrapper-csv-impl[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API CSV Implementation 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(prepare-agent)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/ubuntu/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m @ [36mtable-wrapper-csv-impl[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module! :source
+[[1;34mINFO[m] Compiling 9 source files with javac [forked debug target 11] to target/classes
+[[1;33mWARNING[m] The following options were not recognized by any processor: '[detailedmsgtex]'
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[42,24] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[42,24] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[42,24] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[42,24] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[79,19] [nullness:override.return] Incompatible return type.
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+  Consequence: method in @Initialized @NonNull CsvTableRow.@Initialized @NonNull <anonymous org.spacious_team.table_wrapper.csv.CsvTableRow$1>
+    @Initialized @Nullable TableCell next(@Initialized @NonNull CsvTableRow.@Initialized @NonNull <anonymous org.spacious_team.table_wrapper.csv.CsvTableRow$1> this)
+  cannot override method in @Initialized @NonNull Iterator<@Initialized @NonNull TableCell>
+    @Initialized @NonNull TableCell next(@Initialized @NonNull Iterator<@Initialized @NonNull TableCell> this)
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[79,29] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[79,29] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[79,29] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[79,29] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[37,47] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private, final]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[37,47] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private, final]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[38,36] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private, final]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[38,36] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private, final]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[51,24] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[51,24] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[51,24] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[51,24] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[52,40] [nullness:assignment] incompatible types in assignment.
+  found   : @Initialized @Nullable CsvTableCell
+  required: @UnknownInitialization @NonNull CsvTableCell
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[57,19] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[57,19] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[57,19] [nullness:contracts.precondition.override] Subclass precondition is stronger for 'this.dateTimeFormatter' in getValue.
+    In superclass org.spacious_team.table_wrapper.api.CellDataAccessObject: no information
+    In subclass org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject: @Nullable
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[57,19] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[57,19] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[63,32] [nullness:assignment] incompatible types in assignment.
+  found   : @Initialized @Nullable String
+  required: @UnknownInitialization @NonNull String
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[81,24] [keyfor:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[81,24] [keyfor:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[81,24] [nullness:type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[81,24] [nullness:type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[88,57] [nullness:assignment] incompatible types in assignment.
+  found   : @Initialized @Nullable DateTimeFormatter
+  required: @UnknownInitialization @NonNull DateTimeFormatter
+[[1;33mWARNING[m] /home/ubuntu/table_3/annotator_cfnullness/run_cfnullness/dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[106,57] [nullness:assignment] incompatible types in assignment.
+  found   : @Initialized @Nullable DateTimeFormatter
+  required: @UnknownInitialization @NonNull DateTimeFormatter
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  9.806 s
+[[1;34mINFO[m] Finished at: 2025-04-11T19:16:46Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+
+==== Count Script Output ====
+
+27 errors

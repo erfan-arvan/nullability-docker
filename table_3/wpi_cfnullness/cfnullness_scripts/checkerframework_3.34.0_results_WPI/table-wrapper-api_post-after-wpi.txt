@@ -1,0 +1,46 @@
+../dataset/table-wrapper-api_post/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:47: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 1839, 1842 ) $$ dereference of possibly-null reference row
+        return row.getCell(i);
+               ^
+../dataset/table-wrapper-api_post/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:52: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 1920, 1923 ) $$ dereference of possibly-null reference row
+        return row.getRowNum();
+               ^
+../dataset/table-wrapper-api_post/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:57: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2008, 2011 ) $$ dereference of possibly-null reference row
+        return row.getFirstCellNum();
+               ^
+../dataset/table-wrapper-api_post/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:62: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2101, 2104 ) $$ dereference of possibly-null reference row
+        return row.getLastCellNum();
+               ^
+../dataset/table-wrapper-api_post/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:67: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2209, 2212 ) $$ dereference of possibly-null reference row
+        return row.rowContains(expected);
+               ^
+../dataset/table-wrapper-api_post/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:72: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2316, 2319 ) $$ dereference of possibly-null reference row
+        return row.iterator();
+               ^
+../dataset/table-wrapper-api_post/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:110: error: (assignment) $$ 2 $$ @Initialized @Nullable Integer $$ @UnknownInitialization @NonNull Integer $$ ( 3568, 3620 ) $$ incompatible types in assignment.
+        Integer cellIndex = table.getHeaderDescription().get(column.getColumn());
+                                                            ^
+  found   : @Initialized @Nullable Integer
+  required: @UnknownInitialization @NonNull Integer
+../dataset/table-wrapper-api_post/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:94: error: (argument) $$ 4 $$ array $$ Arrays.stream $$ capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable [] $$ @Initialized @NonNull TableColumnDescription @Initialized @NonNull [] $$ ( 4493, 4529 ) $$ incompatible argument for parameter array of Arrays.stream.
+        TableColumn[] columns = Arrays.stream(headerDescription.getEnumConstants()).map(TableColumnDescription::getColumn).toArray(TableColumn[]::new);
+                                                                                ^
+  found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
+  required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
+../dataset/table-wrapper-api_post/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:153: error: (assignment) $$ 2 $$ null (NullType) $$ T extends @UnknownInitialization @NonNull Object $$ ( 6922, 6926 ) $$ incompatible types in assignment.
+        T equalsObject = null;
+                         ^
+  found   : null (NullType)
+  required: T extends @UnknownInitialization @NonNull Object
+../dataset/table-wrapper-api_post/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:134: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TableCell $$ @Initialized @NonNull TableCell $$ ( 5956, 5989 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+                    TableCell cell = requireNonNull(reportPage.getCell(tableNameCell));
+                                                                      ^
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+../dataset/table-wrapper-api_post/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:162: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ @Initialized @Nullable TableCell $$ @Initialized @NonNull TableCell $$ ( 7266, 7299 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+                    TableCell cell = requireNonNull(reportPage.getCell(tableNameCell));
+                                                                      ^
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+11 errors

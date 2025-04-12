@@ -1,0 +1,201 @@
+diff --git a/src/com/namelessmc/java_api/ApiError.java b/src/com/namelessmc/java_api/ApiError.java
+index 87dcff6..73c07fc 100644
+--- a/src/com/namelessmc/java_api/ApiError.java
++++ b/src/com/namelessmc/java_api/ApiError.java
+@@ -34,7 +34,7 @@ public class ApiError extends NamelessException {
+ 	private static final long serialVersionUID = 3093028909912281912L;
+ 	private final int code;
+ 	private final  String meta;
+-	public ApiError(final int code,  String meta) {
++	public ApiError(final int code, final  String meta) {
+ 		super("An unexpected API error occurred with error code " + code + " and " + (meta == null ? "no meta" : "meta " + meta));
+ 		this.code = code;
+ 		this.meta = meta;
+diff --git a/src/com/namelessmc/java_api/CustomProfileField.java b/src/com/namelessmc/java_api/CustomProfileField.java
+index b7b73a9..ba5583d 100644
+--- a/src/com/namelessmc/java_api/CustomProfileField.java
++++ b/src/com/namelessmc/java_api/CustomProfileField.java
+@@ -38,7 +38,7 @@ public class CustomProfileField {
+ 		return description;
+ 	}
+ 	@Override
+-	public boolean equals(Object other) {
++	public boolean equals(final  Object other) {
+ 		return other instanceof CustomProfileField &&
+ 				((CustomProfileField) other).id == this.id;
+ 	}
+diff --git a/src/com/namelessmc/java_api/FilteredUserListBuilder.java b/src/com/namelessmc/java_api/FilteredUserListBuilder.java
+index c578e9f..c47be6d 100644
+--- a/src/com/namelessmc/java_api/FilteredUserListBuilder.java
++++ b/src/com/namelessmc/java_api/FilteredUserListBuilder.java
+@@ -6,7 +6,8 @@ public class FilteredUserListBuilder {
+ 	FilteredUserListBuilder( NamelessAPI api) {
+ 		this.api = api;
+ 	}
+-	public <T> FilteredUserListBuilder withFilter(UserFilter<T> filter, T value) {
++	public <T>  FilteredUserListBuilder withFilter(final  UserFilter<T> filter,
++														   final  T value) {
+ 		if (filters == null) {
+ 			filters = new HashMap<>();
+ 		}
+diff --git a/src/com/namelessmc/java_api/Group.java b/src/com/namelessmc/java_api/Group.java
+index 824bba3..8fb92aa 100644
+--- a/src/com/namelessmc/java_api/Group.java
++++ b/src/com/namelessmc/java_api/Group.java
+@@ -27,7 +27,7 @@ public class Group implements Comparable<Group> {
+ 		return this.order - other.order;
+ 	}
+ 	@Override
+-	public boolean equals(Object other) {
++	public boolean equals(final  Object other) {
+ 		return other instanceof Group &&
+ 				((Group) other).id == this.id;
+ 	}
+diff --git a/src/com/namelessmc/java_api/NamelessAPI.java b/src/com/namelessmc/java_api/NamelessAPI.java
+index c025790..3cffa7a 100755
+--- a/src/com/namelessmc/java_api/NamelessAPI.java
++++ b/src/com/namelessmc/java_api/NamelessAPI.java
+@@ -129,7 +129,7 @@ public final class NamelessAPI {
+ 	}
+ 	public  Optional<String> registerUser(final  String username,
+ 												  final  String email,
+-												   IntegrationData... integrationData)
++												  final  IntegrationData ... integrationData)
+ 			throws NamelessException, InvalidUsernameException, UsernameAlreadyExistsException,
+ 					CannotSendEmailException, IntegrationUsernameAlreadyExistsException,
+ 					IntegrationIdAlreadyExistsException, InvalidEmailAddressException, EmailAlreadyUsedException {
+@@ -186,7 +186,10 @@ public final class NamelessAPI {
+ 		json.addProperty("bot_user_id", userId + "");
+ 		this.requests.post("discord/update-bot-settings", json);
+ 	}
+-	public void setDiscordBotSettings( final URL url, final long guildId,  final String username, final long userId) throws NamelessException {
++	public void setDiscordBotSettings(final  URL url,
++									  final long guildId,
++									  final  String username,
++									  final long userId) throws NamelessException {
+ 		Objects.requireNonNull(url, "Bot url is null");
+ 		Objects.requireNonNull(username, "Bot username is null");
+ 		final JsonObject json = new JsonObject();
+@@ -274,7 +277,8 @@ public final class NamelessAPI {
+ 			throw new IllegalArgumentException("Invalid uuid: '" + uuid + "'", e);
+ 		}
+ 	}
+-	public static NamelessApiBuilder builder( URL apiUrl,  String apiKey) {
++	public static  NamelessApiBuilder builder(final  URL apiUrl,
++											 final  String apiKey) {
+ 		return new NamelessApiBuilder(apiUrl, apiKey);
+ 	}
+ }
+diff --git a/src/com/namelessmc/java_api/NamelessApiBuilder.java b/src/com/namelessmc/java_api/NamelessApiBuilder.java
+index dbbfff8..0bfdfab 100644
+--- a/src/com/namelessmc/java_api/NamelessApiBuilder.java
++++ b/src/com/namelessmc/java_api/NamelessApiBuilder.java
+@@ -83,21 +83,21 @@ public class NamelessApiBuilder {
+ 				.connectTimeout(timeout);
+ 		return this;
+ 	}
+-	public  NamelessApiBuilder withProxy(ProxySelector proxy) {
++	public  NamelessApiBuilder withProxy(final ProxySelector proxy) {
+ 		this.httpClientBuilder.proxy(proxy);
+ 		return this;
+ 	}
+ 	@Deprecated
+-	public  NamelessApiBuilder proxy(ProxySelector proxy) {
++	public  NamelessApiBuilder proxy(final ProxySelector proxy) {
+ 		this.httpClientBuilder.proxy(proxy);
+ 		return this;
+ 	}
+ 	@Deprecated
+-	public  NamelessApiBuilder withAuthenticator(Authenticator authenticator) {
++	public  NamelessApiBuilder withAuthenticator(final Authenticator authenticator) {
+ 		this.httpClientBuilder.authenticator(authenticator);
+ 		return this;
+ 	}
+-	public  NamelessApiBuilder authenticator(Authenticator authenticator) {
++	public  NamelessApiBuilder authenticator(final Authenticator authenticator) {
+ 		this.httpClientBuilder.authenticator(authenticator);
+ 		return this;
+ 	}
+diff --git a/src/com/namelessmc/java_api/NamelessUser.java b/src/com/namelessmc/java_api/NamelessUser.java
+index c5cb230..55dff16 100644
+--- a/src/com/namelessmc/java_api/NamelessUser.java
++++ b/src/com/namelessmc/java_api/NamelessUser.java
+@@ -13,10 +13,10 @@ public final class NamelessUser implements LanguageEntity {
+ 	NamelessUser(final  NamelessAPI api,
+ 				 final int id,
+ 				 final  String username,
+-				 boolean uuidKnown,
+-				  UUID uuid,
+-				 boolean discordIdKnown,
+-				 long discordId
++				 final boolean uuidKnown,
++				 final  UUID uuid,
++				 final boolean discordIdKnown,
++				 final long discordId
+ 	) {
+ 		this.api = api;
+ 		this.requests = api.getRequestHandler();
+diff --git a/src/com/namelessmc/java_api/NamelessVersion.java b/src/com/namelessmc/java_api/NamelessVersion.java
+index 7c4e08f..12f126c 100644
+--- a/src/com/namelessmc/java_api/NamelessVersion.java
++++ b/src/com/namelessmc/java_api/NamelessVersion.java
+@@ -17,7 +17,11 @@ public enum NamelessVersion {
+ 	private final int major;
+ 	private final int minor;
+ 	private final boolean isBeta;
+-	NamelessVersion( final String name,  String friendlyName, final int major, final int minor, final boolean isBeta) {
++	NamelessVersion(final  String name,
++					final  String friendlyName,
++					final int major,
++					final int minor,
++					final boolean isBeta) {
+ 		this.name = name;
+ 		this.friendlyName = friendlyName;
+ 		this.major = major;
+diff --git a/src/com/namelessmc/java_api/integrations/DetailedDiscordIntegrationData.java b/src/com/namelessmc/java_api/integrations/DetailedDiscordIntegrationData.java
+index 4d3f982..e180d36 100644
+--- a/src/com/namelessmc/java_api/integrations/DetailedDiscordIntegrationData.java
++++ b/src/com/namelessmc/java_api/integrations/DetailedDiscordIntegrationData.java
+@@ -1,7 +1,7 @@
+ package com.namelessmc.java_api.integrations;
+ public class DetailedDiscordIntegrationData extends DetailedIntegrationData implements IDiscordIntegrationData {
+ 	private final long idLong;
+-	public DetailedDiscordIntegrationData( JsonObject json) {
++	public DetailedDiscordIntegrationData(final  JsonObject json) {
+ 		super(json);
+ 		this.idLong = Integer.parseInt(this.getIdentifier());
+ 	}
+diff --git a/src/com/namelessmc/java_api/integrations/DetailedMinecraftIntegrationData.java b/src/com/namelessmc/java_api/integrations/DetailedMinecraftIntegrationData.java
+index 2fc590f..495e461 100644
+--- a/src/com/namelessmc/java_api/integrations/DetailedMinecraftIntegrationData.java
++++ b/src/com/namelessmc/java_api/integrations/DetailedMinecraftIntegrationData.java
+@@ -1,7 +1,7 @@
+ package com.namelessmc.java_api.integrations;
+ public class DetailedMinecraftIntegrationData extends DetailedIntegrationData implements IMinecraftIntegrationData {
+ 	private final  UUID uuid;
+-	public DetailedMinecraftIntegrationData( JsonObject json) {
++	public DetailedMinecraftIntegrationData(final  JsonObject json) {
+ 		super(json);
+ 		this.uuid = NamelessAPI.websiteUuidToJavaUuid(this.getIdentifier());
+ 	}
+diff --git a/src/com/namelessmc/java_api/modules/websend/WebsendCommand.java b/src/com/namelessmc/java_api/modules/websend/WebsendCommand.java
+index 90b7e61..5a619d4 100644
+--- a/src/com/namelessmc/java_api/modules/websend/WebsendCommand.java
++++ b/src/com/namelessmc/java_api/modules/websend/WebsendCommand.java
+@@ -1,13 +1,13 @@
+ package com.namelessmc.java_api.modules.websend;
+ public class WebsendCommand {
+-	private final int id;
++	private final @Positive int id;
+ 	private final  String commandLine;
+-	public WebsendCommand(final int id,
++	public WebsendCommand(final @Positive int id,
+ 						  final  String commandLine) {
+ 		this.id = id;
+ 		this.commandLine = commandLine;
+ 	}
+-	public int getId() {
++	public @Positive int getId() {
+ 		return id;
+ 	}
+ 	public  String getCommandLine() {

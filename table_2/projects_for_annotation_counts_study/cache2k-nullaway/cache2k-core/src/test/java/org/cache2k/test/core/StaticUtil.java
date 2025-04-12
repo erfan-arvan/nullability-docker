@@ -1,0 +1,104 @@
+package org.cache2k.test.core;
+
+/*
+ * #%L
+ * cache2k core implementation
+ * %%
+ * Copyright (C) 2000 - 2020 headissue GmbH, Munich
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+import org.cache2k.Cache;
+import org.cache2k.Cache2kBuilder;
+import org.cache2k.CacheEntry;
+import org.cache2k.CacheManager;
+import org.cache2k.event.CacheEntryRemovedListener;
+import org.cache2k.core.api.InternalCache;
+import org.cache2k.core.api.InternalCacheInfo;
+import org.cache2k.CacheOperationCompletionListener;
+
+import java.util.Arrays;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+
+/**
+ * @author Jens Wilke
+ */
+public class StaticUtil {
+
+  public static <T> Iterable<T> toIterable(T... keys) {
+    return Arrays.asList(keys);
+  }
+
+  public static InternalCacheInfo latestInfo(Cache c) {
+    return ((InternalCache) c).getLatestInfo();
+  }
+
+  /**
+   * Enforce the usage of wired cache by registering a dummy listener.
+   */
+  @SuppressWarnings("unchecked")
+  public static <K, V> Cache2kBuilder<K, V> enforceWiredCache(Cache2kBuilder<K, V> b) {
+    return b.addListener(new CacheEntryRemovedListener<K, V>() {
+      @Override
+      public void onEntryRemoved(Cache<K, V> cache, CacheEntry<K, V> entry) { }
+    });
+  }
+
+  public static void allCachesClosed() {
+    assertFalse("all caches closed",
+      CacheManager.getInstance().getActiveCaches().iterator().hasNext());
+  }
+
+  public static int count(Iterable<?> _things) {
+    int _counter = 0;
+    for (Object o : _things) {
+      _counter++;
+    }
+    return _counter;
+  }
+
+  public static void loadAndWait(LoaderRunner x) {
+    Throwable t = loadAndWaitMaybeFaulty(x);
+    assertNull(t);
+  }
+
+  public static Throwable loadAndWaitMaybeFaulty(LoaderRunner x) {
+    CacheLoaderTest.CompletionWaiter w = new CacheLoaderTest.CompletionWaiter();
+    x.run(w);
+    w.awaitCompletion();
+    return w.getException();
+  }
+
+  public static <K, V> CacheLoaderTest.CompletionWaiter load(Cache<K, V> c, K ...keys) {
+    CacheLoaderTest.CompletionWaiter w = new CacheLoaderTest.CompletionWaiter();
+    c.loadAll(toIterable(keys), w);
+    w.awaitCompletion();
+    return w;
+  }
+
+  public static <K, V> CacheLoaderTest.CompletionWaiter reload(Cache<K, V> c, K ...keys) {
+    CacheLoaderTest.CompletionWaiter w = new CacheLoaderTest.CompletionWaiter();
+    c.reloadAll(toIterable(keys), w);
+    w.awaitCompletion();
+    return w;
+  }
+
+  public interface LoaderRunner {
+    void run(CacheOperationCompletionListener l);
+  }
+
+}

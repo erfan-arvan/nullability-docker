@@ -1,0 +1,212 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.cache2k:cache2k-api >-----------------------
+[INFO] Building cache2k API 2.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M2:enforce (enforce-versions) @ cache2k-api ---
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ cache2k-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java-8-compile) @ cache2k-api ---
+[INFO] Compiling 91 source files with javac [forked debug release 8] to target/classes
+[WARNING] The following options were not recognized by any processor: '[detailedmsgtex]'
+[WARNING] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.checkerframework.javacutil.Resolver (file:/Users/erfanarvan/.m2/repository/org/checkerframework/checker/3.45.1-SNAPSHOT/checker-3.45.1-SNAPSHOT.jar) to method com.sun.tools.javac.comp.Resolve.findMethod(com.sun.tools.javac.comp.Env,com.sun.tools.javac.code.Type,com.sun.tools.javac.util.Name,com.sun.tools.javac.util.List,com.sun.tools.javac.util.List,boolean,boolean)
+WARNING: Please consider reporting this to the maintainers of org.checkerframework.javacutil.Resolver
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+/Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java:[84,11] [nullness:return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: T extends @Initialized @NonNull ToggleFeature
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java:[131,37] [nullness:override.param] Incompatible parameter type for o.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull ToggleFeature
+    @Initialized @NonNull boolean equals(@Initialized @NonNull ToggleFeature this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java:[148,35] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java:[148,35] [nullness:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[81,17] [nullness:initialization.field.uninitialized] the default constructor does not initialize field name
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[83,23] [nullness:initialization.field.uninitialized] the default constructor does not initialize field keyType
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[84,23] [nullness:initialization.field.uninitialized] the default constructor does not initialize field valueType
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[86,38] [nullness:assignment] incompatible types in assignment.
+  found   : null (NullType)
+  required: @Initialized @NonNull Duration
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[87,30] [nullness:assignment] incompatible types in assignment.
+  found   : null (NullType)
+  required: @Initialized @NonNull Duration
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[105,52] [nullness:initialization.field.uninitialized] the default constructor does not initialize field loaderExecutor
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[106,52] [nullness:initialization.field.uninitialized] the default constructor does not initialize field refreshExecutor
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[107,52] [nullness:initialization.field.uninitialized] the default constructor does not initialize field asyncListenerExecutor
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[108,52] [nullness:initialization.field.uninitialized] the default constructor does not initialize field executor
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[109,62] [nullness:initialization.field.uninitialized] the default constructor does not initialize field expiryPolicy
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[110,66] [nullness:initialization.field.uninitialized] the default constructor does not initialize field resiliencePolicy
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[111,61] [nullness:initialization.field.uninitialized] the default constructor does not initialize field loader
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[112,61] [nullness:initialization.field.uninitialized] the default constructor does not initialize field writer
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[113,69] [nullness:initialization.field.uninitialized] the default constructor does not initialize field advancedLoader
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[114,66] [nullness:initialization.field.uninitialized] the default constructor does not initialize field asyncLoader
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[115,66] [nullness:initialization.field.uninitialized] the default constructor does not initialize field exceptionPropagator
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[116,57] [nullness:initialization.field.uninitialized] the default constructor does not initialize field weigher
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[118,69] [nullness:initialization.field.uninitialized] the default constructor does not initialize field listeners
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[119,69] [nullness:initialization.field.uninitialized] the default constructor does not initialize field asyncListeners
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[120,68] [nullness:initialization.field.uninitialized] the default constructor does not initialize field lifecycleListeners
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[121,23] [nullness:initialization.field.uninitialized] the default constructor does not initialize field features
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[122,27] [nullness:initialization.field.uninitialized] the default constructor does not initialize field sections
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[223,18] [nullness:assignment] incompatible types in assignment.
+  found   : null (NullType)
+  required: @Initialized @NonNull CacheType<V extends @Initialized @Nullable Object>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[242,18] [nullness:assignment] incompatible types in assignment.
+  found   : null (NullType)
+  required: @Initialized @NonNull CacheType<V extends @Initialized @Nullable Object>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java:[263,10] [nullness:assignment] incompatible types in assignment.
+  found   : null (NullType)
+  required: @Initialized @NonNull Duration
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[107,30] [nullness:argument] incompatible argument for parameter keyType of Cache2kBuilder constructor.
+  found   : null (NullType)
+  required: @Initialized @NonNull CacheType</*RAW*/>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[107,36] [nullness:argument] incompatible argument for parameter valueType of Cache2kBuilder constructor.
+  found   : null (NullType)
+  required: @Initialized @NonNull CacheType</*RAW*/>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[132,39] [nullness:assignment] incompatible types in assignment.
+  found   : null (NullType)
+  required: @Initialized @NonNull Cache2kConfig<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[133,33] [nullness:assignment] incompatible types in assignment.
+  found   : null (NullType)
+  required: @Initialized @NonNull CacheManager
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[135,10] [nullness:initialization.fields.uninitialized] the constructor does not initialize fields: keyType, valueType
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[136,14] [nullness:method.invocation] call to withConfig(org.cache2k.config.Cache2kConfig<K,V>) not allowed on the given receiver.
+  found   : @UnderInitialization @NonNull Cache2kBuilder</*RAW*/>
+  required: @Initialized @NonNull Cache2kBuilder</*RAW*/>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache.java:[885,16] [nullness:type.argument] incompatible type argument for type parameter K of ConcurrentMap.
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache.java:[885,19] [nullness:type.argument] incompatible type argument for type parameter V of ConcurrentMap.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/CacheEntry.java:[77,24] [nullness:return] incompatible types in return.
+  type of expression: @Initialized @Nullable Throwable
+  method return type: @Initialized @NonNull Throwable
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CustomizationReferenceSupplier.java:[39,28] [nullness:argument] incompatible argument for parameter obj of Cache2kConfig.checkNull.
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CustomizationReferenceSupplier.java:[49,31] [nullness:override.param] Incompatible parameter type for other.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CustomizationReferenceSupplier<T extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CustomizationReferenceSupplier<T extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CustomizationReferenceSupplier.java:[57,11] [nullness:dereference.of.nullable] dereference of possibly-null reference object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CustomizationReferenceSupplier.java:[62,11] [nullness:dereference.of.nullable] dereference of possibly-null reference object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/integration/LoadDetail.java:[49,11] [nullness:return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LoadDetail<V extends @Initialized @Nullable Object>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/io/ResiliencePolicy.java:[59,35] [nullness:argument] incompatible argument for parameter v of Cache2kConfig.setResiliencePolicy.
+  found   : null (NullType)
+  required: @Initialized @NonNull CustomizationSupplier<? extends @Initialized @NonNull ResiliencePolicy<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java:[67,21] [nullness:return] incompatible types in return.
+  type of expression: T[ extends @Initialized @NonNull ConfigSection</*RAW TYPE ARGUMENT:*/ ?[ extends @Initialized @NonNull ConfigSection</*RAW TYPE ARGUMENT:*/ ?, /*RAW TYPE ARGUMENT:*/ ?[ extends @Initialized @NonNull SectionBuilder</*RAW TYPE ARGUMENT:*/ ?, /*RAW TYPE ARGUMENT:*/ ?> super @Initialized @NonNull Void]> super @Initialized @NonNull Void], /*RAW TYPE ARGUMENT:*/ ?[ extends @Initialized @NonNull SectionBuilder</*RAW TYPE ARGUMENT:*/ ?, /*RAW TYPE ARGUMENT:*/ ?[ extends @Initialized @NonNull ConfigSection</*RAW TYPE ARGUMENT:*/ ?, /*RAW TYPE ARGUMENT:*/ ?> super @Initialized @NonNull Void]> super @Initialized @NonNull Void]> super @Initialized @Nullable Void]
+  method return type: T[ extends @Initialized @NonNull ConfigSection</*RAW TYPE ARGUMENT:*/ ?[ extends @Initialized @NonNull ConfigSection<SELF[ extends @Initialized @NonNull ConfigSection<SELF, B[ extends @Initialized @NonNull SectionBuilder<B, SELF> super @Initialized @NonNull Void]> super @Initialized @NonNull Void], B[ extends @Initialized @NonNull SectionBuilder<B, SELF[ extends @Initialized @NonNull ConfigSection<SELF, B> super @Initialized @NonNull Void]> super @Initialized @NonNull Void]> super @Initialized @NonNull Void], /*RAW TYPE ARGUMENT:*/ ?[ extends @Initialized @NonNull SectionBuilder<B[ extends @Initialized @NonNull SectionBuilder<B, SELF[ extends @Initialized @NonNull ConfigSection<SELF, B> super @Initialized @NonNull Void]> super @Initialized @NonNull Void], SELF[ extends @Initialized @NonNull ConfigSection<SELF, B[ extends @Initialized @NonNull SectionBuilder<B, SELF> super @Initialized @NonNull Void]> super @Initialized @NonNull Void]> super @Initialized @NonNull Void]> super @Initialized @NonNull Void]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java:[67,21] [nullness:type.arguments.not.inferred] Could not infer type arguments for SectionContainer.getSection
+  unsatisfiable constraint: T extends @Initialized @NonNull ConfigSection</*RAW*/> <: T extends @Initialized @NonNull ConfigSection</*RAW*/>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java:[81,35] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java:[81,35] [nullness:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/AbstractCache.java:[216,23] [nullness:type.argument] incompatible type argument for type parameter K of ConcurrentMap.
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/AbstractCache.java:[216,26] [nullness:type.argument] incompatible type argument for type parameter V of ConcurrentMap.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[226,40] [keyfor:purity.not.sideeffectfree.call] call to side-effecting this.getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[226,40] [nullness:purity.not.sideeffectfree.call] call to side-effecting this.getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[226,59] [keyfor:purity.not.sideeffectfree.call] call to side-effecting delegate not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[226,59] [nullness:purity.not.sideeffectfree.call] call to side-effecting delegate not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[235,23] [nullness:type.argument] incompatible type argument for type parameter K of ConcurrentMap.
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[235,26] [nullness:type.argument] incompatible type argument for type parameter V of ConcurrentMap.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kManagerConfig.java:[32,27] [nullness:assignment] incompatible types in assignment.
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kManagerConfig.java:[33,38] [nullness:assignment] incompatible types in assignment.
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/Cache2kManagerConfig.java:[106,13] [nullness:return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Cache2kManagerConfig
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[49,6] [nullness:dereference.of.nullable] dereference of possibly-null reference ((ParameterizedType)this.getClass().getGenericSuperclass())
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[85,31] [nullness:override.param] Incompatible parameter type for o.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CacheTypeCapture<T extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CacheTypeCapture<T extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[103,13] [nullness:return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CacheType<? extends @Initialized @Nullable Object>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[108,13] [nullness:return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Class<T extends @Initialized @Nullable Object>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[113,13] [nullness:return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CacheType<? extends @Initialized @Nullable Object> @Initialized @NonNull []
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[128,54] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getTypeName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[128,54] [nullness:purity.not.sideeffectfree.call] call to side-effecting getTypeName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[162,46] [nullness:argument] incompatible argument for parameter s of OfClass.shortenName.
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[166,33] [nullness:override.param] Incompatible parameter type for o.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull OfClass<T extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull OfClass<T extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[237,33] [nullness:override.param] Incompatible parameter type for o.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull OfArray
+    @Initialized @NonNull boolean equals(@Initialized @NonNull OfArray this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[281,49] [nullness:argument] incompatible argument for parameter s of OfClass.shortenName.
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[285,33] [nullness:override.param] Incompatible parameter type for o.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull OfGeneric<T extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull OfGeneric<T extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/integration/Loaders.java:[42,39] [nullness:argument] incompatible argument for parameter value of RefreshedTimeWrapper constructor.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/DefaultCustomizationCollection.java:[68,35] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/DefaultCustomizationCollection.java:[68,35] [nullness:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java:[37,9] [nullness:initialization.fields.uninitialized] the constructor does not initialize fields: className
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java:[85,31] [nullness:override.param] Incompatible parameter type for other.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CustomizationSupplierByClassName<T extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CustomizationSupplierByClassName<T extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java-11-compile) @ cache2k-api ---
+[INFO] Compiling 1 source file with javac [forked debug release 11] to target/classes
+[WARNING] The following options were not recognized by any processor: '[detailedmsgtex]'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.132 s
+[INFO] Finished at: 2024-08-18T02:25:55-04:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,20 @@
+package de.zuellich.meal_planner.algorithms;
+
+import de.zuellich.meal_planner.datatypes.Recipe;
+import de.zuellich.meal_planner.datatypes.RecipeFormat;
+
+/**
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public interface RecipeParser {
+
+    /**
+     * @param source The source format to parse.
+     * @return The parsed recipe instance.
+     */
+    @org.checkerframework.dataflow.qual.Impure
+     Recipe parse( RecipeParser this,  String source);
+
+    @org.checkerframework.dataflow.qual.Pure
+     RecipeFormat getFormat();
+}

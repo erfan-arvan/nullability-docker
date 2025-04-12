@@ -1,0 +1,75 @@
+package de.zuellich.meal_planner.pinterest.oauth2;
+
+import java.util.Collections;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+import org.springframework.security.oauth2.client.OAuth2ClientContext;
+import org.springframework.security.oauth2.client.OAuth2RestTemplate;
+import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResourceDetails;
+import org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails;
+import org.springframework.security.oauth2.common.AuthenticationScheme;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
+
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+public class ResourceConfiguration {
+
+    private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String clientId = "";
+
+    private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String clientSecret = "";
+
+    private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String accessTokenUri = "";
+
+    private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String authorizationUri = "";
+
+    /**
+     * Configure a OAuth2 interface for Pinterest.
+     *
+     * @return The configuration.
+     */
+    @org.checkerframework.dataflow.qual.Impure
+    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OAuth2ProtectedResourceDetails pinterestOAuth2Configuration() {
+        AuthorizationCodeResourceDetails resourceDetails = new AuthorizationCodeResourceDetails();
+        resourceDetails.setClientId(clientId);
+        resourceDetails.setClientSecret(clientSecret);
+        resourceDetails.setAccessTokenUri(accessTokenUri);
+        resourceDetails.setUserAuthorizationUri(authorizationUri);
+        resourceDetails.setClientAuthenticationScheme(AuthenticationScheme.query);
+        resourceDetails.setScope(Collections.singletonList("read_public"));
+        resourceDetails.setId("pinterest");
+        resourceDetails.setAuthenticationScheme(AuthenticationScheme.query);
+        return resourceDetails;
+    }
+
+    /**
+     * Get a new rest template with OAuth2 support for Pinterest.
+     *
+     * @param clientContext The context that stores information for the oauth2 requests.
+     * @return A new rest template that can be used to make requests to protected resources.
+     */
+    @org.checkerframework.dataflow.qual.Impure
+    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OAuth2RestTemplate pinterestRestTemplate(OAuth2ClientContext clientContext) {
+        return new OAuth2RestTemplate(pinterestOAuth2Configuration(), clientContext);
+    }
+
+    /**
+     * Get a new rest template with OAuth2 support for Pinterest.
+     *
+     * @param clientContext The context that stores information for the oauth2 requests.
+     * @return A new rest template that can be used to make requests to protected resources.
+     */
+    @org.checkerframework.dataflow.qual.Impure
+    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OAuth2RestTemplate staticallyConfiguredRestTemplate(OAuth2ClientContext clientContext) {
+        AuthorizationCodeResourceDetails resourceDetails = new AuthorizationCodeResourceDetails();
+        resourceDetails.setClientId("clientId");
+        resourceDetails.setClientSecret("clientSecret");
+        resourceDetails.setAccessTokenUri("accessTokenUri");
+        resourceDetails.setUserAuthorizationUri("authorizationUri");
+        resourceDetails.setClientAuthenticationScheme(AuthenticationScheme.query);
+        resourceDetails.setScope(Collections.singletonList("read_public"));
+        resourceDetails.setId("pinterest");
+        resourceDetails.setAuthenticationScheme(AuthenticationScheme.query);
+        return new OAuth2RestTemplate(pinterestOAuth2Configuration(), clientContext);
+    }
+}

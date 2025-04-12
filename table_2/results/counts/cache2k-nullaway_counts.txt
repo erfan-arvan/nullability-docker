@@ -1,0 +1,152 @@
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 0
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 21
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/cache2k/Cache.java: @SuppressWarnings("UnusedDeclaration")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings({"unchecked", "rawtypes"})
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/integration/Loaders.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/integration/LoadDetail.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/integration/LoadDetail.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/Cache2kConfig.java: @SuppressWarnings("unused")
+./src/main/java/org/cache2k/config/ValidatingConfigBean.java: @SuppressWarnings("rawtypes")
+./src/main/java/org/cache2k/config/CacheType.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("EqualsWhichDoesntCheckParameterClass")
+./src/main/java/org/cache2k/config/ToggleFeature.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/ToggleFeature.java: @SuppressWarnings("unchecked")
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 105
+  @NonNull: 8
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 30
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/cache2k/Cache.java: @SuppressWarnings({"UnusedDeclaration", "NullableProblems"})
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings({"unchecked", "rawtypes"})
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/AbstractCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/AbstractCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/AbstractCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/ForwardingCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/ForwardingCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/ForwardingCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/processor/MutableCacheEntry.java: @SuppressWarnings("NullAway")
+./src/main/java/org/cache2k/integration/Loaders.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/integration/LoadDetail.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/integration/LoadDetail.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/Cache2kConfig.java: @SuppressWarnings("unused")
+./src/main/java/org/cache2k/config/ValidatingConfigBean.java: @SuppressWarnings("rawtypes")
+./src/main/java/org/cache2k/config/CacheType.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("EqualsWhichDoesntCheckParameterClass")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("NullAway")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("NullAway")
+./src/main/java/org/cache2k/config/ToggleFeature.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/ToggleFeature.java: @SuppressWarnings("unchecked")
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 0
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 21
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/cache2k/Cache.java: @SuppressWarnings("UnusedDeclaration")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings({"unchecked", "rawtypes"})
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/integration/Loaders.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/integration/LoadDetail.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/integration/LoadDetail.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/Cache2kConfig.java: @SuppressWarnings("unused")
+./src/main/java/org/cache2k/config/ValidatingConfigBean.java: @SuppressWarnings("rawtypes")
+./src/main/java/org/cache2k/config/CacheType.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("EqualsWhichDoesntCheckParameterClass")
+./src/main/java/org/cache2k/config/ToggleFeature.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/ToggleFeature.java: @SuppressWarnings("unchecked")
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 105
+  @NonNull: 8
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 30
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/cache2k/Cache.java: @SuppressWarnings({"UnusedDeclaration", "NullableProblems"})
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings({"unchecked", "rawtypes"})
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/Cache2kBuilder.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/AbstractCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/AbstractCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/AbstractCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/ForwardingCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/ForwardingCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/ForwardingCache.java: @SuppressWarnings("deprecation")
+./src/main/java/org/cache2k/processor/MutableCacheEntry.java: @SuppressWarnings("NullAway")
+./src/main/java/org/cache2k/integration/Loaders.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/integration/LoadDetail.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/integration/LoadDetail.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/Cache2kConfig.java: @SuppressWarnings("unused")
+./src/main/java/org/cache2k/config/ValidatingConfigBean.java: @SuppressWarnings("rawtypes")
+./src/main/java/org/cache2k/config/CacheType.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("EqualsWhichDoesntCheckParameterClass")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("NullAway")
+./src/main/java/org/cache2k/config/CacheTypeCapture.java: @SuppressWarnings("NullAway")
+./src/main/java/org/cache2k/config/ToggleFeature.java: @SuppressWarnings("unchecked")
+./src/main/java/org/cache2k/config/ToggleFeature.java: @SuppressWarnings("unchecked")

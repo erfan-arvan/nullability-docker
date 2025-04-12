@@ -1,0 +1,210 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.cache2k:cache2k-api:jar:2.0-SNAPSHOT
+[[1;33mWARNING[m] 'parent.relativePath' of POM org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT (/home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_pre/cache2k-java11-parent/pom.xml) points at org.cache2k:cache2k-api instead of org.cache2k:cache2k-parent, please verify your project structure @ org.cache2k:cache2k-java11-parent:2.0-SNAPSHOT, /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_pre/cache2k-java11-parent/pom.xml, line 5, column 11
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.cache2k:cache2k-api[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding cache2k API 2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M2:enforce[m [1m(enforce-versions)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_pre/cache2k-api/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(java-8-compile)[m @ [36mcache2k-api[0;1m ---[m
+[[1;34mINFO[m] Compiling 91 source files with javac [forked debug release 8] to target/classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;33mWARNING[m] COMPILATION WARNING : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;33mWARNING[m] The following options were not recognized by any processor: '[detailedmsgtex]'
+[[1;33mWARNING[m] /tmp/WPITEMP-cache2k/org/cache2k/AbstractCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Imported type not found: org.cache2k.annotation.Nullable
+[[1;33mWARNING[m] /tmp/WPITEMP-cache2k/org/cache2k/Cache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Imported type not found: org.cache2k.annotation.NonNull
+[[1;33mWARNING[m] /tmp/WPITEMP-cache2k/org/cache2k/Cache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Imported type not found: org.cache2k.processor.EntryMutator
+[[1;33mWARNING[m] /tmp/WPITEMP-cache2k/org/cache2k/Cache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 741,col 5): Package-private method mutate(K,EntryMutator) not found in type org.cache2k.Cache
+[[1;34mINFO[m] 5 warnings 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] An exception has occurred in the compiler (11.0.22). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program and the following diagnostic in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.Error: Problem while parsing /tmp/WPITEMP-cache2k/org/cache2k/config/Cache2kConfig-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_pre/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:832)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1371)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:973)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)
+Caused by: java.lang.Error: Problem while parsing /tmp/WPITEMP-cache2k/org/cache2k/config/Cache2kConfig-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_pre/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1014)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:689)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1071)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)
+	... 8 more
+Caused by: org.checkerframework.javacutil.BugInCF: org.checkerframework.framework.stub.AnnotationFileParser.AjavaAnnotationCollectorVisitor.visitLists(import org.cache2k.Cache2kBuilder;
+,import org.cache2k.Weigher;
+,import org.cache2k.event.CacheEntryOperationListener;
+,import org.cache2k.event.CacheLifecycleListener;
+,import org.cache2k.expiry.ExpiryPolicy;
+,import org.cache2k.expiry.ExpiryTimeValues;
+,import org.cache2k.io.AdvancedCacheLoader;
+,import org.cache2k.io.AsyncCacheLoader;
+,import org.cache2k.io.CacheLoader;
+,import org.cache2k.io.CacheWriter;
+,import org.cache2k.io.ExceptionPropagator;
+,import org.cache2k.io.ResiliencePolicy;
+,import java.time.Duration;
+,import java.util.Collection;
+,import java.util.HashSet;
+,import java.util.Set;
+,import java.util.concurrent.Executor;
+,import java.util.concurrent.TimeUnit;
+ [size 18], [import org.cache2k.Cache2kBuilder;
+, import org.cache2k.Weigher;
+, import org.cache2k.annotation.NonNull;
+, import org.cache2k.annotation.Nullable;
+, import org.cache2k.event.CacheEntryOperationListener;
+, import org.cache2k.event.CacheLifecycleListener;
+, import org.cache2k.expiry.ExpiryPolicy;
+, import org.cache2k.expiry.ExpiryTimeValues;
+, import org.cache2k.io.AdvancedCacheLoader;
+, import org.cache2k.io.AsyncCacheLoader;
+, import org.cache2k.io.CacheLoader;
+, import org.cache2k.io.CacheWriter;
+, import org.cache2k.io.ExceptionPropagator;
+, import org.cache2k.io.ResiliencePolicy;
+, import java.time.Duration;
+, import java.util.Collection;
+, import java.util.HashSet;
+, import java.util.Set;
+, import java.util.concurrent.Executor;
+, import java.util.concurrent.TimeUnit;
+] [size 20])
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2297)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:668)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processCompilationUnit(AnnotationFileParser.java:825)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processStubUnit(AnnotationFileParser.java:790)
+	at org.checkerframework.framework.stub.AnnotationFileParser.process(AnnotationFileParser.java:779)
+	at org.checkerframework.framework.stub.AnnotationFileParser.parseAjavaFile(AnnotationFileParser.java:696)
+	at org.checkerframework.framework.stub.AnnotationFileElementTypes.parseAjavaFileWithTree(AnnotationFileElementTypes.java:286)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1012)
+	... 17 more
+Caused by: java.lang.Throwable
+	at org.checkerframework.javacutil.BugInCF.<init>(BugInCF.java:38)
+	... 27 more
+
+[[1;34mINFO[m] 1 error
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  7.295 s
+[[1;34mINFO[m] Finished at: 2025-04-12T05:03:28Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile[m [1m(java-8-compile)[m on project [36mcache2k-api[m: [1;31mCompilation failure[m
+[[1;31mERROR[m] [1;31mAn exception has occurred in the compiler (11.0.22). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program and the following diagnostic in your report. Thank you.[m
+[[1;31mERROR[m] [1;31mcom.sun.tools.javac.util.ClientCodeException: java.lang.Error: Problem while parsing /tmp/WPITEMP-cache2k/org/cache2k/config/Cache2kConfig-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_pre/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:832)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1371)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:973)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)[m
+[[1;31mERROR[m] [1;31mCaused by: java.lang.Error: Problem while parsing /tmp/WPITEMP-cache2k/org/cache2k/config/Cache2kConfig-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_1/cfnullness/dataset/cache2k-nullaway_pre/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1014)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:689)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1071)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)[m
+[[1;31mERROR[m] [1;31m	... 8 more[m
+[[1;31mERROR[m] [1;31mCaused by: org.checkerframework.javacutil.BugInCF: org.checkerframework.framework.stub.AnnotationFileParser.AjavaAnnotationCollectorVisitor.visitLists(import org.cache2k.Cache2kBuilder;[m
+[[1;31mERROR[m] [1;31m,import org.cache2k.Weigher;[m
+[[1;31mERROR[m] [1;31m,import org.cache2k.event.CacheEntryOperationListener;[m
+[[1;31mERROR[m] [1;31m,import org.cache2k.event.CacheLifecycleListener;[m
+[[1;31mERROR[m] [1;31m,import org.cache2k.expiry.ExpiryPolicy;[m
+[[1;31mERROR[m] [1;31m,import org.cache2k.expiry.ExpiryTimeValues;[m
+[[1;31mERROR[m] [1;31m,import org.cache2k.io.AdvancedCacheLoader;[m
+[[1;31mERROR[m] [1;31m,import org.cache2k.io.AsyncCacheLoader;[m
+[[1;31mERROR[m] [1;31m,import org.cache2k.io.CacheLoader;[m
+[[1;31mERROR[m] [1;31m,import org.cache2k.io.CacheWriter;[m
+[[1;31mERROR[m] [1;31m,import org.cache2k.io.ExceptionPropagator;[m
+[[1;31mERROR[m] [1;31m,import org.cache2k.io.ResiliencePolicy;[m
+[[1;31mERROR[m] [1;31m,import java.time.Duration;[m
+[[1;31mERROR[m] [1;31m,import java.util.Collection;[m
+[[1;31mERROR[m] [1;31m,import java.util.HashSet;[m
+[[1;31mERROR[m] [1;31m,import java.util.Set;[m
+[[1;31mERROR[m] [1;31m,import java.util.concurrent.Executor;[m
+[[1;31mERROR[m] [1;31m,import java.util.concurrent.TimeUnit;[m
+[[1;31mERROR[m] [1;31m [size 18], [import org.cache2k.Cache2kBuilder;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.Weigher;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.annotation.NonNull;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.annotation.Nullable;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.event.CacheEntryOperationListener;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.event.CacheLifecycleListener;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.expiry.ExpiryPolicy;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.expiry.ExpiryTimeValues;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.io.AdvancedCacheLoader;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.io.AsyncCacheLoader;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.io.CacheLoader;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.io.CacheWriter;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.io.ExceptionPropagator;[m
+[[1;31mERROR[m] [1;31m, import org.cache2k.io.ResiliencePolicy;[m
+[[1;31mERROR[m] [1;31m, import java.time.Duration;[m
+[[1;31mERROR[m] [1;31m, import java.util.Collection;[m
+[[1;31mERROR[m] [1;31m, import java.util.HashSet;[m
+[[1;31mERROR[m] [1;31m, import java.util.Set;[m
+[[1;31mERROR[m] [1;31m, import java.util.concurrent.Executor;[m
+[[1;31mERROR[m] [1;31m, import java.util.concurrent.TimeUnit;[m
+[[1;31mERROR[m] [1;31m] [size 20])[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2297)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:668)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:189)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.processCompilationUnit(AnnotationFileParser.java:825)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.processStubUnit(AnnotationFileParser.java:790)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.process(AnnotationFileParser.java:779)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.parseAjavaFile(AnnotationFileParser.java:696)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileElementTypes.parseAjavaFileWithTree(AnnotationFileElementTypes.java:286)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1012)[m
+[[1;31mERROR[m] [1;31m	... 17 more[m
+[[1;31mERROR[m] [1;31mCaused by: java.lang.Throwable[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.javacutil.BugInCF.<init>(BugInCF.java:38)[m
+[[1;31mERROR[m] [1;31m	... 27 more[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+==== Count Script Output ====
+
+70

@@ -1,0 +1,54 @@
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 1
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 0
+
+Lines containing @SuppressWarnings:
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 17
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 2
+
+Lines containing @SuppressWarnings:
+./src/main/java/butterknife/compiler/ButterKnifeProcessor.java: @SuppressWarnings("NullAway") // TODO fix all these...
+./src/main/java/butterknife/compiler/FieldResourceBinding.java: @SuppressWarnings("Immutable")
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 1
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 0
+
+Lines containing @SuppressWarnings:
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 17
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 2
+
+Lines containing @SuppressWarnings:
+./src/main/java/butterknife/compiler/ButterKnifeProcessor.java: @SuppressWarnings("NullAway") // TODO fix all these...
+./src/main/java/butterknife/compiler/FieldResourceBinding.java: @SuppressWarnings("Immutable")

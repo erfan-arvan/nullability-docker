@@ -1,0 +1,290 @@
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java b/jib-core/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java
+index 71318451d..fa3499a1d 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java
+@@ -72,6 +72,9 @@ public class BuildConfiguration {
+       }
+       switch (errorMessages.size()) {
+         case 0: 
++          if (baseImageReference == null || targetImageReference == null || mainClass == null) {
++            throw new IllegalStateException("Required fields should not be null");
++          }
+           return new BuildConfiguration(
+               buildLogger,
+               baseImageReference,
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/builder/PullBaseImageStep.java b/jib-core/src/main/java/com/google/cloud/tools/jib/builder/PullBaseImageStep.java
+index 0f3a0ccb4..4ca22d4f9 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/builder/PullBaseImageStep.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/builder/PullBaseImageStep.java
+@@ -26,6 +26,12 @@ class PullBaseImageStep implements Callable<Image> {
+           return JsonToImageTranslator.toImage(v21ManifestTemplate);
+         case 2:
+           V22ManifestTemplate v22ManifestTemplate = (V22ManifestTemplate) manifestTemplate;
++          if (v22ManifestTemplate.getContainerConfiguration() == null
++              || v22ManifestTemplate.getContainerConfiguration().getDigest() == null) {
++            throw new UnknownManifestFormatException(
++                "Invalid container configuration in Docker V2.2 manifest: \n"
++                    + Blobs.writeToString(JsonTemplateMapper.toBlob(v22ManifestTemplate)));
++          }
+           ByteArrayOutputStream containerConfigurationOutputStream = new ByteArrayOutputStream();
+           registryClient.pullBlob(
+               v22ManifestTemplate.getContainerConfiguration().getDigest(),
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStep.java b/jib-core/src/main/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStep.java
+index 44e2917c2..bb79ccdca 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStep.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStep.java
+@@ -37,9 +37,10 @@ class RetrieveRegistryCredentialsStep implements Callable<Authorization> {
+           return authorization;
+         }
+       }
+-      if (buildConfiguration.getKnownRegistryCredentials().has(registry)) {
+-        logGotCredentialsFrom(
+-            buildConfiguration.getKnownRegistryCredentials().getCredentialSource(registry));
++      String credentialSource =
++          buildConfiguration.getKnownRegistryCredentials().getCredentialSource(registry);
++      if (credentialSource != null) {
++        logGotCredentialsFrom(credentialSource);
+         return buildConfiguration.getKnownRegistryCredentials().getAuthorization(registry);
+       }
+       Authorization dockerConfigAuthorization = dockerConfigCredentialRetriever.retrieve();
+@@ -52,16 +53,21 @@ class RetrieveRegistryCredentialsStep implements Callable<Authorization> {
+       for (String registrySuffix : COMMON_CREDENTIAL_HELPERS.keySet()) {
+         if (registry.endsWith(registrySuffix)) {
+           try {
+-            Authorization authorization =
+-                retrieveFromCredentialHelper(COMMON_CREDENTIAL_HELPERS.get(registrySuffix));
++            String commonCredentialHelper = COMMON_CREDENTIAL_HELPERS.get(registrySuffix);
++            if (commonCredentialHelper == null) {
++              throw new IllegalStateException("No COMMON_CREDENTIAL_HELPERS should be null");
++            }
++            Authorization authorization = retrieveFromCredentialHelper(commonCredentialHelper);
+             if (authorization != null) {
+               return authorization;
+             }
+           } catch (NonexistentDockerCredentialHelperException ex) {
++            if (ex.getMessage() != null) {
+               buildConfiguration.getBuildLogger().warn(ex.getMessage());
+             }
+           }
+         }
++      }
+       buildConfiguration
+           .getBuildLogger()
+           .info("No credentials could be retrieved for registry " + registry);
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/cache/CacheMetadataTranslator.java b/jib-core/src/main/java/com/google/cloud/tools/jib/cache/CacheMetadataTranslator.java
+index b45705c21..405cef21e 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/cache/CacheMetadataTranslator.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/cache/CacheMetadataTranslator.java
+@@ -5,6 +5,10 @@ public class CacheMetadataTranslator {
+     try {
+       CacheMetadata cacheMetadata = new CacheMetadata();
+       for (CacheMetadataLayerObjectTemplate layerObjectTemplate : template.getLayers()) {
++        if (layerObjectTemplate.getDigest() == null || layerObjectTemplate.getDiffId() == null) {
++          throw new IllegalStateException(
++              "Cannot translate cache metadata layer without a digest or diffId");
++        }
+         Path layerContentFile =
+             CacheFiles.getLayerFile(cacheDirectory, layerObjectTemplate.getDigest());
+         CacheMetadataLayerPropertiesObjectTemplate propertiesObjectTemplate =
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/cache/CacheReader.java b/jib-core/src/main/java/com/google/cloud/tools/jib/cache/CacheReader.java
+index f2c24bc20..ca075a6c4 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/cache/CacheReader.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/cache/CacheReader.java
+@@ -42,6 +42,9 @@ public class CacheReader {
+     FileTime newestLastModifiedTime = FileTime.from(Instant.MIN);
+     Path newestLayerFile = null;
+     for (CachedLayerWithMetadata cachedLayer : cachedLayers) {
++      if (cachedLayer.getMetadata() == null) {
++        throw new IllegalStateException("Layers with sourceFiles should have metadata");
++      }
+       FileTime cachedLayerLastModifiedTime = cachedLayer.getMetadata().getLastModifiedTime();
+       if (cachedLayerLastModifiedTime.compareTo(newestLastModifiedTime) > 0) {
+         newestLastModifiedTime = cachedLayerLastModifiedTime;
+@@ -65,6 +68,9 @@ public class CacheReader {
+       }
+     }
+     for (CachedLayerWithMetadata cachedLayer : cachedLayersWithSourceFiles) {
++      if (cachedLayer.getMetadata() == null) {
++        throw new IllegalStateException("Layers with sourceFiles should have metadata");
++      }
+       if (sourceFilesLastModifiedTime.compareTo(cachedLayer.getMetadata().getLastModifiedTime())
+           <= 0) {
+         return cachedLayer;
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/image/json/JsonToImageTranslator.java b/jib-core/src/main/java/com/google/cloud/tools/jib/image/json/JsonToImageTranslator.java
+index 6edf16f0e..1d0d70571 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/image/json/JsonToImageTranslator.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/image/json/JsonToImageTranslator.java
+@@ -17,6 +17,10 @@ public class JsonToImageTranslator {
+     List<ReferenceNoDiffIdLayer> layers = new ArrayList<>();
+     for (BuildableManifestTemplate.ContentDescriptorTemplate layerObjectTemplate :
+         manifestTemplate.getLayers()) {
++      if (layerObjectTemplate.getDigest() == null) {
++        throw new IllegalArgumentException(
++            "All layers in the manifest template must have digest set");
++      }
+       layers.add(
+           new ReferenceNoDiffIdLayer(
+               new BlobDescriptor(layerObjectTemplate.getSize(), layerObjectTemplate.getDigest())));
+@@ -32,6 +36,9 @@ public class JsonToImageTranslator {
+       Layer layer = new ReferenceLayer(noDiffIdLayer.getBlobDescriptor(), diffId);
+       image.addLayer(layer);
+     }
++    if (containerConfigurationTemplate.getContainerEntrypoint() == null) {
++      throw new IllegalArgumentException("containerConfigurationTemplate must have an entrypoint");
++    }
+     image.setEntrypoint(containerConfigurationTemplate.getContainerEntrypoint());
+     for (String environmentVariable : containerConfigurationTemplate.getContainerEnvironment()) {
+       image.addEnvironmentVariableDefinition(environmentVariable);
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/image/json/V21ManifestTemplate.java b/jib-core/src/main/java/com/google/cloud/tools/jib/image/json/V21ManifestTemplate.java
+index aef024cd5..970b97895 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/image/json/V21ManifestTemplate.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/image/json/V21ManifestTemplate.java
+@@ -28,10 +28,6 @@ public class V21ManifestTemplate implements ManifestTemplate {
+     return Collections.unmodifiableList(fsLayers);
+   }
+   @VisibleForTesting
+-  DescriptorDigest getLayerDigest(int index) {
+-    return fsLayers.get(index).blobSum;
+-  }
+-  @VisibleForTesting
+   String getV1Compatibility(int index) {
+     return history.get(index).v1Compatibility;
+   }
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/BlobChecker.java b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/BlobChecker.java
+index 564932de7..0ca76ed20 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/BlobChecker.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/BlobChecker.java
+@@ -31,7 +31,11 @@ class BlobChecker implements RegistryEndpointProvider<BlobDescriptor> {
+             JsonTemplateMapper.readJson(errorContent, ErrorResponseTemplate.class);
+         List<ErrorEntryTemplate> errors = errorResponse.getErrors();
+         if (errors.size() == 1) {
+-          ErrorCodes errorCode = ErrorCodes.valueOf(errors.get(0).getCode());
++          String errorCodeString = errors.get(0).getCode();
++          if (errorCodeString == null) {
++            throw httpResponseException;
++          }
++          ErrorCodes errorCode = ErrorCodes.valueOf(errorCodeString);
+           if (errorCode.equals(ErrorCodes.BLOB_UNKNOWN)) {
+             return null;
+           }
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryAuthenticator.java b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryAuthenticator.java
+index 270be3607..06cde8479 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryAuthenticator.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryAuthenticator.java
+@@ -56,7 +56,9 @@ public class RegistryAuthenticator {
+     return new URL(authenticationUrlBase + scope);
+   }
+   private Authorization authenticate(String scope) throws RegistryAuthenticationFailedException {
+-    try (Connection connection = new Connection(getAuthenticationUrl(scope))) {
++    try {
++      URL authenticationUrl = getAuthenticationUrl(scope);
++      try (Connection connection = new Connection(authenticationUrl)) {
+         Request.Builder requestBuilder = Request.builder();
+         if (authorization != null) {
+           requestBuilder.setAuthorization(authorization);
+@@ -65,7 +67,12 @@ public class RegistryAuthenticator {
+         String responseString = Blobs.writeToString(response.getBody());
+         AuthenticationResponseTemplate responseJson =
+             JsonTemplateMapper.readJson(responseString, AuthenticationResponseTemplate.class);
++        if (responseJson.token == null) {
++          throw new RegistryAuthenticationFailedException(
++              "Did not get token in authentication response from " + authenticationUrl);
++        }
+         return Authorizations.withBearerToken(responseJson.token);
++      }
+     } catch (IOException ex) {
+       throw new RegistryAuthenticationFailedException(ex);
+     }
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryClient.java b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryClient.java
+index 8bf090865..1be457a8b 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryClient.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryClient.java
+@@ -48,7 +48,11 @@ public class RegistryClient {
+       String imageTag, Class<T> manifestTemplateClass) throws IOException, RegistryException {
+     ManifestPuller<T> manifestPuller =
+         new ManifestPuller<>(registryEndpointProperties, imageTag, manifestTemplateClass);
+-    return callRegistryEndpoint(manifestPuller);
++    T manifestTemplate = callRegistryEndpoint(manifestPuller);
++    if (manifestTemplate == null) {
++      throw new IllegalStateException("ManifestPuller#handleResponse does not return null");
++    }
++    return manifestTemplate;
+   }
+   public ManifestTemplate pullManifest(String imageTag) throws IOException, RegistryException {
+     return pullManifest(imageTag, ManifestTemplate.class);
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryErrorExceptionBuilder.java b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryErrorExceptionBuilder.java
+index f9adcf3f7..e6a2827e9 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryErrorExceptionBuilder.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/RegistryErrorExceptionBuilder.java
+@@ -4,7 +4,13 @@ class RegistryErrorExceptionBuilder {
+   private final StringBuilder errorMessageBuilder = new StringBuilder();
+   private boolean firstErrorReason = true;
+   private static String getReason( String errorCodeString,  String message) {
++    if (message == null) {
++      message = "no details";
++    }
+     try {
++      if (errorCodeString == null) {
++        throw new IllegalArgumentException();
++      }
+       ErrorCodes errorCode = ErrorCodes.valueOf(errorCodeString);
+       if (errorCode == ErrorCodes.MANIFEST_INVALID || errorCode == ErrorCodes.BLOB_UNKNOWN) {
+         return message + " (something went wrong)";
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/credentials/DockerCredentialHelper.java b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/credentials/DockerCredentialHelper.java
+index 0a45c6c99..d432c3748 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/credentials/DockerCredentialHelper.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/credentials/DockerCredentialHelper.java
+@@ -39,6 +39,10 @@ public class DockerCredentialHelper {
+         try {
+           DockerCredentialsTemplate dockerCredentials =
+               JsonTemplateMapper.readJson(output, DockerCredentialsTemplate.class);
++          if (dockerCredentials.Username == null || dockerCredentials.Secret == null) {
++            throw new NonexistentServerUrlDockerCredentialHelperException(
++                credentialHelper, serverUrl, output);
++          }
+           return Authorizations.withBasicCredentials(
+               dockerCredentials.Username, dockerCredentials.Secret);
+         } catch (JsonProcessingException ex) {
+@@ -47,6 +51,9 @@ public class DockerCredentialHelper {
+         }
+       }
+     } catch (IOException ex) {
++      if (ex.getMessage() == null) {
++        throw ex;
++      }
+       if (ex.getMessage().contains("No such file or directory")
+           || ex.getMessage().contains("cannot find the file")) {
+         throw new NonexistentDockerCredentialHelperException(credentialHelperSuffix, ex);
+diff --git a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/credentials/RegistryCredentials.java b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/credentials/RegistryCredentials.java
+index 8f26b6964..5d7db7237 100644
+--- a/jib-core/src/main/java/com/google/cloud/tools/jib/registry/credentials/RegistryCredentials.java
++++ b/jib-core/src/main/java/com/google/cloud/tools/jib/registry/credentials/RegistryCredentials.java
+@@ -48,13 +48,13 @@ public class RegistryCredentials {
+     return credentials.containsKey(registry);
+   }
+   public Authorization getAuthorization(String registry) {
+-    if (!has(registry)) {
++    if (credentials.get(registry) == null) {
+       return null;
+     }
+     return credentials.get(registry).authorization;
+   }
+   public String getCredentialSource(String registry) {
+-    if (!has(registry)) {
++    if (credentials.get(registry) == null) {
+       return null;
+     }
+     return credentials.get(registry).credentialSource;
+diff --git a/jib-core/src/test/java/com/google/cloud/tools/jib/image/json/V21ManifestTemplateTest.java b/jib-core/src/test/java/com/google/cloud/tools/jib/image/json/V21ManifestTemplateTest.java
+index 29a34f401..2d4df1b77 100644
+--- a/jib-core/src/test/java/com/google/cloud/tools/jib/image/json/V21ManifestTemplateTest.java
++++ b/jib-core/src/test/java/com/google/cloud/tools/jib/image/json/V21ManifestTemplateTest.java
+@@ -8,7 +8,7 @@ public class V21ManifestTemplateTest {
+     Assert.assertEquals(
+         DescriptorDigest.fromDigest(
+             "sha256:8c662931926fa990b41da3c9f42663a537ccd498130030f9149173a0493832ad"),
+-        manifestJson.getLayerDigest(0));
++        manifestJson.getFsLayers().get(0).getDigest());
+     Assert.assertEquals("some v1-compatible object", manifestJson.getV1Compatibility(0));
+   }
+ }

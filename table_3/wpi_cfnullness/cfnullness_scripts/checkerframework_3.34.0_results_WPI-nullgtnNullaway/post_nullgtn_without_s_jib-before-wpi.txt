@@ -1,0 +1,1237 @@
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheMetadataTranslatorTest.java:48: error: (initialization.field.uninitialized) $$ 1 $$ mockPath $$ ( 1657, 1689 ) $$ the default constructor does not initialize field mockPath
+    private Path mockPath;
+                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheMetadataTranslatorTest.java:50: error: (initialization.field.uninitialized) $$ 1 $$ baseLayerBlobDescriptor $$ ( 1695, 1742 ) $$ the default constructor does not initialize field baseLayerBlobDescriptor
+    private BlobDescriptor baseLayerBlobDescriptor;
+                           ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheMetadataTranslatorTest.java:52: error: (initialization.field.uninitialized) $$ 1 $$ baseLayerDiffId $$ ( 1748, 1789 ) $$ the default constructor does not initialize field baseLayerDiffId
+    private DescriptorDigest baseLayerDiffId;
+                             ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheMetadataTranslatorTest.java:54: error: (initialization.field.uninitialized) $$ 1 $$ classesLayerBlobDescriptor $$ ( 1795, 1845 ) $$ the default constructor does not initialize field classesLayerBlobDescriptor
+    private BlobDescriptor classesLayerBlobDescriptor;
+                           ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheMetadataTranslatorTest.java:56: error: (initialization.field.uninitialized) $$ 1 $$ classesLayerDiffId $$ ( 1851, 1895 ) $$ the default constructor does not initialize field classesLayerDiffId
+    private DescriptorDigest classesLayerDiffId;
+                             ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheMetadataTranslatorTest.java:100: error: (argument) $$ 4 $$ metadata $$ CachedLayerWithMetadata constructor $$ null (NullType) $$ @Initialized @NonNull LayerMetadata $$ ( 5095, 5099 ) $$ incompatible argument for parameter metadata of CachedLayerWithMetadata constructor.
+        CachedLayerWithMetadata baseLayer = new CachedLayerWithMetadata(baseCachedLayer, null);
+                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LayerMetadata
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/blob/BlobDescriptor.java:81: error: (override.param) $$ 7 $$ obj $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull BlobDescriptor $$ @Initialized @NonNull boolean equals(@Initialized @NonNull BlobDescriptor this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 2508, 2518 ) $$ Incompatible parameter type for obj.
+    public boolean equals(Object obj) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull BlobDescriptor
+    @Initialized @NonNull boolean equals(@Initialized @NonNull BlobDescriptor this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/DescriptorDigest.java:100: error: (override.param) $$ 7 $$ obj $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull DescriptorDigest $$ @Initialized @NonNull boolean equals(@Initialized @NonNull DescriptorDigest this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 3278, 3288 ) $$ Incompatible parameter type for obj.
+    public boolean equals(Object obj) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull DescriptorDigest
+    @Initialized @NonNull boolean equals(@Initialized @NonNull DescriptorDigest this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheFilesTest.java:36: error: (initialization.field.uninitialized) $$ 1 $$ mockPath $$ ( 1121, 1153 ) $$ the default constructor does not initialize field mockPath
+    private Path mockPath;
+                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheReaderTest.java:66: error: (initialization.field.uninitialized) $$ 1 $$ testCacheFolder $$ ( 2300, 2329 ) $$ the default constructor does not initialize field testCacheFolder
+    private Path testCacheFolder;
+                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheReaderTest.java:129: error: (dereference.of.nullable) $$ 1 $$ cacheReader.getUpToDateLayerBySourceFiles(Collections.singletonList(testSourceFiles)) $$ ( 6811, 6896 ) $$ dereference of possibly-null reference cacheReader.getUpToDateLayerBySourceFiles(Collections.singletonList(testSourceFiles))
+            Assert.assertEquals(classesCachedLayer.getBlobDescriptor(), cacheReader.getUpToDateLayerBySourceFiles(Collections.singletonList(testSourceFiles)).getBlobDescriptor());
+                                                                                                                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheReaderTest.java:134: error: (argument) $$ 4 $$ object $$ Assert.assertNull $$ @Initialized @Nullable CachedLayer $$ @Initialized @NonNull Object $$ ( 7324, 7413 ) $$ incompatible argument for parameter object of Assert.assertNull.
+            Assert.assertNull(cacheReader.getUpToDateLayerBySourceFiles(Collections.singletonList(resourceSourceFiles)));
+                                                                       ^
+  found   : @Initialized @Nullable CachedLayer
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheWriterTest.java:57: error: (initialization.field.uninitialized) $$ 1 $$ testCache $$ ( 2013, 2037 ) $$ the default constructor does not initialize field testCache
+    private Cache testCache;
+                  ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheWriterTest.java:59: error: (initialization.field.uninitialized) $$ 1 $$ resourceBlob $$ ( 2043, 2069 ) $$ the default constructor does not initialize field resourceBlob
+    private Path resourceBlob;
+                 ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/ImageLayers.java:71: error: (return) $$ 2 $$ null (NullType) $$ T extends @Initialized @NonNull Layer $$ ( 1996, 2000 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: T extends @Initialized @NonNull Layer
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CachedLayerTest.java:42: error: (initialization.field.uninitialized) $$ 1 $$ mockPath $$ ( 1361, 1393 ) $$ the default constructor does not initialize field mockPath
+    private Path mockPath;
+                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CachedLayerTest.java:45: error: (initialization.field.uninitialized) $$ 1 $$ mockBlobDescriptor $$ ( 1399, 1451 ) $$ the default constructor does not initialize field mockBlobDescriptor
+    private BlobDescriptor mockBlobDescriptor;
+                           ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CachedLayerTest.java:48: error: (initialization.field.uninitialized) $$ 1 $$ mockDiffId $$ ( 1457, 1503 ) $$ the default constructor does not initialize field mockDiffId
+    private DescriptorDigest mockDiffId;
+                             ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheTest.java:51: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 1862, 1877 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("The cache can only write to a directory", ex.getMessage());
+                                                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheTest.java:58: error: (dereference.of.nullable) $$ 1 $$ getClass().getClassLoader() $$ ( 2147, 2174 ) $$ dereference of possibly-null reference getClass().getClassLoader()
+        Path resourceMetadataJsonPath = Paths.get(getClass().getClassLoader().getResource("json/metadata.json").toURI());
+                                                                           ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/cache/CacheTest.java:58: error: (dereference.of.nullable) $$ 1 $$ getClass().getClassLoader().getResource("json/metadata.json") $$ ( 2147, 2208 ) $$ dereference of possibly-null reference getClass().getClassLoader().getResource("json/metadata.json")
+        Path resourceMetadataJsonPath = Paths.get(getClass().getClassLoader().getResource("json/metadata.json").toURI());
+                                                                                         ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/hash/CountingDigestOutputStreamTest.java:40: error: (initialization.field.uninitialized) $$ 1 $$ knownSha256Hashes $$ ( 1325, 1371 ) $$ the default constructor does not initialize field knownSha256Hashes
+    private Map<String, String> knownSha256Hashes;
+                                ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/hash/CountingDigestOutputStreamTest.java:47: error: (method.invocation) $$ 3 $$ put(K,V) $$ @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.String>>.class) @NonNull HashMap</*RAW*/> $$ @Initialized @NonNull HashMap</*RAW*/> $$ ( 1530, 1614 ) $$ call to put(K,V) not allowed on the given receiver.
+                put("crepecake", "52a9e4d4ba4333ce593707f98564fee1e6d898db0d3602408c0b2a6a424d357c");
+                   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.String>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/hash/CountingDigestOutputStreamTest.java:48: error: (method.invocation) $$ 3 $$ put(K,V) $$ @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.String>>.class) @NonNull HashMap</*RAW*/> $$ @Initialized @NonNull HashMap</*RAW*/> $$ ( 1632, 1712 ) $$ call to put(K,V) not allowed on the given receiver.
+                put("12345", "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5");
+                   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.String>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/hash/CountingDigestOutputStreamTest.java:49: error: (method.invocation) $$ 3 $$ put(K,V) $$ @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.String>>.class) @NonNull HashMap</*RAW*/> $$ @Initialized @NonNull HashMap</*RAW*/> $$ ( 1730, 1805 ) $$ call to put(K,V) not allowed on the given receiver.
+                put("", "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855");
+                   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.String>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/filesystem/UserCacheHomeTest.java:41: error: (initialization.field.uninitialized) $$ 1 $$ fakeCacheHome $$ ( 1242, 1271 ) $$ the default constructor does not initialize field fakeCacheHome
+    private String fakeCacheHome;
+                   ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/filesystem/DirectoryWalkerTest.java:38: error: (methodref.param) $$ 7 $$ arg0 $$ @Initialized @NonNull Path $$ @Initialized @Nullable Path $$ @Initialized @NonNull Set<@Initialized @NonNull Path> $$ @Initialized @NonNull boolean add(@Initialized @NonNull Set<@Initialized @NonNull Path> this, @Initialized @NonNull Path p0) $$ @UnknownInitialization @Nullable PathConsumer $$ @NonNull void accept(@Initialized @NonNull PathConsumer this, @Initialized @Nullable Path p0) throws @Initialized @NonNull IOException $$ ( 1280, 1296 ) $$ Incompatible parameter type for arg0
+        PathConsumer addToWalkedPaths = walkedPaths::add;
+                                        ^
+  found   : @Initialized @NonNull Path
+  required: @Initialized @Nullable Path
+  Consequence: method in @Initialized @NonNull Set<@Initialized @NonNull Path>
+    @Initialized @NonNull boolean add(@Initialized @NonNull Set<@Initialized @NonNull Path> this, @Initialized @NonNull Path p0)
+  is not a valid method reference for method in @UnknownInitialization @Nullable PathConsumer
+    @NonNull void accept(@Initialized @NonNull PathConsumer this, @Initialized @Nullable Path p0) throws @Initialized @NonNull IOException
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:30: error: (type.arguments.not.inferred) $$ 2 $$ Arrays.asList $$ @org.checkerframework.checker.nullness.qual.Nullable <: @org.checkerframework.checker.nullness.qual.NonNull $$ ( 977, 1058 ) $$ Could not infer type arguments for Arrays.asList
+    private static final List<String> goodRegistries = Arrays.asList("some.domain---name.123.com:8080", "gcr.io", "localhost", null, "");
+                                                                    ^
+  unsatisfiable constraint: @org.checkerframework.checker.nullness.qual.Nullable <: @org.checkerframework.checker.nullness.qual.NonNull
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:34: error: (type.arguments.not.inferred) $$ 2 $$ Arrays.asList $$ @org.checkerframework.checker.nullness.qual.Nullable <: @org.checkerframework.checker.nullness.qual.NonNull $$ ( 1263, 1311 ) $$ Could not infer type arguments for Arrays.asList
+    private static final List<String> goodTags = Arrays.asList("some-.-.Tag", "", "latest", null);
+                                                              ^
+  unsatisfiable constraint: @org.checkerframework.checker.nullness.qual.Nullable <: @org.checkerframework.checker.nullness.qual.NonNull
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:36: error: (type.arguments.not.inferred) $$ 2 $$ Arrays.asList $$ @org.checkerframework.checker.nullness.qual.Nullable <: @org.checkerframework.checker.nullness.qual.NonNull $$ ( 1366, 1460 ) $$ Could not infer type arguments for Arrays.asList
+    private static final List<String> goodDigests = Arrays.asList("sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", null);
+                                                                 ^
+  unsatisfiable constraint: @org.checkerframework.checker.nullness.qual.Nullable <: @org.checkerframework.checker.nullness.qual.NonNull
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:79: error: (type.arguments.not.inferred) $$ 2 $$ Assert.assertThat $$ @Initialized @Nullable String <: @Initialized @NonNull String $$ ( 3675, 3757 ) $$ Could not infer type arguments for Assert.assertThat
+                Assert.assertThat(ex.getMessage(), CoreMatchers.containsString(badImageReference));
+                                 ^
+  unsatisfiable constraint: @Initialized @Nullable String <: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:92: error: (argument) $$ 4 $$ registry $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 4437, 4441 ) $$ incompatible argument for parameter registry of ImageReference.of.
+        Assert.assertEquals("registry.hub.docker.com", ImageReference.of(null, expectedRepository, expectedTag).getRegistry());
+                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:93: error: (argument) $$ 4 $$ registry $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 4565, 4569 ) $$ incompatible argument for parameter registry of ImageReference.of.
+        Assert.assertEquals("registry.hub.docker.com", ImageReference.of(null, expectedRepository, null).getRegistry());
+                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:93: error: (argument) $$ 4 $$ tag $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 4591, 4595 ) $$ incompatible argument for parameter tag of ImageReference.of.
+        Assert.assertEquals("registry.hub.docker.com", ImageReference.of(null, expectedRepository, null).getRegistry());
+                                                                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:94: error: (argument) $$ 4 $$ tag $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 4707, 4711 ) $$ incompatible argument for parameter tag of ImageReference.of.
+        Assert.assertEquals("latest", ImageReference.of(expectedRegistry, expectedRepository, null).getTag());
+                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:95: error: (argument) $$ 4 $$ registry $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 4780, 4784 ) $$ incompatible argument for parameter registry of ImageReference.of.
+        Assert.assertEquals("latest", ImageReference.of(null, expectedRepository, null).getTag());
+                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:95: error: (argument) $$ 4 $$ tag $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 4806, 4810 ) $$ incompatible argument for parameter tag of ImageReference.of.
+        Assert.assertEquals("latest", ImageReference.of(null, expectedRepository, null).getTag());
+                                                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:96: error: (argument) $$ 4 $$ registry $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 4889, 4893 ) $$ incompatible argument for parameter registry of ImageReference.of.
+        Assert.assertEquals(expectedRepository, ImageReference.of(null, expectedRepository, null).getRepository());
+                                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:96: error: (argument) $$ 4 $$ tag $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 4915, 4919 ) $$ incompatible argument for parameter tag of ImageReference.of.
+        Assert.assertEquals(expectedRepository, ImageReference.of(null, expectedRepository, null).getRepository());
+                                                                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:101: error: (argument) $$ 4 $$ registry $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 5048, 5052 ) $$ incompatible argument for parameter registry of ImageReference.of.
+        Assert.assertEquals("someimage", ImageReference.of(null, "someimage", null).toString());
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:101: error: (argument) $$ 4 $$ tag $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 5067, 5071 ) $$ incompatible argument for parameter tag of ImageReference.of.
+        Assert.assertEquals("someimage", ImageReference.of(null, "someimage", null).toString());
+                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:103: error: (argument) $$ 4 $$ registry $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 5243, 5247 ) $$ incompatible argument for parameter registry of ImageReference.of.
+        Assert.assertEquals("someotherimage", ImageReference.of(null, "library/someotherimage", null).toString());
+                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:103: error: (argument) $$ 4 $$ tag $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 5275, 5279 ) $$ incompatible argument for parameter tag of ImageReference.of.
+        Assert.assertEquals("someotherimage", ImageReference.of(null, "library/someotherimage", null).toString());
+                                                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageReferenceTest.java:104: error: (argument) $$ 4 $$ tag $$ ImageReference.of $$ null (NullType) $$ @Initialized @NonNull String $$ ( 5405, 5409 ) $$ incompatible argument for parameter tag of ImageReference.of.
+        Assert.assertEquals("someregistry/someotherimage", ImageReference.of("someregistry", "someotherimage", null).toString());
+                                                                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageTest.java:35: error: (initialization.field.uninitialized) $$ 1 $$ mockLayer $$ ( 1058, 1092 ) $$ the default constructor does not initialize field mockLayer
+    private Layer mockLayer;
+                  ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageTest.java:38: error: (initialization.field.uninitialized) $$ 1 $$ mockImageLayers $$ ( 1098, 1151 ) $$ the default constructor does not initialize field mockImageLayers
+    private ImageLayers<Layer> mockImageLayers;
+                               ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageTest.java:41: error: (initialization.field.uninitialized) $$ 1 $$ image $$ ( 1157, 1194 ) $$ the default constructor does not initialize field image
+    private Image image;
+                  ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/Image.java:41: error: (initialization.field.uninitialized) $$ 1 $$ entrypoint $$ ( 1232, 1264 ) $$ the default constructor does not initialize field entrypoint
+    private List<String> entrypoint;
+                         ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerTest.java:33: error: (initialization.field.uninitialized) $$ 1 $$ mockUncompressedBlob $$ ( 1025, 1069 ) $$ the default constructor does not initialize field mockUncompressedBlob
+    private Blob mockUncompressedBlob;
+                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerTest.java:36: error: (initialization.field.uninitialized) $$ 1 $$ mockDescriptorDigest $$ ( 1075, 1131 ) $$ the default constructor does not initialize field mockDescriptorDigest
+    private DescriptorDigest mockDescriptorDigest;
+                             ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerTest.java:39: error: (initialization.field.uninitialized) $$ 1 $$ mockBlobDescriptor $$ ( 1137, 1189 ) $$ the default constructor does not initialize field mockBlobDescriptor
+    private BlobDescriptor mockBlobDescriptor;
+                           ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerTest.java:42: error: (initialization.field.uninitialized) $$ 1 $$ mockDiffId $$ ( 1195, 1241 ) $$ the default constructor does not initialize field mockDiffId
+    private DescriptorDigest mockDiffId;
+                             ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerTest.java:52: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 1741, 1756 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Blob descriptor not available for unwritten layer", ex.getMessage());
+                                                                                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerTest.java:58: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 2025, 2040 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Diff ID not available for unwritten layer", ex.getMessage());
+                                                                                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerTest.java:69: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 2476, 2491 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Blob not available for reference layer", ex.getMessage());
+                                                                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerTest.java:82: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 3059, 3074 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Blob not available for digest-only layer", ex.getMessage());
+                                                                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerTest.java:90: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 3502, 3517 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Diff ID not available for digest-only layer", ex.getMessage());
+                                                                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/json/ImageToJsonTranslatorTest.java:46: error: (initialization.field.uninitialized) $$ 1 $$ imageToJsonTranslator $$ ( 1658, 1710 ) $$ the default constructor does not initialize field imageToJsonTranslator
+    private ImageToJsonTranslator imageToJsonTranslator;
+                                  ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/json/BuildableManifestTemplate.java:56: error: (initialization.fields.uninitialized) $$ 1 $$ mediaType, digest $$ ( 1867, 1914 ) $$ the constructor does not initialize fields: mediaType, digest
+        private ContentDescriptorTemplate() {
+                ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/json/JsonToImageTranslatorTest.java:43: error: (dereference.of.nullable) $$ 1 $$ getClass().getClassLoader() $$ ( 1634, 1661 ) $$ dereference of possibly-null reference getClass().getClassLoader()
+        Path jsonFile = Paths.get(getClass().getClassLoader().getResource("json/v21manifest.json").toURI());
+                                                           ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/json/JsonToImageTranslatorTest.java:43: error: (dereference.of.nullable) $$ 1 $$ getClass().getClassLoader().getResource("json/v21manifest.json") $$ ( 1634, 1698 ) $$ dereference of possibly-null reference getClass().getClassLoader().getResource("json/v21manifest.json")
+        Path jsonFile = Paths.get(getClass().getClassLoader().getResource("json/v21manifest.json").toURI());
+                                                                         ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/json/JsonToImageTranslatorTest.java:64: error: (dereference.of.nullable) $$ 1 $$ getClass().getClassLoader() $$ ( 3098, 3125 ) $$ dereference of possibly-null reference getClass().getClassLoader()
+        Path containerConfigurationJsonFile = Paths.get(getClass().getClassLoader().getResource("json/containerconfig.json").toURI());
+                                                                                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/json/JsonToImageTranslatorTest.java:64: error: (dereference.of.nullable) $$ 1 $$ getClass().getClassLoader().getResource("json/containerconfig.json") $$ ( 3098, 3166 ) $$ dereference of possibly-null reference getClass().getClassLoader().getResource("json/containerconfig.json")
+        Path containerConfigurationJsonFile = Paths.get(getClass().getClassLoader().getResource("json/containerconfig.json").toURI());
+                                                                                               ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/json/JsonToImageTranslatorTest.java:67: error: (dereference.of.nullable) $$ 1 $$ getClass().getClassLoader().getResource(jsonFilename) $$ ( 3434, 3487 ) $$ dereference of possibly-null reference getClass().getClassLoader().getResource(jsonFilename)
+        Path manifestJsonFile = Paths.get(getClass().getClassLoader().getResource(jsonFilename).toURI());
+                                                                                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/DescriptorDigestTest.java:44: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 1595, 1610 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Invalid hash: " + badHash, ex.getMessage());
+                                                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/DescriptorDigestTest.java:55: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 1997, 2012 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Invalid hash: " + badHash, ex.getMessage());
+                                                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/DescriptorDigestTest.java:75: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 2816, 2831 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Invalid digest: " + badDigest, ex.getMessage());
+                                                                             ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/DescriptorDigestTest.java:88: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 3562, 3595 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+        Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+                                                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/DescriptorDigestTest.java:89: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 3643, 3676 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+        Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+                                                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/DescriptorDigestTest.java:90: error: (argument) $$ 4 $$ object $$ Assert.assertNull $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 3705, 3737 ) $$ incompatible argument for parameter object of Assert.assertNull.
+        Assert.assertNull(digestMap.get(descriptorDigestB));
+                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerBuilderTest.java:75: error: (dereference.of.nullable) $$ 1 $$ layerDirectory.getParent() $$ ( 3311, 3337 ) $$ dereference of possibly-null reference layerDirectory.getParent()
+                    for (Path pathComponent : layerDirectory.getParent().relativize(path)) {
+                                                                      ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerBuilderTest.java:126: error: (argument) $$ 4 $$ matcher $$ Assert.assertThat $$ @Initialized @NonNull Matcher<@Initialized @NonNull byte @UnknownInitialization @Nullable []> $$ @Initialized @NonNull Matcher<? extends @Initialized @Nullable Object super @Initialized @NonNull byte @Initialized @NonNull []> $$ ( 6856, 6895 ) $$ incompatible argument for parameter matcher of Assert.assertThat.
+        Assert.assertThat(layerContent, CoreMatchers.is(reproducedLayerContent));
+                                                       ^
+  found   : @Initialized @NonNull Matcher<@Initialized @NonNull byte @UnknownInitialization @Nullable []>
+  required: @Initialized @NonNull Matcher<? extends @Initialized @Nullable Object super @Initialized @NonNull byte @Initialized @NonNull []>
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/LayerBuilderTest.java:127: error: (argument) $$ 4 $$ matcher $$ Assert.assertThat $$ @Initialized @NonNull Matcher<@Initialized @NonNull byte @UnknownInitialization @Nullable []> $$ @Initialized @NonNull Matcher<? extends @Initialized @Nullable Object super @Initialized @NonNull byte @Initialized @NonNull []> $$ ( 6938, 6981 ) $$ incompatible argument for parameter matcher of Assert.assertThat.
+        Assert.assertThat(layerContent, CoreMatchers.not(notReproducedLayerContent));
+                                                        ^
+  found   : @Initialized @NonNull Matcher<@Initialized @NonNull byte @UnknownInitialization @Nullable []>
+  required: @Initialized @NonNull Matcher<? extends @Initialized @Nullable Object super @Initialized @NonNull byte @Initialized @NonNull []>
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageLayersTest.java:38: error: (initialization.field.uninitialized) $$ 1 $$ mockCachedLayer $$ ( 1180, 1226 ) $$ the default constructor does not initialize field mockCachedLayer
+    private CachedLayer mockCachedLayer;
+                        ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageLayersTest.java:41: error: (initialization.field.uninitialized) $$ 1 $$ mockReferenceLayer $$ ( 1232, 1284 ) $$ the default constructor does not initialize field mockReferenceLayer
+    private ReferenceLayer mockReferenceLayer;
+                           ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageLayersTest.java:44: error: (initialization.field.uninitialized) $$ 1 $$ mockDigestOnlyLayer $$ ( 1290, 1344 ) $$ the default constructor does not initialize field mockDigestOnlyLayer
+    private DigestOnlyLayer mockDigestOnlyLayer;
+                            ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/image/ImageLayersTest.java:47: error: (initialization.field.uninitialized) $$ 1 $$ mockUnwrittenLayer $$ ( 1350, 1402 ) $$ the default constructor does not initialize field mockUnwrittenLayer
+    private UnwrittenLayer mockUnwrittenLayer;
+                           ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/json/JsonTemplateMapperTest.java:43: error: (initialization.field.uninitialized) $$ 1 $$ text $$ ( 1346, 1366 ) $$ the default constructor does not initialize field text
+        private String text;
+                       ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/json/JsonTemplateMapperTest.java:45: error: (initialization.field.uninitialized) $$ 1 $$ digest $$ ( 1376, 1408 ) $$ the default constructor does not initialize field digest
+        private DescriptorDigest digest;
+                                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/json/JsonTemplateMapperTest.java:47: error: (initialization.field.uninitialized) $$ 1 $$ innerObject $$ ( 1418, 1450 ) $$ the default constructor does not initialize field innerObject
+        private InnerObject innerObject;
+                            ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/json/JsonTemplateMapperTest.java:49: error: (initialization.field.uninitialized) $$ 1 $$ list $$ ( 1460, 1491 ) $$ the default constructor does not initialize field list
+        private List<InnerObject> list;
+                                  ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/json/JsonTemplateMapperTest.java:57: error: (initialization.field.uninitialized) $$ 1 $$ texts $$ ( 1737, 1764 ) $$ the default constructor does not initialize field texts
+            private List<String> texts;
+                                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/json/JsonTemplateMapperTest.java:59: error: (initialization.field.uninitialized) $$ 1 $$ digests $$ ( 1778, 1817 ) $$ the default constructor does not initialize field digests
+            private List<DescriptorDigest> digests;
+                                           ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/http/ResponseTest.java:38: error: (initialization.field.uninitialized) $$ 1 $$ httpResponseMock $$ ( 1196, 1244 ) $$ the default constructor does not initialize field httpResponseMock
+    private HttpResponse httpResponseMock;
+                         ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/http/ConnectionTest.java:46: error: (initialization.field.uninitialized) $$ 1 $$ mockHttpRequestFactory $$ ( 1522, 1582 ) $$ the default constructor does not initialize field mockHttpRequestFactory
+    private HttpRequestFactory mockHttpRequestFactory;
+                               ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/http/ConnectionTest.java:49: error: (initialization.field.uninitialized) $$ 1 $$ mockHttpRequest $$ ( 1588, 1634 ) $$ the default constructor does not initialize field mockHttpRequest
+    private HttpRequest mockHttpRequest;
+                        ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/http/ConnectionTest.java:52: error: (initialization.field.uninitialized) $$ 1 $$ mockHttpResponse $$ ( 1640, 1688 ) $$ the default constructor does not initialize field mockHttpResponse
+    private HttpResponse mockHttpResponse;
+                         ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/http/ConnectionTest.java:60: error: (initialization.field.uninitialized) $$ 1 $$ fakeRequest $$ ( 2029, 2057 ) $$ the default constructor does not initialize field fakeRequest
+    private Request fakeRequest;
+                    ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/http/ConnectionTest.java:75: error: (methodref.param) $$ 7 $$ request $$ @Initialized @NonNull Request $$ @Initialized @Nullable Request $$ @Initialized @NonNull Connection $$ @Initialized @NonNull Response get(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException $$ @Initialized @NonNull SendFunction $$ @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException $$ ( 2988, 3003 ) $$ Incompatible parameter type for request
+        testSend(HttpMethods.GET, Connection::get);
+                                  ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull Connection
+    @Initialized @NonNull Response get(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException
+  is not a valid method reference for method in @Initialized @NonNull SendFunction
+    @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/http/ConnectionTest.java:75: error: (methodref.receiver) $$ 6 $$ @Initialized @NonNull Connection $$ @Initialized @Nullable Connection $$ @Initialized @NonNull Connection $$ @Initialized @NonNull Response get(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException $$ @Initialized @NonNull SendFunction $$ @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException $$ ( 2988, 3003 ) $$ Incompatible receiver type
+        testSend(HttpMethods.GET, Connection::get);
+                                  ^
+  found   : @Initialized @NonNull Connection
+  required: @Initialized @Nullable Connection
+  Consequence: method in @Initialized @NonNull Connection
+    @Initialized @NonNull Response get(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException
+  is not a valid method reference for method in @Initialized @NonNull SendFunction
+    @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/http/ConnectionTest.java:80: error: (methodref.param) $$ 7 $$ request $$ @Initialized @NonNull Request $$ @Initialized @Nullable Request $$ @Initialized @NonNull Connection $$ @Initialized @NonNull Response post(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException $$ @Initialized @NonNull SendFunction $$ @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException $$ ( 3106, 3122 ) $$ Incompatible parameter type for request
+        testSend(HttpMethods.POST, Connection::post);
+                                   ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull Connection
+    @Initialized @NonNull Response post(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException
+  is not a valid method reference for method in @Initialized @NonNull SendFunction
+    @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/http/ConnectionTest.java:80: error: (methodref.receiver) $$ 6 $$ @Initialized @NonNull Connection $$ @Initialized @Nullable Connection $$ @Initialized @NonNull Connection $$ @Initialized @NonNull Response post(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException $$ @Initialized @NonNull SendFunction $$ @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException $$ ( 3106, 3122 ) $$ Incompatible receiver type
+        testSend(HttpMethods.POST, Connection::post);
+                                   ^
+  found   : @Initialized @NonNull Connection
+  required: @Initialized @Nullable Connection
+  Consequence: method in @Initialized @NonNull Connection
+    @Initialized @NonNull Response post(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException
+  is not a valid method reference for method in @Initialized @NonNull SendFunction
+    @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/http/ConnectionTest.java:85: error: (methodref.param) $$ 7 $$ request $$ @Initialized @NonNull Request $$ @Initialized @Nullable Request $$ @Initialized @NonNull Connection $$ @Initialized @NonNull Response put(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException $$ @Initialized @NonNull SendFunction $$ @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException $$ ( 3223, 3238 ) $$ Incompatible parameter type for request
+        testSend(HttpMethods.PUT, Connection::put);
+                                  ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull Connection
+    @Initialized @NonNull Response put(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException
+  is not a valid method reference for method in @Initialized @NonNull SendFunction
+    @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/http/ConnectionTest.java:85: error: (methodref.receiver) $$ 6 $$ @Initialized @NonNull Connection $$ @Initialized @Nullable Connection $$ @Initialized @NonNull Connection $$ @Initialized @NonNull Response put(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException $$ @Initialized @NonNull SendFunction $$ @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException $$ ( 3223, 3238 ) $$ Incompatible receiver type
+        testSend(HttpMethods.PUT, Connection::put);
+                                  ^
+  found   : @Initialized @NonNull Connection
+  required: @Initialized @Nullable Connection
+  Consequence: method in @Initialized @NonNull Connection
+    @Initialized @NonNull Response put(@Initialized @NonNull Connection this, @Initialized @NonNull Request p0) throws @Initialized @NonNull IOException
+  is not a valid method reference for method in @Initialized @NonNull SendFunction
+    @Initialized @NonNull Response send(@Initialized @NonNull SendFunction this, @Initialized @Nullable Connection p0, @Initialized @Nullable Request p1) throws @Initialized @NonNull IOException
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/http/Request.java:40: error: (initialization.field.uninitialized) $$ 1 $$ body $$ ( 1094, 1123 ) $$ the default constructor does not initialize field body
+        private BlobHttpContent body;
+                                ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/RegistryErrorExceptionBuilderTest.java:33: error: (initialization.field.uninitialized) $$ 1 $$ mockHttpResponseException $$ ( 1101, 1167 ) $$ the default constructor does not initialize field mockHttpResponseException
+    private HttpResponseException mockHttpResponseException;
+                                  ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/RegistryErrorExceptionBuilderTest.java:48: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 2528, 2543 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Tried to do something but failed because: manifest invalid (something went wrong), blob unknown (something went wrong), manifest unknown, tag invalid, manifest unverified, other: some other error happened, unknown: some unknown error happened | If this is a bug, please file an issue at https://github.com/google/jib/issues/new", ex.getMessage());
+                                                                                                                                                                                                                                                                                                                                                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobPusherTest.java:45: error: (initialization.field.uninitialized) $$ 1 $$ mockBlob $$ ( 1455, 1487 ) $$ the default constructor does not initialize field mockBlob
+    private Blob mockBlob;
+                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobPusherTest.java:48: error: (initialization.field.uninitialized) $$ 1 $$ mockURL $$ ( 1493, 1523 ) $$ the default constructor does not initialize field mockURL
+    private URL mockURL;
+                ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobPusherTest.java:50: error: (initialization.field.uninitialized) $$ 1 $$ fakeDescriptorDigest $$ ( 1529, 1575 ) $$ the default constructor does not initialize field fakeDescriptorDigest
+    private DescriptorDigest fakeDescriptorDigest;
+                             ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobPusherTest.java:52: error: (initialization.field.uninitialized) $$ 1 $$ testBlobPusher $$ ( 1581, 1615 ) $$ the default constructor does not initialize field testBlobPusher
+    private BlobPusher testBlobPusher;
+                       ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobPusherTest.java:97: error: (type.arguments.not.inferred) $$ 2 $$ Assert.assertThat $$ @Initialized @Nullable String <: @Initialized @NonNull String $$ ( 3655, 3763 ) $$ Could not infer type arguments for Assert.assertThat
+            Assert.assertThat(ex.getMessage(), CoreMatchers.containsString("Expected 1 'Location' header, but found 2"));
+                             ^
+  unsatisfiable constraint: @Initialized @Nullable String <: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobPusherTest.java:110: error: (type.arguments.not.inferred) $$ 2 $$ Assert.assertThat $$ @Initialized @Nullable String <: @Initialized @NonNull String $$ ( 4273, 4376 ) $$ Could not infer type arguments for Assert.assertThat
+            Assert.assertThat(ex.getMessage(), CoreMatchers.containsString("Received unrecognized status code -1"));
+                             ^
+  unsatisfiable constraint: @Initialized @Nullable String <: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobPusherTest.java:178: error: (argument) $$ 4 $$ object $$ Assert.assertNull $$ @Initialized @Nullable Void $$ @Initialized @NonNull Object $$ ( 6978, 7056 ) $$ incompatible argument for parameter object of Assert.assertNull.
+        Assert.assertNull(testBlobPusher.committer(mockURL).handleResponse(Mockito.mock(Response.class)));
+                                                                          ^
+  found   : @Initialized @Nullable Void
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/BlobPusher.java:58: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull BlobHttpContent $$ ( 1933, 1937 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull BlobHttpContent
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/BlobPusher.java:75: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 2515, 2519 ) $$ incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/BlobPusher.java:154: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull BlobHttpContent $$ ( 4729, 4733 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull BlobHttpContent
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/ManifestPusherTest.java:45: error: (initialization.field.uninitialized) $$ 1 $$ v22manifestJsonFile $$ ( 1530, 1563 ) $$ the default constructor does not initialize field v22manifestJsonFile
+    private Path v22manifestJsonFile;
+                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/ManifestPusherTest.java:47: error: (initialization.field.uninitialized) $$ 1 $$ fakeManifestTemplate $$ ( 1569, 1618 ) $$ the default constructor does not initialize field fakeManifestTemplate
+    private V22ManifestTemplate fakeManifestTemplate;
+                                ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/ManifestPusherTest.java:49: error: (initialization.field.uninitialized) $$ 1 $$ testManifestPusher $$ ( 1624, 1666 ) $$ the default constructor does not initialize field testManifestPusher
+    private ManifestPusher testManifestPusher;
+                           ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/ManifestPusherTest.java:71: error: (argument) $$ 4 $$ object $$ Assert.assertNull $$ @Initialized @Nullable Void $$ @Initialized @NonNull Object $$ ( 2797, 2860 ) $$ incompatible argument for parameter object of Assert.assertNull.
+        Assert.assertNull(testManifestPusher.handleResponse(Mockito.mock(Response.class)));
+                                                           ^
+  found   : @Initialized @Nullable Void
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/json/V22ManifestTemplate.java:79: error: (initialization.field.uninitialized) $$ 1 $$ config $$ ( 2581, 2622 ) $$ the default constructor does not initialize field config
+    private ContentDescriptorTemplate config;
+                                      ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/json/V22ManifestTemplate.java:112: error: (override.param) $$ 7 $$ size $$ @Initialized @NonNull long $$ @Initialized @Nullable long $$ @Initialized @NonNull V22ManifestTemplate $$ @NonNull void addLayer(@Initialized @NonNull V22ManifestTemplate this, @Initialized @NonNull long p0, @Initialized @NonNull DescriptorDigest p1) $$ @Initialized @NonNull BuildableManifestTemplate $$ @NonNull void addLayer(@Initialized @NonNull BuildableManifestTemplate this, @Initialized @Nullable long p0, @Initialized @Nullable DescriptorDigest p1) $$ ( 3423, 3432 ) $$ Incompatible parameter type for size.
+    public void addLayer(long size, DescriptorDigest digest) {
+                              ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull V22ManifestTemplate
+    @NonNull void addLayer(@Initialized @NonNull V22ManifestTemplate this, @Initialized @NonNull long p0, @Initialized @NonNull DescriptorDigest p1)
+  cannot override method in @Initialized @NonNull BuildableManifestTemplate
+    @NonNull void addLayer(@Initialized @NonNull BuildableManifestTemplate this, @Initialized @Nullable long p0, @Initialized @Nullable DescriptorDigest p1)
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/json/V22ManifestTemplate.java:112: error: (override.param) $$ 7 $$ digest $$ @Initialized @NonNull DescriptorDigest $$ @Initialized @Nullable DescriptorDigest $$ @Initialized @NonNull V22ManifestTemplate $$ @NonNull void addLayer(@Initialized @NonNull V22ManifestTemplate this, @Initialized @NonNull long p0, @Initialized @NonNull DescriptorDigest p1) $$ @Initialized @NonNull BuildableManifestTemplate $$ @NonNull void addLayer(@Initialized @NonNull BuildableManifestTemplate this, @Initialized @Nullable long p0, @Initialized @Nullable DescriptorDigest p1) $$ ( 3434, 3457 ) $$ Incompatible parameter type for digest.
+    public void addLayer(long size, DescriptorDigest digest) {
+                                                     ^
+  found   : @Initialized @NonNull DescriptorDigest
+  required: @Initialized @Nullable DescriptorDigest
+  Consequence: method in @Initialized @NonNull V22ManifestTemplate
+    @NonNull void addLayer(@Initialized @NonNull V22ManifestTemplate this, @Initialized @NonNull long p0, @Initialized @NonNull DescriptorDigest p1)
+  cannot override method in @Initialized @NonNull BuildableManifestTemplate
+    @NonNull void addLayer(@Initialized @NonNull BuildableManifestTemplate this, @Initialized @Nullable long p0, @Initialized @Nullable DescriptorDigest p1)
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/AuthenticationMethodRetrieverTest.java:40: error: (initialization.field.uninitialized) $$ 1 $$ mockHttpResponseException $$ ( 1349, 1415 ) $$ the default constructor does not initialize field mockHttpResponseException
+    private HttpResponseException mockHttpResponseException;
+                                  ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/AuthenticationMethodRetrieverTest.java:43: error: (initialization.field.uninitialized) $$ 1 $$ mockHeaders $$ ( 1421, 1463 ) $$ the default constructor does not initialize field mockHeaders
+    private HttpHeaders mockHeaders;
+                        ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/AuthenticationMethodRetrieverTest.java:94: error: (argument) $$ 4 $$ arg0 $$ OngoingStubbing.thenReturn $$ null (NullType) $$ @Initialized @NonNull String $$ ( 3662, 3666 ) $$ incompatible argument for parameter arg0 of OngoingStubbing.thenReturn.
+        Mockito.when(mockHeaders.getAuthenticate()).thenReturn(null);
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/AuthenticationMethodRetrieverTest.java:99: error: (type.arguments.not.inferred) $$ 2 $$ Assert.assertThat $$ @Initialized @Nullable String <: @Initialized @NonNull String $$ ( 3957, 4059 ) $$ Could not infer type arguments for Assert.assertThat
+            Assert.assertThat(ex.getMessage(), CoreMatchers.containsString("'WWW-Authenticate' header not found"));
+                             ^
+  unsatisfiable constraint: @Initialized @Nullable String <: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/AuthenticationMethodRetrieverTest.java:113: error: (type.arguments.not.inferred) $$ 2 $$ Assert.assertThat $$ @Initialized @Nullable String <: @Initialized @NonNull String $$ ( 4841, 4971 ) $$ Could not infer type arguments for Assert.assertThat
+            Assert.assertThat(ex.getMessage(), CoreMatchers.containsString("Failed get authentication method from 'WWW-Authenticate' header"));
+                             ^
+  unsatisfiable constraint: @Initialized @Nullable String <: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/AuthenticationMethodRetriever.java:37: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull BlobHttpContent $$ ( 1372, 1376 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull BlobHttpContent
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/AuthenticationMethodRetriever.java:48: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull RegistryAuthenticator $$ ( 1639, 1643 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull RegistryAuthenticator
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/RegistryAuthenticator.java:54: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull RegistryAuthenticator $$ ( 2406, 2410 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull RegistryAuthenticator
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/RegistryAuthenticator.java:72: error: (argument) $$ 4 $$ realm $$ RegistryAuthenticator constructor $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 3362, 3367 ) $$ incompatible argument for parameter realm of RegistryAuthenticator constructor.
+        return new RegistryAuthenticator(realm, service, repository);
+                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/RegistryAuthenticator.java:72: error: (argument) $$ 4 $$ service $$ RegistryAuthenticator constructor $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 3369, 3376 ) $$ incompatible argument for parameter service of RegistryAuthenticator constructor.
+        return new RegistryAuthenticator(realm, service, repository);
+                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/RegistryAuthenticator.java:85: error: (initialization.field.uninitialized) $$ 1 $$ token $$ ( 3930, 3951 ) $$ the default constructor does not initialize field token
+        private String token;
+                       ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/RegistryClientTest.java:33: error: (initialization.field.uninitialized) $$ 1 $$ mockAuthorization $$ ( 1089, 1139 ) $$ the default constructor does not initialize field mockAuthorization
+    private Authorization mockAuthorization;
+                          ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/RegistryClientTest.java:35: error: (initialization.field.uninitialized) $$ 1 $$ testRegistryClient $$ ( 1145, 1187 ) $$ the default constructor does not initialize field testRegistryClient
+    private RegistryClient testRegistryClient;
+                           ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/RegistryClientTest.java:45: error: (argument) $$ 4 $$ userAgentSuffix $$ RegistryClient.setUserAgentSuffix $$ null (NullType) $$ @Initialized @NonNull String $$ ( 1510, 1514 ) $$ incompatible argument for parameter userAgentSuffix of RegistryClient.setUserAgentSuffix.
+        RegistryClient.setUserAgentSuffix(null);
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/RegistryClient.java:92: error: (dereference.of.nullable) $$ 1 $$ RegistryClient.class.getPackage() $$ ( 3156, 3189 ) $$ dereference of possibly-null reference RegistryClient.class.getPackage()
+        String version = RegistryClient.class.getPackage().getImplementationVersion();
+                                                        ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/RegistryClient.java:217: error: (argument) $$ 4 $$ url $$ RegistryClient.callRegistryEndpoint $$ null (NullType) $$ @Initialized @NonNull URL $$ ( 8913, 8917 ) $$ incompatible argument for parameter url of RegistryClient.callRegistryEndpoint.
+        return callRegistryEndpoint(null, registryEndpointProvider);
+                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull URL
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/Timer.java:45: error: (method.invocation) $$ 3 $$ getTabs() $$ @UnderInitialization(com.google.cloud.tools.jib.Timer.class) @NonNull Timer $$ @Initialized @NonNull Timer $$ ( 1409, 1418 ) $$ call to getTabs() not allowed on the given receiver.
+            buildLogger.debug(getTabs().append("TIMING\t").append(label));
+                                     ^
+  found   : @UnderInitialization(com.google.cloud.tools.jib.Timer.class) @NonNull Timer
+  required: @Initialized @NonNull Timer
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/Timer.java:53: error: (argument) $$ 4 $$ buildLogger $$ Timer constructor $$ @Initialized @Nullable BuildLogger $$ @Initialized @NonNull BuildLogger $$ ( 1637, 1648 ) $$ incompatible argument for parameter buildLogger of Timer constructor.
+        return new Timer(buildLogger, label, depth + 1);
+                         ^
+  found   : @Initialized @Nullable BuildLogger
+  required: @Initialized @NonNull BuildLogger
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/Timer.java:81: error: (argument) $$ 4 $$ label $$ Timer.lap $$ null (NullType) $$ @Initialized @NonNull String $$ ( 2539, 2543 ) $$ incompatible argument for parameter label of Timer.lap.
+        lap(null);
+            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/RegistryAuthenticatorTest.java:45: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 2332, 2347 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Failed to authenticate with the registry because: 'Bearer' was not found in the 'WWW-Authenticate' header, tried to parse: realm=\"https://somerealm\",service=\"someservice\",scope=\"somescope\"", ex.getMessage());
+                                                                                                                                                                                                                                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/RegistryAuthenticatorTest.java:55: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 2903, 2918 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Failed to authenticate with the registry because: 'realm' was not found in the 'WWW-Authenticate' header, tried to parse: Bearer scope=\"somescope\"", ex.getMessage());
+                                                                                                                                                                                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/RegistryAuthenticatorTest.java:65: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 3496, 3511 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Failed to authenticate with the registry because: 'service' was not found in the 'WWW-Authenticate' header, tried to parse: Bearer realm=\"https://somerealm\"", ex.getMessage());
+                                                                                                                                                                                                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobCheckerTest.java:47: error: (initialization.field.uninitialized) $$ 1 $$ mockResponse $$ ( 1667, 1707 ) $$ the default constructor does not initialize field mockResponse
+    private Response mockResponse;
+                     ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobCheckerTest.java:51: error: (initialization.field.uninitialized) $$ 1 $$ testBlobChecker $$ ( 1858, 1894 ) $$ the default constructor does not initialize field testBlobChecker
+    private BlobChecker testBlobChecker;
+                        ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobCheckerTest.java:53: error: (initialization.field.uninitialized) $$ 1 $$ fakeDigest $$ ( 1900, 1936 ) $$ the default constructor does not initialize field fakeDigest
+    private DescriptorDigest fakeDigest;
+                             ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobCheckerTest.java:76: error: (type.arguments.not.inferred) $$ 2 $$ Assert.assertThat $$ @Initialized @Nullable String <: @Initialized @NonNull String $$ ( 2965, 3069 ) $$ Could not infer type arguments for Assert.assertThat
+            Assert.assertThat(ex.getMessage(), CoreMatchers.containsString("Did not receive Content-Length header"));
+                             ^
+  unsatisfiable constraint: @Initialized @Nullable String <: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/BlobChecker.java:71: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull BlobDescriptor $$ ( 3030, 3034 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull BlobDescriptor
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/BlobChecker.java:84: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull BlobDescriptor $$ ( 3751, 3755 ) $$ incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull BlobDescriptor
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/BlobChecker.java:102: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull BlobHttpContent $$ ( 4397, 4401 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull BlobHttpContent
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobPullerTest.java:45: error: (initialization.field.uninitialized) $$ 1 $$ fakeDigest $$ ( 1623, 1659 ) $$ the default constructor does not initialize field fakeDigest
+    private DescriptorDigest fakeDigest;
+                             ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobPullerTest.java:51: error: (initialization.field.uninitialized) $$ 1 $$ testBlobPuller $$ ( 1886, 1920 ) $$ the default constructor does not initialize field testBlobPuller
+    private BlobPuller testBlobPuller;
+                       ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/BlobPullerTest.java:81: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 3715, 3730 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("The pulled BLOB has digest '" + testBlobDigest + "', but the request digest was '" + fakeDigest + "'", ex.getMessage());
+                                                                                                                                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/hash/CountingDigestOutputStream.java:43: error: (argument) $$ 4 $$ digest $$ DigestOutputStream constructor $$ null (NullType) $$ @Initialized @NonNull MessageDigest $$ ( 1496, 1500 ) $$ incompatible argument for parameter digest of DigestOutputStream constructor.
+        super(outputStream, null);
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull MessageDigest
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/hash/CountingDigestOutputStream.java:45: error: (method.invocation) $$ 3 $$ setMessageDigest(java.security.MessageDigest) $$ @UnderInitialization(com.google.cloud.tools.jib.hash.CountingDigestOutputStream.class) @NonNull DigestOutputStream $$ @Initialized @NonNull DigestOutputStream $$ ( 1529, 1591 ) $$ call to setMessageDigest(java.security.MessageDigest) not allowed on the given receiver.
+            setMessageDigest(MessageDigest.getInstance(SHA_256_ALGORITHM));
+                            ^
+  found   : @UnderInitialization(com.google.cloud.tools.jib.hash.CountingDigestOutputStream.class) @NonNull DigestOutputStream
+  required: @Initialized @NonNull DigestOutputStream
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/BlobPuller.java:67: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull BlobHttpContent $$ ( 2581, 2585 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull BlobHttpContent
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/ManifestPullerTest.java:49: error: (initialization.field.uninitialized) $$ 1 $$ mockResponse $$ ( 1714, 1754 ) $$ the default constructor does not initialize field mockResponse
+    private Response mockResponse;
+                     ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/ManifestPullerTest.java:60: error: (argument) $$ 4 $$ matcher $$ Assert.assertThat $$ @Initialized @NonNull Matcher<@UnknownInitialization @Nullable ManifestTemplate> $$ @Initialized @NonNull Matcher<? extends @Initialized @Nullable Object super @Initialized @NonNull ManifestTemplate> $$ ( 2594, 2644 ) $$ incompatible argument for parameter matcher of Assert.assertThat.
+        Assert.assertThat(manifestTemplate, CoreMatchers.instanceOf(V21ManifestTemplate.class));
+                                                                   ^
+  found   : @Initialized @NonNull Matcher<@UnknownInitialization @Nullable ManifestTemplate>
+  required: @Initialized @NonNull Matcher<? extends @Initialized @Nullable Object super @Initialized @NonNull ManifestTemplate>
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/ManifestPullerTest.java:68: error: (argument) $$ 4 $$ matcher $$ Assert.assertThat $$ @Initialized @NonNull Matcher<@UnknownInitialization @Nullable ManifestTemplate> $$ @Initialized @NonNull Matcher<? extends @Initialized @Nullable Object super @Initialized @NonNull ManifestTemplate> $$ ( 3178, 3228 ) $$ incompatible argument for parameter matcher of Assert.assertThat.
+        Assert.assertThat(manifestTemplate, CoreMatchers.instanceOf(V22ManifestTemplate.class));
+                                                                   ^
+  found   : @Initialized @NonNull Matcher<@UnknownInitialization @Nullable ManifestTemplate>
+  required: @Initialized @NonNull Matcher<? extends @Initialized @Nullable Object super @Initialized @NonNull ManifestTemplate>
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/ManifestPullerTest.java:78: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 3675, 3690 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Cannot find field 'schemaVersion' in manifest", ex.getMessage());
+                                                                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/ManifestPullerTest.java:89: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 4187, 4202 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("`schemaVersion` field is not an integer", ex.getMessage());
+                                                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/ManifestPullerTest.java:100: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 4707, 4722 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("Unknown schemaVersion: 0 - only 1 and 2 are supported", ex.getMessage());
+                                                                                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/ManifestPuller.java:56: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull BlobHttpContent $$ ( 2201, 2205 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull BlobHttpContent
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetrieverTest.java:39: error: (initialization.field.uninitialized) $$ 1 $$ mockAuthorization $$ ( 1257, 1307 ) $$ the default constructor does not initialize field mockAuthorization
+    private Authorization mockAuthorization;
+                          ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetrieverTest.java:42: error: (initialization.field.uninitialized) $$ 1 $$ mockDockerCredentialHelper $$ ( 1313, 1381 ) $$ the default constructor does not initialize field mockDockerCredentialHelper
+    private DockerCredentialHelper mockDockerCredentialHelper;
+                                   ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetrieverTest.java:45: error: (initialization.field.uninitialized) $$ 1 $$ mockDockerCredentialHelperFactory $$ ( 1387, 1469 ) $$ the default constructor does not initialize field mockDockerCredentialHelperFactory
+    private DockerCredentialHelperFactory mockDockerCredentialHelperFactory;
+                                          ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetrieverTest.java:47: error: (initialization.field.uninitialized) $$ 1 $$ dockerConfigFile $$ ( 1475, 1505 ) $$ the default constructor does not initialize field dockerConfigFile
+    private Path dockerConfigFile;
+                 ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetrieverTest.java:58: error: (argument) $$ 4 $$ object $$ Assert.assertNull $$ @Initialized @Nullable Authorization $$ @Initialized @NonNull Object $$ ( 2123, 2165 ) $$ incompatible argument for parameter object of Assert.assertNull.
+        Assert.assertNull(dockerConfigCredentialRetriever.retrieve());
+                                                                  ^
+  found   : @Initialized @Nullable Authorization
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetrieverTest.java:63: error: (argument) $$ 4 $$ dockerCredentialHelperFactory $$ DockerConfigCredentialRetriever constructor $$ null (NullType) $$ @Initialized @NonNull DockerCredentialHelperFactory $$ ( 2371, 2375 ) $$ incompatible argument for parameter dockerCredentialHelperFactory of DockerConfigCredentialRetriever constructor.
+        DockerConfigCredentialRetriever dockerConfigCredentialRetriever = new DockerConfigCredentialRetriever("some registry", dockerConfigFile, null);
+                                                                                                                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DockerCredentialHelperFactory
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetrieverTest.java:65: error: (argument) $$ 4 $$ object $$ Assert.assertNotNull $$ @Initialized @Nullable Authorization $$ @Initialized @NonNull Object $$ ( 2489, 2502 ) $$ incompatible argument for parameter object of Assert.assertNotNull.
+        Assert.assertNotNull(authorization);
+                             ^
+  found   : @Initialized @Nullable Authorization
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetrieverTest.java:74: error: (argument) $$ 4 $$ object $$ Assert.assertNotNull $$ @Initialized @Nullable Authorization $$ @Initialized @NonNull Object $$ ( 3077, 3090 ) $$ incompatible argument for parameter object of Assert.assertNotNull.
+        Assert.assertNotNull(authorization);
+                             ^
+  found   : @Initialized @Nullable Authorization
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetrieverTest.java:83: error: (argument) $$ 4 $$ object $$ Assert.assertNotNull $$ @Initialized @Nullable Authorization $$ @Initialized @NonNull Object $$ ( 3667, 3680 ) $$ incompatible argument for parameter object of Assert.assertNotNull.
+        Assert.assertNotNull(authorization);
+                             ^
+  found   : @Initialized @Nullable Authorization
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetrieverTest.java:90: error: (argument) $$ 4 $$ object $$ Assert.assertNull $$ @Initialized @Nullable Authorization $$ @Initialized @NonNull Object $$ ( 3976, 4018 ) $$ incompatible argument for parameter object of Assert.assertNull.
+        Assert.assertNull(dockerConfigCredentialRetriever.retrieve());
+                                                                  ^
+  found   : @Initialized @Nullable Authorization
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/credentials/DockerCredentialHelper.java:48: error: (initialization.field.uninitialized) $$ 1 $$ Username $$ ( 1744, 1768 ) $$ the default constructor does not initialize field Username
+        private String Username;
+                       ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/credentials/DockerCredentialHelper.java:50: error: (initialization.field.uninitialized) $$ 1 $$ Secret $$ ( 1778, 1800 ) $$ the default constructor does not initialize field Secret
+        private String Secret;
+                       ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/json/DockerConfigTemplateTest.java:41: error: (argument) $$ 4 $$ auth $$ DockerConfigTemplate.addAuth $$ null (NullType) $$ @Initialized @NonNull String $$ ( 1711, 1715 ) $$ incompatible argument for parameter auth of DockerConfigTemplate.addAuth.
+        DockerConfigTemplate dockerConfigTemplate = new DockerConfigTemplate().addAuth("some registry", "some auth").addAuth("some other registry", "some other auth").addAuth("just registry", null).setCredsStore("some credential store").addCredHelper("some registry", "some credential helper").addCredHelper("another registry", "another credential helper");
+                                                                                                                                                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/json/DockerConfigTemplateTest.java:56: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ null (NullType) $$ @Initialized @NonNull Object $$ ( 2756, 2760 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+        Assert.assertEquals(null, dockerConfigTemplate.getAuthFor("just registry"));
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/json/DockerConfigTemplateTest.java:57: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 2866, 2926 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+        Assert.assertEquals("some credential store", dockerConfigTemplate.getCredentialHelperFor("some registry"));
+                                                                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/json/DockerConfigTemplateTest.java:58: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 2982, 3048 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+        Assert.assertEquals("some credential store", dockerConfigTemplate.getCredentialHelperFor("some other registry"));
+                                                                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/json/DockerConfigTemplateTest.java:59: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 3104, 3164 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+        Assert.assertEquals("some credential store", dockerConfigTemplate.getCredentialHelperFor("just registry"));
+                                                                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/json/DockerConfigTemplateTest.java:60: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 3224, 3287 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+        Assert.assertEquals("another credential helper", dockerConfigTemplate.getCredentialHelperFor("another registry"));
+                                                                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/json/DockerConfigTemplateTest.java:61: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ null (NullType) $$ @Initialized @NonNull Object $$ ( 3318, 3322 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+        Assert.assertEquals(null, dockerConfigTemplate.getCredentialHelperFor("unknonwn registry"));
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/registry/credentials/json/DockerConfigTemplateTest.java:61: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 3324, 3388 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+        Assert.assertEquals(null, dockerConfigTemplate.getCredentialHelperFor("unknonwn registry"));
+                                                                             ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/TestBuildLogger.java:29: error: (override.param) $$ 7 $$ message $$ @Initialized @NonNull CharSequence $$ @Initialized @Nullable CharSequence $$ @Initialized @NonNull TestBuildLogger $$ @NonNull void debug(@Initialized @NonNull TestBuildLogger this, @Initialized @NonNull CharSequence p0) $$ @Initialized @NonNull BuildLogger $$ @NonNull void debug(@Initialized @NonNull BuildLogger this, @Initialized @Nullable CharSequence p0) $$ ( 984, 1004 ) $$ Incompatible parameter type for message.
+    public void debug(CharSequence message) {
+                                   ^
+  found   : @Initialized @NonNull CharSequence
+  required: @Initialized @Nullable CharSequence
+  Consequence: method in @Initialized @NonNull TestBuildLogger
+    @NonNull void debug(@Initialized @NonNull TestBuildLogger this, @Initialized @NonNull CharSequence p0)
+  cannot override method in @Initialized @NonNull BuildLogger
+    @NonNull void debug(@Initialized @NonNull BuildLogger this, @Initialized @Nullable CharSequence p0)
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/TestBuildLogger.java:34: error: (override.param) $$ 7 $$ message $$ @Initialized @NonNull CharSequence $$ @Initialized @Nullable CharSequence $$ @Initialized @NonNull TestBuildLogger $$ @NonNull void info(@Initialized @NonNull TestBuildLogger this, @Initialized @NonNull CharSequence p0) $$ @Initialized @NonNull BuildLogger $$ @NonNull void info(@Initialized @NonNull BuildLogger this, @Initialized @Nullable CharSequence p0) $$ ( 1092, 1112 ) $$ Incompatible parameter type for message.
+    public void info(CharSequence message) {
+                                  ^
+  found   : @Initialized @NonNull CharSequence
+  required: @Initialized @Nullable CharSequence
+  Consequence: method in @Initialized @NonNull TestBuildLogger
+    @NonNull void info(@Initialized @NonNull TestBuildLogger this, @Initialized @NonNull CharSequence p0)
+  cannot override method in @Initialized @NonNull BuildLogger
+    @NonNull void info(@Initialized @NonNull BuildLogger this, @Initialized @Nullable CharSequence p0)
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/TestBuildLogger.java:39: error: (override.param) $$ 7 $$ message $$ @Initialized @NonNull CharSequence $$ @Initialized @Nullable CharSequence $$ @Initialized @NonNull TestBuildLogger $$ @NonNull void warn(@Initialized @NonNull TestBuildLogger this, @Initialized @NonNull CharSequence p0) $$ @Initialized @NonNull BuildLogger $$ @NonNull void warn(@Initialized @NonNull BuildLogger this, @Initialized @Nullable CharSequence p0) $$ ( 1199, 1219 ) $$ Incompatible parameter type for message.
+    public void warn(CharSequence message) {
+                                  ^
+  found   : @Initialized @NonNull CharSequence
+  required: @Initialized @Nullable CharSequence
+  Consequence: method in @Initialized @NonNull TestBuildLogger
+    @NonNull void warn(@Initialized @NonNull TestBuildLogger this, @Initialized @NonNull CharSequence p0)
+  cannot override method in @Initialized @NonNull BuildLogger
+    @NonNull void warn(@Initialized @NonNull BuildLogger this, @Initialized @Nullable CharSequence p0)
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/TestBuildLogger.java:44: error: (override.param) $$ 7 $$ message $$ @Initialized @NonNull CharSequence $$ @Initialized @Nullable CharSequence $$ @Initialized @NonNull TestBuildLogger $$ @NonNull void error(@Initialized @NonNull TestBuildLogger this, @Initialized @NonNull CharSequence p0) $$ @Initialized @NonNull BuildLogger $$ @NonNull void error(@Initialized @NonNull BuildLogger this, @Initialized @Nullable CharSequence p0) $$ ( 1307, 1327 ) $$ Incompatible parameter type for message.
+    public void error(CharSequence message) {
+                                   ^
+  found   : @Initialized @NonNull CharSequence
+  required: @Initialized @Nullable CharSequence
+  Consequence: method in @Initialized @NonNull TestBuildLogger
+    @NonNull void error(@Initialized @NonNull TestBuildLogger this, @Initialized @NonNull CharSequence p0)
+  cannot override method in @Initialized @NonNull BuildLogger
+    @NonNull void error(@Initialized @NonNull BuildLogger this, @Initialized @Nullable CharSequence p0)
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/BuildConfigurationTest.java:92: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 6095, 6110 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("main class is required but not set", ex.getMessage());
+                                                                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/BuildConfigurationTest.java:99: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 6562, 6577 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("target image is required but not set and main class is required but not set", ex.getMessage());
+                                                                                                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/BuildConfigurationTest.java:106: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 7005, 7020 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("base image is required but not set, target image is required but not set, and main class is required but not set", ex.getMessage());
+                                                                                                                                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/TestSourceFilesConfiguration.java:42: error: (method.invocation) $$ 3 $$ getFilesList(java.lang.String) $$ @UnderInitialization @NonNull TestSourceFilesConfiguration $$ @Initialized @NonNull TestSourceFilesConfiguration $$ ( 1458, 1498 ) $$ call to getFilesList(java.lang.String) not allowed on the given receiver.
+        dependenciesSourceFiles = getFilesList("application/dependencies");
+                                              ^
+  found   : @UnderInitialization @NonNull TestSourceFilesConfiguration
+  required: @Initialized @NonNull TestSourceFilesConfiguration
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/TestSourceFilesConfiguration.java:43: error: (method.invocation) $$ 3 $$ getFilesList(java.lang.String) $$ @UnderInitialization @NonNull TestSourceFilesConfiguration $$ @Initialized @NonNull TestSourceFilesConfiguration $$ ( 1531, 1568 ) $$ call to getFilesList(java.lang.String) not allowed on the given receiver.
+        resourcesSourceFiles = getFilesList("application/resources");
+                                           ^
+  found   : @UnderInitialization @NonNull TestSourceFilesConfiguration
+  required: @Initialized @NonNull TestSourceFilesConfiguration
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/TestSourceFilesConfiguration.java:44: error: (method.invocation) $$ 3 $$ getFilesList(java.lang.String) $$ @UnderInitialization @NonNull TestSourceFilesConfiguration $$ @Initialized @NonNull TestSourceFilesConfiguration $$ ( 1599, 1634 ) $$ call to getFilesList(java.lang.String) not allowed on the given receiver.
+        classesSourceFiles = getFilesList("application/classes");
+                                         ^
+  found   : @UnderInitialization @NonNull TestSourceFilesConfiguration
+  required: @Initialized @NonNull TestSourceFilesConfiguration
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStepTest.java:43: error: (initialization.field.uninitialized) $$ 1 $$ mockBuildConfiguration $$ ( 1705, 1765 ) $$ the default constructor does not initialize field mockBuildConfiguration
+    private BuildConfiguration mockBuildConfiguration;
+                               ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStepTest.java:46: error: (initialization.field.uninitialized) $$ 1 $$ mockBuildLogger $$ ( 1771, 1817 ) $$ the default constructor does not initialize field mockBuildLogger
+    private BuildLogger mockBuildLogger;
+                        ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStepTest.java:49: error: (initialization.field.uninitialized) $$ 1 $$ mockDockerCredentialHelperFactory $$ ( 1823, 1905 ) $$ the default constructor does not initialize field mockDockerCredentialHelperFactory
+    private DockerCredentialHelperFactory mockDockerCredentialHelperFactory;
+                                          ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStepTest.java:52: error: (initialization.field.uninitialized) $$ 1 $$ mockDockerCredentialHelper $$ ( 1911, 1979 ) $$ the default constructor does not initialize field mockDockerCredentialHelper
+    private DockerCredentialHelper mockDockerCredentialHelper;
+                                   ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStepTest.java:59: error: (initialization.field.uninitialized) $$ 1 $$ mockNonexistentServerUrlDockerCredentialHelper $$ ( 2121, 2209 ) $$ the default constructor does not initialize field mockNonexistentServerUrlDockerCredentialHelper
+    private DockerCredentialHelper mockNonexistentServerUrlDockerCredentialHelper;
+                                   ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStepTest.java:66: error: (initialization.field.uninitialized) $$ 1 $$ mockNonexistentDockerCredentialHelper $$ ( 2342, 2421 ) $$ the default constructor does not initialize field mockNonexistentDockerCredentialHelper
+    private DockerCredentialHelper mockNonexistentDockerCredentialHelper;
+                                   ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStepTest.java:69: error: (initialization.field.uninitialized) $$ 1 $$ mockAuthorization $$ ( 2427, 2477 ) $$ the default constructor does not initialize field mockAuthorization
+    private Authorization mockAuthorization;
+                          ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStepTest.java:72: error: (initialization.field.uninitialized) $$ 1 $$ mockDockerConfigCredentialRetriever $$ ( 2483, 2569 ) $$ the default constructor does not initialize field mockDockerConfigCredentialRetriever
+    private DockerConfigCredentialRetriever mockDockerConfigCredentialRetriever;
+                                            ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStepTest.java:75: error: (initialization.field.uninitialized) $$ 1 $$ mockNonexistentServerUrlDockerCredentialHelperException $$ ( 2575, 2701 ) $$ the default constructor does not initialize field mockNonexistentServerUrlDockerCredentialHelperException
+    private NonexistentServerUrlDockerCredentialHelperException mockNonexistentServerUrlDockerCredentialHelperException;
+                                                                ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStepTest.java:78: error: (initialization.field.uninitialized) $$ 1 $$ mockNonexistentDockerCredentialHelperException $$ ( 2707, 2815 ) $$ the default constructor does not initialize field mockNonexistentDockerCredentialHelperException
+    private NonexistentDockerCredentialHelperException mockNonexistentDockerCredentialHelperException;
+                                                       ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStepTest.java:132: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ null (NullType) $$ @Initialized @NonNull Object $$ ( 7189, 7193 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+        Assert.assertEquals(null, makeRetrieveRegistryCredentialsStep("something.amazonaws.com").call());
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:141: error: (argument) $$ 4 $$ credentialHelperNames $$ BuildConfiguration constructor $$ @Initialized @Nullable List<@Initialized @NonNull String> $$ @Initialized @NonNull List<@Initialized @NonNull String> $$ ( 4917, 4938 ) $$ incompatible argument for parameter credentialHelperNames of BuildConfiguration constructor.
+                    return new BuildConfiguration(buildLogger, baseImageReference, targetImageReference, credentialHelperNames, knownRegistryCredentials, enableReproducibleBuilds, mainClass, jvmFlags, environmentMap, targetFormat);
+                                                                                                         ^
+  found   : @Initialized @Nullable List<@Initialized @NonNull String>
+  required: @Initialized @NonNull List<@Initialized @NonNull String>
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:141: error: (argument) $$ 4 $$ knownRegistryCredentials $$ BuildConfiguration constructor $$ @Initialized @Nullable RegistryCredentials $$ @Initialized @NonNull RegistryCredentials $$ ( 4940, 4964 ) $$ incompatible argument for parameter knownRegistryCredentials of BuildConfiguration constructor.
+                    return new BuildConfiguration(buildLogger, baseImageReference, targetImageReference, credentialHelperNames, knownRegistryCredentials, enableReproducibleBuilds, mainClass, jvmFlags, environmentMap, targetFormat);
+                                                                                                                                ^
+  found   : @Initialized @Nullable RegistryCredentials
+  required: @Initialized @NonNull RegistryCredentials
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:141: error: (argument) $$ 4 $$ jvmFlags $$ BuildConfiguration constructor $$ @Initialized @Nullable List<@Initialized @NonNull String> $$ @Initialized @NonNull List<@Initialized @NonNull String> $$ ( 5003, 5011 ) $$ incompatible argument for parameter jvmFlags of BuildConfiguration constructor.
+                    return new BuildConfiguration(buildLogger, baseImageReference, targetImageReference, credentialHelperNames, knownRegistryCredentials, enableReproducibleBuilds, mainClass, jvmFlags, environmentMap, targetFormat);
+                                                                                                                                                                                               ^
+  found   : @Initialized @Nullable List<@Initialized @NonNull String>
+  required: @Initialized @NonNull List<@Initialized @NonNull String>
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:141: error: (argument) $$ 4 $$ environmentMap $$ BuildConfiguration constructor $$ @Initialized @Nullable Map<@Initialized @NonNull String, @Initialized @NonNull String> $$ @Initialized @NonNull Map<@Initialized @NonNull String, @Initialized @NonNull String> $$ ( 5013, 5027 ) $$ incompatible argument for parameter environmentMap of BuildConfiguration constructor.
+                    return new BuildConfiguration(buildLogger, baseImageReference, targetImageReference, credentialHelperNames, knownRegistryCredentials, enableReproducibleBuilds, mainClass, jvmFlags, environmentMap, targetFormat);
+                                                                                                                                                                                                         ^
+  found   : @Initialized @Nullable Map<@Initialized @NonNull String, @Initialized @NonNull String>
+  required: @Initialized @NonNull Map<@Initialized @NonNull String, @Initialized @NonNull String>
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:214: error: (dereference.of.nullable) $$ 1 $$ baseImageReference $$ ( 7905, 7923 ) $$ dereference of possibly-null reference baseImageReference
+        return baseImageReference.getRegistry();
+               ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:218: error: (dereference.of.nullable) $$ 1 $$ baseImageReference $$ ( 8006, 8024 ) $$ dereference of possibly-null reference baseImageReference
+        return baseImageReference.getRepository();
+               ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:222: error: (dereference.of.nullable) $$ 1 $$ baseImageReference $$ ( 8102, 8120 ) $$ dereference of possibly-null reference baseImageReference
+        return baseImageReference.getTag();
+               ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:226: error: (dereference.of.nullable) $$ 1 $$ targetImageReference $$ ( 8193, 8213 ) $$ dereference of possibly-null reference targetImageReference
+        return targetImageReference.getRegistry();
+               ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:230: error: (dereference.of.nullable) $$ 1 $$ targetImageReference $$ ( 8293, 8313 ) $$ dereference of possibly-null reference targetImageReference
+        return targetImageReference.getRepository();
+               ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:234: error: (dereference.of.nullable) $$ 1 $$ targetImageReference $$ ( 8388, 8408 ) $$ dereference of possibly-null reference targetImageReference
+        return targetImageReference.getTag();
+               ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:238: error: (return) $$ 2 $$ @Initialized @Nullable RegistryCredentials $$ @Initialized @NonNull RegistryCredentials $$ ( 8504, 8528 ) $$ incompatible types in return.
+        return knownRegistryCredentials;
+               ^
+  type of expression: @Initialized @Nullable RegistryCredentials
+  method return type: @Initialized @NonNull RegistryCredentials
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:242: error: (return) $$ 2 $$ @Initialized @Nullable List<@Initialized @NonNull String> $$ @Initialized @NonNull List<@Initialized @NonNull String> $$ ( 8605, 8626 ) $$ incompatible types in return.
+        return credentialHelperNames;
+               ^
+  type of expression: @Initialized @Nullable List<@Initialized @NonNull String>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull String>
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:250: error: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 8784, 8793 ) $$ incompatible types in return.
+        return mainClass;
+               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:254: error: (return) $$ 2 $$ @Initialized @Nullable List<@Initialized @NonNull String> $$ @Initialized @NonNull List<@Initialized @NonNull String> $$ ( 8857, 8865 ) $$ incompatible types in return.
+        return jvmFlags;
+               ^
+  type of expression: @Initialized @Nullable List<@Initialized @NonNull String>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull String>
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/BuildConfiguration.java:258: error: (return) $$ 2 $$ @Initialized @Nullable Map<@Initialized @NonNull String, @Initialized @NonNull String> $$ @Initialized @NonNull Map<@Initialized @NonNull String, @Initialized @NonNull String> $$ ( 8939, 8953 ) $$ incompatible types in return.
+        return environmentMap;
+               ^
+  type of expression: @Initialized @Nullable Map<@Initialized @NonNull String, @Initialized @NonNull String>
+  method return type: @Initialized @NonNull Map<@Initialized @NonNull String, @Initialized @NonNull String>
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetriever.java:104: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull DockerConfigTemplate $$ ( 4192, 4196 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull DockerConfigTemplate
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigCredentialRetriever.java:110: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull DockerConfigTemplate $$ ( 4465, 4469 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull DockerConfigTemplate
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStep.java:110: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 5844, 5848 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/builder/RetrieveRegistryCredentialsStep.java:127: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 6795, 6799 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/credentials/json/DockerConfigTemplate.java:65: error: (initialization.field.uninitialized) $$ 1 $$ auth $$ ( 2099, 2119 ) $$ the default constructor does not initialize field auth
+        private String auth;
+                       ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/credentials/json/DockerConfigTemplate.java:87: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 2706, 2710 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/ImageReference.java:100: error: (dereference.of.nullable) $$ 1 $$ registry $$ ( 4262, 4270 ) $$ dereference of possibly-null reference registry
+        if (!registry.contains(".") && !registry.contains(":") && !"localhost".equals(registry)) {
+             ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/ImageReference.java:110: error: (dereference.of.nullable) $$ 1 $$ repository $$ ( 4749, 4759 ) $$ dereference of possibly-null reference repository
+        if (DOCKER_HUB_REGISTRY.equals(registry) && repository.indexOf('/') < 0) {
+                                                    ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/ImageReference.java:123: error: (argument) $$ 4 $$ repository $$ ImageReference constructor $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 5272, 5282 ) $$ incompatible argument for parameter repository of ImageReference constructor.
+        return new ImageReference(registry, repository, tag);
+                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/ImageReference.java:123: error: (argument) $$ 4 $$ tag $$ ImageReference constructor $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 5284, 5287 ) $$ incompatible argument for parameter tag of ImageReference constructor.
+        return new ImageReference(registry, repository, tag);
+                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/credentials/RegistryCredentials.java:129: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 5041, 5045 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/credentials/RegistryCredentials.java:140: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 5409, 5413 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/BuildAndCacheApplicationLayersStepTest.java:49: error: (initialization.field.uninitialized) $$ 1 $$ mockBuildConfiguration $$ ( 1760, 1820 ) $$ the default constructor does not initialize field mockBuildConfiguration
+    private BuildConfiguration mockBuildConfiguration;
+                               ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/BuildAndCacheApplicationLayersStepTest.java:68: error: (dereference.of.nullable) $$ 1 $$ cacheReader.getUpToDateLayerBySourceFiles(testSourceFilesConfiguration.getDependenciesFiles()) $$ ( 3231, 3325 ) $$ dereference of possibly-null reference cacheReader.getUpToDateLayerBySourceFiles(testSourceFilesConfiguration.getDependenciesFiles())
+        Assert.assertEquals(applicationLayers.get(0).getBlobDescriptor(), cacheReader.getUpToDateLayerBySourceFiles(testSourceFilesConfiguration.getDependenciesFiles()).getBlobDescriptor());
+                                                                                                                   ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/BuildAndCacheApplicationLayersStepTest.java:69: error: (dereference.of.nullable) $$ 1 $$ cacheReader.getUpToDateLayerBySourceFiles(testSourceFilesConfiguration.getResourcesFiles()) $$ ( 3422, 3513 ) $$ dereference of possibly-null reference cacheReader.getUpToDateLayerBySourceFiles(testSourceFilesConfiguration.getResourcesFiles())
+        Assert.assertEquals(applicationLayers.get(1).getBlobDescriptor(), cacheReader.getUpToDateLayerBySourceFiles(testSourceFilesConfiguration.getResourcesFiles()).getBlobDescriptor());
+                                                                                                                   ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/builder/BuildAndCacheApplicationLayersStepTest.java:70: error: (dereference.of.nullable) $$ 1 $$ cacheReader.getUpToDateLayerBySourceFiles(testSourceFilesConfiguration.getClassesFiles()) $$ ( 3610, 3699 ) $$ dereference of possibly-null reference cacheReader.getUpToDateLayerBySourceFiles(testSourceFilesConfiguration.getClassesFiles())
+        Assert.assertEquals(applicationLayers.get(2).getBlobDescriptor(), cacheReader.getUpToDateLayerBySourceFiles(testSourceFilesConfiguration.getClassesFiles()).getBlobDescriptor());
+                                                                                                                   ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/blob/BlobTest.java:63: error: (dereference.of.nullable) $$ 1 $$ outputStream $$ ( 2199, 2211 ) $$ dereference of possibly-null reference outputStream
+        BlobWriter writer = outputStream -> outputStream.write(expected.getBytes(StandardCharsets.UTF_8));
+                                            ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/tar/TarStreamBuilderTest.java:45: error: (initialization.field.uninitialized) $$ 1 $$ expectedFileAString $$ ( 1527, 1562 ) $$ the default constructor does not initialize field expectedFileAString
+    private String expectedFileAString;
+                   ^
+../dataset/post_nullgtn_without_s_jib/src/test/java/com/google/cloud/tools/jib/tar/TarStreamBuilderTest.java:47: error: (initialization.field.uninitialized) $$ 1 $$ expectedFileBString $$ ( 1568, 1603 ) $$ the default constructor does not initialize field expectedFileBString
+    private String expectedFileBString;
+                   ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/tar/TarStreamBuilder.java:71: error: (argument) $$ 4 $$ tarByteStream $$ TarStreamBuilder.writeEntriesAsTarArchive $$ @Initialized @Nullable OutputStream $$ @Initialized @NonNull OutputStream $$ ( 2688, 2700 ) $$ incompatible argument for parameter tarByteStream of TarStreamBuilder.writeEntriesAsTarArchive.
+        return Blobs.from(outputStream -> writeEntriesAsTarArchive(Collections.unmodifiableList(entries), outputStream));
+                                                                                                          ^
+  found   : @Initialized @Nullable OutputStream
+  required: @Initialized @NonNull OutputStream
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/Command.java:44: error: (argument) $$ 4 $$ stdin $$ Command.run $$ null (NullType) $$ @Initialized @NonNull byte @Initialized @NonNull [] $$ ( 1295, 1299 ) $$ incompatible argument for parameter stdin of Command.run.
+        return run(null);
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/BlobPullerIntegrationTest.java:47: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 1639, 1643 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+        RegistryClient registryClient = new RegistryClient(null, "localhost:5000", "busybox");
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/BlobPullerIntegrationTest.java:60: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 2525, 2529 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+            RegistryClient registryClient = new RegistryClient(null, "localhost:5000", "busybox");
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/BlobPullerIntegrationTest.java:64: error: (type.arguments.not.inferred) $$ 2 $$ Assert.assertThat $$ @Initialized @Nullable String <: @Initialized @NonNull String $$ ( 2789, 2925 ) $$ Could not infer type arguments for Assert.assertThat
+            Assert.assertThat(ex.getMessage(), CoreMatchers.containsString("pull BLOB for localhost:5000/busybox with digest " + nonexistentDigest));
+                             ^
+  unsatisfiable constraint: @Initialized @Nullable String <: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/ManifestPullerIntegrationTest.java:37: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 1341, 1345 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+        RegistryClient registryClient = new RegistryClient(null, "localhost:5000", "busybox");
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/ManifestPullerIntegrationTest.java:45: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 1776, 1780 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+        RegistryClient registryClient = new RegistryClient(null, "gcr.io", "distroless/java");
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/ManifestPullerIntegrationTest.java:55: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 2302, 2306 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+            RegistryClient registryClient = new RegistryClient(null, "localhost:5000", "busybox");
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/ManifestPullerIntegrationTest.java:59: error: (type.arguments.not.inferred) $$ 2 $$ Assert.assertThat $$ @Initialized @Nullable String <: @Initialized @NonNull String $$ ( 2537, 2666 ) $$ Could not infer type arguments for Assert.assertThat
+            Assert.assertThat(ex.getMessage(), CoreMatchers.containsString("pull image manifest for localhost:5000/busybox:nonexistent-tag"));
+                             ^
+  unsatisfiable constraint: @Initialized @Nullable String <: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/BlobPusherIntegrationTest.java:40: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 1530, 1534 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+        RegistryClient registryClient = new RegistryClient(null, "localhost:5000", "testimage");
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/BlobCheckerIntegrationTest.java:36: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 1272, 1276 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+        RegistryClient registryClient = new RegistryClient(null, "localhost:5000", "busybox");
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/BlobCheckerIntegrationTest.java:44: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 1773, 1777 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+        RegistryClient registryClient = new RegistryClient(null, "localhost:5000", "busybox");
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/BlobCheckerIntegrationTest.java:46: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ null (NullType) $$ @Initialized @NonNull Object $$ ( 1974, 1978 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+        Assert.assertEquals(null, registryClient.checkBlob(fakeBlobDigest));
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/AuthenticationMethodRetrieverIntegrationTest.java:29: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 1109, 1113 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+        RegistryClient registryClient = new RegistryClient(null, "registry.hub.docker.com", "library/busybox");
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/credentials/DockerCredentialHelperIntegrationTest.java:53: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 2577, 2592 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+            Assert.assertEquals("The system does not have docker-credential-fake-cloud-provider CLI", ex.getMessage());
+                                                                                                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/credentials/DockerCredentialHelperIntegrationTest.java:64: error: (type.arguments.not.inferred) $$ 2 $$ Assert.assertThat $$ @Initialized @Nullable String <: @Initialized @NonNull String $$ ( 3126, 3282 ) $$ Could not infer type arguments for Assert.assertThat
+            Assert.assertThat(ex.getMessage(), CoreMatchers.containsString("The credential helper (docker-credential-gcr) has nothing for server URL: fake.server.url"));
+                             ^
+  unsatisfiable constraint: @Initialized @Nullable String <: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/ManifestPusherIntegrationTest.java:41: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 1545, 1549 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+        RegistryClient registryClient = new RegistryClient(null, "gcr.io", "distroless/java");
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/ManifestPusherIntegrationTest.java:43: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 1708, 1712 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+        registryClient = new RegistryClient(null, "localhost:5000", "busybox");
+                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/ManifestPusherIntegrationTest.java:49: error: (dereference.of.nullable) $$ 1 $$ httpResponseException $$ ( 2140, 2161 ) $$ dereference of possibly-null reference httpResponseException
+            Assert.assertEquals(HttpStatusCodes.STATUS_CODE_BAD_REQUEST, httpResponseException.getStatusCode());
+                                                                         ^
+../dataset/post_nullgtn_without_s_jib/src/integration-test/java/com/google/cloud/tools/jib/registry/ManifestPusherIntegrationTest.java:68: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 3233, 3237 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+        RegistryClient registryClient = new RegistryClient(null, "localhost:5000", "testimage");
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/cache/CacheWriter.java:60: error: (argument) $$ 4 $$ prefix $$ Files.createTempFile $$ null (NullType) $$ @Initialized @NonNull String $$ ( 2339, 2343 ) $$ incompatible argument for parameter prefix of Files.createTempFile.
+        Path tempLayerFile = Files.createTempFile(cache.getCacheDirectory(), null, null);
+                                                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/cache/CacheWriter.java:60: error: (argument) $$ 4 $$ suffix $$ Files.createTempFile $$ null (NullType) $$ @Initialized @NonNull String $$ ( 2345, 2349 ) $$ incompatible argument for parameter suffix of Files.createTempFile.
+        Path tempLayerFile = Files.createTempFile(cache.getCacheDirectory(), null, null);
+                                                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/cache/CacheWriter.java:102: error: (argument) $$ 4 $$ layerMetadata $$ Cache.addLayerToMetadata $$ null (NullType) $$ @Initialized @NonNull LayerMetadata $$ ( 5178, 5182 ) $$ incompatible argument for parameter layerMetadata of Cache.addLayerToMetadata.
+        cache.addLayerToMetadata(cachedLayer, null);
+                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LayerMetadata
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/LayerBuilder.java:73: error: (dereference.of.nullable) $$ 1 $$ sourceFile.getParent() $$ ( 2817, 2839 ) $$ dereference of possibly-null reference sourceFile.getParent()
+                        Path sourceFileRelativePath = sourceFile.getParent().relativize(path);
+                                                                          ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/cache/json/CacheMetadataLayerObjectTemplate.java:38: error: (initialization.field.uninitialized) $$ 1 $$ properties $$ ( 1263, 1325 ) $$ the default constructor does not initialize field properties
+    private CacheMetadataLayerPropertiesObjectTemplate properties;
+                                                       ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/cache/json/CacheMetadataLayerObjectTemplate.java:49: error: (initialization.field.uninitialized) $$ 1 $$ digest $$ ( 1571, 1603 ) $$ the default constructor does not initialize field digest
+        private DescriptorDigest digest;
+                                 ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/cache/json/CacheMetadataLayerObjectTemplate.java:51: error: (initialization.field.uninitialized) $$ 1 $$ diffId $$ ( 1613, 1645 ) $$ the default constructor does not initialize field diffId
+        private DescriptorDigest diffId;
+                                 ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/cache/CacheMetadataTranslator.java:50: error: (argument) $$ 4 $$ metadata $$ CachedLayerWithMetadata constructor $$ @Initialized @Nullable LayerMetadata $$ @Initialized @NonNull LayerMetadata $$ ( 2918, 2931 ) $$ incompatible argument for parameter metadata of CachedLayerWithMetadata constructor.
+                CachedLayerWithMetadata cachedLayerWithMetadata = new CachedLayerWithMetadata(cachedLayer, layerMetadata);
+                                                                                                           ^
+  found   : @Initialized @Nullable LayerMetadata
+  required: @Initialized @NonNull LayerMetadata
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/cache/CacheReader.java:100: error: (return) $$ 2 $$ @Initialized @Nullable Path $$ @Initialized @NonNull Path $$ ( 4271, 4286 ) $$ incompatible types in return.
+        return newestLayerFile;
+               ^
+  type of expression: @Initialized @Nullable Path
+  method return type: @Initialized @NonNull Path
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/filesystem/UserCacheHome.java:67: error: (argument) $$ 4 $$ first $$ Paths.get $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 2544, 2552 ) $$ incompatible argument for parameter first of Paths.get.
+        Path userHomeDirectory = Paths.get(userHome);
+                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/filesystem/UserCacheHome.java:70: error: (dereference.of.nullable) $$ 1 $$ rawOsName $$ ( 2701, 2710 ) $$ dereference of possibly-null reference rawOsName
+        String osName = rawOsName.toLowerCase(Locale.ENGLISH);
+                        ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/json/V21ManifestTemplate.java:75: error: (initialization.field.uninitialized) $$ 1 $$ blobSum $$ ( 2393, 2426 ) $$ the default constructor does not initialize field blobSum
+        private DescriptorDigest blobSum;
+                                 ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/json/V21ManifestTemplate.java:88: error: (initialization.field.uninitialized) $$ 1 $$ v1Compatibility $$ ( 2786, 2817 ) $$ the default constructor does not initialize field v1Compatibility
+        private String v1Compatibility;
+                       ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/json/OCIManifestTemplate.java:79: error: (initialization.field.uninitialized) $$ 1 $$ config $$ ( 2513, 2554 ) $$ the default constructor does not initialize field config
+    private ContentDescriptorTemplate config;
+                                      ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/json/OCIManifestTemplate.java:112: error: (override.param) $$ 7 $$ size $$ @Initialized @NonNull long $$ @Initialized @Nullable long $$ @Initialized @NonNull OCIManifestTemplate $$ @NonNull void addLayer(@Initialized @NonNull OCIManifestTemplate this, @Initialized @NonNull long p0, @Initialized @NonNull DescriptorDigest p1) $$ @Initialized @NonNull BuildableManifestTemplate $$ @NonNull void addLayer(@Initialized @NonNull BuildableManifestTemplate this, @Initialized @Nullable long p0, @Initialized @Nullable DescriptorDigest p1) $$ ( 3355, 3364 ) $$ Incompatible parameter type for size.
+    public void addLayer(long size, DescriptorDigest digest) {
+                              ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull OCIManifestTemplate
+    @NonNull void addLayer(@Initialized @NonNull OCIManifestTemplate this, @Initialized @NonNull long p0, @Initialized @NonNull DescriptorDigest p1)
+  cannot override method in @Initialized @NonNull BuildableManifestTemplate
+    @NonNull void addLayer(@Initialized @NonNull BuildableManifestTemplate this, @Initialized @Nullable long p0, @Initialized @Nullable DescriptorDigest p1)
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/json/OCIManifestTemplate.java:112: error: (override.param) $$ 7 $$ digest $$ @Initialized @NonNull DescriptorDigest $$ @Initialized @Nullable DescriptorDigest $$ @Initialized @NonNull OCIManifestTemplate $$ @NonNull void addLayer(@Initialized @NonNull OCIManifestTemplate this, @Initialized @NonNull long p0, @Initialized @NonNull DescriptorDigest p1) $$ @Initialized @NonNull BuildableManifestTemplate $$ @NonNull void addLayer(@Initialized @NonNull BuildableManifestTemplate this, @Initialized @Nullable long p0, @Initialized @Nullable DescriptorDigest p1) $$ ( 3366, 3389 ) $$ Incompatible parameter type for digest.
+    public void addLayer(long size, DescriptorDigest digest) {
+                                                     ^
+  found   : @Initialized @NonNull DescriptorDigest
+  required: @Initialized @Nullable DescriptorDigest
+  Consequence: method in @Initialized @NonNull OCIManifestTemplate
+    @NonNull void addLayer(@Initialized @NonNull OCIManifestTemplate this, @Initialized @NonNull long p0, @Initialized @NonNull DescriptorDigest p1)
+  cannot override method in @Initialized @NonNull BuildableManifestTemplate
+    @NonNull void addLayer(@Initialized @NonNull BuildableManifestTemplate this, @Initialized @Nullable long p0, @Initialized @Nullable DescriptorDigest p1)
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/json/ContainerConfigurationTemplate.java:83: error: (initialization.field.uninitialized) $$ 1 $$ Env $$ ( 2775, 2800 ) $$ the default constructor does not initialize field Env
+        private List<String> Env;
+                             ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/image/json/ContainerConfigurationTemplate.java:88: error: (initialization.field.uninitialized) $$ 1 $$ Entrypoint $$ ( 2883, 2915 ) $$ the default constructor does not initialize field Entrypoint
+        private List<String> Entrypoint;
+                             ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/json/JsonTemplateMapper.java:74: error: (argument) $$ 4 $$ out $$ ObjectMapper.writeValue $$ @Initialized @Nullable OutputStream $$ @Initialized @NonNull OutputStream $$ ( 2767, 2779 ) $$ incompatible argument for parameter out of ObjectMapper.writeValue.
+            objectMapper.writeValue(outputStream, template);
+                                    ^
+  found   : @Initialized @Nullable OutputStream
+  required: @Initialized @NonNull OutputStream
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/RegistryAuthenticators.java:36: error: (argument) $$ 4 $$ authorization $$ RegistryClient constructor $$ null (NullType) $$ @Initialized @NonNull Authorization $$ ( 1471, 1475 ) $$ incompatible argument for parameter authorization of RegistryClient constructor.
+            RegistryClient registryClient = new RegistryClient(null, serverUrl, repository);
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Authorization
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/RegistryErrorExceptionBuilder.java:75: error: (argument) $$ 4 $$ cause $$ RegistryErrorExceptionBuilder constructor $$ null (NullType) $$ @Initialized @NonNull Throwable $$ ( 2716, 2720 ) $$ incompatible argument for parameter cause of RegistryErrorExceptionBuilder constructor.
+        this(method, null);
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Throwable
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/json/ErrorEntryTemplate.java:34: error: (initialization.fields.uninitialized) $$ 1 $$ code, message $$ ( 1158, 1194 ) $$ the constructor does not initialize fields: code, message
+    private ErrorEntryTemplate() {
+            ^
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/registry/RegistryUnauthorizedException.java:51: error: (return) $$ 2 $$ @Initialized @Nullable HttpResponseException $$ @Initialized @NonNull HttpResponseException $$ ( 1579, 1613 ) $$ incompatible types in return.
+        return (HttpResponseException) getCause();
+               ^
+  type of expression: @Initialized @Nullable HttpResponseException
+  method return type: @Initialized @NonNull HttpResponseException
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/blob/WriterBlob.java:34: error: (override.param) $$ 7 $$ outputStream $$ @Initialized @NonNull OutputStream $$ @Initialized @Nullable OutputStream $$ @Initialized @NonNull WriterBlob $$ @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull WriterBlob this, @Initialized @NonNull OutputStream p0) throws @Initialized @NonNull IOException $$ @Initialized @NonNull Blob $$ @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull Blob this, @Initialized @Nullable OutputStream p0) throws @Initialized @NonNull IOException $$ ( 1086, 1111 ) $$ Incompatible parameter type for outputStream.
+    public BlobDescriptor writeTo(OutputStream outputStream) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull OutputStream
+  required: @Initialized @Nullable OutputStream
+  Consequence: method in @Initialized @NonNull WriterBlob
+    @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull WriterBlob this, @Initialized @NonNull OutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Blob
+    @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull Blob this, @Initialized @Nullable OutputStream p0) throws @Initialized @NonNull IOException
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/blob/InputStreamBlob.java:39: error: (override.param) $$ 7 $$ outputStream $$ @Initialized @NonNull OutputStream $$ @Initialized @Nullable OutputStream $$ @Initialized @NonNull InputStreamBlob $$ @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull InputStreamBlob this, @Initialized @NonNull OutputStream p0) throws @Initialized @NonNull IOException $$ @Initialized @NonNull Blob $$ @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull Blob this, @Initialized @Nullable OutputStream p0) throws @Initialized @NonNull IOException $$ ( 1171, 1196 ) $$ Incompatible parameter type for outputStream.
+    public BlobDescriptor writeTo(OutputStream outputStream) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull OutputStream
+  required: @Initialized @Nullable OutputStream
+  Consequence: method in @Initialized @NonNull InputStreamBlob
+    @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull InputStreamBlob this, @Initialized @NonNull OutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Blob
+    @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull Blob this, @Initialized @Nullable OutputStream p0) throws @Initialized @NonNull IOException
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/blob/StringBlob.java:36: error: (override.param) $$ 7 $$ outputStream $$ @Initialized @NonNull OutputStream $$ @Initialized @Nullable OutputStream $$ @Initialized @NonNull StringBlob $$ @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull StringBlob this, @Initialized @NonNull OutputStream p0) throws @Initialized @NonNull IOException $$ @Initialized @NonNull Blob $$ @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull Blob this, @Initialized @Nullable OutputStream p0) throws @Initialized @NonNull IOException $$ ( 1082, 1107 ) $$ Incompatible parameter type for outputStream.
+    public BlobDescriptor writeTo(OutputStream outputStream) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull OutputStream
+  required: @Initialized @Nullable OutputStream
+  Consequence: method in @Initialized @NonNull StringBlob
+    @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull StringBlob this, @Initialized @NonNull OutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Blob
+    @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull Blob this, @Initialized @Nullable OutputStream p0) throws @Initialized @NonNull IOException
+../dataset/post_nullgtn_without_s_jib/src/main/java/com/google/cloud/tools/jib/blob/FileBlob.java:37: error: (override.param) $$ 7 $$ outputStream $$ @Initialized @NonNull OutputStream $$ @Initialized @Nullable OutputStream $$ @Initialized @NonNull FileBlob $$ @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull FileBlob this, @Initialized @NonNull OutputStream p0) throws @Initialized @NonNull IOException $$ @Initialized @NonNull Blob $$ @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull Blob this, @Initialized @Nullable OutputStream p0) throws @Initialized @NonNull IOException $$ ( 1072, 1097 ) $$ Incompatible parameter type for outputStream.
+    public BlobDescriptor writeTo(OutputStream outputStream) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull OutputStream
+  required: @Initialized @Nullable OutputStream
+  Consequence: method in @Initialized @NonNull FileBlob
+    @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull FileBlob this, @Initialized @NonNull OutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Blob
+    @Initialized @NonNull BlobDescriptor writeTo(@Initialized @NonNull Blob this, @Initialized @Nullable OutputStream p0) throws @Initialized @NonNull IOException
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+278 errors

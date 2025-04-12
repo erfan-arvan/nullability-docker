@@ -1,0 +1,51 @@
+../dataset/pre_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/base/UnsafeAccess.java:22: warning: Unsafe is internal proprietary API and may be removed in a future release
+import sun.misc.Unsafe;
+               ^
+../dataset/pre_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:166: error: cannot find symbol
+  final NodeFactory<K, V> nodeFactory;
+        ^
+  symbol:   class NodeFactory
+  location: class BoundedLocalCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class BoundedLocalCache
+    V extends Object declared in class BoundedLocalCache
+../dataset/pre_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/base/UnsafeAccess.java:22: warning: Unsafe is internal proprietary API and may be removed in a future release
+import sun.misc.Unsafe;
+               ^
+../dataset/pre_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/base/UnsafeAccess.java:22: warning: Unsafe is internal proprietary API and may be removed in a future release
+import sun.misc.Unsafe;
+               ^
+../dataset/pre_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:188: error: cannot find symbol
+    nodeFactory = NodeFactory.newFactory(builder, isAsync);
+                  ^
+  symbol:   variable NodeFactory
+  location: class BoundedLocalCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class BoundedLocalCache
+    V extends Object declared in class BoundedLocalCache
+../dataset/pre_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:3043: error: cannot find symbol
+      cache = LocalCacheFactory.newBoundedLocalCache(builder, loader, /* async */ false);
+              ^
+  symbol:   variable LocalCacheFactory
+  location: class BoundedLocalManualCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class BoundedLocalManualCache
+    V extends Object declared in class BoundedLocalManualCache
+../dataset/pre_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:3423: error: cannot find symbol
+      cache = (BoundedLocalCache<K, CompletableFuture<V>>) LocalCacheFactory
+                                                           ^
+  symbol:   variable LocalCacheFactory
+  location: class BoundedLocalAsyncCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class BoundedLocalAsyncCache
+    V extends Object declared in class BoundedLocalAsyncCache
+../dataset/pre_wpi_with_s_caffeine_CFNullness/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:3480: error: cannot find symbol
+      cache = (BoundedLocalCache<K, CompletableFuture<V>>) LocalCacheFactory
+                                                           ^
+  symbol:   variable LocalCacheFactory
+  location: class BoundedLocalAsyncLoadingCache<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class BoundedLocalAsyncLoadingCache
+    V extends Object declared in class BoundedLocalAsyncLoadingCache
+5 errors
+3 warnings

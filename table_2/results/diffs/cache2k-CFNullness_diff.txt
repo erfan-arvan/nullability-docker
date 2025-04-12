@@ -1,0 +1,560 @@
+diff --git a/cache2k-api/src/main/java/org/cache2k/AbstractCache.java b/cache2k-api/src/main/java/org/cache2k/AbstractCache.java
+index 27148b3b..48b0f4bb 100644
+--- a/cache2k-api/src/main/java/org/cache2k/AbstractCache.java
++++ b/cache2k-api/src/main/java/org/cache2k/AbstractCache.java
+@@ -102,6 +102,14 @@ public class AbstractCache<K, V> implements Cache<K, V> {
+     throw new UnsupportedOperationException();
+   }
+   @Override
++  public void mutate(K key, EntryMutator<K, V> mutator) {
++    throw new UnsupportedOperationException();
++  }
++  @Override
++  public void mutateAll(Iterable<? extends K> keys, EntryMutator<K, V> mutator) {
++    throw new UnsupportedOperationException();
++  }
++  @Override
+   public Map<K, V> getAll(Iterable<? extends K> keys) {
+     throw new UnsupportedOperationException();
+   }
+diff --git a/cache2k-api/src/main/java/org/cache2k/Cache.java b/cache2k-api/src/main/java/org/cache2k/Cache.java
+index 953e6cd0..71420395 100644
+--- a/cache2k-api/src/main/java/org/cache2k/Cache.java
++++ b/cache2k-api/src/main/java/org/cache2k/Cache.java
+@@ -1,5 +1,5 @@
+ package org.cache2k;
+-public interface Cache<K, V> extends KeyValueStore<K, V>, Closeable {
++public interface Cache<K, V> extends KeyValueStore<K, V>, DataAware<K, V>, Closeable {
+   String getName();
+   @Override
+    V get(K key);
+@@ -32,12 +32,18 @@ public interface Cache<K, V> extends KeyValueStore<K, V>, Closeable {
+   CompletableFuture<Void> reloadAll(Iterable<? extends K> keys);
+   < R>  R invoke(K key, EntryProcessor<K, V, R> processor);
+   default void mutate(K key, EntryMutator<K, V> mutator) {
+-    invoke(key, entry -> { mutator.mutate(entry); return this; });
++    invoke(key, new EntryProcessor<K, V, Void>() {
++      @Override
++      public  Void process(MutableCacheEntry<K, V> entry) throws Exception {
++        mutator.mutate(entry);
++        return null;
++      }
++    });
+   }
+   < R> Map<K, EntryProcessingResult<R>> invokeAll(
+     Iterable<? extends K> keys, EntryProcessor<K, V, R> entryProcessor);
+   default void mutateAll(Iterable<? extends K> keys, EntryMutator<K, V> mutator) {
+-    invokeAll(keys, entry -> { mutator.mutate(entry); return this; });
++    invokeAll(keys, entry -> { mutator.mutate(entry); return null; });
+   }
+   @Override
+   Map<K, V> getAll(Iterable<? extends K> keys);
+diff --git a/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java b/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java
+index 6a4cc702..bb6f147c 100644
+--- a/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java
++++ b/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java
+@@ -1,6 +1,6 @@
+ package org.cache2k;
+ public class Cache2kBuilder<K, V>
+-  implements ConfigBuilder<Cache2kBuilder<K, V>, Cache2kConfig<K, V>> {
++  implements ConfigBuilder<Cache2kBuilder<K, V>, Cache2kConfig<K, V>>, DataAware<K, V> {
+   private static final String MSG_NO_TYPES =
+     "Use Cache2kBuilder.forUnknownTypes(), to construct a builder with no key and value types";
+   public static Cache2kBuilder<Object, Object> forUnknownTypes() {
+@@ -130,9 +130,9 @@ public class Cache2kBuilder<K, V>
+   public final Cache2kBuilder<K, V> exceptionPropagator(
+     final org.cache2k.integration.ExceptionPropagator<K> ep) {
+     checkNull(ep);
+-    ExceptionPropagator<K> newPropagator = new ExceptionPropagator<K>() {
++    ExceptionPropagator<K, V> newPropagator = new ExceptionPropagator<K, V>() {
+       @Override
+-      public RuntimeException propagateException(LoadExceptionInfo<K> newInfo) {
++      public RuntimeException propagateException(LoadExceptionInfo<K, V> newInfo) {
+         org.cache2k.integration.ExceptionInformation oldInfo =
+           new org.cache2k.integration.ExceptionInformation() {
+           @Override
+@@ -166,7 +166,7 @@ public class Cache2kBuilder<K, V>
+     exceptionPropagator(newPropagator);
+     return this;
+   }
+-  public final Cache2kBuilder<K, V> exceptionPropagator(ExceptionPropagator<K> ep) {
++  public final Cache2kBuilder<K, V> exceptionPropagator(ExceptionPropagator<K, V> ep) {
+     cfg().setExceptionPropagator(wrapCustomizationInstance(ep));
+     return this;
+   }
+diff --git a/cache2k-api/src/main/java/org/cache2k/CacheEntry.java b/cache2k-api/src/main/java/org/cache2k/CacheEntry.java
+index f2d9279d..2444e980 100644
+--- a/cache2k-api/src/main/java/org/cache2k/CacheEntry.java
++++ b/cache2k-api/src/main/java/org/cache2k/CacheEntry.java
+@@ -1,10 +1,10 @@
+ package org.cache2k;
+-public interface CacheEntry<K, V> {
++public interface CacheEntry<K, V> extends DataAware<K, V> {
+   K getKey();
+   V getValue();
+   default  Throwable getException() {
+-    LoadExceptionInfo<K> info = getExceptionInfo();
++    LoadExceptionInfo<K, V> info = getExceptionInfo();
+     return info != null ? info.getException() : null;
+   }
+-   LoadExceptionInfo<K> getExceptionInfo();
++   LoadExceptionInfo<K, V> getExceptionInfo();
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/Customization.java b/cache2k-api/src/main/java/org/cache2k/Customization.java
+index 7b65d462..055ba557 100644
+--- a/cache2k-api/src/main/java/org/cache2k/Customization.java
++++ b/cache2k-api/src/main/java/org/cache2k/Customization.java
+@@ -1,3 +1,2 @@
+ package org.cache2k;
+-public interface Customization<K, V> {
+-}
++public interface Customization { }
+diff --git a/cache2k-api/src/main/java/org/cache2k/DataAware.java b/cache2k-api/src/main/java/org/cache2k/DataAware.java
+new file mode 100644
+index 00000000..700e9129
+--- /dev/null
++++ b/cache2k-api/src/main/java/org/cache2k/DataAware.java
+@@ -0,0 +1,2 @@
++package org.cache2k;
++public interface DataAware< K,  V> { }
+diff --git a/cache2k-api/src/main/java/org/cache2k/DataAwareCustomization.java b/cache2k-api/src/main/java/org/cache2k/DataAwareCustomization.java
+new file mode 100644
+index 00000000..a2d16932
+--- /dev/null
++++ b/cache2k-api/src/main/java/org/cache2k/DataAwareCustomization.java
+@@ -0,0 +1,4 @@
++package org.cache2k;
++public interface DataAwareCustomization<K, V>
++  extends Customization, DataAware<K, V> {
++}
+diff --git a/cache2k-api/src/main/java/org/cache2k/KeyValueSource.java b/cache2k-api/src/main/java/org/cache2k/KeyValueSource.java
+index d5c2980b..da783d92 100644
+--- a/cache2k-api/src/main/java/org/cache2k/KeyValueSource.java
++++ b/cache2k-api/src/main/java/org/cache2k/KeyValueSource.java
+@@ -1,4 +1,4 @@
+ package org.cache2k;
+-public interface KeyValueSource<K, V> {
++public interface KeyValueSource<K, V> extends DataAware<K, V> {
+    V get(K key);
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/KeyValueStore.java b/cache2k-api/src/main/java/org/cache2k/KeyValueStore.java
+index fcb92a4b..8be730d9 100644
+--- a/cache2k-api/src/main/java/org/cache2k/KeyValueStore.java
++++ b/cache2k-api/src/main/java/org/cache2k/KeyValueStore.java
+@@ -1,5 +1,6 @@
+ package org.cache2k;
+-public interface KeyValueStore<K, V> extends AdvancedKeyValueSource<K, V> {
++public interface KeyValueStore<K, V>
++  extends AdvancedKeyValueSource<K, V> {
+   void put(K key, V value);
+   void putAll(Map<? extends K, ? extends V> valueMap);
+   void remove(K key);
+diff --git a/cache2k-api/src/main/java/org/cache2k/Weigher.java b/cache2k-api/src/main/java/org/cache2k/Weigher.java
+index 508570d7..51253c85 100644
+--- a/cache2k-api/src/main/java/org/cache2k/Weigher.java
++++ b/cache2k-api/src/main/java/org/cache2k/Weigher.java
+@@ -1,4 +1,4 @@
+ package org.cache2k;
+-public interface Weigher<K, V> extends Customization<K, V> {
++public interface Weigher<K, V> extends DataAwareCustomization<K, V> {
+   int weigh(K key, V value);
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/annotation/NonNullApi.java b/cache2k-api/src/main/java/org/cache2k/annotation/NonNullApi.java
+new file mode 100644
+index 00000000..742a273a
+--- /dev/null
++++ b/cache2k-api/src/main/java/org/cache2k/annotation/NonNullApi.java
+@@ -0,0 +1,7 @@
++package org.cache2k.annotation;
++@Target(value = {ElementType.PACKAGE, ElementType.TYPE})
++@Retention(value = RetentionPolicy.CLASS)
++@Documented
++@TypeQualifierDefault(value = {ElementType.METHOD, ElementType.PARAMETER})
++@UnderMigration(status = MigrationStatus.STRICT)
++public @interface NonNullApi { }
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java b/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java
+index d5e508f6..4e84285b 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/Cache2kConfig.java
+@@ -35,7 +35,7 @@ public class Cache2kConfig<K, V>
+   private  CustomizationSupplier<? extends CacheWriter<K, V>> writer;
+   private  CustomizationSupplier<? extends AdvancedCacheLoader<K, V>> advancedLoader;
+   private  CustomizationSupplier<? extends AsyncCacheLoader<K, V>> asyncLoader;
+-  private  CustomizationSupplier<? extends ExceptionPropagator<K>> exceptionPropagator;
++  private  CustomizationSupplier<? extends ExceptionPropagator<K, V>> exceptionPropagator;
+   private  CustomizationSupplier<? extends Weigher<K, V>> weigher;
+   private  CustomizationCollection<CacheEntryOperationListener<K, V>> listeners;
+   private  CustomizationCollection<CacheEntryOperationListener<K, V>> asyncListeners;
+@@ -204,10 +204,10 @@ public class Cache2kConfig<K, V>
+   public void setStoreByReference(boolean v) {
+     storeByReference = v;
+   }
+-  public  CustomizationSupplier<? extends ExceptionPropagator<K>> getExceptionPropagator() {
++  public  CustomizationSupplier<? extends ExceptionPropagator<K, V>> getExceptionPropagator() {
+     return exceptionPropagator;
+   }
+-  public void setExceptionPropagator( CustomizationSupplier<? extends ExceptionPropagator<K>> v) {
++  public void setExceptionPropagator( CustomizationSupplier<? extends ExceptionPropagator<K, V>> v) {
+     exceptionPropagator = v;
+   }
+   public 
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/CustomizationReferenceSupplier.java b/cache2k-api/src/main/java/org/cache2k/config/CustomizationReferenceSupplier.java
+index 9d5f50bb..56c4f62d 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/CustomizationReferenceSupplier.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/CustomizationReferenceSupplier.java
+@@ -2,7 +2,7 @@ package org.cache2k.config;
+ public final class CustomizationReferenceSupplier< T> implements CustomizationSupplier<T> {
+   private final  T object;
+   public CustomizationReferenceSupplier( T obj) {
+-    Cache2kConfig.checkNull(obj);
++    Objects.requireNonNull(obj);
+     object = obj;
+   }
+   @Override
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java b/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java
+index 24256e91..9ab3c777 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java
+@@ -4,9 +4,7 @@ public final class CustomizationSupplierByClassName<T>
+   private  String className;
+   public CustomizationSupplierByClassName() { }
+   public CustomizationSupplierByClassName(String className) {
+-    if (className == null) {
+-      throw new NullPointerException("className");
+-    }
++    checkNull(className);
+     this.className = className;
+   }
+   public  String getClassName() {
+@@ -15,11 +13,15 @@ public final class CustomizationSupplierByClassName<T>
+   public void setClassName(String v) {
+     className = v;
+   }
+-  @Override
+-  public void validate() {
++  private String checkNull( String className) {
+     if (className == null) {
+       throw new IllegalArgumentException("className not set");
+     }
++    return className;
++  }
++  @Override
++  public void validate() {
++    checkNull(className);
+   }
+   @Override
+   public ConfigBuilder builder() {
+@@ -29,7 +31,7 @@ public final class CustomizationSupplierByClassName<T>
+   public T supply(CacheBuildContext<?, ?> ctx) {
+     try {
+       return (T) ctx.getCacheManager().getClassLoader()
+-        .loadClass(className).getConstructor().newInstance();
++        .loadClass(checkNull(className)).getConstructor().newInstance();
+     } catch (Exception e) {
+       throw new LinkageError("error loading customization class", e);
+     }
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/DataCustomizationSupplier.java b/cache2k-api/src/main/java/org/cache2k/config/DataCustomizationSupplier.java
+index 0e646ca5..aaf7a9a9 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/DataCustomizationSupplier.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/DataCustomizationSupplier.java
+@@ -1,4 +1,4 @@
+ package org.cache2k.config;
+-public interface DataCustomizationSupplier<K, V, T extends Customization<K, V>>
++public interface DataCustomizationSupplier<K, V, T extends DataAwareCustomization<K, V>>
+   extends CustomizationSupplier<T> {
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java b/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java
+index f23b8eae..4b6b2fc8 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java
+@@ -54,7 +54,8 @@ public abstract class ToggleFeature implements SingleFeature {
+   }
+   @Override
+   public final boolean equals( Object o) {
+-    return getClass().equals(o);
++    if (o == null) { return false; }
++    return getClass().equals(o.getClass());
+   }
+   @Override
+   public final int hashCode() {
+diff --git a/cache2k-api/src/main/java/org/cache2k/config/package-info.java b/cache2k-api/src/main/java/org/cache2k/config/package-info.java
+index 36c15f4b..1e112d1e 100644
+--- a/cache2k-api/src/main/java/org/cache2k/config/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/config/package-info.java
+@@ -1,2 +1,2 @@
+-@NonNullIsDefault
++@NonNullApi
+ package org.cache2k.config;
+diff --git a/cache2k-api/src/main/java/org/cache2k/event/CacheEntryOperationListener.java b/cache2k-api/src/main/java/org/cache2k/event/CacheEntryOperationListener.java
+index 3509f41c..246a6509 100644
+--- a/cache2k-api/src/main/java/org/cache2k/event/CacheEntryOperationListener.java
++++ b/cache2k-api/src/main/java/org/cache2k/event/CacheEntryOperationListener.java
+@@ -1,3 +1,3 @@
+ package org.cache2k.event;
+-public interface CacheEntryOperationListener<K, V> extends EventListener {
++public interface CacheEntryOperationListener<K, V> extends EventListener, DataAware<K, V> {
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/event/CacheEntryUpdatedListener.java b/cache2k-api/src/main/java/org/cache2k/event/CacheEntryUpdatedListener.java
+index 7ae53527..8a2e6f05 100644
+--- a/cache2k-api/src/main/java/org/cache2k/event/CacheEntryUpdatedListener.java
++++ b/cache2k-api/src/main/java/org/cache2k/event/CacheEntryUpdatedListener.java
+@@ -1,5 +1,5 @@
+ package org.cache2k.event;
+ public interface CacheEntryUpdatedListener<K, V> extends CacheEntryOperationListener<K, V> {
+   void onEntryUpdated(
+-    Cache<K, V> cache, CacheEntry<K, V> currentEntry, CacheEntry<K, V> entryWithNewData);
++    Cache<K, V> cache, CacheEntry<K, V> currentEntry, CacheEntry<K, V> newEntry);
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/event/package-info.java b/cache2k-api/src/main/java/org/cache2k/event/package-info.java
+index 436da6fd..7b57a18e 100644
+--- a/cache2k-api/src/main/java/org/cache2k/event/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/event/package-info.java
+@@ -1,2 +1,2 @@
+-@NonNullIsDefault
++@NonNullApi
+ package org.cache2k.event;
+diff --git a/cache2k-api/src/main/java/org/cache2k/expiry/ExpiryPolicy.java b/cache2k-api/src/main/java/org/cache2k/expiry/ExpiryPolicy.java
+index 3b479e42..c8de5de1 100644
+--- a/cache2k-api/src/main/java/org/cache2k/expiry/ExpiryPolicy.java
++++ b/cache2k-api/src/main/java/org/cache2k/expiry/ExpiryPolicy.java
+@@ -1,4 +1,4 @@
+ package org.cache2k.expiry;
+-public interface ExpiryPolicy<K, V> extends ExpiryTimeValues {
++public interface ExpiryPolicy<K, V> extends ExpiryTimeValues, DataAware<K, V> {
+   long calculateExpiryTime(K key, V value, long loadTime,  CacheEntry<K, V> currentEntry);
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/expiry/package-info.java b/cache2k-api/src/main/java/org/cache2k/expiry/package-info.java
+index e75a4bfd..715bc9de 100644
+--- a/cache2k-api/src/main/java/org/cache2k/expiry/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/expiry/package-info.java
+@@ -1,2 +1,2 @@
+-@NonNullIsDefault
++@NonNullApi
+ package org.cache2k.expiry;
+diff --git a/cache2k-api/src/main/java/org/cache2k/integration/package-info.java b/cache2k-api/src/main/java/org/cache2k/integration/package-info.java
+index 0b9164c0..d962eeca 100644
+--- a/cache2k-api/src/main/java/org/cache2k/integration/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/integration/package-info.java
+@@ -1 +1,2 @@
++@NonNullApi @Deprecated
+ package org.cache2k.integration;
+diff --git a/cache2k-api/src/main/java/org/cache2k/io/AdvancedCacheLoader.java b/cache2k-api/src/main/java/org/cache2k/io/AdvancedCacheLoader.java
+index 7eaa6d68..730ee32c 100644
+--- a/cache2k-api/src/main/java/org/cache2k/io/AdvancedCacheLoader.java
++++ b/cache2k-api/src/main/java/org/cache2k/io/AdvancedCacheLoader.java
+@@ -1,4 +1,4 @@
+ package org.cache2k.io;
+-public interface AdvancedCacheLoader<K, V> extends Customization<K, V> {
++public interface AdvancedCacheLoader<K, V> extends DataAwareCustomization<K, V> {
+   V load(K key, long startTime,  CacheEntry<K, V> currentEntry) throws Exception;
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/io/AsyncCacheLoader.java b/cache2k-api/src/main/java/org/cache2k/io/AsyncCacheLoader.java
+index 47bc85d1..d7ff187b 100644
+--- a/cache2k-api/src/main/java/org/cache2k/io/AsyncCacheLoader.java
++++ b/cache2k-api/src/main/java/org/cache2k/io/AsyncCacheLoader.java
+@@ -1,6 +1,6 @@
+ package org.cache2k.io;
+ @FunctionalInterface
+-public interface AsyncCacheLoader<K, V> extends Customization<K, V> {
++public interface AsyncCacheLoader<K, V> extends DataAwareCustomization<K, V> {
+   void load(K key, Context<K, V> context, Callback<V> callback) throws Exception;
+   interface Context<K, V> {
+     long getStartTime();
+diff --git a/cache2k-api/src/main/java/org/cache2k/io/CacheLoader.java b/cache2k-api/src/main/java/org/cache2k/io/CacheLoader.java
+index bf284f79..01e888f4 100644
+--- a/cache2k-api/src/main/java/org/cache2k/io/CacheLoader.java
++++ b/cache2k-api/src/main/java/org/cache2k/io/CacheLoader.java
+@@ -1,5 +1,5 @@
+ package org.cache2k.io;
+ @FunctionalInterface
+-public interface CacheLoader<K, V> extends Customization<K, V> {
++public interface CacheLoader<K, V> extends DataAwareCustomization<K, V> {
+   V load(K key) throws Exception;
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/io/CacheWriter.java b/cache2k-api/src/main/java/org/cache2k/io/CacheWriter.java
+index d916d94f..482b5c0a 100644
+--- a/cache2k-api/src/main/java/org/cache2k/io/CacheWriter.java
++++ b/cache2k-api/src/main/java/org/cache2k/io/CacheWriter.java
+@@ -1,5 +1,5 @@
+ package org.cache2k.io;
+-public interface CacheWriter<K, V> extends Customization<K, V> {
++public interface CacheWriter<K, V> extends DataAwareCustomization<K, V> {
+   void write(K key, V value) throws Exception;
+   void delete(K key) throws Exception;
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/io/CacheWriterException.java b/cache2k-api/src/main/java/org/cache2k/io/CacheWriterException.java
+index d1c51042..f7062d14 100644
+--- a/cache2k-api/src/main/java/org/cache2k/io/CacheWriterException.java
++++ b/cache2k-api/src/main/java/org/cache2k/io/CacheWriterException.java
+@@ -1,6 +1,6 @@
+ package org.cache2k.io;
+ public class CacheWriterException extends CustomizationException {
+-  public CacheWriterException(final Throwable cause) {
++  public CacheWriterException(Throwable cause) {
+     super(cause);
+   }
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/io/ExceptionPropagator.java b/cache2k-api/src/main/java/org/cache2k/io/ExceptionPropagator.java
+index 3f4c45e9..e4c4a3ad 100644
+--- a/cache2k-api/src/main/java/org/cache2k/io/ExceptionPropagator.java
++++ b/cache2k-api/src/main/java/org/cache2k/io/ExceptionPropagator.java
+@@ -1,5 +1,5 @@
+ package org.cache2k.io;
+ @FunctionalInterface
+-public interface ExceptionPropagator<K> extends Customization<K, Void> {
+-  RuntimeException propagateException(LoadExceptionInfo<K> loadExceptionInfo);
++public interface ExceptionPropagator<K, V> extends DataAwareCustomization<K, V> {
++  RuntimeException propagateException(LoadExceptionInfo<K, V> loadExceptionInfo);
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/io/LoadExceptionInfo.java b/cache2k-api/src/main/java/org/cache2k/io/LoadExceptionInfo.java
+index 80b8498f..4e5c26e8 100644
+--- a/cache2k-api/src/main/java/org/cache2k/io/LoadExceptionInfo.java
++++ b/cache2k-api/src/main/java/org/cache2k/io/LoadExceptionInfo.java
+@@ -1,19 +1,19 @@
+ package org.cache2k.io;
+-public interface LoadExceptionInfo<K> extends CacheEntry<K, Void> {
++public interface LoadExceptionInfo<K, V> extends CacheEntry<K, V> {
+   @Override
+   K getKey();
+   @Override
+-  default Void getValue() {
++  default V getValue() {
+     throw generateExceptionToPropagate();
+   }
+   @Override
+   Throwable getException();
+   @Override
+-  default LoadExceptionInfo<K> getExceptionInfo() { return this; }
++  default LoadExceptionInfo<K, V> getExceptionInfo() { return this; }
+   default RuntimeException generateExceptionToPropagate() {
+     return getExceptionPropagator().propagateException(this);
+   }
+-  ExceptionPropagator getExceptionPropagator();
++  ExceptionPropagator<K, V> getExceptionPropagator();
+   int getRetryCount();
+   long getSinceTime();
+   long getLoadTime();
+diff --git a/cache2k-api/src/main/java/org/cache2k/io/ResiliencePolicy.java b/cache2k-api/src/main/java/org/cache2k/io/ResiliencePolicy.java
+index 9123ff06..f1bf3422 100644
+--- a/cache2k-api/src/main/java/org/cache2k/io/ResiliencePolicy.java
++++ b/cache2k-api/src/main/java/org/cache2k/io/ResiliencePolicy.java
+@@ -1,13 +1,13 @@
+ package org.cache2k.io;
+-public interface ResiliencePolicy<K, V> extends ExpiryTimeValues, Customization<K, V> {
++public interface ResiliencePolicy<K, V> extends ExpiryTimeValues, DataAwareCustomization<K, V> {
+   ResiliencePolicy<?, ?> DISABLED_POLICY = new ResiliencePolicy<Object, Object>() {
+     @Override
+-    public long suppressExceptionUntil(Object key, LoadExceptionInfo<Object> loadExceptionInfo,
++    public long suppressExceptionUntil(Object key, LoadExceptionInfo<Object, Object> loadExceptionInfo,
+                                        CacheEntry<Object, Object> cachedEntry) {
+       return NOW;
+     }
+     @Override
+-    public long retryLoadAfter(Object key, LoadExceptionInfo<Object> loadExceptionInfo) {
++    public long retryLoadAfter(Object key, LoadExceptionInfo<Object, Object> loadExceptionInfo) {
+       return NOW;
+     }
+   };
+@@ -18,7 +18,7 @@ public interface ResiliencePolicy<K, V> extends ExpiryTimeValues, Customization<
+     b.config().setResiliencePolicy(null);
+   }
+   long suppressExceptionUntil(K key,
+-                              LoadExceptionInfo<K> loadExceptionInfo,
++                              LoadExceptionInfo<K, V> loadExceptionInfo,
+                               CacheEntry<K, V> cachedEntry);
+-  long retryLoadAfter(K key, LoadExceptionInfo<K> loadExceptionInfo);
++  long retryLoadAfter(K key, LoadExceptionInfo<K, V> loadExceptionInfo);
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/io/package-info.java b/cache2k-api/src/main/java/org/cache2k/io/package-info.java
+index 538452a9..bbcec95a 100644
+--- a/cache2k-api/src/main/java/org/cache2k/io/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/io/package-info.java
+@@ -1,2 +1,2 @@
+-@NonNullIsDefault
++@NonNullApi
+ package org.cache2k.io;
+diff --git a/cache2k-api/src/main/java/org/cache2k/operation/package-info.java b/cache2k-api/src/main/java/org/cache2k/operation/package-info.java
+index d7d004ed..3954bf1a 100644
+--- a/cache2k-api/src/main/java/org/cache2k/operation/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/operation/package-info.java
+@@ -1,2 +1,2 @@
+-@NonNullIsDefault
++@NonNullApi
+ package org.cache2k.operation;
+diff --git a/cache2k-api/src/main/java/org/cache2k/package-info.java b/cache2k-api/src/main/java/org/cache2k/package-info.java
+index 579cb432..e169378f 100644
+--- a/cache2k-api/src/main/java/org/cache2k/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/package-info.java
+@@ -1,2 +1,2 @@
+-@NonNullIsDefault
++@NonNullApi
+ package org.cache2k;
+diff --git a/cache2k-api/src/main/java/org/cache2k/processor/EntryMutator.java b/cache2k-api/src/main/java/org/cache2k/processor/EntryMutator.java
+new file mode 100644
+index 00000000..e325c8f2
+--- /dev/null
++++ b/cache2k-api/src/main/java/org/cache2k/processor/EntryMutator.java
+@@ -0,0 +1,4 @@
++package org.cache2k.processor;
++public interface EntryMutator<K, V> extends DataAware<K, V> {
++  void mutate(MutableCacheEntry<K, V> entry) throws Exception;
++}
+diff --git a/cache2k-api/src/main/java/org/cache2k/processor/EntryProcessor.java b/cache2k-api/src/main/java/org/cache2k/processor/EntryProcessor.java
+index fda9e45c..82cebf90 100644
+--- a/cache2k-api/src/main/java/org/cache2k/processor/EntryProcessor.java
++++ b/cache2k-api/src/main/java/org/cache2k/processor/EntryProcessor.java
+@@ -1,5 +1,5 @@
+ package org.cache2k.processor;
+ @FunctionalInterface
+-public interface EntryProcessor<K, V, R> {
++public interface EntryProcessor<K, V,  R> extends DataAware<K, V> {
+    R process(MutableCacheEntry<K, V> entry) throws Exception;
+ }
+diff --git a/cache2k-api/src/main/java/org/cache2k/processor/MutableCacheEntry.java b/cache2k-api/src/main/java/org/cache2k/processor/MutableCacheEntry.java
+index d21b6004..21076fa5 100644
+--- a/cache2k-api/src/main/java/org/cache2k/processor/MutableCacheEntry.java
++++ b/cache2k-api/src/main/java/org/cache2k/processor/MutableCacheEntry.java
+@@ -2,10 +2,11 @@ package org.cache2k.processor;
+ public interface MutableCacheEntry<K, V> extends CacheEntry<K, V> {
+   @Override
+    V getValue();
++  default  V getValueOrNull() { return getValue(); }
+   @Override
+    Throwable getException();
+   @Override
+-   LoadExceptionInfo<K> getExceptionInfo();
++   LoadExceptionInfo<K, V> getExceptionInfo();
+   boolean exists();
+   long getStartTime();
+   MutableCacheEntry<K, V> lock();
+diff --git a/cache2k-api/src/main/java/org/cache2k/processor/package-info.java b/cache2k-api/src/main/java/org/cache2k/processor/package-info.java
+index 69f45f1a..e7693981 100644
+--- a/cache2k-api/src/main/java/org/cache2k/processor/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/processor/package-info.java
+@@ -1,2 +1,2 @@
+-@NonNullIsDefault
++@NonNullApi
+ package org.cache2k.processor;
+diff --git a/cache2k-api/src/main/java/org/cache2k/spi/package-info.java b/cache2k-api/src/main/java/org/cache2k/spi/package-info.java
+index 9b0cd630..e117c18f 100644
+--- a/cache2k-api/src/main/java/org/cache2k/spi/package-info.java
++++ b/cache2k-api/src/main/java/org/cache2k/spi/package-info.java
+@@ -1,2 +1,2 @@
+-@NonNullIsDefault
++@NonNullApi
+ package org.cache2k.spi;
+diff --git a/cache2k-api/src/main/java11/module-info.java b/cache2k-api/src/main/java11/module-info.java
+index 659c599c..fb729f44 100644
+--- a/cache2k-api/src/main/java11/module-info.java
++++ b/cache2k-api/src/main/java11/module-info.java
+@@ -1,8 +1,9 @@
+ module org.cache2k.api {
++  requires static kotlin.annotations.jvm;
+   requires static jsr305;
++  requires static org.checkerframework.checker.qual;
+   exports org.cache2k;
+   exports org.cache2k.config;
+-  exports org.cache2k.annotation;
+   exports org.cache2k.event;
+   exports org.cache2k.expiry;
+   exports org.cache2k.integration;

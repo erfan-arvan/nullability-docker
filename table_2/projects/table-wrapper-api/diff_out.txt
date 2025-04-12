@@ -1,0 +1,142 @@
+diff --git a/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java b/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java
+index ef4ef19..700d4aa 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java
++++ b/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java
+@@ -53,7 +53,9 @@ public abstract class AbstractTable<R extends ReportPageRow> implements Table {
+         Map<TableColumn, Integer> columnIndices = new HashMap<>();
+         ReportPageRow[] headerRows = new ReportPageRow[headersRowCount];
+         for (int i = 0; i < headersRowCount; i++) {
+-            headerRows[i] = reportPage.getRow(tableRange.getFirstRow() + 1 + i);
++             ReportPageRow row = reportPage.getRow(tableRange.getFirstRow() + 1 + i);
++            ReportPageRow notNullRow = requireNonNull(row, "Header row is absent");
++            headerRows[i] = notNullRow;
+         }
+         TableColumn[] columns = Arrays.stream(headerDescription.getEnumConstants())
+                 .map(TableColumnDescription::getColumn)
+@@ -124,7 +126,10 @@ public abstract class AbstractTable<R extends ReportPageRow> implements Table {
+         }
+         if (equalsObject != null) {
+             collection.remove(equalsObject);
+-            collection.addAll(duplicatesMerger.apply(equalsObject, element));
++             Collection<T> mergedCollection = duplicatesMerger.apply(equalsObject, element);
++            if (mergedCollection != null) {
++                collection.addAll(mergedCollection);
++            }
+         } else {
+             collection.add(element);
+         }
+@@ -178,7 +183,8 @@ public abstract class AbstractTable<R extends ReportPageRow> implements Table {
+     private MutableTableRow<R> getMutableTableRow(TableCellAddress address) {
+         if (tableRange.contains(address)) {
+             MutableTableRow<R> tableRow = new MutableTableRow<>(this, getCellDataAccessObject());
+-            tableRow.setRow(getRow(address.getRow()));
++            R row = requireNonNull(getRow(address.getRow()), "Row is empty");
++            tableRow.setRow(row);
+             return tableRow;
+         }
+         return null;
+diff --git a/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java b/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java
+index 2cf5467..354bccb 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java
++++ b/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java
+@@ -45,7 +45,8 @@ public interface CellDataAccessObject<C, R extends ReportPageRow> {
+                 BigDecimal.ZERO : new BigDecimal(number);
+     }
+     default String getStringValue(C cell) {
+-        return requireNonNull(getValue(cell), "Not a string").toString();
++        Object value = requireNonNull(getValue(cell), "Not a string");
++        return value.toString();
+     }
+     Instant getInstantValue(C cell);
+     default LocalDateTime getLocalDateTimeValue(C cell) {
+diff --git a/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java b/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java
+index 19300aa..8648914 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java
++++ b/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java
+@@ -57,8 +57,9 @@ class MutableTableRow<T extends ReportPageRow> implements TableRow {
+         return dao.getLocalDateTimeValue(row, getCellIndex(column));
+     }
+     private Integer getCellIndex(TableColumnDescription column) {
+-        return table.getHeaderDescription()
++         Integer cellIndex = table.getHeaderDescription()
+                 .get(column.getColumn());
++        return requireNonNull(cellIndex, "Cell not found");
+     }
+     public MutableTableRow<T> clone() {
+         try {
+diff --git a/src/main/java/org/spacious_team/table_wrapper/api/NonNullByDefault.java b/src/main/java/org/spacious_team/table_wrapper/api/NonNullByDefault.java
+deleted file mode 100644
+index 6f0b6e4..0000000
+--- a/src/main/java/org/spacious_team/table_wrapper/api/NonNullByDefault.java
++++ /dev/null
+@@ -1,14 +0,0 @@
+-package org.spacious_team.table_wrapper.api;
+-@Documented
+-@TypeQualifierDefault({
+-        ElementType.ANNOTATION_TYPE,
+-        ElementType.CONSTRUCTOR,
+-        ElementType.FIELD,
+-        ElementType.LOCAL_VARIABLE,
+-        ElementType.METHOD,
+-        ElementType.PACKAGE,
+-        ElementType.PARAMETER,
+-        ElementType.TYPE})
+-@Retention(RetentionPolicy.RUNTIME)
+-public @interface NonNullByDefault {
+-}
+\ No newline at end of file
+diff --git a/src/main/java/org/spacious_team/table_wrapper/api/TableColumnImpl.java b/src/main/java/org/spacious_team/table_wrapper/api/TableColumnImpl.java
+index acef64b..cb60b00 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/api/TableColumnImpl.java
++++ b/src/main/java/org/spacious_team/table_wrapper/api/TableColumnImpl.java
+@@ -19,8 +19,8 @@ public class TableColumnImpl implements TableColumn {
+             next_cell:
+             for (  TableCell cell : header) {
+                  Object value;
+-                if (cell != null && cell.getColumnIndex() >= firstColumnForSearch &&
+-                        ((value = cell.getValue()) instanceof String)) {
++                if ((cell != null) && (cell.getColumnIndex() >= firstColumnForSearch) &&
++                        (((value = cell.getValue()) != null) && (value instanceof String))) {
+                     String colName = value.toString().toLowerCase();
+                     for (String word : words) {
+                         if (!containsWord(colName, word)) {
+@@ -34,6 +34,6 @@ public class TableColumnImpl implements TableColumn {
+         throw new RuntimeException("Не обнаружен заголовок таблицы, включающий слова: " + String.join(", ", words));
+     }
+     private boolean containsWord(String text,  String word) {
+-        return text.matches("(^|(.|\\n)*\\b|(.|\\n)*\\s)" + word + "(\\b(.|\\n)*|\\s(.|\\n)*|$)");
++        return word != null && text.matches("(^|(.|\\n)*\\b|(.|\\n)*\\s)" + word + "(\\b(.|\\n)*|\\s(.|\\n)*|$)");
+     }
+ }
+diff --git a/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java b/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java
+index 94bdee3..8e9c6cd 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java
++++ b/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java
+@@ -56,7 +56,8 @@ public interface TableFactory {
+                     reportPage.find(range.getFirstRow(), range.getFirstRow() + 1, tableNameFinder);
+             if (!tableNameCell.equals(TableCellAddress.NOT_FOUND)) {
+                 try {
+-                    tableName = reportPage.getCell(tableNameCell).getStringValue();
++                    TableCell cell = requireNonNull(reportPage.getCell(tableNameCell));
++                    tableName = cell.getStringValue();
+                 } catch (Exception ignore) {
+                 }
+             }
+@@ -74,7 +75,8 @@ public interface TableFactory {
+                     reportPage.find(range.getFirstRow(), range.getFirstRow() + 1, tableNameFinder);
+             if (!tableNameCell.equals(TableCellAddress.NOT_FOUND)) {
+                 try {
+-                    tableName = reportPage.getCell(tableNameCell).getStringValue();
++                    TableCell cell = requireNonNull(reportPage.getCell(tableNameCell));
++                    tableName = cell.getStringValue();
+                 } catch (Exception ignore) {
+                 }
+             }
+diff --git a/src/main/java/org/spacious_team/table_wrapper/api/package-info.java b/src/main/java/org/spacious_team/table_wrapper/api/package-info.java
+index 6398f24..11c6e61 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/api/package-info.java
++++ b/src/main/java/org/spacious_team/table_wrapper/api/package-info.java
+@@ -1,2 +1,2 @@
+-@NonNullByDefault
++@DefaultQualifier(NonNull.class)
+ package org.spacious_team.table_wrapper.api;

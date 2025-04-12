@@ -1,0 +1,53 @@
+../dataset/table-wrapper-api_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java:198: error: (return) $$ 2 $$ @Initialized @Nullable TableCell $$ @Initialized @NonNull TableCell $$ ( 7705, 7760 ) $$ incompatible types in return.
+        return (row == null) ? null : row.getCell(address.getColumn());
+                             ^
+  type of expression: @Initialized @Nullable TableCell
+  method return type: @Initialized @NonNull TableCell
+../dataset/table-wrapper-api_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:135: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 4594, 4617 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:143: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 4852, 4875 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:151: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5117, 5140 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:159: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5396, 5419 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:167: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5667, 5690 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:175: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5937, 5960 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:183: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 6228, 6251 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:108: error: (return) $$ 2 $$ @Initialized @Nullable Integer $$ @Initialized @NonNull Integer $$ ( 3499, 3551 ) $$ incompatible types in return.
+        return table.getHeaderDescription().get(column.getColumn());
+                                               ^
+  type of expression: @Initialized @Nullable Integer
+  method return type: @Initialized @NonNull Integer
+../dataset/table-wrapper-api_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:87: error: (argument) $$ 4 $$ array $$ Arrays.stream $$ capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable [] $$ @Initialized @NonNull TableColumnDescription @Initialized @NonNull [] $$ ( 4272, 4308 ) $$ incompatible argument for parameter array of Arrays.stream.
+        TableColumn[] columns = Arrays.stream(headerDescription.getEnumConstants()).map(TableColumnDescription::getColumn).toArray(TableColumn[]::new);
+                                                                                ^
+  found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
+  required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+10 errors

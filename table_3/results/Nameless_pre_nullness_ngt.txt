@@ -1,0 +1,149 @@
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessAPI.java:140: error: (argument) $$ 4 $$ username $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull String $$ ( 4821, 4825 ) $$ incompatible argument for parameter username of NamelessUser constructor.
+        return new NamelessUser(this, id, null, false, null, false, -1L);
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessAPI.java:140: error: (argument) $$ 4 $$ uuid $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull UUID $$ ( 4834, 4838 ) $$ incompatible argument for parameter uuid of NamelessUser constructor.
+        return new NamelessUser(this, id, null, false, null, false, -1L);
+                                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UUID
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessAPI.java:149: error: (argument) $$ 4 $$ uuid $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull UUID $$ ( 5191, 5195 ) $$ incompatible argument for parameter uuid of NamelessUser constructor.
+        return new NamelessUser(this, -1, username, false, null, false, -1L);
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UUID
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessAPI.java:158: error: (argument) $$ 4 $$ username $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull String $$ ( 5520, 5524 ) $$ incompatible argument for parameter username of NamelessUser constructor.
+        return new NamelessUser(this, -1, null, true, uuid, false, -1L);
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessAPI.java:187: error: (argument) $$ 4 $$ username $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull String $$ ( 6772, 6776 ) $$ incompatible argument for parameter username of NamelessUser constructor.
+        return new NamelessUser(this, -1, null, false, null, true, discordId);
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessAPI.java:187: error: (argument) $$ 4 $$ uuid $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull UUID $$ ( 6785, 6789 ) $$ incompatible argument for parameter uuid of NamelessUser constructor.
+        return new NamelessUser(this, -1, null, false, null, true, discordId);
+                                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UUID
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/RequestHandler.java:74: error: (argument) $$ 4 $$ postBody $$ RequestHandler.makeConnection $$ null (NullType) $$ @Initialized @NonNull JsonObject $$ ( 3007, 3011 ) $$ incompatible argument for parameter postBody of RequestHandler.makeConnection.
+        return makeConnection(urlBuilder.toString(), null);
+                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull JsonObject
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/RequestHandler.java:159: error: (argument) $$ 4 $$ meta $$ ApiError constructor $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 8245, 8249 ) $$ incompatible argument for parameter meta of ApiError constructor.
+            throw new ApiError(json.get("code").getAsInt(), meta);
+                                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessUser.java:55: error: (initialization.fields.uninitialized) $$ 1 $$ _cachedUserInfo, _cachedIntegrationData $$ ( 2027, 2651 ) $$ the constructor does not initialize fields: _cachedUserInfo, _cachedIntegrationData
+    NamelessUser(final NamelessAPI api, final int id, final String username, boolean uuidKnown, UUID uuid, boolean discordIdKnown, long discordId) {
+    ^
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessUser.java:117: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull JsonObject $$ ( 4631, 4635 ) $$ incompatible types in assignment.
+        this._cachedUserInfo = null;
+                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull JsonObject
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessUser.java:118: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Map<@Initialized @NonNull String, @Initialized @NonNull DetailedIntegrationData> $$ ( 4675, 4679 ) $$ incompatible types in assignment.
+        this._cachedIntegrationData = null;
+                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Map<@Initialized @NonNull String, @Initialized @NonNull DetailedIntegrationData>
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessUser.java:123: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull UUID $$ ( 4908, 4912 ) $$ incompatible types in assignment.
+            this.uuid = null;
+                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UUID
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessUser.java:438: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull UUID $$ ( 19535, 19539 ) $$ incompatible types in assignment.
+            this.uuid = null;
+                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UUID
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/Website.java:33: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Update $$ ( 1406, 1410 ) $$ incompatible types in assignment.
+                this.update = null;
+                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Update
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/Website.java:36: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Update $$ ( 1469, 1473 ) $$ incompatible types in assignment.
+            this.update = null;
+                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Update
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/FilteredUserListBuilder.java:32: error: (argument) $$ 4 $$ arg1 $$ Map.put $$ T extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 840, 845 ) $$ incompatible argument for parameter arg1 of Map.put.
+        filters.put(filter, value);
+                            ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/FilteredUserListBuilder.java:80: error: (argument) $$ 4 $$ uuid $$ NamelessUser constructor $$ @Initialized @Nullable UUID $$ @Initialized @NonNull UUID $$ ( 2781, 2785 ) $$ incompatible argument for parameter uuid of NamelessUser constructor.
+            users.add(new NamelessUser(this.api, id, username, true, uuid, false, -1L));
+                                                                     ^
+  found   : @Initialized @Nullable UUID
+  required: @Initialized @NonNull UUID
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/Group.java:46: error: (override.param) $$ 7 $$ other $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Group $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Group this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1011, 1023 ) $$ Incompatible parameter type for other.
+    public boolean equals(Object other) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Group
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Group this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/NamelessApiBuilder.java:159: error: (argument) $$ 4 $$ debugLogger $$ RequestHandler constructor $$ @Initialized @Nullable ApiLogger $$ @Initialized @NonNull ApiLogger $$ ( 5005, 5021 ) $$ incompatible argument for parameter debugLogger of RequestHandler constructor.
+        return new NamelessAPI(new RequestHandler(this.apiUrl, this.httpClientBuilder.build(), this.gsonBuilder.create(), this.debugLogger, this.responseSizeLimit), this.apiUrl, this.apiKey);
+                                                                                                                              ^
+  found   : @Initialized @Nullable ApiLogger
+  required: @Initialized @NonNull ApiLogger
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/CustomProfileField.java:54: error: (override.param) $$ 7 $$ other $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull CustomProfileField $$ @Initialized @NonNull boolean equals(@Initialized @NonNull CustomProfileField this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1182, 1194 ) $$ Incompatible parameter type for other.
+    public boolean equals(Object other) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CustomProfileField
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CustomProfileField this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/LanguageCodeMap.java:36: error: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1461, 1492 ) $$ incompatible types in return.
+        return NAMELESS_TO_POSIX.get(language);
+                                    ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/logger/JavaLoggerLogger.java:21: error: (override.param) $$ 7 $$ string $$ @Initialized @NonNull String $$ @Initialized @Nullable String $$ @Initialized @NonNull JavaLoggerLogger $$ @NonNull void log(@Initialized @NonNull JavaLoggerLogger this, @Initialized @NonNull String p0) $$ @Initialized @NonNull ApiLogger $$ @NonNull void log(@Initialized @NonNull ApiLogger this, @Initialized @Nullable String p0) $$ ( 511, 530 ) $$ Incompatible parameter type for string.
+    public void log(final String string) {
+                                 ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull JavaLoggerLogger
+    @NonNull void log(@Initialized @NonNull JavaLoggerLogger this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull ApiLogger
+    @NonNull void log(@Initialized @NonNull ApiLogger this, @Initialized @Nullable String p0)
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/logger/Slf4jLogger.java:17: error: (override.param) $$ 7 $$ string $$ @Initialized @NonNull String $$ @Initialized @Nullable String $$ @Initialized @NonNull Slf4jLogger $$ @NonNull void log(@Initialized @NonNull Slf4jLogger this, @Initialized @NonNull String p0) $$ @Initialized @NonNull ApiLogger $$ @NonNull void log(@Initialized @NonNull ApiLogger this, @Initialized @Nullable String p0) $$ ( 454, 473 ) $$ Incompatible parameter type for string.
+    public void log(final String string) {
+                                 ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull Slf4jLogger
+    @NonNull void log(@Initialized @NonNull Slf4jLogger this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull ApiLogger
+    @NonNull void log(@Initialized @NonNull ApiLogger this, @Initialized @Nullable String p0)
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/logger/PrintStreamLogger.java:19: error: (override.param) $$ 7 $$ string $$ @Initialized @NonNull String $$ @Initialized @Nullable String $$ @Initialized @NonNull PrintStreamLogger $$ @NonNull void log(@Initialized @NonNull PrintStreamLogger this, @Initialized @NonNull String p0) $$ @Initialized @NonNull ApiLogger $$ @NonNull void log(@Initialized @NonNull ApiLogger this, @Initialized @Nullable String p0) $$ ( 534, 553 ) $$ Incompatible parameter type for string.
+    public void log(final String string) {
+                                 ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull PrintStreamLogger
+    @NonNull void log(@Initialized @NonNull PrintStreamLogger this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull ApiLogger
+    @NonNull void log(@Initialized @NonNull ApiLogger this, @Initialized @Nullable String p0)
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/integrations/DetailedDiscordIntegrationData.java:12: error: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 425, 445 ) $$ call to getIdentifier() not allowed on the given receiver.
+        this.idLong = Integer.parseInt(this.getIdentifier());
+                                                         ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+../dataset/nameless_pre_nullgtn/src/com/namelessmc/java_api/integrations/DetailedMinecraftIntegrationData.java:14: error: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 511, 531 ) $$ call to getIdentifier() not allowed on the given receiver.
+        this.uuid = NamelessAPI.websiteUuidToJavaUuid(this.getIdentifier());
+                                                                        ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+35

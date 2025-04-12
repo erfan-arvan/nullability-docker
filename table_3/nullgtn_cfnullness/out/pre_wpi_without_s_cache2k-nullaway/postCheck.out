@@ -1,0 +1,82 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.cache2k:cache2k-api >-----------------------
+[INFO] Building cache2k API 2.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M2:enforce (enforce-versions) @ cache2k-api ---
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ cache2k-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java-8-compile) @ cache2k-api ---
+[INFO] Compiling 91 source files with javac [forked debug release 8] to target/classes
+[WARNING] The following options were not recognized by any processor: '[detailedmsgtex]'
+[WARNING] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.checkerframework.javacutil.Resolver (file:/Users/erfanarvan/.m2/repository/org/checkerframework/checker/3.45.1-SNAPSHOT/checker-3.45.1-SNAPSHOT.jar) to method com.sun.tools.javac.comp.Resolve.findMethod(com.sun.tools.javac.comp.Env,com.sun.tools.javac.code.Type,com.sun.tools.javac.util.Name,com.sun.tools.javac.util.List,com.sun.tools.javac.util.List,boolean,boolean)
+WARNING: Please consider reporting this to the maintainers of org.checkerframework.javacutil.Resolver
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+/Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java:[81,15] [nullness:return] incompatible types in return.
+  type of expression: T extends @Initialized @NonNull ToggleFeature
+  method return type: T extends @Initialized @Nullable ToggleFeature
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java:[148,35] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/ToggleFeature.java:[148,35] [nullness:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[136,14] [nullness:method.invocation] call to withConfig(org.cache2k.config.Cache2kConfig<K,V>) not allowed on the given receiver.
+  found   : @UnderInitialization(org.cache2k.Cache2kBuilder.class) @NonNull Cache2kBuilder</*RAW*/>
+  required: @Initialized @NonNull Cache2kBuilder</*RAW*/>
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache2kBuilder.java:[1018,35] [nullness:contracts.precondition.override] Subclass precondition is stronger for 'this.config' in config.
+    In superclass org.cache2k.config.ConfigBuilder: no information
+    In subclass org.cache2k.Cache2kBuilder: @Nullable
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache.java:[885,16] [nullness:type.argument] incompatible type argument for type parameter K of ConcurrentMap.
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/Cache.java:[885,19] [nullness:type.argument] incompatible type argument for type parameter V of ConcurrentMap.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CustomizationReferenceSupplier.java:[39,28] [nullness:argument] incompatible argument for parameter obj of Cache2kConfig.checkNull.
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java:[81,35] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/SectionContainer.java:[81,35] [nullness:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/AbstractCache.java:[216,23] [nullness:type.argument] incompatible type argument for type parameter K of ConcurrentMap.
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/AbstractCache.java:[216,26] [nullness:type.argument] incompatible type argument for type parameter V of ConcurrentMap.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[226,40] [keyfor:purity.not.sideeffectfree.call] call to side-effecting this.getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[226,40] [nullness:purity.not.sideeffectfree.call] call to side-effecting this.getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[235,23] [nullness:type.argument] incompatible type argument for type parameter K of ConcurrentMap.
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/ForwardingCache.java:[235,26] [nullness:type.argument] incompatible type argument for type parameter V of ConcurrentMap.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[49,6] [nullness:dereference.of.nullable] dereference of possibly-null reference ((ParameterizedType)this.getClass().getGenericSuperclass())
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[128,54] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getTypeName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[128,54] [nullness:purity.not.sideeffectfree.call] call to side-effecting getTypeName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[154,10] [nullness:dereference.of.nullable] dereference of possibly-null reference s
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[207,13] [nullness:dereference.of.nullable] dereference of possibly-null reference td
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CacheTypeCapture.java:[215,13] [nullness:dereference.of.nullable] dereference of possibly-null reference td
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/integration/Loaders.java:[42,39] [nullness:argument] incompatible argument for parameter value of RefreshedTimeWrapper constructor.
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/DefaultCustomizationCollection.java:[68,35] [keyfor:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/DefaultCustomizationCollection.java:[68,35] [nullness:purity.not.sideeffectfree.call] call to side-effecting getClass().getSimpleName not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java:[78,19] [nullness:argument] incompatible argument for parameter arg0 of ClassLoader.loadClass.
+  found   : @Initialized @MonotonicNonNull String
+  required: @Initialized @NonNull String
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_cache2k-nullaway/cache2k-api/src/main/java/org/cache2k/config/CustomizationSupplierByClassName.java:[89,11] [nullness:dereference.of.nullable] dereference of possibly-null reference className
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java-11-compile) @ cache2k-api ---
+[INFO] Compiling 1 source file with javac [forked debug release 11] to target/classes
+[WARNING] The following options were not recognized by any processor: '[detailedmsgtex]'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.389 s
+[INFO] Finished at: 2024-08-18T02:27:07-04:00
+[INFO] ------------------------------------------------------------------------

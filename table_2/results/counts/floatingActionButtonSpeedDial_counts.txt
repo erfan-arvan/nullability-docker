@@ -1,0 +1,74 @@
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 28
+  @NonNull: 13
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 6
+
+Lines containing @SuppressWarnings:
+./src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 51
+  @NonNull: 13
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 6
+
+Lines containing @SuppressWarnings:
+./src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 28
+  @NonNull: 13
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 6
+
+Lines containing @SuppressWarnings:
+./src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 51
+  @NonNull: 13
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 6
+
+Lines containing @SuppressWarnings:
+./src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialView.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java: @SuppressWarnings({"unused", "WeakerAccess"})
+./src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java: @SuppressWarnings({"unused", "WeakerAccess"})

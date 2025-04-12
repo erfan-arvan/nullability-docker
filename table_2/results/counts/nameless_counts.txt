@@ -1,0 +1,54 @@
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 26
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 247
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 1
+
+Lines containing @SuppressWarnings:
+./src/com/namelessmc/java_api/NamelessVersion.java: @SuppressWarnings("SameParameterValue")
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 27
+  @NonNull: 258
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 1
+
+Lines containing @SuppressWarnings:
+./src/com/namelessmc/java_api/NamelessVersion.java: @SuppressWarnings("SameParameterValue")
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 26
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 247
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 1
+
+Lines containing @SuppressWarnings:
+./src/com/namelessmc/java_api/NamelessVersion.java: @SuppressWarnings("SameParameterValue")
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 27
+  @NonNull: 258
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 1
+
+Lines containing @SuppressWarnings:
+./src/com/namelessmc/java_api/NamelessVersion.java: @SuppressWarnings("SameParameterValue")

@@ -1,0 +1,49 @@
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:26: error: wrong number of type arguments; required 2
+public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
+                                                   ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:28: error: wrong number of type arguments; required 2
+public class CsvTable extends AbstractTable<CsvTableRow> {
+                                           ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:35: error: wrong number of type arguments; required 2
+    public CsvTable(AbstractTable<CsvTableRow> table, int appendDataRowsToTop, int appendDataRowsToBottom) {
+                                 ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:46: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:93: error: method does not override or implement a method from a supertype
+    @java.lang.Override
+    ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:111: error: method does not override or implement a method from a supertype
+    @java.lang.Override
+    ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:29: error: CsvTableRow is not abstract and does not override abstract method getCell(int) in ReportPageRow
+public class CsvTableRow extends AbstractReportPageRow {
+       ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:42: error: getCell(int) in CsvTableRow cannot implement getCell(int) in ReportPageRow
+    public CsvTableCell getCell(int i) {
+                        ^
+  return type @org.checkerframework.checker.nullness.qual.Nullable CsvTableCell is not compatible with TableCell
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:40: error: method does not override or implement a method from a supertype
+    @Nullable @Override
+              ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:81: error: incompatible types: @org.checkerframework.checker.nullness.qual.Nullable CsvTableCell cannot be converted to @org.checkerframework.checker.nullness.qual.Nullable TableCell
+                    return getCell(cellIndex++);
+                                  ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:39: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:41: error: incompatible types: CsvTable cannot be converted to Table
+        return new CsvTable(this, topRows, bottomRows);
+               ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:44: error: method does not override or implement a method from a supertype
+    @java.lang.Override
+    ^
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:47: error: cannot find symbol
+        return "CsvTable(super=" + super.toString() + ", cellDataAccessObject=" + this.getCellDataAccessObject() + ")";
+                                   ^
+  symbol:   variable super
+  location: class CsvTable
+../dataset/table-wrapper-csv-impl_post_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java:41: error: incompatible types: CsvTable cannot be converted to Table
+        return new CsvTable(
+               ^
+15 errors

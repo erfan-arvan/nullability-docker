@@ -1,0 +1,30 @@
+package de.zuellich.meal_planner.pinterest.services;
+
+import de.zuellich.meal_planner.pinterest.datatypes.Board;
+import de.zuellich.meal_planner.pinterest.datatypes.BoardListing;
+import de.zuellich.meal_planner.pinterest.datatypes.Pin;
+import java.util.List;
+
+/**
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+public interface IBoardService {
+
+    /**
+     * @return A list of the users boards or an empty list of none found.
+     */
+    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull List<Board> getBoards();
+
+    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull List<Pin> getPins(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String boardId);
+
+    /**
+     * Retrieve a listing of the boards basic properties and its pins.
+     *
+     * @param boardId The board to retrieve.
+     * @return The listing.
+     */
+    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BoardListing getBoardListing(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String boardId);
+}

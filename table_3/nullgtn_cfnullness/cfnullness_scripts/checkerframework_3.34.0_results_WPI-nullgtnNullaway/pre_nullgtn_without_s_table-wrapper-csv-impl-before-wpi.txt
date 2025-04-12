@@ -1,0 +1,29 @@
+../dataset/pre_nullgtn_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:73: error: (methodref.receiver.bound) $$ 5 $$ @Initialized @Nullable Predicate<@Initialized @NonNull Object> $$ @Initialized @NonNull Predicate<@Initialized @NonNull Object> $$ @Initialized @Nullable Predicate<@Initialized @NonNull Object> $$ @Initialized @Nullable Predicate<@Initialized @NonNull Object> $$ @Initialized @NonNull boolean test(@Initialized @NonNull Predicate<@Initialized @NonNull Object> this, @Initialized @NonNull Object p0) $$ ( 2933, 2957 ) $$ Incompatible receiver type
+        return CsvTableHelper.find(rows, startRow, endRow, startColumn, endColumn, cellValuePredicate::test);
+                                                                                   ^
+  found   : @Initialized @Nullable Predicate<@Initialized @NonNull Object>
+  required: @Initialized @NonNull Predicate<@Initialized @NonNull Object>
+  Consequence: method
+    @Initialized @Nullable Predicate<@Initialized @NonNull Object>
+  is not a valid method reference for method in @Initialized @Nullable Predicate<@Initialized @NonNull Object>
+    @Initialized @NonNull boolean test(@Initialized @NonNull Predicate<@Initialized @NonNull Object> this, @Initialized @NonNull Object p0)
+../dataset/pre_nullgtn_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:44: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull CsvTableCell $$ ( 1648, 1652 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CsvTableCell
+../dataset/pre_nullgtn_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:59: error: (override.param) $$ 7 $$ obj $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull RowAndIndex $$ @Initialized @NonNull boolean equals(@Initialized @NonNull RowAndIndex this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1951, 1961 ) $$ Incompatible parameter type for obj.
+        public boolean equals(Object obj) {
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull RowAndIndex
+    @Initialized @NonNull boolean equals(@Initialized @NonNull RowAndIndex this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/pre_nullgtn_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:43: error: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1680, 1695 ) $$ incompatible types in return.
+        return cell.getValue();
+                            ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+4 errors

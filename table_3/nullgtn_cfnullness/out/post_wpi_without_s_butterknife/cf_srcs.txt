@@ -1,0 +1,14 @@
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/Id.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldAnimationBinding.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/Parameter.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/MethodViewBinding.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ResourceBinding.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldCollectionViewBinding.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/MemberViewBinding.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldViewBinding.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java
+../dataset/post_wpi_without_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java

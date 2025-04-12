@@ -1,0 +1,75 @@
+diff --git a/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java b/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java
+index 7ca2c20..7900b2a 100644
+--- a/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java
++++ b/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java
+@@ -59,7 +59,8 @@ final class FabWithLabelView extends LinearLayout {
+         mSpeedDialActionItem = actionItem;
+         setId(actionItem.getId());
+         setLabel(actionItem.getLabel());
+-        setLabelClickable(getSpeedDialActionItem().isLabelClickable());
++        SpeedDialActionItem speedDialActionItem = getSpeedDialActionItem();
++        setLabelClickable(speedDialActionItem != null && speedDialActionItem.isLabelClickable());
+         int iconTintColor = actionItem.getFabImageTintColor();
+         Drawable drawable = actionItem.getFabImageDrawable(getContext());
+         if (drawable != null && iconTintColor != NOT_SET) {
+@@ -97,14 +98,22 @@ final class FabWithLabelView extends LinearLayout {
+             getFab().setOnClickListener(new OnClickListener() {
+                 @Override
+                 public void onClick(View view) {
+-                    mOnActionSelectedListener.onActionSelected(getSpeedDialActionItem());
++                    SpeedDialActionItem speedDialActionItem = getSpeedDialActionItem();
++                    if (mOnActionSelectedListener != null
++                            && speedDialActionItem != null) {
++                        mOnActionSelectedListener.onActionSelected(speedDialActionItem);
++                    }
+                 }
+             });
+             getLabelBackground().setOnClickListener(new OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+-                    if (getSpeedDialActionItem().isLabelClickable() && isLabelEnable()) {
+-                        mOnActionSelectedListener.onActionSelected(getSpeedDialActionItem());
++                    SpeedDialActionItem speedDialActionItem = getSpeedDialActionItem();
++                    if (mOnActionSelectedListener != null
++                            && speedDialActionItem != null
++                            && speedDialActionItem.isLabelClickable()
++                            && isLabelEnable()) {
++                        mOnActionSelectedListener.onActionSelected(speedDialActionItem);
+                     }
+                 }
+             });
+diff --git a/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java b/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java
+index 230a96f..6b7e226 100755
+--- a/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java
++++ b/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java
+@@ -132,7 +132,7 @@ public class SpeedDialView extends LinearLayout implements CoordinatorLayout.Att
+         return speedDialActionItem;
+     }
+     public boolean removeActionItem( SpeedDialActionItem actionItem) {
+-        return removeActionItemById(actionItem.getId()) != null;
++        return actionItem != null && removeActionItemById(actionItem.getId()) != null;
+     }
+     public SpeedDialActionItem removeActionItemById(@IdRes int idRes) {
+         return removeActionItem(findFabWithLabelViewById(idRes));
+@@ -141,8 +141,11 @@ public class SpeedDialView extends LinearLayout implements CoordinatorLayout.Att
+         return replaceActionItem(mFabWithLabelViews.get(position).getSpeedDialActionItem(),
+                 newActionItem);
+     }
+-    public boolean replaceActionItem(SpeedDialActionItem oldSpeedDialActionItem, SpeedDialActionItem
+-            newSpeedDialActionItem) {
++    public boolean replaceActionItem( SpeedDialActionItem oldSpeedDialActionItem,
++                                     SpeedDialActionItem newSpeedDialActionItem) {
++        if (oldSpeedDialActionItem == null) {
++            return false;
++        } else {
+             FabWithLabelView oldView = findFabWithLabelViewById(oldSpeedDialActionItem.getId());
+             if (oldView != null) {
+                 int index = mFabWithLabelViews.indexOf(oldView);
+@@ -157,6 +160,7 @@ public class SpeedDialView extends LinearLayout implements CoordinatorLayout.Att
+                 return false;
+             }
+         }
++    }
+     public void clearActionItems() {
+         Iterator<FabWithLabelView> it = mFabWithLabelViews.iterator();
+         while (it.hasNext()) {

@@ -1,0 +1,219 @@
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:32: error: cannot find symbol
+    private final ImmutableList<ResourceMethod> methods;
+                  ^
+  symbol:   class ImmutableList
+  location: class Type
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/Id.java:9: error: cannot find symbol
+  private static final ClassName ANDROID_R = ClassName.get("android", "R");
+                       ^
+  symbol:   class ClassName
+  location: class Id
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ResourceBinding.java:9: error: cannot find symbol
+  CodeBlock render(int sdk);
+  ^
+  symbol:   class CodeBlock
+  location: interface ResourceBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:5: error: cannot find symbol
+  private static final ClassName RESOURCES_COMPAT =
+                       ^
+  symbol:   class ClassName
+  location: class FieldTypefaceBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:7: error: cannot find symbol
+  private static final ClassName RESOURCES_COMPAT_ANDROIDX =
+                       ^
+  symbol:   class ClassName
+  location: class FieldTypefaceBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:9: error: cannot find symbol
+  private static final ClassName TYPEFACE = ClassName.get("android.graphics", "Typeface");
+                       ^
+  symbol:   class ClassName
+  location: class FieldTypefaceBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldAnimationBinding.java:22: error: cannot find symbol
+  @Override public CodeBlock render(int sdk) {
+                   ^
+  symbol:   class CodeBlock
+  location: class FieldAnimationBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/Parameter.java:8: error: cannot find symbol
+  private final TypeName type;
+                ^
+  symbol:   class TypeName
+  location: class Parameter
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/Parameter.java:10: error: cannot find symbol
+  Parameter(int listenerPosition, TypeName type) {
+                                  ^
+  symbol:   class TypeName
+  location: class Parameter
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/Parameter.java:19: error: cannot find symbol
+  TypeName getType() {
+  ^
+  symbol:   class TypeName
+  location: class Parameter
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldViewBinding.java:24: error: cannot find symbol
+  public ClassName getRawType() {
+         ^
+  symbol:   class ClassName
+  location: class FieldViewBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:72: error: cannot find symbol
+    private final Map<ListenerClass, Map<ListenerMethod, Set<MethodViewBinding>>> methodBindings =
+                      ^
+  symbol:   class ListenerClass
+  location: class Builder
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:80: error: cannot find symbol
+    public boolean hasMethodBinding(ListenerClass listener, ListenerMethod method) {
+                                    ^
+  symbol:   class ListenerClass
+  location: class Builder
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:85: error: cannot find symbol
+    public void addMethodBinding(ListenerClass listener, ListenerMethod method,
+                                 ^
+  symbol:   class ListenerClass
+  location: class Builder
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldCollectionViewBinding.java:36: error: cannot find symbol
+  CodeBlock render(boolean debuggable) {
+  ^
+  symbol:   class CodeBlock
+  location: class FieldCollectionViewBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:12: error: cannot find symbol
+  private final Map<ListenerClass, Map<ListenerMethod, Set<MethodViewBinding>>> methodBindings;
+                    ^
+  symbol:   class ListenerClass
+  location: class ViewBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:15: error: cannot find symbol
+  ViewBinding(Id id, Map<ListenerClass, Map<ListenerMethod, Set<MethodViewBinding>>> methodBindings,
+                         ^
+  symbol:   class ListenerClass
+  location: class ViewBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ViewBinding.java:30: error: cannot find symbol
+  public Map<ListenerClass, Map<ListenerMethod, Set<MethodViewBinding>>> getMethodBindings() {
+             ^
+  symbol:   class ListenerClass
+  location: class ViewBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:29: error: cannot find symbol
+  @Override public CodeBlock render(int sdk) {
+                   ^
+  symbol:   class CodeBlock
+  location: class FieldDrawableBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:39: error: cannot find symbol
+      this.methods = ImmutableList.copyOf(methodList);
+                     ^
+  symbol:   variable ImmutableList
+  location: class Type
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldResourceBinding.java:43: error: cannot find symbol
+      methods = ImmutableList.of(new ResourceMethod(null, methodName, true, 1));
+                ^
+  symbol:   variable ImmutableList
+  location: class Type
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/Id.java:9: error: cannot find symbol
+  private static final ClassName ANDROID_R = ClassName.get("android", "R");
+                                             ^
+  symbol:   variable ClassName
+  location: class Id
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/Id.java:23: error: cannot find symbol
+      ClassName className = ClassName.get(rSymbol.packge().getQualifiedName().toString(), R,
+      ^
+  symbol:   class ClassName
+  location: class Id
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/Id.java:23: error: cannot find symbol
+      ClassName className = ClassName.get(rSymbol.packge().getQualifiedName().toString(), R,
+                            ^
+  symbol:   variable ClassName
+  location: class Id
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:6: error: cannot find symbol
+      ClassName.get("android.support.v4.content.res", "ResourcesCompat");
+      ^
+  symbol:   variable ClassName
+  location: class FieldTypefaceBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:8: error: cannot find symbol
+      ClassName.get("androidx.core.content.res", "ResourcesCompat");
+      ^
+  symbol:   variable ClassName
+  location: class FieldTypefaceBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldTypefaceBinding.java:9: error: cannot find symbol
+  private static final ClassName TYPEFACE = ClassName.get("android.graphics", "Typeface");
+                                            ^
+  symbol:   variable ClassName
+  location: class FieldTypefaceBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:168: error: cannot find symbol
+    annotations.add(BindAnim.class);
+                    ^
+  symbol:   class BindAnim
+  location: class ButterKnifeProcessor
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:209: error: cannot find symbol
+    for (Element element : env.getElementsAnnotatedWith(BindAnim.class)) {
+                                                        ^
+  symbol:   class BindAnim
+  location: class ButterKnifeProcessor
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:214: error: cannot find symbol
+        logParsingError(element, BindAnim.class, e);
+                                 ^
+  symbol:   class BindAnim
+  location: class ButterKnifeProcessor
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:584: error: cannot find symbol
+          BindAnim.class.getSimpleName(), enclosingElement.getQualifiedName(),
+          ^
+  symbol:   class BindAnim
+  location: class ButterKnifeProcessor
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:590: error: cannot find symbol
+    hasError |= isInaccessibleViaGeneratedCode(BindAnim.class, "fields", element);
+                                               ^
+  symbol:   class BindAnim
+  location: class ButterKnifeProcessor
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:591: error: cannot find symbol
+    hasError |= isBindingInWrongPackage(BindAnim.class, element);
+                                        ^
+  symbol:   class BindAnim
+  location: class ButterKnifeProcessor
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:599: error: cannot find symbol
+    int id = element.getAnnotation(BindAnim.class).value();
+                                   ^
+  symbol:   class BindAnim
+  location: class ButterKnifeProcessor
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:600: error: cannot find symbol
+    Id resourceId = elementToId(element, BindAnim.class, id);
+                                         ^
+  symbol:   class BindAnim
+  location: class ButterKnifeProcessor
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/BindingSet.java:637: error: cannot find symbol
+          .containsKey(OnTouch.class.getAnnotation(ListenerClass.class))) {
+                       ^
+  symbol:   class OnTouch
+  location: class BindingSet
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldAnimationBinding.java:23: error: cannot find symbol
+    return CodeBlock.of("target.$L = $T.loadAnimation(context, $L)", name, ANIMATION_UTILS,
+           ^
+  symbol:   variable CodeBlock
+  location: class FieldAnimationBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldCollectionViewBinding.java:37: error: package CodeBlock does not exist
+    CodeBlock.Builder builder = CodeBlock.builder()
+             ^
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldCollectionViewBinding.java:37: error: cannot find symbol
+    CodeBlock.Builder builder = CodeBlock.builder()
+                                ^
+  symbol:   variable CodeBlock
+  location: class FieldCollectionViewBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldViewBinding.java:28: error: cannot find symbol
+    return (ClassName) type;
+            ^
+  symbol:   class ClassName
+  location: class FieldViewBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/MethodViewBinding.java:12: error: cannot find symbol
+    this.parameters = Collections.unmodifiableList(new ArrayList<>(parameters));
+                                                       ^
+  symbol:   class ArrayList
+  location: class MethodViewBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:31: error: cannot find symbol
+      return CodeBlock.of("target.$L = $T.getTintedDrawable(context, $L, $L)", name, UTILS, id.code,
+             ^
+  symbol:   variable CodeBlock
+  location: class FieldDrawableBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:35: error: cannot find symbol
+      return CodeBlock.of("target.$L = context.getDrawable($L)", name, id.code);
+             ^
+  symbol:   variable CodeBlock
+  location: class FieldDrawableBinding
+../dataset/post_wpi_with_s_butterknife/src/main/java/butterknife/compiler/FieldDrawableBinding.java:37: error: cannot find symbol
+    return CodeBlock.of("target.$L = $T.getDrawable(context, $L)", name,
+           ^
+  symbol:   variable CodeBlock
+  location: class FieldDrawableBinding
+44 errors

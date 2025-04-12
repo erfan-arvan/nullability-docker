@@ -75,7 +75,7 @@ import net.ltgt.gradle.errorprone.CheckSeverity
 tasks.withType(JavaCompile) {
     options.errorprone.disableAllChecks = true
     options.errorprone {
-        check("NullAway", CheckSeverity.ERROR)
+        check("NullAway", CheckSeverity.WARN)
         check("AnnotatorScanner", CheckSeverity.WARN)
         check("AnnotLocator", CheckSeverity.WARN)
         option("NullAway:AnnotatedPackages", "com.google.cloud.tools.jib")

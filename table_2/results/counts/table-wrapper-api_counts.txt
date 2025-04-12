@@ -1,0 +1,140 @@
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 0
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 12
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java: @SuppressWarnings("unchecked")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/Table.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTableFactory.java: @SuppressWarnings({"unchecked", "unused"})
+./src/main/java/org/spacious_team/table_wrapper/api/TableRow.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCell.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/OptionalTableColumn.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableFactoryRegistry.java: @SuppressWarnings("unused")
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 63
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 33
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: for (@SuppressWarnings("NullableProblems") @Nullable TableCell cell : row) {
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: for (@SuppressWarnings("NullableProblems") @Nullable TableCell cell : row) {
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java: @SuppressWarnings("unchecked")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/Table.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings({"nullness"})
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings("nullness")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: for (@SuppressWarnings("NullableProblems") @Nullable TableRow row : this) {
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/TableColumnImpl.java: for (@SuppressWarnings("NullableProblems") @Nullable TableCell cell : header) {
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTableFactory.java: @SuppressWarnings({"unchecked", "unused"})
+./src/main/java/org/spacious_team/table_wrapper/api/TableRow.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCell.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/OptionalTableColumn.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableFactoryRegistry.java: @SuppressWarnings("unused")
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 0
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 12
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java: @SuppressWarnings("unchecked")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/Table.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTableFactory.java: @SuppressWarnings({"unchecked", "unused"})
+./src/main/java/org/spacious_team/table_wrapper/api/TableRow.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCell.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/OptionalTableColumn.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableFactoryRegistry.java: @SuppressWarnings("unused")
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 63
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 33
+
+Lines containing @SuppressWarnings:
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: for (@SuppressWarnings("NullableProblems") @Nullable TableCell cell : row) {
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/ReportPage.java: for (@SuppressWarnings("NullableProblems") @Nullable TableCell cell : row) {
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java: @SuppressWarnings("unchecked")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCellRange.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/Table.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings({"nullness"})
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings("nullness")
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: for (@SuppressWarnings("NullableProblems") @Nullable TableRow row : this) {
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/TableColumnImpl.java: for (@SuppressWarnings("NullableProblems") @Nullable TableCell cell : header) {
+./src/main/java/org/spacious_team/table_wrapper/api/AbstractTableFactory.java: @SuppressWarnings({"unchecked", "unused"})
+./src/main/java/org/spacious_team/table_wrapper/api/TableRow.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableCell.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java: @SuppressWarnings({"nullness", "ConstantConditions"})
+./src/main/java/org/spacious_team/table_wrapper/api/OptionalTableColumn.java: @SuppressWarnings("unused")
+./src/main/java/org/spacious_team/table_wrapper/api/TableFactoryRegistry.java: @SuppressWarnings("unused")

@@ -1,0 +1,110 @@
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:50: error: (override.param) $$ 7 $$ boardId $$ @Initialized @NonNull String $$ @Initialized @Nullable String $$ @Initialized @NonNull BoardService $$ @Initialized @NonNull List<@Initialized @NonNull Pin> getPins(@Initialized @NonNull BoardService this, @Initialized @NonNull String p0) $$ @Initialized @NonNull IBoardService $$ @Initialized @NonNull List<@Initialized @NonNull Pin> getPins(@Initialized @NonNull IBoardService this, @Initialized @Nullable String p0) $$ ( 1769, 1783 ) $$ Incompatible parameter type for boardId.
+    public List<Pin> getPins(String boardId) {
+                                    ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull BoardService
+    @Initialized @NonNull List<@Initialized @NonNull Pin> getPins(@Initialized @NonNull BoardService this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull IBoardService
+    @Initialized @NonNull List<@Initialized @NonNull Pin> getPins(@Initialized @NonNull IBoardService this, @Initialized @Nullable String p0)
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:72: error: (override.param) $$ 7 $$ boardId $$ @Initialized @NonNull String $$ @Initialized @Nullable String $$ @Initialized @NonNull BoardService $$ @Initialized @NonNull BoardListing getBoardListing(@Initialized @NonNull BoardService this, @Initialized @NonNull String p0) $$ @Initialized @NonNull IBoardService $$ @Initialized @NonNull BoardListing getBoardListing(@Initialized @NonNull IBoardService this, @Initialized @Nullable String p0) $$ ( 2680, 2694 ) $$ Incompatible parameter type for boardId.
+    public BoardListing getBoardListing(String boardId) {
+                                               ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull BoardService
+    @Initialized @NonNull BoardListing getBoardListing(@Initialized @NonNull BoardService this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull IBoardService
+    @Initialized @NonNull BoardListing getBoardListing(@Initialized @NonNull IBoardService this, @Initialized @Nullable String p0)
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:40: error: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Board $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Board this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 647, 655 ) $$ Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Board
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Board this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:58: error: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Pin $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Pin this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1373, 1381 ) $$ Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Pin
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Pin this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:78: error: (dereference.of.nullable) $$ 1 $$ e.getCause() $$ ( 3306, 3318 ) $$ dereference of possibly-null reference e.getCause()
+                    System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
+                                                                                ^
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:33: error: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Recipe $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Recipe this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 715, 723 ) $$ Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Recipe
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Recipe this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:35: error: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Ingredient $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Ingredient this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 642, 650 ) $$ Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Ingredient
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Ingredient this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:25: error: (initialization.fields.uninitialized) $$ 1 $$ byShorthand, byPlural, bySingular $$ ( 594, 665 ) $$ the constructor does not initialize fields: byShorthand, byPlural, bySingular
+    private IngredientUnitLookup() {
+            ^
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:26: error: (method.invocation) $$ 3 $$ setupLookupTable() $$ @UnderInitialization @NonNull IngredientUnitLookup $$ @Initialized @NonNull IngredientUnitLookup $$ ( 635, 658 ) $$ call to setupLookupTable() not allowed on the given receiver.
+        this.setupLookupTable();
+                             ^
+  found   : @UnderInitialization @NonNull IngredientUnitLookup
+  required: @Initialized @NonNull IngredientUnitLookup
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:52: error: (dereference.of.nullable) $$ 1 $$ matcher.group(2) $$ ( 2016, 2032 ) $$ dereference of possibly-null reference matcher.group(2)
+        String rawUnit = matcher.group(2).trim();
+                                      ^
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:53: error: (dereference.of.nullable) $$ 1 $$ matcher.group(3) $$ ( 2066, 2082 ) $$ dereference of possibly-null reference matcher.group(3)
+        String rawName = matcher.group(3).trim();
+                                      ^
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgRecipeScanner.java:19: error: (override.param) $$ 7 $$ source $$ @Initialized @NonNull String $$ @Initialized @Nullable String $$ @Initialized @NonNull SchemaOrgRecipeScanner $$ @Initialized @NonNull Recipe parse(@Initialized @NonNull SchemaOrgRecipeScanner this, @Initialized @NonNull String p0) $$ @Initialized @NonNull RecipeScanner $$ @Initialized @NonNull Recipe parse(@Initialized @NonNull RecipeScanner this, @Initialized @Nullable String p0) $$ ( 563, 576 ) $$ Incompatible parameter type for source.
+    public Recipe parse(String source) {
+                               ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull SchemaOrgRecipeScanner
+    @Initialized @NonNull Recipe parse(@Initialized @NonNull SchemaOrgRecipeScanner this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull RecipeScanner
+    @Initialized @NonNull Recipe parse(@Initialized @NonNull RecipeScanner this, @Initialized @Nullable String p0)
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeFormatDetector.java:23: error: (override.param) $$ 7 $$ source $$ @Initialized @NonNull String $$ @Initialized @Nullable String $$ @Initialized @NonNull SchemaOrgQuirksModeFormatDetector $$ @Initialized @NonNull boolean isSupported(@Initialized @NonNull SchemaOrgQuirksModeFormatDetector this, @Initialized @NonNull String p0) $$ @Initialized @NonNull FormatDetector $$ @Initialized @NonNull boolean isSupported(@Initialized @NonNull FormatDetector this, @Initialized @Nullable String p0) $$ ( 697, 710 ) $$ Incompatible parameter type for source.
+    public boolean isSupported(String source) {
+                                      ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull SchemaOrgQuirksModeFormatDetector
+    @Initialized @NonNull boolean isSupported(@Initialized @NonNull SchemaOrgQuirksModeFormatDetector this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull FormatDetector
+    @Initialized @NonNull boolean isSupported(@Initialized @NonNull FormatDetector this, @Initialized @Nullable String p0)
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgFormatDetector.java:27: error: (override.param) $$ 7 $$ htmlSource $$ @Initialized @NonNull String $$ @Initialized @Nullable String $$ @Initialized @NonNull SchemaOrgFormatDetector $$ @Initialized @NonNull boolean isSupported(@Initialized @NonNull SchemaOrgFormatDetector this, @Initialized @NonNull String p0) $$ @Initialized @NonNull FormatDetector $$ @Initialized @NonNull boolean isSupported(@Initialized @NonNull FormatDetector this, @Initialized @Nullable String p0) $$ ( 858, 875 ) $$ Incompatible parameter type for htmlSource.
+    public boolean isSupported(String htmlSource) {
+                                      ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull SchemaOrgFormatDetector
+    @Initialized @NonNull boolean isSupported(@Initialized @NonNull SchemaOrgFormatDetector this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull FormatDetector
+    @Initialized @NonNull boolean isSupported(@Initialized @NonNull FormatDetector this, @Initialized @Nullable String p0)
+../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgFormatDetector.java:55: error: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull SchemaOrgFormatDetector $$ @Initialized @NonNull boolean equals(@Initialized @NonNull SchemaOrgFormatDetector this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1785, 1793 ) $$ Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull SchemaOrgFormatDetector
+    @Initialized @NonNull boolean equals(@Initialized @NonNull SchemaOrgFormatDetector this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+Note: ../dataset/mealPlanner_post_nullgtn/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+278

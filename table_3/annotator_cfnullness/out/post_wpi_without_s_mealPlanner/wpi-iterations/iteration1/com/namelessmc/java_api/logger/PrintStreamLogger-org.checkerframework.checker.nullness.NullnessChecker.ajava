@@ -1,0 +1,24 @@
+package com.namelessmc.java_api.logger;
+
+import java.io.PrintStream;
+
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+public class PrintStreamLogger extends ApiLogger {
+
+    public static final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull PrintStreamLogger DEFAULT_INSTANCE = new PrintStreamLogger(System.err, "[Nameless-Java-API Debug] ");
+
+    private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull PrintStream stream;
+
+    private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String prefix;
+
+    @org.checkerframework.dataflow.qual.Impure
+    public PrintStreamLogger(final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull PrintStream stream, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String prefix) {
+        this.stream = stream;
+        this.prefix = prefix;
+    }
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void log(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull PrintStreamLogger this, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String string) {
+        this.stream.println(this.prefix + string);
+    }
+}

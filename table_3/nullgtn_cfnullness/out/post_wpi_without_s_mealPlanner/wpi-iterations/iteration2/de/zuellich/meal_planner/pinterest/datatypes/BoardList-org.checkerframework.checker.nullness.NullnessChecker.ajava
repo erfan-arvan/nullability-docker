@@ -1,0 +1,24 @@
+package de.zuellich.meal_planner.pinterest.datatypes;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.common.collect.ImmutableList;
+import java.util.List;
+
+/**
+ * Represents a list of boards. Helper for JSON serialization.
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+public class BoardList {
+
+    private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull List<Board> boards = ImmutableList.of();
+
+    @org.checkerframework.dataflow.qual.Pure
+    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull List<Board> getBoards() {
+        return boards;
+    }
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void setBoards(List<Board> boards) {
+        this.boards = boards;
+    }
+}

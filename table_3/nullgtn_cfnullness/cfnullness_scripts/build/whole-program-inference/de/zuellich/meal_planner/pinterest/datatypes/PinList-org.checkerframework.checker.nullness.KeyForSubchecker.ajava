@@ -1,0 +1,36 @@
+package de.zuellich.meal_planner.pinterest.datatypes;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.common.collect.ImmutableList;
+import java.util.List;
+
+/**
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public class PinList {
+
+    private  List<Pin> pins = ImmutableList.of();
+
+    private  PagingInformation page = new PagingInformation();
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  List<Pin> getPins( PinList this) {
+        return pins;
+    }
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void setPins(List<Pin> pins) {
+        this.pins = pins;
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  PagingInformation getPage( PinList this) {
+        return page;
+    }
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void setPage(PagingInformation page) {
+        this.page = page;
+    }
+}

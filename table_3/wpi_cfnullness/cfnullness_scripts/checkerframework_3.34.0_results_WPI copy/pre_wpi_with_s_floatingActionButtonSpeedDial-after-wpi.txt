@@ -1,0 +1,221 @@
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:236: warning: (argument) $$ 4 $$ val $$ Parcel.writeString $$ @Initialized @MonotonicNonNull String $$ @Initialized @NonNull String $$ ( 7613, 7624 ) $$ incompatible argument for parameter val of Parcel.writeString.
+        dest.writeString(this.mLabel);
+                             ^
+  found   : @Initialized @MonotonicNonNull String
+  required: @Initialized @NonNull String
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:253: warning: (argument) $$ 4 $$ loader $$ Parcel.readParcelable $$ @Initialized @Nullable ClassLoader $$ @Initialized @NonNull ClassLoader $$ ( 8376, 8405 ) $$ incompatible argument for parameter loader of Parcel.readParcelable.
+                UiUtils.getDrawableFromBitmap((Bitmap) in.readParcelable(Bitmap.class.getClassLoader()));
+                                                                                                    ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:70: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Drawable $$ ( 2966, 2970 ) $$ incompatible types in assignment.
+    private Drawable mMainFabOpenDrawable = null;
+                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Drawable
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:71: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Drawable $$ ( 3017, 3021 ) $$ incompatible types in assignment.
+    private Drawable mMainFabCloseDrawable = null;
+                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Drawable
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:87: warning: (method.invocation) $$ 3 $$ close() $$ @UnderInitialization(android.widget.LinearLayout.class) @NonNull SpeedDialView $$ @Initialized @NonNull SpeedDialView $$ ( 3694, 3701 ) $$ call to close() not allowed on the given receiver.
+                    close();
+                         ^
+  found   : @UnderInitialization(android.widget.LinearLayout.class) @NonNull SpeedDialView
+  required: @Initialized @NonNull SpeedDialView
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:96: warning: (initialization.fields.uninitialized) $$ 1 $$ mMainFab, mOverlayLayout, mOnChangeListener, mOnActionSelectedListener $$ ( 3841, 3939 ) $$ the constructor does not initialize fields: mMainFab, mOverlayLayout, mOnChangeListener, mOnActionSelectedListener
+    public SpeedDialView(Context context) {
+           ^
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:98: warning: (method.invocation) $$ 3 $$ init(android.content.Context,android.util.AttributeSet) $$ @UnderInitialization(android.widget.LinearLayout.class) @NonNull SpeedDialView $$ @Initialized @NonNull SpeedDialView $$ ( 3913, 3932 ) $$ call to init(android.content.Context,android.util.AttributeSet) not allowed on the given receiver.
+        init(context, null);
+            ^
+  found   : @UnderInitialization(android.widget.LinearLayout.class) @NonNull SpeedDialView
+  required: @Initialized @NonNull SpeedDialView
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:98: warning: (argument) $$ 4 $$ attrs $$ SpeedDialView.init $$ null (NullType) $$ @Initialized @NonNull AttributeSet $$ ( 3927, 3931 ) $$ incompatible argument for parameter attrs of SpeedDialView.init.
+        init(context, null);
+                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AttributeSet
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:101: warning: (initialization.fields.uninitialized) $$ 1 $$ mMainFab, mOverlayLayout, mOnChangeListener, mOnActionSelectedListener $$ ( 3945, 4071 ) $$ the constructor does not initialize fields: mMainFab, mOverlayLayout, mOnChangeListener, mOnActionSelectedListener
+    public SpeedDialView(Context context, AttributeSet attrs) {
+           ^
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:103: warning: (method.invocation) $$ 3 $$ init(android.content.Context,android.util.AttributeSet) $$ @UnderInitialization(android.widget.LinearLayout.class) @NonNull SpeedDialView $$ @Initialized @NonNull SpeedDialView $$ ( 4044, 4064 ) $$ call to init(android.content.Context,android.util.AttributeSet) not allowed on the given receiver.
+        init(context, attrs);
+            ^
+  found   : @UnderInitialization(android.widget.LinearLayout.class) @NonNull SpeedDialView
+  required: @Initialized @NonNull SpeedDialView
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:106: warning: (initialization.fields.uninitialized) $$ 1 $$ mMainFab, mOverlayLayout, mOnChangeListener, mOnActionSelectedListener $$ ( 4077, 4236 ) $$ the constructor does not initialize fields: mMainFab, mOverlayLayout, mOnChangeListener, mOnActionSelectedListener
+    public SpeedDialView(Context context,  AttributeSet attrs, int defStyleAttr) {
+           ^
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:108: warning: (method.invocation) $$ 3 $$ init(android.content.Context,android.util.AttributeSet) $$ @UnderInitialization(android.widget.LinearLayout.class) @NonNull SpeedDialView $$ @Initialized @NonNull SpeedDialView $$ ( 4209, 4229 ) $$ call to init(android.content.Context,android.util.AttributeSet) not allowed on the given receiver.
+        init(context, attrs);
+            ^
+  found   : @UnderInitialization(android.widget.LinearLayout.class) @NonNull SpeedDialView
+  required: @Initialized @NonNull SpeedDialView
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:143: warning: (argument) $$ 4 $$ listener $$ SpeedDialView.show $$ null (NullType) $$ @Initialized @NonNull OnVisibilityChangedListener $$ ( 5191, 5195 ) $$ incompatible argument for parameter listener of SpeedDialView.show.
+        show(null);
+             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull OnVisibilityChangedListener
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:151: warning: (argument) $$ 4 $$ listener $$ SpeedDialView.hide $$ null (NullType) $$ @Initialized @NonNull OnVisibilityChangedListener $$ ( 5351, 5355 ) $$ incompatible argument for parameter listener of SpeedDialView.hide.
+        hide(null);
+             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull OnVisibilityChangedListener
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:182: warning: (argument) $$ 4 $$ l $$ View.setOnClickListener $$ null (NullType) $$ @Initialized @NonNull OnClickListener $$ ( 6315, 6319 ) $$ incompatible argument for parameter l of View.setOnClickListener.
+            setOnClickListener(null);
+                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull OnClickListener
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:314: warning: (argument) $$ 4 $$ it $$ SpeedDialView.removeActionItem $$ null (NullType) $$ @Initialized @NonNull Iterator<@Initialized @NonNull FabWithLabelView> $$ ( 12250, 12254 ) $$ incompatible argument for parameter it of SpeedDialView.removeActionItem.
+            removeActionItem(findFabWithLabelViewById(newSpeedDialActionItem.getId()), null, false);
+                                                                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Iterator<@Initialized @NonNull FabWithLabelView>
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:315: warning: (argument) $$ 4 $$ it $$ SpeedDialView.removeActionItem $$ null (NullType) $$ @Initialized @NonNull Iterator<@Initialized @NonNull FabWithLabelView> $$ ( 12351, 12355 ) $$ incompatible argument for parameter it of SpeedDialView.removeActionItem.
+            removeActionItem(findFabWithLabelViewById(oldSpeedDialActionItem.getId()), null, false);
+                                                                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Iterator<@Initialized @NonNull FabWithLabelView>
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:463: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull SpeedDialActionItem $$ ( 16968, 16972 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull SpeedDialActionItem
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:468: warning: (argument) $$ 4 $$ it $$ SpeedDialView.removeActionItem $$ null (NullType) $$ @Initialized @NonNull Iterator<@Initialized @NonNull FabWithLabelView> $$ ( 17103, 17107 ) $$ incompatible argument for parameter it of SpeedDialView.removeActionItem.
+        return removeActionItem(view, null, true);
+                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Iterator<@Initialized @NonNull FabWithLabelView>
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:485: warning: (assignment) $$ 2 $$ @Initialized @Nullable Drawable $$ @Initialized @NonNull Drawable $$ ( 17911, 17972 ) $$ incompatible types in assignment.
+                mMainFabOpenDrawable = AppCompatResources.getDrawable(getContext(), openDrawableRes);
+                                                                     ^
+  found   : @Initialized @Nullable Drawable
+  required: @Initialized @NonNull Drawable
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:490: warning: (argument) $$ 4 $$ drawable $$ UiUtils.getRotateDrawable $$ @Initialized @Nullable Drawable $$ @Initialized @NonNull Drawable $$ ( 18307, 18315 ) $$ incompatible argument for parameter drawable of UiUtils.getRotateDrawable.
+                mMainFabCloseDrawable = UiUtils.getRotateDrawable(drawable, -UiUtils.ROTATION_ANGLE);
+                                                                  ^
+  found   : @Initialized @Nullable Drawable
+  required: @Initialized @NonNull Drawable
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:542: warning: (argument) $$ 4 $$ attrs $$ FabWithLabelView constructor $$ null (NullType) $$ @Initialized @NonNull AttributeSet $$ ( 20766, 20770 ) $$ incompatible argument for parameter attrs of FabWithLabelView constructor.
+            newView = new FabWithLabelView(new ContextThemeWrapper(getContext(), theme), null, theme);
+                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AttributeSet
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:598: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull FabWithLabelView $$ ( 22690, 22694 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull FabWithLabelView
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:697: warning: (initialization.fields.uninitialized) $$ 1 $$ mTmpRect, mInternalAutoHideListener $$ ( 26143, 26251 ) $$ the constructor does not initialize fields: mTmpRect, mInternalAutoHideListener
+        public SnackbarBehavior() {
+               ^
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:702: warning: (initialization.fields.uninitialized) $$ 1 $$ mTmpRect, mInternalAutoHideListener $$ ( 26261, 26748 ) $$ the constructor does not initialize fields: mTmpRect, mInternalAutoHideListener
+        public SnackbarBehavior(Context context, AttributeSet attrs) {
+               ^
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:62: warning: (initialization.fields.uninitialized) $$ 1 $$ mLabelTextView, mFab, mLabelCardView, mSpeedDialActionItem, mOnActionSelectedListener $$ ( 2351, 2452 ) $$ the constructor does not initialize fields: mLabelTextView, mFab, mLabelCardView, mSpeedDialActionItem, mOnActionSelectedListener
+    public FabWithLabelView(Context context) {
+           ^
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:64: warning: (method.invocation) $$ 3 $$ init(android.content.Context,android.util.AttributeSet) $$ @UnderInitialization(android.widget.LinearLayout.class) @NonNull FabWithLabelView $$ @Initialized @NonNull FabWithLabelView $$ ( 2426, 2445 ) $$ call to init(android.content.Context,android.util.AttributeSet) not allowed on the given receiver.
+        init(context, null);
+            ^
+  found   : @UnderInitialization(android.widget.LinearLayout.class) @NonNull FabWithLabelView
+  required: @Initialized @NonNull FabWithLabelView
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:64: warning: (argument) $$ 4 $$ attrs $$ FabWithLabelView.init $$ null (NullType) $$ @Initialized @NonNull AttributeSet $$ ( 2440, 2444 ) $$ incompatible argument for parameter attrs of FabWithLabelView.init.
+        init(context, null);
+                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AttributeSet
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:67: warning: (initialization.fields.uninitialized) $$ 1 $$ mLabelTextView, mFab, mLabelCardView, mSpeedDialActionItem, mOnActionSelectedListener $$ ( 2458, 2587 ) $$ the constructor does not initialize fields: mLabelTextView, mFab, mLabelCardView, mSpeedDialActionItem, mOnActionSelectedListener
+    public FabWithLabelView(Context context, AttributeSet attrs) {
+           ^
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:69: warning: (method.invocation) $$ 3 $$ init(android.content.Context,android.util.AttributeSet) $$ @UnderInitialization(android.widget.LinearLayout.class) @NonNull FabWithLabelView $$ @Initialized @NonNull FabWithLabelView $$ ( 2560, 2580 ) $$ call to init(android.content.Context,android.util.AttributeSet) not allowed on the given receiver.
+        init(context, attrs);
+            ^
+  found   : @UnderInitialization(android.widget.LinearLayout.class) @NonNull FabWithLabelView
+  required: @Initialized @NonNull FabWithLabelView
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:72: warning: (initialization.fields.uninitialized) $$ 1 $$ mLabelTextView, mFab, mLabelCardView, mSpeedDialActionItem, mOnActionSelectedListener $$ ( 2593, 2755 ) $$ the constructor does not initialize fields: mLabelTextView, mFab, mLabelCardView, mSpeedDialActionItem, mOnActionSelectedListener
+    public FabWithLabelView(Context context,  AttributeSet attrs, int defStyleAttr) {
+           ^
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:74: warning: (method.invocation) $$ 3 $$ init(android.content.Context,android.util.AttributeSet) $$ @UnderInitialization(android.widget.LinearLayout.class) @NonNull FabWithLabelView $$ @Initialized @NonNull FabWithLabelView $$ ( 2728, 2748 ) $$ call to init(android.content.Context,android.util.AttributeSet) not allowed on the given receiver.
+        init(context, attrs);
+            ^
+  found   : @UnderInitialization(android.widget.LinearLayout.class) @NonNull FabWithLabelView
+  required: @Initialized @NonNull FabWithLabelView
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:133: warning: (argument) $$ 4 $$ sequence $$ FabWithLabelView.setLabel $$ @Initialized @Nullable String $$ @Initialized @NonNull CharSequence $$ ( 4264, 4285 ) $$ incompatible argument for parameter sequence of FabWithLabelView.setLabel.
+        setLabel(actionItem.getLabel());
+                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull CharSequence
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:143: warning: (argument) $$ 4 $$ mDrawable $$ FabWithLabelView.setFabIcon $$ @Initialized @Nullable Drawable $$ @Initialized @NonNull Drawable $$ ( 4712, 4720 ) $$ incompatible argument for parameter mDrawable of FabWithLabelView.setFabIcon.
+        setFabIcon(drawable);
+                   ^
+  found   : @Initialized @Nullable Drawable
+  required: @Initialized @NonNull Drawable
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:194: warning: (argument) $$ 4 $$ l $$ View.setOnClickListener $$ null (NullType) $$ @Initialized @NonNull OnClickListener $$ ( 6837, 6841 ) $$ incompatible argument for parameter l of View.setOnClickListener.
+            getFab().setOnClickListener(null);
+                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull OnClickListener
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:195: warning: (argument) $$ 4 $$ l $$ View.setOnClickListener $$ null (NullType) $$ @Initialized @NonNull OnClickListener $$ ( 6896, 6900 ) $$ incompatible argument for parameter l of View.setOnClickListener.
+            getLabelBackground().setOnClickListener(null);
+                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull OnClickListener
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:39: warning: (initialization.fields.uninitialized) $$ 1 $$ mClickListener $$ ( 1369, 1448 ) $$ the constructor does not initialize fields: mClickListener
+    public SpeedDialOverlayLayout( Context context) {
+           ^
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:43: warning: (initialization.fields.uninitialized) $$ 1 $$ mClickListener $$ ( 1454, 1591 ) $$ the constructor does not initialize fields: mClickListener
+    public SpeedDialOverlayLayout( Context context,  AttributeSet attrs) {
+           ^
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:45: warning: (method.invocation) $$ 3 $$ init(android.content.Context,android.util.AttributeSet) $$ @UnderInitialization(android.widget.RelativeLayout.class) @NonNull SpeedDialOverlayLayout $$ @Initialized @NonNull SpeedDialOverlayLayout $$ ( 1564, 1584 ) $$ call to init(android.content.Context,android.util.AttributeSet) not allowed on the given receiver.
+        init(context, attrs);
+            ^
+  found   : @UnderInitialization(android.widget.RelativeLayout.class) @NonNull SpeedDialOverlayLayout
+  required: @Initialized @NonNull SpeedDialOverlayLayout
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:48: warning: (initialization.fields.uninitialized) $$ 1 $$ mClickListener $$ ( 1597, 1787 ) $$ the constructor does not initialize fields: mClickListener
+    public SpeedDialOverlayLayout( Context context,  AttributeSet attrs, @AttrRes int
+           ^
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:51: warning: (method.invocation) $$ 3 $$ init(android.content.Context,android.util.AttributeSet) $$ @UnderInitialization(android.widget.RelativeLayout.class) @NonNull SpeedDialOverlayLayout $$ @Initialized @NonNull SpeedDialOverlayLayout $$ ( 1760, 1780 ) $$ call to init(android.content.Context,android.util.AttributeSet) not allowed on the given receiver.
+        init(context, attrs);
+            ^
+  found   : @UnderInitialization(android.widget.RelativeLayout.class) @NonNull SpeedDialOverlayLayout
+  required: @Initialized @NonNull SpeedDialOverlayLayout
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:111: warning: (argument) $$ 4 $$ l $$ View.setOnClickListener $$ @Initialized @Nullable OnClickListener $$ @Initialized @NonNull OnClickListener $$ ( 3243, 3287 ) $$ incompatible argument for parameter l of View.setOnClickListener.
+        super.setOnClickListener(hasClickableOverlay() ? clickListener : null);
+                                                       ^
+  found   : @Initialized @Nullable OnClickListener
+  required: @Initialized @NonNull OnClickListener
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:200: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Bitmap $$ ( 7008, 7012 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Bitmap
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:231: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Drawable $$ ( 8160, 8164 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Drawable
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:27: warning: (type.argument) $$ 4 $$ T $$ ThreadLocal $$ @Initialized @NonNull Matrix $$ [extends @Initialized @Nullable Object super null (NullType)] $$ ( 887, 893 ) $$ incompatible type argument for type parameter T of ThreadLocal.
+    private static final ThreadLocal<Matrix> MATRIX_THREAD_LOCAL = new ThreadLocal<>();
+                                     ^
+  found   : @Initialized @NonNull Matrix
+  required: [extends @Initialized @Nullable Object super null (NullType)]
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:27: warning: (assignment) $$ 2 $$ @Initialized @NonNull ThreadLocal<@Initialized @Nullable Matrix> $$ @Initialized @NonNull ThreadLocal<@Initialized @NonNull Matrix> $$ ( 917, 936 ) $$ incompatible types in assignment.
+    private static final ThreadLocal<Matrix> MATRIX_THREAD_LOCAL = new ThreadLocal<>();
+                                                                   ^
+  found   : @Initialized @NonNull ThreadLocal<@Initialized @Nullable Matrix>
+  required: @Initialized @NonNull ThreadLocal<@Initialized @NonNull Matrix>
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:28: warning: (type.argument) $$ 4 $$ T $$ ThreadLocal $$ @Initialized @NonNull RectF $$ [extends @Initialized @Nullable Object super null (NullType)] $$ ( 975, 980 ) $$ incompatible type argument for type parameter T of ThreadLocal.
+    private static final ThreadLocal<RectF> RECT_F = new ThreadLocal<>();
+                                     ^
+  found   : @Initialized @NonNull RectF
+  required: [extends @Initialized @Nullable Object super null (NullType)]
+../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:28: warning: (assignment) $$ 2 $$ @Initialized @NonNull ThreadLocal<@Initialized @Nullable RectF> $$ @Initialized @NonNull ThreadLocal<@Initialized @NonNull RectF> $$ ( 991, 1010 ) $$ incompatible types in assignment.
+    private static final ThreadLocal<RectF> RECT_F = new ThreadLocal<>();
+                                                     ^
+  found   : @Initialized @NonNull ThreadLocal<@Initialized @Nullable RectF>
+  required: @Initialized @NonNull ThreadLocal<@Initialized @NonNull RectF>
+Note: ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+48 warnings

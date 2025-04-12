@@ -1,0 +1,89 @@
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:39: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvReportPage
+public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
+       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:26: error: duplicate class: org.spacious_team.table_wrapper.csv.DateTimeFormatParser
+class DateTimeFormatParser {
+^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:32: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTable
+public class CsvTable extends AbstractTable<CsvTableRow> {
+       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableHelper.java:28: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableHelper
+class CsvTableHelper {
+^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:32: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableCell
+public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
+       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java:28: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableFactory
+public class CsvTableFactory extends AbstractTableFactory<CsvReportPage> {
+       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:31: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableRow
+public class CsvTableRow extends AbstractReportPageRow {
+       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:33: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject
+public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex, CsvTableRow> {
+       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:37: error: package javax.annotation does not exist
+import javax.annotation.Nullable;
+                       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:26: error: package javax.annotation does not exist
+import javax.annotation.Nullable;
+                       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:24: error: package javax.annotation does not exist
+import javax.annotation.Nullable;
+                       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:24: error: package javax.annotation does not exist
+import javax.annotation.Nullable;
+                       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:28: error: package javax.annotation does not exist
+import javax.annotation.Nullable;
+                       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:37: error: package javax.annotation does not exist
+import javax.annotation.Nullable;
+                       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:24: error: package javax.annotation does not exist
+import javax.annotation.Nullable;
+                       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:29: error: package javax.annotation does not exist
+import javax.annotation.Nullable;
+                       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:29: error: package javax.annotation does not exist
+import javax.annotation.Nullable;
+                       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:31: error: package javax.annotation does not exist
+import javax.annotation.Nullable;
+                       ^
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:80: error: cannot find symbol
+    @Nullable @Override
+     ^
+  symbol:   class Nullable
+  location: class CsvReportPage
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:39: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class CsvTableRow
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:48: error: cannot find symbol
+        @Nullable
+         ^
+  symbol:   class Nullable
+  location: class RowAndIndex
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:32: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class CsvCellDataAccessObject
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:54: error: cannot find symbol
+    public static void setDateTimeFormatter(@Nullable final DateTimeFormatter dateTimeFormatter) {
+                                             ^
+  symbol:   class Nullable
+  location: class CsvCellDataAccessObject
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:58: error: cannot find symbol
+    @Nullable
+     ^
+  symbol:   class Nullable
+  location: class CsvCellDataAccessObject
+../dataset/pre_nullaway_without_s_table-wrapper-csv-impl/src/src-delomboked/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:76: error: cannot find symbol
+            @Nullable
+             ^
+  symbol: class Nullable
+25 errors

@@ -1,0 +1,904 @@
++ PROJECT_PATH=../dataset/pre_wpi_without_s_nameless
++ CF_BINARY=../scripts/tools/checker-framework-3.34.0/checker/bin/javac
++ COMPILED_CLASSES_FOLDER=../dataset/pre_wpi_without_s_nameless/classes
++ LIB_FOLDER=../dataset/pre_wpi_without_s_nameless/lib
++ SRC_FILES=../dataset/pre_wpi_without_s_nameless/cf_srcs.txt
++ CLASSPATH_DIR=../dataset/pre_wpi_without_s_nameless/classpath
++ echo 'CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac'
+CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac
++ unzip_jars ../dataset/pre_wpi_without_s_nameless/lib ../dataset/pre_wpi_without_s_nameless/classpath
++ local lib_folder=../dataset/pre_wpi_without_s_nameless/lib
++ local extract_to=../dataset/pre_wpi_without_s_nameless/classpath
++ '[' -d ../dataset/pre_wpi_without_s_nameless/classpath ']'
++ rm -rf ../dataset/pre_wpi_without_s_nameless/classpath
++ mkdir -p ../dataset/pre_wpi_without_s_nameless/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_without_s_nameless/lib/animal-sniffer-annotations-1.14.jar -d ../dataset/pre_wpi_without_s_nameless/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_without_s_nameless/lib/annotations-23.0.0.jar -d ../dataset/pre_wpi_without_s_nameless/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_without_s_nameless/lib/error_prone_annotations-2.0.18.jar -d ../dataset/pre_wpi_without_s_nameless/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_without_s_nameless/lib/gson-2.9.0.jar -d ../dataset/pre_wpi_without_s_nameless/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_without_s_nameless/lib/guava-23.0.jar -d ../dataset/pre_wpi_without_s_nameless/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_without_s_nameless/lib/j2objc-annotations-1.1.jar -d ../dataset/pre_wpi_without_s_nameless/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_without_s_nameless/lib/jsr305-1.3.9.jar -d ../dataset/pre_wpi_without_s_nameless/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_without_s_nameless/lib/methanol-1.6.0.jar -d ../dataset/pre_wpi_without_s_nameless/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_without_s_nameless/lib/slf4j-api-2.0.0-alpha7.jar -d ../dataset/pre_wpi_without_s_nameless/classpath
++ find ../dataset/pre_wpi_without_s_nameless/src -name '*.java'
++ BUILD_CMD='../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_wpi_without_s_nameless/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_wpi_without_s_nameless/classes -cp ../dataset/pre_wpi_without_s_nameless/classpath @../dataset/pre_wpi_without_s_nameless/cf_srcs.txt'
++ CLEAN_CMD='rm -rf ../dataset/pre_wpi_without_s_nameless/classes'
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_wpi_without_s_nameless/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_wpi_without_s_nameless/classes -cp ../dataset/pre_wpi_without_s_nameless/classpath @../dataset/pre_wpi_without_s_nameless/cf_srcs.txt
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/FilteredUserListBuilder.java:32: warning: (argument) $$ 4 $$ arg1 $$ Map.put $$ T extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 789, 794 ) $$ incompatible argument for parameter arg1 of Map.put.
+		filters.put(filter, value);
+		                    ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/integrations/DetailedDiscordIntegrationData.java:12: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 375, 395 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.idLong = Integer.parseInt(this.getIdentifier());
+		                                                 ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/integrations/DetailedMinecraftIntegrationData.java:15: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 463, 483 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.uuid = NamelessAPI.websiteUuidToJavaUuid(this.getIdentifier());
+		                                                                ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+3 warnings
++ WPITEMPDIR=../dataset/pre_wpi_without_s_nameless/wpi-out
++ WPIOUTDIR=build/whole-program-inference
++ DEBUG=1
++ rm -rf ../dataset/pre_wpi_without_s_nameless/wpi-out
++ mkdir -p ../dataset/pre_wpi_without_s_nameless/wpi-out
++ rm -f iteration1.diff iteration2.diff iteration3.diff iteration4.diff iteration5.diff
++ WPIITERATIONOUTPUTS=../dataset/pre_wpi_without_s_nameless/wpi-iterations
++ rm -rf ../dataset/pre_wpi_without_s_nameless/wpi-iterations
++ mkdir -p ../dataset/pre_wpi_without_s_nameless/wpi-iterations
++ count=1
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 1'
+entering iteration 1
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_wpi_without_s_nameless/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_wpi_without_s_nameless/classes -cp ../dataset/pre_wpi_without_s_nameless/classpath @../dataset/pre_wpi_without_s_nameless/cf_srcs.txt
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/Group.java:47: warning: (override.param) $$ 7 $$ other $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Group $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Group this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 871, 883 ) $$ Incompatible parameter type for other.
+	public boolean equals(Object other) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Group
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Group this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessAPI.java:154: warning: (argument) $$ 4 $$ username $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull String $$ ( 4437, 4441 ) $$ incompatible argument for parameter username of NamelessUser constructor.
+		return new NamelessUser(this, id, null, false, null, false, -1L);
+		                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessAPI.java:154: warning: (argument) $$ 4 $$ uuid $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull UUID $$ ( 4450, 4454 ) $$ incompatible argument for parameter uuid of NamelessUser constructor.
+		return new NamelessUser(this, id, null, false, null, false, -1L);
+		                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UUID
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessAPI.java:163: warning: (argument) $$ 4 $$ uuid $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull UUID $$ ( 4782, 4786 ) $$ incompatible argument for parameter uuid of NamelessUser constructor.
+		return new NamelessUser(this, -1, username, false, null, false, -1L);
+		                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UUID
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessAPI.java:172: warning: (argument) $$ 4 $$ username $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull String $$ ( 5086, 5090 ) $$ incompatible argument for parameter username of NamelessUser constructor.
+		return new NamelessUser(this, -1, null, true, uuid, false, -1L);
+		                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessAPI.java:201: warning: (argument) $$ 4 $$ username $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull String $$ ( 6251, 6255 ) $$ incompatible argument for parameter username of NamelessUser constructor.
+		return new NamelessUser(this, -1, null, false, null, true, discordId);
+		                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessAPI.java:201: warning: (argument) $$ 4 $$ uuid $$ NamelessUser constructor $$ null (NullType) $$ @Initialized @NonNull UUID $$ ( 6264, 6268 ) $$ incompatible argument for parameter uuid of NamelessUser constructor.
+		return new NamelessUser(this, -1, null, false, null, true, discordId);
+		                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UUID
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/RequestHandler.java:81: warning: (argument) $$ 4 $$ postBody $$ RequestHandler.makeConnection $$ null (NullType) $$ @Initialized @NonNull JsonObject $$ ( 2768, 2772 ) $$ incompatible argument for parameter postBody of RequestHandler.makeConnection.
+		return makeConnection(urlBuilder.toString(), null);
+		                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull JsonObject
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/RequestHandler.java:185: warning: (argument) $$ 4 $$ meta $$ ApiError constructor $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 7394, 7398 ) $$ incompatible argument for parameter meta of ApiError constructor.
+			throw new ApiError(json.get("code").getAsInt(), meta);
+			                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessUser.java:48: warning: (initialization.fields.uninitialized) $$ 1 $$ _cachedUserInfo, _cachedIntegrationData $$ ( 1944, 2533 ) $$ the constructor does not initialize fields: _cachedUserInfo, _cachedIntegrationData
+	NamelessUser( final NamelessAPI api,
+	^
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessUser.java:124: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull JsonObject $$ ( 4211, 4215 ) $$ incompatible types in assignment.
+		this._cachedUserInfo = null;
+		                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull JsonObject
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessUser.java:125: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Map<@Initialized @NonNull String, @Initialized @NonNull DetailedIntegrationData> $$ ( 4249, 4253 ) $$ incompatible types in assignment.
+		this._cachedIntegrationData = null;
+		                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Map<@Initialized @NonNull String, @Initialized @NonNull DetailedIntegrationData>
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessUser.java:130: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull UUID $$ ( 4440, 4444 ) $$ incompatible types in assignment.
+			this.uuid = null;
+			            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UUID
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessUser.java:132: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 4497, 4501 ) $$ incompatible types in assignment.
+			this.username = null;
+			                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessUser.java:473: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull UUID $$ ( 17547, 17551 ) $$ incompatible types in assignment.
+			this.uuid = null;
+			            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UUID
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/Website.java:38: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Update $$ ( 1310, 1314 ) $$ incompatible types in assignment.
+				this.update = null;
+				              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Update
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/Website.java:41: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Update $$ ( 1349, 1353 ) $$ incompatible types in assignment.
+			this.update = null;
+			              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Update
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/FilteredUserListBuilder.java:23: warning: (initialization.fields.uninitialized) $$ 1 $$ filters $$ ( 561, 625 ) $$ the constructor does not initialize fields: filters
+	FilteredUserListBuilder( NamelessAPI api) {
+	^
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/FilteredUserListBuilder.java:32: warning: (argument) $$ 4 $$ arg1 $$ Map.put $$ T extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 789, 794 ) $$ incompatible argument for parameter arg1 of Map.put.
+		filters.put(filter, value);
+		                    ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/FilteredUserListBuilder.java:81: warning: (argument) $$ 4 $$ uuid $$ NamelessUser constructor $$ @Initialized @Nullable UUID $$ @Initialized @NonNull UUID $$ ( 2359, 2363 ) $$ incompatible argument for parameter uuid of NamelessUser constructor.
+			users.add(new NamelessUser(this.api, id, username, true, uuid, false, -1L));
+			                                                         ^
+  found   : @Initialized @Nullable UUID
+  required: @Initialized @NonNull UUID
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessApiBuilder.java:25: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ApiLogger $$ ( 828, 832 ) $$ incompatible types in assignment.
+	private  ApiLogger debugLogger = null;
+	                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ApiLogger
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessApiBuilder.java:59: warning: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ApiLogger $$ ( 1844, 1848 ) $$ incompatible types in assignment.
+			this.debugLogger = null;
+			                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ApiLogger
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/CustomProfileField.java:55: warning: (override.param) $$ 7 $$ other $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull CustomProfileField $$ @Initialized @NonNull boolean equals(@Initialized @NonNull CustomProfileField this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1056, 1068 ) $$ Incompatible parameter type for other.
+	public boolean equals(Object other) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CustomProfileField
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CustomProfileField this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/integrations/DetailedDiscordIntegrationData.java:12: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 375, 395 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.idLong = Integer.parseInt(this.getIdentifier());
+		                                                 ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/integrations/DetailedMinecraftIntegrationData.java:15: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 463, 483 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.uuid = NamelessAPI.websiteUuidToJavaUuid(this.getIdentifier());
+		                                                                ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/LanguageCodeMap.java:38: warning: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1330, 1361 ) $$ incompatible types in return.
+		return NAMELESS_TO_POSIX.get(language);
+		                            ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+26 warnings
++ rm -rf ../dataset/pre_wpi_without_s_nameless/classes
++ mkdir -p ../dataset/pre_wpi_without_s_nameless/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out build/whole-program-inference
+++ true
++ DIFF_RESULT='Only in build/whole-program-inference: butterknife
+Only in build/whole-program-inference: com'
++ [[ 1 == 1 ]]
+++ realpath iteration1.diff
+realpath: iteration1.diff: No such file or directory
++ echo 'putting the diff for iteration 1 into '
+putting the diff for iteration 1 into 
++ echo Only in build/whole-program-inference: butterknife Only in build/whole-program-inference: com
++ [[ Only in build/whole-program-inference: butterknife
+Only in build/whole-program-inference: com != '' ]]
++ rm -rf ../dataset/pre_wpi_without_s_nameless/wpi-out
++ mv build/whole-program-inference ../dataset/pre_wpi_without_s_nameless/wpi-out
++ mkdir -p ../dataset/pre_wpi_without_s_nameless/wpi-iterations/iteration1
++ cp -rf ../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife ../dataset/pre_wpi_without_s_nameless/wpi-out/com ../dataset/pre_wpi_without_s_nameless/wpi-iterations/iteration1
++ echo 'ending iteration 1, time taken: 5 seconds'
+ending iteration 1, time taken: 5 seconds
++ echo
+
++ (( count++ ))
++ '[' 2 -eq 11 ']'
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 2'
+entering iteration 2
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_wpi_without_s_nameless/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_wpi_without_s_nameless/classes -cp ../dataset/pre_wpi_without_s_nameless/classpath @../dataset/pre_wpi_without_s_nameless/cf_srcs.txt
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 3,col 1): Imported type not found: butterknife.OnTouch
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 4,col 1): Imported type not found: butterknife.internal.ListenerClass
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 5,col 1): Imported type not found: butterknife.internal.ListenerMethod
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 7,col 1): Imported type not found: com.squareup.javapoet.AnnotationSpec
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 8,col 1): Imported type not found: com.squareup.javapoet.ClassName
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 9,col 1): Imported type not found: com.squareup.javapoet.CodeBlock
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 10,col 1): Imported type not found: com.squareup.javapoet.JavaFile
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 11,col 1): Imported type not found: com.squareup.javapoet.MethodSpec
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 12,col 1): Imported type not found: com.squareup.javapoet.ParameterizedTypeName
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 13,col 1): Imported type not found: com.squareup.javapoet.TypeName
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 14,col 1): Imported type not found: com.squareup.javapoet.TypeSpec
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 15,col 1): Imported type not found: com.squareup.javapoet.WildcardTypeName
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Enclosing type of static field ACTIVITY_TYPE not found: butterknife.compiler.ButterKnifeProcessor
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 29,col 1): Enclosing type of static field DIALOG_TYPE not found: butterknife.compiler.ButterKnifeProcessor
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Enclosing type of static field VIEW_TYPE not found: butterknife.compiler.ButterKnifeProcessor
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Enclosing type of static field isSubtypeOfType not found: butterknife.compiler.ButterKnifeProcessor
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Enclosing type of static field getPackage not found: com.google.auto.common.MoreElements
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 1,col 1): Package not found: butterknife.compiler
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/BindingSet-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 41,col 1): Type not found: butterknife.compiler.BindingSet
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 3,col 1): Imported type not found: butterknife.BindAnim
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 4,col 1): Imported type not found: butterknife.BindArray
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 5,col 1): Imported type not found: butterknife.BindBitmap
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 6,col 1): Imported type not found: butterknife.BindBool
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 7,col 1): Imported type not found: butterknife.BindColor
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 8,col 1): Imported type not found: butterknife.BindDimen
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 9,col 1): Imported type not found: butterknife.BindDrawable
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 10,col 1): Imported type not found: butterknife.BindFloat
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 11,col 1): Imported type not found: butterknife.BindFont
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 12,col 1): Imported type not found: butterknife.BindInt
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 13,col 1): Imported type not found: butterknife.BindString
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 14,col 1): Imported type not found: butterknife.BindView
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 15,col 1): Imported type not found: butterknife.BindViews
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Imported type not found: butterknife.OnCheckedChanged
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 17,col 1): Imported type not found: butterknife.OnClick
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Imported type not found: butterknife.OnEditorAction
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 19,col 1): Imported type not found: butterknife.OnFocusChange
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Imported type not found: butterknife.OnItemClick
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Imported type not found: butterknife.OnItemLongClick
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Imported type not found: butterknife.OnItemSelected
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Imported type not found: butterknife.OnLongClick
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 24,col 1): Imported type not found: butterknife.OnPageChange
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 25,col 1): Imported type not found: butterknife.OnTextChanged
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 27,col 1): Imported type not found: butterknife.Optional
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Imported type not found: butterknife.compiler.FieldTypefaceBinding.TypefaceStyles
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Imported type not found: com.google.auto.common.SuperficialValidation
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Imported type not found: com.google.auto.service.AutoService
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 77,col 1): Enclosing type of static field NO_RES_ID not found: butterknife.internal.Constants
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ButterKnifeProcessor-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 84,col 1): Type not found: butterknife.compiler.ButterKnifeProcessor
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldAnimationBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 4,col 1): Enclosing type of static field ANIMATION_UTILS not found: butterknife.compiler.BindingSet
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldAnimationBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 6,col 1): Type not found: butterknife.compiler.FieldAnimationBinding
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldCollectionViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 7,col 1): Enclosing type of static field UTILS not found: butterknife.compiler.BindingSet
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldCollectionViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 8,col 1): Enclosing type of static field requiresCast not found: butterknife.compiler.BindingSet
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldCollectionViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 10,col 1): Type not found: butterknife.compiler.FieldCollectionViewBinding
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 4,col 1): Enclosing type of static field CONTEXT_COMPAT not found: butterknife.compiler.BindingSet
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 5,col 1): Enclosing type of static field CONTEXT_COMPAT_ANDROIDX not found: butterknife.compiler.BindingSet
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldDrawableBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 9,col 1): Type not found: butterknife.compiler.FieldDrawableBinding
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 11,col 1): Type not found: butterknife.compiler.FieldResourceBinding
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 3,col 1): Imported type not found: android.support.annotation.Nullable
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldTypefaceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 7,col 1): Type not found: butterknife.compiler.FieldTypefaceBinding
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/FieldViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 7,col 1): Type not found: butterknife.compiler.FieldViewBinding
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/Id-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 10,col 1): Type not found: butterknife.compiler.Id
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/MemberViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 6,col 1): Type not found: butterknife.compiler.MemberViewBinding
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/MethodViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 7,col 1): Type not found: butterknife.compiler.MethodViewBinding
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/Parameter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 8,col 1): Type not found: butterknife.compiler.Parameter
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ResourceBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 5,col 1): Type not found: butterknife.compiler.ResourceBinding
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_without_s_nameless/wpi-out/butterknife/compiler/ViewBinding-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 12,col 1): Type not found: butterknife.compiler.ViewBinding
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessUser.java:204: warning: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 6442, 6494 ) $$ incompatible types in return.
+		return LanguageCodeMap.getLanguagePosix(this.getLanguage());
+		                                       ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/Website.java:79: warning: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 2142, 2189 ) $$ incompatible types in return.
+		return LanguageCodeMap.getLanguagePosix(this.language);
+		                                       ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/FilteredUserListBuilder.java:32: warning: (argument) $$ 4 $$ arg1 $$ Map.put $$ T extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 789, 794 ) $$ incompatible argument for parameter arg1 of Map.put.
+		filters.put(filter, value);
+		                    ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/NamelessApiBuilder.java:172: warning: (argument) $$ 4 $$ debugLogger $$ RequestHandler constructor $$ @Initialized @Nullable ApiLogger $$ @Initialized @NonNull ApiLogger $$ ( 4600, 4616 ) $$ incompatible argument for parameter debugLogger of RequestHandler constructor.
+						this.debugLogger,
+						    ^
+  found   : @Initialized @Nullable ApiLogger
+  required: @Initialized @NonNull ApiLogger
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/integrations/DetailedDiscordIntegrationData.java:12: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 375, 395 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.idLong = Integer.parseInt(this.getIdentifier());
+		                                                 ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/integrations/DetailedMinecraftIntegrationData.java:15: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 463, 483 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.uuid = NamelessAPI.websiteUuidToJavaUuid(this.getIdentifier());
+		                                                                ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/ApiError.java:59: warning: (assignment) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 2499, 2503 ) $$ incompatible types in assignment.
+		this.meta = meta;
+		            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+73 warnings
++ rm -rf ../dataset/pre_wpi_without_s_nameless/classes
++ mkdir -p ../dataset/pre_wpi_without_s_nameless/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out build/whole-program-inference
+++ true
++ DIFF_RESULT='Only in ../dataset/pre_wpi_without_s_nameless/wpi-out: butterknife
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+87c87
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.NullnessChecker.ajava
+85c85
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String meta;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull String meta;
+87c87
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/LanguageEntity-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/LanguageEntity-org.checkerframework.checker.nullness.NullnessChecker.ajava
+13c13
+<     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getLanguagePosix() throws NamelessException;
+---
+>     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String getLanguagePosix() throws NamelessException;
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+56c56
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.NullnessChecker.ajava
+56c56
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+209c209
+<     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull NamelessUser this) throws NamelessException {
+---
+>     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull NamelessUser this) throws NamelessException {
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava
+44c44
+<     RequestHandler(final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull URL apiUrl, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Methanol httpClient, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Gson gson, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ApiLogger debugLogger, final  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int responseLengthLimit) {
+---
+>     RequestHandler(final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull URL apiUrl, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Methanol httpClient, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Gson gson, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable ApiLogger debugLogger, final  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int responseLengthLimit) {
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+49c49
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+76c76
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+103c103
+<         @org.checkerframework.dataflow.qual.Impure
+---
+>         @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.NullnessChecker.ajava
+49c49
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+76,77c76,77
+<     @org.checkerframework.dataflow.qual.Impure
+<     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Website this) {
+---
+>     @org.checkerframework.dataflow.qual.Pure
+>     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Website this) {
+103c103
+<         @org.checkerframework.dataflow.qual.Impure
+---
+>         @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+8c8
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+8c8
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+16c16
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava
+16c16
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+11c11
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava
+11c11
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree'
++ [[ 1 == 1 ]]
+++ realpath iteration2.diff
+realpath: iteration2.diff: No such file or directory
++ echo 'putting the diff for iteration 2 into '
+putting the diff for iteration 2 into 
++ echo Only in ../dataset/pre_wpi_without_s_nameless/wpi-out: butterknife diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 87c87 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.NullnessChecker.ajava 85c85 '<' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String 'meta;' --- '>' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull String 'meta;' 87c87 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/LanguageEntity-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/LanguageEntity-org.checkerframework.checker.nullness.NullnessChecker.ajava 13c13 '<' @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String 'getLanguagePosix()' throws 'NamelessException;' --- '>' @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String 'getLanguagePosix()' throws 'NamelessException;' diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 56c56 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.NullnessChecker.ajava 56c56 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree 209c209 '<' public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String 'getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull NamelessUser 'this)' throws NamelessException '{' --- '>' public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String 'getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull NamelessUser 'this)' throws NamelessException '{' diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava 44c44 '<' 'RequestHandler(final' @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull URL apiUrl, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Methanol httpClient, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Gson gson, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ApiLogger debugLogger, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int 'responseLengthLimit)' '{' --- '>' 'RequestHandler(final' @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull URL apiUrl, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Methanol httpClient, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Gson gson, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable ApiLogger debugLogger, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int 'responseLengthLimit)' '{' diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 49c49 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 76c76 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 103c103 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.NullnessChecker.ajava 49c49 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 76,77c76,77 '<' @org.checkerframework.dataflow.qual.Impure '<' public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String 'getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull Website 'this)' '{' --- '>' @org.checkerframework.dataflow.qual.Pure '>' public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String 'getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull Website 'this)' '{' 103c103 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 8c8 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.NullnessChecker.ajava 8c8 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 16c16 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava 16c16 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava 10c10 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 11c11 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava 11c11 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.SideEffectFree
++ [[ Only in ../dataset/pre_wpi_without_s_nameless/wpi-out: butterknife
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+87c87
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.NullnessChecker.ajava
+85c85
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String meta;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull String meta;
+87c87
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/LanguageEntity-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/LanguageEntity-org.checkerframework.checker.nullness.NullnessChecker.ajava
+13c13
+<     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getLanguagePosix() throws NamelessException;
+---
+>     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String getLanguagePosix() throws NamelessException;
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+56c56
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/NamelessUser-org.checkerframework.checker.nullness.NullnessChecker.ajava
+56c56
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+209c209
+<     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull NamelessUser this) throws NamelessException {
+---
+>     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull NamelessUser this) throws NamelessException {
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava
+44c44
+<     RequestHandler(final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull URL apiUrl, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Methanol httpClient, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Gson gson, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ApiLogger debugLogger, final  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int responseLengthLimit) {
+---
+>     RequestHandler(final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull URL apiUrl, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Methanol httpClient, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Gson gson, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable ApiLogger debugLogger, final  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int responseLengthLimit) {
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+49c49
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+76c76
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+103c103
+<         @org.checkerframework.dataflow.qual.Impure
+---
+>         @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/Website-org.checkerframework.checker.nullness.NullnessChecker.ajava
+49c49
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.Pure
+76,77c76,77
+<     @org.checkerframework.dataflow.qual.Impure
+<     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Website this) {
+---
+>     @org.checkerframework.dataflow.qual.Pure
+>     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String getLanguagePosix(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Website this) {
+103c103
+<         @org.checkerframework.dataflow.qual.Impure
+---
+>         @org.checkerframework.dataflow.qual.Pure
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AccountAlreadyActivatedException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/AlreadyHasOpenReportException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+8c8
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ApiDisabledException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+8c8
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotReportSelfException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/CannotSendEmailException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/EmailAlreadyUsedException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationIdAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/IntegrationUsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidEmailAddressException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidUsernameException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/InvalidValidateCodeException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/ReportUserBannedException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/exception/UsernameAlreadyExistsException-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+16c16
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DetailedIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava
+16c16
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/DiscordIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava
+10c10
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
+11c11
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree
+diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/integrations/MinecraftIntegrationData-org.checkerframework.checker.nullness.NullnessChecker.ajava
+11c11
+<     @org.checkerframework.dataflow.qual.Impure
+---
+>     @org.checkerframework.dataflow.qual.SideEffectFree != '' ]]
++ rm -rf ../dataset/pre_wpi_without_s_nameless/wpi-out
++ mv build/whole-program-inference ../dataset/pre_wpi_without_s_nameless/wpi-out
++ mkdir -p ../dataset/pre_wpi_without_s_nameless/wpi-iterations/iteration2
++ cp -rf ../dataset/pre_wpi_without_s_nameless/wpi-out/com ../dataset/pre_wpi_without_s_nameless/wpi-iterations/iteration2
++ echo 'ending iteration 2, time taken: 5 seconds'
+ending iteration 2, time taken: 5 seconds
++ echo
+
++ (( count++ ))
++ '[' 3 -eq 11 ']'
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 3'
+entering iteration 3
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_wpi_without_s_nameless/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_wpi_without_s_nameless/classes -cp ../dataset/pre_wpi_without_s_nameless/classpath @../dataset/pre_wpi_without_s_nameless/cf_srcs.txt
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/RequestHandler.java:47: warning: (assignment) $$ 2 $$ @Initialized @Nullable ApiLogger $$ @Initialized @NonNull ApiLogger $$ ( 1564, 1575 ) $$ incompatible types in assignment.
+		this.debugLogger = debugLogger;
+		                   ^
+  found   : @Initialized @Nullable ApiLogger
+  required: @Initialized @NonNull ApiLogger
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/FilteredUserListBuilder.java:32: warning: (argument) $$ 4 $$ arg1 $$ Map.put $$ T extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 789, 794 ) $$ incompatible argument for parameter arg1 of Map.put.
+		filters.put(filter, value);
+		                    ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/integrations/DetailedDiscordIntegrationData.java:12: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 375, 395 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.idLong = Integer.parseInt(this.getIdentifier());
+		                                                 ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/integrations/DetailedMinecraftIntegrationData.java:15: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 463, 483 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.uuid = NamelessAPI.websiteUuidToJavaUuid(this.getIdentifier());
+		                                                                ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+4 warnings
++ rm -rf ../dataset/pre_wpi_without_s_nameless/classes
++ mkdir -p ../dataset/pre_wpi_without_s_nameless/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out build/whole-program-inference
+++ true
++ DIFF_RESULT='diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava
+37c37
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ApiLogger debugLogger;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull ApiLogger debugLogger;'
++ [[ 1 == 1 ]]
+++ realpath iteration3.diff
+realpath: iteration3.diff: No such file or directory
++ echo 'putting the diff for iteration 3 into '
+putting the diff for iteration 3 into 
++ echo diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava 37c37 '<' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ApiLogger 'debugLogger;' --- '>' private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull ApiLogger 'debugLogger;'
++ [[ diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/com/namelessmc/java_api/RequestHandler-org.checkerframework.checker.nullness.NullnessChecker.ajava
+37c37
+<     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ApiLogger debugLogger;
+---
+>     private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.MonotonicNonNull ApiLogger debugLogger; != '' ]]
++ rm -rf ../dataset/pre_wpi_without_s_nameless/wpi-out
++ mv build/whole-program-inference ../dataset/pre_wpi_without_s_nameless/wpi-out
++ mkdir -p ../dataset/pre_wpi_without_s_nameless/wpi-iterations/iteration3
++ cp -rf ../dataset/pre_wpi_without_s_nameless/wpi-out/com ../dataset/pre_wpi_without_s_nameless/wpi-iterations/iteration3
++ echo 'ending iteration 3, time taken: 6 seconds'
+ending iteration 3, time taken: 6 seconds
++ echo
+
++ (( count++ ))
++ '[' 4 -eq 11 ']'
++ :
++ [[ 1 == 1 ]]
++ SECONDS=0
++ echo 'entering iteration 4'
+entering iteration 4
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_wpi_without_s_nameless/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_wpi_without_s_nameless/classes -cp ../dataset/pre_wpi_without_s_nameless/classpath @../dataset/pre_wpi_without_s_nameless/cf_srcs.txt
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/FilteredUserListBuilder.java:32: warning: (argument) $$ 4 $$ arg1 $$ Map.put $$ T extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 789, 794 ) $$ incompatible argument for parameter arg1 of Map.put.
+		filters.put(filter, value);
+		                    ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/integrations/DetailedDiscordIntegrationData.java:12: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 375, 395 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.idLong = Integer.parseInt(this.getIdentifier());
+		                                                 ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedDiscordIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+../dataset/pre_wpi_without_s_nameless/src/com/namelessmc/java_api/integrations/DetailedMinecraftIntegrationData.java:15: warning: (method.invocation) $$ 3 $$ getIdentifier() $$ @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData $$ @Initialized @NonNull IntegrationData $$ ( 463, 483 ) $$ call to getIdentifier() not allowed on the given receiver.
+		this.uuid = NamelessAPI.websiteUuidToJavaUuid(this.getIdentifier());
+		                                                                ^
+  found   : @UnderInitialization(com.namelessmc.java_api.integrations.DetailedIntegrationData.class) @NonNull IntegrationData
+  required: @Initialized @NonNull IntegrationData
+3 warnings
++ rm -rf ../dataset/pre_wpi_without_s_nameless/classes
++ mkdir -p ../dataset/pre_wpi_without_s_nameless/wpi-out
++ mkdir -p build/whole-program-inference
+++ diff -r ../dataset/pre_wpi_without_s_nameless/wpi-out build/whole-program-inference
++ DIFF_RESULT=
++ [[ 1 == 1 ]]
+++ realpath iteration4.diff
+realpath: iteration4.diff: No such file or directory
++ echo 'putting the diff for iteration 4 into '
+putting the diff for iteration 4 into 
++ echo
++ [[ '' != '' ]]
++ break

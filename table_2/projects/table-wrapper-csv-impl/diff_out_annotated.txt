@@ -1,0 +1,213 @@
+diff --git a/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java b/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java
+index 4f31ac8..16123f9 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java
++++ b/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java
+@@ -1,12 +1,20 @@
+ package org.spacious_team.table_wrapper.csv;
+ public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex, CsvTableRow> {
+     public static final CsvCellDataAccessObject INSTANCE = new CsvCellDataAccessObject();
+//Others: setter and getter methods
+-    @Setter
+-    @Getter
+-    public static DateTimeFormatter dateTimeFormatter = null;
+//C4: mark elements as final
++    private final  DateTimeFormatter dateTimeFormatter;
+//C4: mark elements as final
++    private final  ZoneId defaultZone;
+//C7: Method/Constructor definition or Override
++    public CsvCellDataAccessObject() {
++        this(null, null);
++    }
+//C7: Method/Constructor definition or Override
++    public CsvCellDataAccessObject( DateTimeFormatter dateTimeFormatter,
++                                    ZoneId defaultZone) {
+//C3: Field Initialization
++        this.dateTimeFormatter = dateTimeFormatter;
+//C3: Field Initialization
++        this.defaultZone = defaultZone;
++    }
+     @Override
+     public  RowAndIndex getCell(CsvTableRow row, Integer cellIndex) {
+//C1: Null Check Introduction
+-        return row.getCell(cellIndex).getRowAndIndex();
++         CsvTableCell cell = row.getCell(cellIndex);
++        return (cell == null) ? null : cell.getRowAndIndex();
+     }
+     @Override
+     public  String getValue(RowAndIndex cell) {
+@@ -15,6 +23,7 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex
+     @Override
+     public Instant getInstantValue(RowAndIndex cell) {
+          String value = getValue(cell);
+//C2: Precondition enforcement (requireNonNull())
++        Objects.requireNonNull(value, "Not an instant");
+//C1: Null Check Introduction
+         DateTimeFormatter formatter = (dateTimeFormatter != null) ?
+                 dateTimeFormatter :
+                 DateTimeFormatParser.getFor(value);
+@@ -22,7 +31,7 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex
+                 LocalDate.parse(value, formatter).atTime(12, 0) : 
+                 LocalDateTime.parse(value, formatter);
+         return dateTime
+//C1: Null Check Introduction
+-                .atZone(ZoneOffset.systemDefault())
++                .atZone(defaultZone == null ? ZoneId.systemDefault() : defaultZone)
+                 .toInstant();
+     }
+ }
+diff --git a/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java b/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java
+index 1af395f..b383f46 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java
++++ b/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java
+@@ -1,12 +1,14 @@
+ package org.spacious_team.table_wrapper.csv;
+ @ToString(callSuper = true)
+ public class CsvTable extends AbstractTable<CsvTableRow> {
+//C7: Method/Constructor definition or Override
++    @Setter
+     @Getter(AccessLevel.PROTECTED)
+-    private final CellDataAccessObject<?, CsvTableRow> cellDataAccessObject = CsvCellDataAccessObject.INSTANCE;
+//C5: Method signature modification
+-    protected CsvTable(AbstractReportPage<CsvTableRow> reportPage,
+//C3: Field Initialization
++    private CellDataAccessObject<?, CsvTableRow> cellDataAccessObject = CsvCellDataAccessObject.INSTANCE;
++    protected <T extends Enum<T> & TableHeaderColumn>
++    CsvTable(AbstractReportPage<CsvTableRow> reportPage,
+              String tableName,
+              TableCellRange tableRange,
+-                       Class<? extends TableColumnDescription> headerDescription,
++             Class<T> headerDescription,
+              int headersRowCount) {
+         super(reportPage, tableName, tableRange, headerDescription, headersRowCount);
+     }
+diff --git a/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java b/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java
+index 9b584f1..ea062e4 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java
++++ b/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java
+@@ -6,8 +6,14 @@ public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
+     public static CsvTableCell of(String[] row, int columnIndex) {
+         return new CsvTableCell(new RowAndIndex(row, columnIndex));
+     }
+//C7: Method/Constructor definition or Override
++    public static CsvTableCell of(String[] row, int columnIndex, CsvCellDataAccessObject dao) {
++        return new CsvTableCell(new RowAndIndex(row, columnIndex), dao);
++    }
+     public CsvTableCell(RowAndIndex rowAndIndex) {
+-        super(rowAndIndex, CsvCellDataAccessObject.INSTANCE);
++        this(rowAndIndex, CsvCellDataAccessObject.INSTANCE);
++    }
+//C7: Method/Constructor definition or Override
++    public CsvTableCell(RowAndIndex rowAndIndex, CsvCellDataAccessObject dao) {
++        super(rowAndIndex, dao);
+         this.rowAndIndex = rowAndIndex;
+     }
+     @Override
+diff --git a/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java b/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java
+index 0fa24cf..bffa858 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java
++++ b/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java
+@@ -4,10 +4,11 @@ public class CsvTableFactory extends AbstractTableFactory<CsvReportPage> {
+         super(CsvReportPage.class);
+     }
+     @Override
+//C5: Method signature modification
+-    public Table create(ReportPage reportPage,
++    public <T extends Enum<T> & TableHeaderColumn>
++    Table create(ReportPage reportPage,
+                  String tableName,
+                  TableCellRange tableRange,
+-                        Class<? extends TableColumnDescription> headerDescription,
+//C5: Method signature modification
++                 Class<T> headerDescription,
+                  int headersRowCount) {
+         return new CsvTable(
+                 cast(reportPage),
+diff --git a/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableHelper.java b/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableHelper.java
+index 0798939..d80a576 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableHelper.java
++++ b/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableHelper.java
+@@ -1,5 +1,6 @@
+ package org.spacious_team.table_wrapper.csv;
+-class CsvTableHelper {
++@NoArgsConstructor(access = PRIVATE)
++final class CsvTableHelper {
+     static TableCellAddress find(String[][] table, Object expected,
+                                  int startRow, int endRow,
+                                  int startColumn, int endColumn) {
+@@ -24,7 +25,7 @@ class CsvTableHelper {
+         for (int i = startColumn; i < endColumn; i++) {
+             String cell = row[i];
+             if (predicate.test(cell)) {
+//C9: Return value modification
+-                return new TableCellAddress(rowNum, i);
++                return TableCellAddress.of(rowNum, i);
+             }
+         }
+         return NOT_FOUND;
+diff --git a/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java b/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java
+index 6e843d1..c9e8678 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java
++++ b/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java
+@@ -1,4 +1,5 @@
+ package org.spacious_team.table_wrapper.csv;
++@EqualsAndHashCode(of ={"row", "rowNum"}, callSuper = false)
+ public class CsvTableRow extends AbstractReportPageRow {
+     private final String[] row;
+     @Getter
+@@ -35,7 +36,7 @@ public class CsvTableRow extends AbstractReportPageRow {
+     }
+     @Override
+     public Iterator< TableCell> iterator() {
+//Others: change the type of a list
+-        return new Iterator<>() {
++        return new Iterator< TableCell>() {
+             private int cellIndex = 0;
+             @Override
+             public boolean hasNext() {
+@@ -43,8 +44,11 @@ public class CsvTableRow extends AbstractReportPageRow {
+             }
+             @Override
+             public  TableCell next() {
+//Others: throw exception if there is not next item
++                if (hasNext()) {
+                     return getCell(cellIndex++);
+                 }
++                throw new NoSuchElementException();
++            }
+         };
+     }
+ }
+diff --git a/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java b/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java
+index cd5378a..573ca9a 100644
+--- a/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java
++++ b/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java
+@@ -1,5 +1,6 @@
+ package org.spacious_team.table_wrapper.csv;
+-class DateTimeFormatParser {
+//Others: dynamic constructor
++@NoArgsConstructor(access = PRIVATE)
+//C4: mark elements as final
++final class DateTimeFormatParser {
+     private static final Map<Integer, DateTimeFormatter> dateTimeFormatters = new ConcurrentHashMap<>();
+     static DateTimeFormatter getFor(String dateTime) {
+         return (dateTime.length() == 10) ?
+@@ -20,7 +21,8 @@ class DateTimeFormatParser {
+         return getDateFormatter(isYearAtFirst, dateSplitter);
+     }
+     static DateTimeFormatter getForDateTime(String dateTime) {
+//Not a real change
+-        boolean isDateAtFirst, isYearAtFirst;
++        boolean isDateAtFirst;
++        boolean isYearAtFirst;
+         char dateSplitter;
+         if (dateTime.charAt(2) == ':') {
+             isDateAtFirst = false;
+diff --git a/src/main/java/org/spacious_team/table_wrapper/csv/package-info.java b/src/main/java/org/spacious_team/table_wrapper/csv/package-info.java
+new file mode 100644
+index 0000000..5c3f752
+--- /dev/null
++++ b/src/main/java/org/spacious_team/table_wrapper/csv/package-info.java
+@@ -0,0 +1,2 @@
++@DefaultQualifier(NonNull.class)
++package org.spacious_team.table_wrapper.csv;
+

@@ -1,0 +1,38 @@
+../dataset/table-wrapper-csv-impl_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:36: error: (assignment) $$ 2 $$ @Initialized @Nullable String $$ @UnknownInitialization @NonNull String $$ ( 1494, 1524 ) $$ incompatible types in assignment.
+        String cellValue = getCellValue(row, columnIndex);
+                                       ^
+  found   : @Initialized @Nullable String
+  required: @UnknownInitialization @NonNull String
+../dataset/table-wrapper-csv-impl_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:49: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TableCell $$ ( 1803, 1807 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TableCell
+../dataset/table-wrapper-csv-impl_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:75: error: (override.param) $$ 7 $$ value $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull CsvTableRow $$ @Initialized @NonNull boolean rowContains(@Initialized @NonNull CsvTableRow this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull ReportPageRow $$ @Initialized @NonNull boolean rowContains(@Initialized @NonNull ReportPageRow this, @Initialized @Nullable Object p0) $$ ( 2345, 2357 ) $$ Incompatible parameter type for value.
+    public boolean rowContains(Object value) {
+                                      ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CsvTableRow
+    @Initialized @NonNull boolean rowContains(@Initialized @NonNull CsvTableRow this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull ReportPageRow
+    @Initialized @NonNull boolean rowContains(@Initialized @NonNull ReportPageRow this, @Initialized @Nullable Object p0)
+../dataset/table-wrapper-csv-impl_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:92: error: (override.param) $$ 7 $$ cellValuePredicate $$ @Initialized @Nullable Predicate<@Initialized @NonNull Object> $$ @Initialized @NonNull Predicate<@Initialized @Nullable Object> $$ @Initialized @NonNull CsvReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @Nullable Predicate<@Initialized @NonNull Object> p4) $$ @Initialized @NonNull ReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4) $$ ( 3629, 3675 ) $$ Incompatible parameter type for cellValuePredicate.
+    public TableCellAddress find(int startRow, int endRow, int startColumn, int endColumn, @Nullable Predicate<Object> cellValuePredicate) {
+                                                                                                                       ^
+  found   : @Initialized @Nullable Predicate<@Initialized @NonNull Object>
+  required: @Initialized @NonNull Predicate<@Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull CsvReportPage
+    @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @Nullable Predicate<@Initialized @NonNull Object> p4)
+  cannot override method in @Initialized @NonNull ReportPage
+    @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4)
+../dataset/table-wrapper-csv-impl_post_nullgtn/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:93: error: (methodref.receiver.bound) $$ 5 $$ @Initialized @Nullable Predicate<@Initialized @NonNull Object> $$ @Initialized @NonNull Predicate<@Initialized @NonNull Object> $$ @Initialized @Nullable Predicate<@Initialized @NonNull Object> $$ @Initialized @Nullable Predicate<@Initialized @NonNull Object> $$ @Initialized @NonNull boolean test(@Initialized @NonNull Predicate<@Initialized @NonNull Object> this, @Initialized @NonNull Object p0) $$ ( 3762, 3786 ) $$ Incompatible receiver type
+        return CsvTableHelper.find(rows, startRow, endRow, startColumn, endColumn, cellValuePredicate::test);
+                                                                                   ^
+  found   : @Initialized @Nullable Predicate<@Initialized @NonNull Object>
+  required: @Initialized @NonNull Predicate<@Initialized @NonNull Object>
+  Consequence: method
+    @Initialized @Nullable Predicate<@Initialized @NonNull Object>
+  is not a valid method reference for method in @Initialized @Nullable Predicate<@Initialized @NonNull Object>
+    @Initialized @NonNull boolean test(@Initialized @NonNull Predicate<@Initialized @NonNull Object> this, @Initialized @NonNull Object p0)
+5 errors

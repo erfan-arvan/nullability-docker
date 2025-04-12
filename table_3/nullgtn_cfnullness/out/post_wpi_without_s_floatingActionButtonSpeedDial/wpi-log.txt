@@ -1,0 +1,1546 @@
++ PROJECT_PATH=../dataset/post_wpi_without_s_floatingActionButtonSpeedDial
++ CF_BINARY=../scripts/tools/checker-framework-3.34.0/checker/bin/javac
++ COMPILED_CLASSES_FOLDER=../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classes
++ LIB_FOLDER=../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/lib
++ SRC_FILES=../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/cf_srcs.txt
++ CLASSPATH_DIR=../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classpath
++ echo 'CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac'
+CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac
++ unzip_jars ../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/lib ../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classpath
++ local lib_folder=../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/lib
++ local extract_to=../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classpath
++ '[' -d ../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classpath ']'
++ rm -rf ../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classpath
++ mkdir -p ../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar -d ../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/classpath
+warning [../dataset/pre_wpi_with_s_floatingActionButtonSpeedDial/lib/res.jar]:  zipfile is empty
++ true
++ find ../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src -name '*.java'
++ BUILD_CMD='../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classes -cp ../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classpath @../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/cf_srcs.txt'
++ CLEAN_CMD='rm -rf ../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classes'
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classes -cp ../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/classpath @../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/cf_srcs.txt
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:19: error: package android.content does not exist
+import android.content.Context;
+                      ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:20: error: package android.content.res does not exist
+import android.content.res.TypedArray;
+                          ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:21: error: package android.graphics does not exist
+import android.graphics.Rect;
+                       ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:22: error: package android.graphics.drawable does not exist
+import android.graphics.drawable.Drawable;
+                                ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:23: error: package android.os does not exist
+import android.os.Build;
+                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:24: error: package android.os does not exist
+import android.os.Bundle;
+                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:25: error: package android.os does not exist
+import android.os.Parcelable;
+                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:26: error: package android.support.annotation does not exist
+import android.support.annotation.DrawableRes;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:27: error: package android.support.annotation does not exist
+import android.support.annotation.IdRes;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:28: error: package android.support.annotation does not exist
+import android.support.annotation.IntDef;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:29: error: package android.support.annotation does not exist
+import android.support.annotation.NonNull;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:30: error: package android.support.annotation does not exist
+import android.support.annotation.Nullable;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:31: error: package android.support.annotation does not exist
+import android.support.annotation.VisibleForTesting;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:32: error: package android.support.design.widget does not exist
+import android.support.design.widget.AppBarLayout;
+                                    ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:33: error: package android.support.design.widget does not exist
+import android.support.design.widget.BottomSheetBehavior;
+                                    ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:34: error: package android.support.design.widget does not exist
+import android.support.design.widget.CoordinatorLayout;
+                                    ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:35: error: package android.support.design.widget does not exist
+import android.support.design.widget.FloatingActionButton;
+                                    ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:36: error: package android.support.design.widget.FloatingActionButton does not exist
+import android.support.design.widget.FloatingActionButton.OnVisibilityChangedListener;
+                                                         ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:37: error: package android.support.v4.view does not exist
+import android.support.v4.view.ViewCompat;
+                              ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:38: error: package android.support.v7.content.res does not exist
+import android.support.v7.content.res.AppCompatResources;
+                                     ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:39: error: package android.support.v7.widget does not exist
+import android.support.v7.widget.CardView;
+                                ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:40: error: package android.support.v7.widget does not exist
+import android.support.v7.widget.RecyclerView;
+                                ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:41: error: package android.util does not exist
+import android.util.AttributeSet;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:42: error: package android.util does not exist
+import android.util.Log;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:43: error: package android.view does not exist
+import android.view.ContextThemeWrapper;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:44: error: package android.view does not exist
+import android.view.Gravity;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:45: error: package android.view does not exist
+import android.view.View;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:46: error: package android.view does not exist
+import android.view.ViewGroup;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:47: error: package android.view.animation does not exist
+import android.view.animation.Animation;
+                             ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:48: error: package android.view.animation does not exist
+import android.view.animation.AnimationUtils;
+                             ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:49: error: package android.widget does not exist
+import android.widget.LinearLayout;
+                     ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:19: error: package android.content does not exist
+import android.content.Context;
+                      ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:20: error: package android.graphics does not exist
+import android.graphics.Bitmap;
+                       ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:21: error: package android.graphics.drawable does not exist
+import android.graphics.drawable.Drawable;
+                                ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:22: error: package android.os does not exist
+import android.os.Parcel;
+                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:23: error: package android.os does not exist
+import android.os.Parcelable;
+                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:24: error: package android.support.annotation does not exist
+import android.support.annotation.ColorInt;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:25: error: package android.support.annotation does not exist
+import android.support.annotation.DrawableRes;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:26: error: package android.support.annotation does not exist
+import android.support.annotation.IdRes;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:27: error: package android.support.annotation does not exist
+import android.support.annotation.Nullable;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:28: error: package android.support.annotation does not exist
+import android.support.annotation.StyleRes;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:29: error: package android.support.design.widget does not exist
+import android.support.design.widget.FloatingActionButton;
+                                    ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:30: error: package android.support.v7.content.res does not exist
+import android.support.v7.content.res.AppCompatResources;
+                                     ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:32: error: package android.support.design.widget does not exist
+import static android.support.design.widget.FloatingActionButton.SIZE_AUTO;
+                                           ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:32: error: static import only from classes and interfaces
+import static android.support.design.widget.FloatingActionButton.SIZE_AUTO;
+^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:65: error: cannot find symbol
+public class SpeedDialView extends LinearLayout implements CoordinatorLayout.AttachedBehavior {
+                                   ^
+  symbol: class LinearLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:65: error: package CoordinatorLayout does not exist
+public class SpeedDialView extends LinearLayout implements CoordinatorLayout.AttachedBehavior {
+                                                                            ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:35: error: cannot find symbol
+public class SpeedDialActionItem implements Parcelable {
+                                            ^
+  symbol: class Parcelable
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:684: error: cannot find symbol
+    @IntDef({TOP, BOTTOM, LEFT, RIGHT})
+     ^
+  symbol:   class IntDef
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:19: error: package android.content does not exist
+import android.content.Context;
+                      ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:20: error: package android.content.res does not exist
+import android.content.res.ColorStateList;
+                          ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:21: error: package android.content.res does not exist
+import android.content.res.TypedArray;
+                          ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:22: error: package android.graphics.drawable does not exist
+import android.graphics.drawable.Drawable;
+                                ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:23: error: package android.support.annotation does not exist
+import android.support.annotation.ColorInt;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:24: error: package android.support.annotation does not exist
+import android.support.annotation.DrawableRes;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:25: error: package android.support.annotation does not exist
+import android.support.annotation.Nullable;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:26: error: package android.support.design.widget does not exist
+import android.support.design.widget.FloatingActionButton;
+                                    ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:27: error: package android.support.v4.content.res does not exist
+import android.support.v4.content.res.ResourcesCompat;
+                                     ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:28: error: package android.support.v4.graphics.drawable does not exist
+import android.support.v4.graphics.drawable.DrawableCompat;
+                                           ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:29: error: package android.support.v7.widget does not exist
+import android.support.v7.widget.CardView;
+                                ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:30: error: package android.text does not exist
+import android.text.TextUtils;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:31: error: package android.util does not exist
+import android.util.AttributeSet;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:32: error: package android.util does not exist
+import android.util.Log;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:33: error: package android.view does not exist
+import android.view.Gravity;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:34: error: package android.view does not exist
+import android.view.View;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:35: error: package android.view does not exist
+import android.view.ViewGroup;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:36: error: package android.widget does not exist
+import android.widget.LinearLayout;
+                     ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:37: error: package android.widget does not exist
+import android.widget.TextView;
+                     ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:41: error: package android.support.design.widget does not exist
+import static android.support.design.widget.FloatingActionButton.SIZE_AUTO;
+                                           ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:41: error: static import only from classes and interfaces
+import static android.support.design.widget.FloatingActionButton.SIZE_AUTO;
+^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:42: error: package android.support.design.widget does not exist
+import static android.support.design.widget.FloatingActionButton.SIZE_MINI;
+                                           ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:42: error: static import only from classes and interfaces
+import static android.support.design.widget.FloatingActionButton.SIZE_MINI;
+^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:43: error: package android.support.design.widget does not exist
+import static android.support.design.widget.FloatingActionButton.SIZE_NORMAL;
+                                           ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:43: error: static import only from classes and interfaces
+import static android.support.design.widget.FloatingActionButton.SIZE_NORMAL;
+^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:50: error: cannot find symbol
+final class FabWithLabelView extends LinearLayout {
+                                     ^
+  symbol: class LinearLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:68: error: cannot find symbol
+    private FloatingActionButton mMainFab;
+            ^
+  symbol:   class FloatingActionButton
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:71: error: cannot find symbol
+    private Drawable mMainFabOpenDrawable = null;
+            ^
+  symbol:   class Drawable
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:73: error: cannot find symbol
+    private Drawable mMainFabCloseDrawable = null;
+            ^
+  symbol:   class Drawable
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:19: error: package android.content does not exist
+import android.content.Context;
+                      ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:20: error: package android.content.res does not exist
+import android.content.res.TypedArray;
+                          ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:21: error: package android.os does not exist
+import android.os.Build;
+                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:22: error: package android.support.annotation does not exist
+import android.support.annotation.AttrRes;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:23: error: package android.support.annotation does not exist
+import android.support.annotation.NonNull;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:24: error: package android.support.annotation does not exist
+import android.support.annotation.Nullable;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:25: error: package android.support.v4.content.res does not exist
+import android.support.v4.content.res.ResourcesCompat;
+                                     ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:26: error: package android.util does not exist
+import android.util.AttributeSet;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:27: error: package android.util does not exist
+import android.util.Log;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:28: error: package android.view does not exist
+import android.view.View;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:29: error: package android.widget does not exist
+import android.widget.RelativeLayout;
+                     ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:32: error: cannot find symbol
+public class SpeedDialOverlayLayout extends RelativeLayout {
+                                            ^
+  symbol: class RelativeLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:98: error: cannot find symbol
+    public SpeedDialView(Context context) {
+                         ^
+  symbol:   class Context
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:103: error: cannot find symbol
+    public SpeedDialView(Context context, AttributeSet attrs) {
+                         ^
+  symbol:   class Context
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:103: error: cannot find symbol
+    public SpeedDialView(Context context, AttributeSet attrs) {
+                                          ^
+  symbol:   class AttributeSet
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:108: error: cannot find symbol
+    public SpeedDialView(Context context,  AttributeSet attrs, int defStyleAttr) {
+                         ^
+  symbol:   class Context
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:108: error: cannot find symbol
+    public SpeedDialView(Context context,  AttributeSet attrs, int defStyleAttr) {
+                                           ^
+  symbol:   class AttributeSet
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:148: error: cannot find symbol
+    public void show( final OnVisibilityChangedListener listener) {
+                            ^
+  symbol:   class OnVisibilityChangedListener
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:156: error: cannot find symbol
+    public void hide( OnVisibilityChangedListener listener) {
+                      ^
+  symbol:   class OnVisibilityChangedListener
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:343: error: package CoordinatorLayout does not exist
+    public CoordinatorLayout.Behavior getBehavior() {
+                            ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:408: error: cannot find symbol
+    protected Parcelable onSaveInstanceState() {
+              ^
+  symbol:   class Parcelable
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:421: error: cannot find symbol
+    protected void onRestoreInstanceState(Parcelable state) {
+                                          ^
+  symbol:   class Parcelable
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:479: error: cannot find symbol
+    private void init(Context context,  AttributeSet attrs) {
+                      ^
+  symbol:   class Context
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:479: error: cannot find symbol
+    private void init(Context context,  AttributeSet attrs) {
+                                        ^
+  symbol:   class AttributeSet
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:515: error: cannot find symbol
+    private FloatingActionButton createMainFab() {
+            ^
+  symbol:   class FloatingActionButton
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:614: error: cannot find symbol
+    private void enlargeAnim(View view, long startOffset) {
+                             ^
+  symbol:   class View
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:37: error: cannot find symbol
+    private OnClickListener mClickListener;
+            ^
+  symbol:   class OnClickListener
+  location: class SpeedDialOverlayLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:39: error: cannot find symbol
+    public SpeedDialOverlayLayout( Context context) {
+                                   ^
+  symbol:   class Context
+  location: class SpeedDialOverlayLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:43: error: cannot find symbol
+    public SpeedDialOverlayLayout( Context context,  AttributeSet attrs) {
+                                   ^
+  symbol:   class Context
+  location: class SpeedDialOverlayLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:43: error: cannot find symbol
+    public SpeedDialOverlayLayout( Context context,  AttributeSet attrs) {
+                                                     ^
+  symbol:   class AttributeSet
+  location: class SpeedDialOverlayLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:48: error: cannot find symbol
+    public SpeedDialOverlayLayout( Context context,  AttributeSet attrs, @AttrRes int
+                                   ^
+  symbol:   class Context
+  location: class SpeedDialOverlayLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:48: error: cannot find symbol
+    public SpeedDialOverlayLayout( Context context,  AttributeSet attrs, @AttrRes int
+                                                     ^
+  symbol:   class AttributeSet
+  location: class SpeedDialOverlayLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:109: error: cannot find symbol
+    public void setOnClickListener( OnClickListener clickListener) {
+                                    ^
+  symbol:   class OnClickListener
+  location: class SpeedDialOverlayLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:114: error: cannot find symbol
+    private void init(Context context,  AttributeSet attrs) {
+                      ^
+  symbol:   class Context
+  location: class SpeedDialOverlayLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:114: error: cannot find symbol
+    private void init(Context context,  AttributeSet attrs) {
+                                        ^
+  symbol:   class AttributeSet
+  location: class SpeedDialOverlayLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:53: error: cannot find symbol
+    private TextView mLabelTextView;
+            ^
+  symbol:   class TextView
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:54: error: cannot find symbol
+    private FloatingActionButton mFab;
+            ^
+  symbol:   class FloatingActionButton
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:55: error: cannot find symbol
+    private CardView mLabelCardView;
+            ^
+  symbol:   class CardView
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:64: error: cannot find symbol
+    public FabWithLabelView(Context context) {
+                            ^
+  symbol:   class Context
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:69: error: cannot find symbol
+    public FabWithLabelView(Context context,  AttributeSet attrs) {
+                            ^
+  symbol:   class Context
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:69: error: cannot find symbol
+    public FabWithLabelView(Context context,  AttributeSet attrs) {
+                                              ^
+  symbol:   class AttributeSet
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:74: error: cannot find symbol
+    public FabWithLabelView(Context context,  AttributeSet attrs, int defStyleAttr) {
+                            ^
+  symbol:   class Context
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:74: error: cannot find symbol
+    public FabWithLabelView(Context context,  AttributeSet attrs, int defStyleAttr) {
+                                              ^
+  symbol:   class AttributeSet
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:117: error: cannot find symbol
+    public CardView getLabelBackground() {
+           ^
+  symbol:   class CardView
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:124: error: cannot find symbol
+    public FloatingActionButton getFab() {
+           ^
+  symbol:   class FloatingActionButton
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:218: error: cannot find symbol
+    private void init(Context context,  AttributeSet attrs) {
+                      ^
+  symbol:   class Context
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:218: error: cannot find symbol
+    private void init(Context context,  AttributeSet attrs) {
+                                        ^
+  symbol:   class AttributeSet
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:295: error: cannot find symbol
+    private void setFabIcon( Drawable mDrawable) {
+                             ^
+  symbol:   class Drawable
+  location: class FabWithLabelView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:44: error: cannot find symbol
+    private final Drawable mFabImageDrawable;
+                  ^
+  symbol:   class Drawable
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:89: error: cannot find symbol
+    public Drawable getFabImageDrawable(Context context) {
+                                        ^
+  symbol:   class Context
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:89: error: cannot find symbol
+    public Drawable getFabImageDrawable(Context context) {
+           ^
+  symbol:   class Drawable
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:237: error: cannot find symbol
+    public void writeToParcel(Parcel dest, int flags) {
+                              ^
+  symbol:   class Parcel
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:251: error: cannot find symbol
+    protected SpeedDialActionItem(Parcel in) {
+                                  ^
+  symbol:   class Parcel
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:266: error: cannot find symbol
+    public static final Creator<SpeedDialActionItem> CREATOR = new Creator<SpeedDialActionItem>() {
+                        ^
+  symbol:   class Creator
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:139: error: cannot find symbol
+        private Drawable mFabImageDrawable;
+                ^
+  symbol:   class Drawable
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:178: error: cannot find symbol
+        public Builder(@IdRes int id,  Drawable drawable) {
+                                       ^
+  symbol:   class Drawable
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:698: error: package CoordinatorLayout does not exist
+    public static class SnackbarBehavior extends CoordinatorLayout.Behavior<View> {
+                                                                  ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:698: error: cannot find symbol
+    public static class SnackbarBehavior extends CoordinatorLayout.Behavior<View> {
+                                                                            ^
+  symbol:   class View
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:702: error: cannot find symbol
+        private Rect mTmpRect;
+                ^
+  symbol:   class Rect
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:704: error: cannot find symbol
+        private OnVisibilityChangedListener mInternalAutoHideListener;
+                ^
+  symbol:   class OnVisibilityChangedListener
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:712: error: cannot find symbol
+        public SnackbarBehavior(Context context, AttributeSet attrs) {
+                                ^
+  symbol:   class Context
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:712: error: cannot find symbol
+        public SnackbarBehavior(Context context, AttributeSet attrs) {
+                                                 ^
+  symbol:   class AttributeSet
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:722: error: cannot find symbol
+        private static boolean isBottomSheet( View view) {
+                                              ^
+  symbol:   class View
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:753: error: package CoordinatorLayout does not exist
+        public void onAttachedToLayoutParams( CoordinatorLayout.LayoutParams lp) {
+                                                               ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:762: error: cannot find symbol
+        public boolean onDependentViewChanged(CoordinatorLayout parent, View child,
+                                              ^
+  symbol:   class CoordinatorLayout
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:762: error: cannot find symbol
+        public boolean onDependentViewChanged(CoordinatorLayout parent, View child,
+                                                                        ^
+  symbol:   class View
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:763: error: cannot find symbol
+                                              View dependency) {
+                                              ^
+  symbol:   class View
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:775: error: cannot find symbol
+        public boolean onLayoutChild(CoordinatorLayout parent, View child,
+                                     ^
+  symbol:   class CoordinatorLayout
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:775: error: cannot find symbol
+        public boolean onLayoutChild(CoordinatorLayout parent, View child,
+                                                               ^
+  symbol:   class View
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:798: error: cannot find symbol
+        void setInternalAutoHideListener(OnVisibilityChangedListener listener) {
+                                         ^
+  symbol:   class OnVisibilityChangedListener
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:802: error: cannot find symbol
+        protected void show(View child) {
+                            ^
+  symbol:   class View
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:812: error: cannot find symbol
+        protected void hide(View child) {
+                            ^
+  symbol:   class View
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:822: error: cannot find symbol
+        private boolean shouldUpdateVisibility(View dependency, View child) {
+                                               ^
+  symbol:   class View
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:822: error: cannot find symbol
+        private boolean shouldUpdateVisibility(View dependency, View child) {
+                                                                ^
+  symbol:   class View
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:844: error: cannot find symbol
+        private boolean updateFabVisibilityForAppBarLayout(CoordinatorLayout parent,
+                                                           ^
+  symbol:   class CoordinatorLayout
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:845: error: cannot find symbol
+                                                           AppBarLayout appBarLayout, View child) {
+                                                           ^
+  symbol:   class AppBarLayout
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:845: error: cannot find symbol
+                                                           AppBarLayout appBarLayout, View child) {
+                                                                                      ^
+  symbol:   class View
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:870: error: cannot find symbol
+        private int getMinimumHeightForVisibleOverlappingContent(AppBarLayout appBarLayout) {
+                                                                 ^
+  symbol:   class AppBarLayout
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:880: error: cannot find symbol
+        private boolean updateFabVisibilityForBottomSheet(View bottomSheet,
+                                                          ^
+  symbol:   class View
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:881: error: cannot find symbol
+                                                          View child) {
+                                                          ^
+  symbol:   class View
+  location: class SnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:906: error: cannot find symbol
+        public ScrollingViewSnackbarBehavior(Context context, AttributeSet attrs) {
+                                             ^
+  symbol:   class Context
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:906: error: cannot find symbol
+        public ScrollingViewSnackbarBehavior(Context context, AttributeSet attrs) {
+                                                              ^
+  symbol:   class AttributeSet
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:911: error: cannot find symbol
+        public boolean onStartNestedScroll( CoordinatorLayout coordinatorLayout,  View child, 
+                                            ^
+  symbol:   class CoordinatorLayout
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:911: error: cannot find symbol
+        public boolean onStartNestedScroll( CoordinatorLayout coordinatorLayout,  View child, 
+                                                                                  ^
+  symbol:   class View
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:912: error: cannot find symbol
+                View directTargetChild,  View target, int axes, int type) {
+                ^
+  symbol:   class View
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:912: error: cannot find symbol
+                View directTargetChild,  View target, int axes, int type) {
+                                         ^
+  symbol:   class View
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:917: error: cannot find symbol
+        public boolean layoutDependsOn(CoordinatorLayout parent, View child, View dependency) {
+                                       ^
+  symbol:   class CoordinatorLayout
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:917: error: cannot find symbol
+        public boolean layoutDependsOn(CoordinatorLayout parent, View child, View dependency) {
+                                                                 ^
+  symbol:   class View
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:917: error: cannot find symbol
+        public boolean layoutDependsOn(CoordinatorLayout parent, View child, View dependency) {
+                                                                             ^
+  symbol:   class View
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:922: error: cannot find symbol
+        public void onNestedScroll( CoordinatorLayout coordinatorLayout,  View child,  View
+                                    ^
+  symbol:   class CoordinatorLayout
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:922: error: cannot find symbol
+        public void onNestedScroll( CoordinatorLayout coordinatorLayout,  View child,  View
+                                                                          ^
+  symbol:   class View
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:922: error: cannot find symbol
+        public void onNestedScroll( CoordinatorLayout coordinatorLayout,  View child,  View
+                                                                                       ^
+  symbol:   class View
+  location: class ScrollingViewSnackbarBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:934: error: package CoordinatorLayout does not exist
+    public static class NoBehavior extends CoordinatorLayout.Behavior<View> {
+                                                            ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:934: error: cannot find symbol
+    public static class NoBehavior extends CoordinatorLayout.Behavior<View> {
+                                                                      ^
+  symbol:   class View
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:938: error: cannot find symbol
+        public NoBehavior(Context context, AttributeSet attrs) {
+                          ^
+  symbol:   class Context
+  location: class NoBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:938: error: cannot find symbol
+        public NoBehavior(Context context, AttributeSet attrs) {
+                                           ^
+  symbol:   class AttributeSet
+  location: class NoBehavior
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:19: error: package android.content does not exist
+import android.content.Context;
+                      ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:20: error: package android.content.res does not exist
+import android.content.res.Resources;
+                          ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:21: error: package android.graphics does not exist
+import android.graphics.Bitmap;
+                       ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:22: error: package android.graphics does not exist
+import android.graphics.Canvas;
+                       ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:23: error: package android.graphics.drawable does not exist
+import android.graphics.drawable.BitmapDrawable;
+                                ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:24: error: package android.graphics.drawable does not exist
+import android.graphics.drawable.Drawable;
+                                ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:25: error: package android.graphics.drawable does not exist
+import android.graphics.drawable.LayerDrawable;
+                                ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:26: error: package android.os does not exist
+import android.os.Build;
+                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:27: error: package android.support.annotation does not exist
+import android.support.annotation.Nullable;
+                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:28: error: package android.support.v4.view does not exist
+import android.support.v4.view.ViewCompat;
+                              ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:29: error: package android.util does not exist
+import android.util.DisplayMetrics;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:30: error: package android.util does not exist
+import android.util.TypedValue;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:31: error: package android.view does not exist
+import android.view.View;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:32: error: package android.view does not exist
+import android.view.ViewGroup;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:33: error: package android.view.animation does not exist
+import android.view.animation.AccelerateDecelerateInterpolator;
+                             ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:35: error: package android.view does not exist
+import static android.view.View.GONE;
+                          ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:35: error: static import only from classes and interfaces
+import static android.view.View.GONE;
+^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:36: error: package android.view does not exist
+import static android.view.View.VISIBLE;
+                          ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:36: error: static import only from classes and interfaces
+import static android.view.View.VISIBLE;
+^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:45: error: cannot find symbol
+    static int getPrimaryColor(Context context) {
+                               ^
+  symbol:   class Context
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:58: error: cannot find symbol
+    static int getAccentColor(Context context) {
+                              ^
+  symbol:   class Context
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:71: error: cannot find symbol
+    static int dpToPx(Context context, float dp) {
+                      ^
+  symbol:   class Context
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:85: error: cannot find symbol
+    public static void fadeOutAnim(final View view) {
+                                         ^
+  symbol:   class View
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:108: error: cannot find symbol
+    public static void fadeInAnim(final View view) {
+                                        ^
+  symbol:   class View
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:126: error: cannot find symbol
+    public static void shrinkAnim(final View view, final boolean removeView) {
+                                        ^
+  symbol:   class View
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:156: error: cannot find symbol
+    public static void rotateForward(View view, boolean animate) {
+                                     ^
+  symbol:   class View
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:172: error: cannot find symbol
+    public static void rotateBackward(View view, boolean animate) {
+                                      ^
+  symbol:   class View
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:181: error: cannot find symbol
+    public static Drawable getRotateDrawable(final Drawable drawable, final float angle) {
+                                                   ^
+  symbol:   class Drawable
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:181: error: cannot find symbol
+    public static Drawable getRotateDrawable(final Drawable drawable, final float angle) {
+                  ^
+  symbol:   class Drawable
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:198: error: cannot find symbol
+    public static Bitmap getBitmapFromDrawable( Drawable drawable) {
+                                                ^
+  symbol:   class Drawable
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:198: error: cannot find symbol
+    public static Bitmap getBitmapFromDrawable( Drawable drawable) {
+                  ^
+  symbol:   class Bitmap
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:229: error: cannot find symbol
+    public static Drawable getDrawableFromBitmap( Bitmap bitmap) {
+                                                  ^
+  symbol:   class Bitmap
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/UiUtils.java:229: error: cannot find symbol
+    public static Drawable getDrawableFromBitmap( Bitmap bitmap) {
+                  ^
+  symbol:   class Drawable
+  location: class UiUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:19: error: package android.graphics does not exist
+import android.graphics.Matrix;
+                       ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:20: error: package android.graphics does not exist
+import android.graphics.Rect;
+                       ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:21: error: package android.graphics does not exist
+import android.graphics.RectF;
+                       ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:22: error: package android.view does not exist
+import android.view.View;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:23: error: package android.view does not exist
+import android.view.ViewGroup;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:24: error: package android.view does not exist
+import android.view.ViewParent;
+                   ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:27: error: cannot find symbol
+    private static final ThreadLocal<Matrix> MATRIX_THREAD_LOCAL = new ThreadLocal<>();
+                                     ^
+  symbol:   class Matrix
+  location: class ViewGroupUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:28: error: cannot find symbol
+    private static final ThreadLocal<RectF> RECT_F = new ThreadLocal<>();
+                                     ^
+  symbol:   class RectF
+  location: class ViewGroupUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:42: error: cannot find symbol
+    static void offsetDescendantRect(ViewGroup parent, View descendant, Rect rect) {
+                                     ^
+  symbol:   class ViewGroup
+  location: class ViewGroupUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:42: error: cannot find symbol
+    static void offsetDescendantRect(ViewGroup parent, View descendant, Rect rect) {
+                                                       ^
+  symbol:   class View
+  location: class ViewGroupUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:42: error: cannot find symbol
+    static void offsetDescendantRect(ViewGroup parent, View descendant, Rect rect) {
+                                                                        ^
+  symbol:   class Rect
+  location: class ViewGroupUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:71: error: cannot find symbol
+    static void getDescendantRect(ViewGroup parent, View descendant, Rect out) {
+                                  ^
+  symbol:   class ViewGroup
+  location: class ViewGroupUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:71: error: cannot find symbol
+    static void getDescendantRect(ViewGroup parent, View descendant, Rect out) {
+                                                    ^
+  symbol:   class View
+  location: class ViewGroupUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:71: error: cannot find symbol
+    static void getDescendantRect(ViewGroup parent, View descendant, Rect out) {
+                                                                     ^
+  symbol:   class Rect
+  location: class ViewGroupUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:76: error: cannot find symbol
+    private static void offsetDescendantMatrix(ViewParent target, View view, Matrix m) {
+                                               ^
+  symbol:   class ViewParent
+  location: class ViewGroupUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:76: error: cannot find symbol
+    private static void offsetDescendantMatrix(ViewParent target, View view, Matrix m) {
+                                                                  ^
+  symbol:   class View
+  location: class ViewGroupUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java:76: error: cannot find symbol
+    private static void offsetDescendantMatrix(ViewParent target, View view, Matrix m) {
+                                                                             ^
+  symbol:   class Matrix
+  location: class ViewGroupUtils
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:285: error: cannot find symbol
+    public SpeedDialActionItem removeActionItemById(@IdRes int idRes) {
+                                                     ^
+  symbol:   class IdRes
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:600: error: cannot find symbol
+    private FabWithLabelView findFabWithLabelViewById(@IdRes int id) {
+                                                       ^
+  symbol:   class IdRes
+  location: class SpeedDialView
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:48: error: cannot find symbol
+    public SpeedDialOverlayLayout( Context context,  AttributeSet attrs, @AttrRes int
+                                                                          ^
+  symbol:   class AttrRes
+  location: class SpeedDialOverlayLayout
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:61: error: package FloatingActionButton does not exist
+    @FloatingActionButton.Size
+                         ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:261: error: package FloatingActionButton does not exist
+    private void setFabSize(@FloatingActionButton.Size int fabSize) {
+                                                 ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:37: error: cannot find symbol
+    @IdRes
+     ^
+  symbol:   class IdRes
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:41: error: cannot find symbol
+    @DrawableRes
+     ^
+  symbol:   class DrawableRes
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:45: error: cannot find symbol
+    @ColorInt
+     ^
+  symbol:   class ColorInt
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:47: error: cannot find symbol
+    @ColorInt
+     ^
+  symbol:   class ColorInt
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:49: error: cannot find symbol
+    @ColorInt
+     ^
+  symbol:   class ColorInt
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:51: error: cannot find symbol
+    @ColorInt
+     ^
+  symbol:   class ColorInt
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:54: error: package FloatingActionButton does not exist
+    @FloatingActionButton.Size
+                         ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:56: error: cannot find symbol
+    @StyleRes
+     ^
+  symbol:   class StyleRes
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:99: error: cannot find symbol
+    @ColorInt
+     ^
+  symbol:   class ColorInt
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:104: error: cannot find symbol
+    @ColorInt
+     ^
+  symbol:   class ColorInt
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:109: error: cannot find symbol
+    @ColorInt
+     ^
+  symbol:   class ColorInt
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:122: error: cannot find symbol
+    @StyleRes
+     ^
+  symbol:   class StyleRes
+  location: class SpeedDialActionItem
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:128: error: package FloatingActionButton does not exist
+    @FloatingActionButton.Size
+                         ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:134: error: cannot find symbol
+        @IdRes
+         ^
+  symbol:   class IdRes
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:136: error: cannot find symbol
+        @DrawableRes
+         ^
+  symbol:   class DrawableRes
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:140: error: cannot find symbol
+        @ColorInt
+         ^
+  symbol:   class ColorInt
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:144: error: cannot find symbol
+        @ColorInt
+         ^
+  symbol:   class ColorInt
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:146: error: cannot find symbol
+        @ColorInt
+         ^
+  symbol:   class ColorInt
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:148: error: cannot find symbol
+        @ColorInt
+         ^
+  symbol:   class ColorInt
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:151: error: package FloatingActionButton does not exist
+        @FloatingActionButton.Size
+                             ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:153: error: cannot find symbol
+        @StyleRes
+         ^
+  symbol:   class StyleRes
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:165: error: cannot find symbol
+        public Builder(@IdRes int id, @DrawableRes int fabImageResource) {
+                        ^
+  symbol:   class IdRes
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:165: error: cannot find symbol
+        public Builder(@IdRes int id, @DrawableRes int fabImageResource) {
+                                       ^
+  symbol:   class DrawableRes
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:178: error: cannot find symbol
+        public Builder(@IdRes int id,  Drawable drawable) {
+                        ^
+  symbol:   class IdRes
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:194: error: cannot find symbol
+        public Builder setFabBackgroundColor(@ColorInt int fabBackgroundColor) {
+                                              ^
+  symbol:   class ColorInt
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:199: error: cannot find symbol
+        public Builder setLabelColor(@ColorInt int labelColor) {
+                                      ^
+  symbol:   class ColorInt
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:204: error: cannot find symbol
+        public Builder setLabelBackgroundColor(@ColorInt int labelBackgroundColor) {
+                                                ^
+  symbol:   class ColorInt
+  location: class Builder
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java:224: error: package FloatingActionButton does not exist
+        /* public */ Builder setFabSize(@FloatingActionButton.Size int fabSize) {
+                                                             ^
+../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:797: error: cannot find symbol
+        @VisibleForTesting
+         ^
+  symbol:   class VisibleForTesting
+  location: class SnackbarBehavior
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Imported type not found: android.content.Context
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 19,col 1): Imported type not found: android.graphics.Bitmap
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Imported type not found: android.graphics.drawable.Drawable
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Imported type not found: android.os.Parcel
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Imported type not found: android.os.Parcelable
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Imported type not found: android.support.annotation.ColorInt
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 24,col 1): Imported type not found: android.support.annotation.DrawableRes
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 25,col 1): Imported type not found: android.support.annotation.IdRes
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 26,col 1): Imported type not found: android.support.annotation.Nullable
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 27,col 1): Imported type not found: android.support.annotation.StyleRes
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Imported type not found: android.support.design.widget.FloatingActionButton
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 29,col 1): Imported type not found: android.support.v7.content.res.AppCompatResources
+warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_floatingActionButtonSpeedDial/wpi-out/com/leinardi/android/speeddial/SpeedDialActionItem-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Enclosing type of static field SIZE_AUTO not found: android.support.design.widget.FloatingActionButton
+258 errors
+13 warnings
+printing javac parameters to: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/javac.20240822_173715.args

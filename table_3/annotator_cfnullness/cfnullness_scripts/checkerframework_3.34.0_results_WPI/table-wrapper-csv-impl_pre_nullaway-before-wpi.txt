@@ -1,0 +1,25 @@
+../dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:25: error: duplicate class: org.spacious_team.table_wrapper.csv.DateTimeFormatParser
+class DateTimeFormatParser {
+^
+../dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:25: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableCell
+public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
+       ^
+../dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:29: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject
+public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex, CsvTableRow> {
+       ^
+../dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:27: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableRow
+public class CsvTableRow extends AbstractReportPageRow {
+       ^
+../dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:38: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvReportPage
+public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
+       ^
+../dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:28: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTable
+public class CsvTable extends AbstractTable<CsvTableRow> {
+       ^
+../dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableHelper.java:28: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableHelper
+class CsvTableHelper {
+^
+../dataset/table-wrapper-csv-impl_pre_nullaway/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java:28: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableFactory
+public class CsvTableFactory extends AbstractTableFactory<CsvReportPage> {
+       ^
+8 errors

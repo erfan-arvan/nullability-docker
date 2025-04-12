@@ -1,0 +1,362 @@
+diff --git a/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java b/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java
+index 4bc38591..f4c64792 100644
+--- a/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java
++++ b/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java
+@@ -2,16 +2,18 @@ package de.zuellich.meal_planner.algorithms;
+ @Service
+ public class AmountParser {
+   private static final List<String> UNICODE_FRACTIONS = Arrays.asList("½", "¼", "¾");
+-  private static final Map<String, Float> fractionLookup;
++  private static final ImmutableMap<String, Float> fractionLookup;
+   static {
+-    fractionLookup = new HashMap<>(4);
+-    fractionLookup.put("1/8", 0.125f);
+-    fractionLookup.put("1/4", 0.25f);
+-    fractionLookup.put("¼", 0.25f);
+-    fractionLookup.put("1/2", 0.5f);
+-    fractionLookup.put("½", 0.5f);
+-    fractionLookup.put("3/4", 0.75f);
+-    fractionLookup.put("¾", 0.75f);
++    fractionLookup =
++        ImmutableMap.<String, Float>builderWithExpectedSize(7)
++            .put("1/8", 0.125f)
++            .put("1/4", 0.25f)
++            .put("¼", 0.25f)
++            .put("1/2", 0.5f)
++            .put("½", 0.5f)
++            .put("3/4", 0.75f)
++            .put("¾", 0.75f)
++            .build();
+   }
+   public static final String CONTAINS_DIGITS_PATTERN = "\\d\\s?[½¼¾]";
+   public float parseAmount(String raw) {
+@@ -67,6 +69,6 @@ public class AmountParser {
+         break;
+       }
+     }
+-    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.get(usedFraction);
++    return Float.parseFloat(withoutUnicodeFraction) + fractionLookup.getOrDefault(usedFraction, 0f);
+   }
+ }
+diff --git a/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java b/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java
+index 90e72aa6..bb22e4ae 100644
+--- a/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java
++++ b/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java
+@@ -1,57 +1,57 @@
+ package de.zuellich.meal_planner.algorithms;
+ @Service
+ public class IngredientUnitLookup {
+-  private static IngredientUnitLookup instance;
++   private static IngredientUnitLookup instance = null;
+   private Map<String, IngredientUnit> byShorthand;
+   private Map<String, IngredientUnit> byPlural;
+   private Map<String, IngredientUnit> bySingular;
+   private IngredientUnitLookup() {
+-    setupLookupTable();
++    this.setupLookupTable();
+   }
+   public static IngredientUnitLookup getInstance() {
+-    if (instance == null) {
+-      instance = new IngredientUnitLookup();
++    if (IngredientUnitLookup.instance == null) {
++      IngredientUnitLookup.instance = new IngredientUnitLookup();
+     }
+-    return instance;
++    return IngredientUnitLookup.instance;
+   }
+   private void setupLookupTable() {
+-    byShorthand = new HashMap<>(IngredientUnit.values().length);
+-    byPlural = new HashMap<>(IngredientUnit.values().length);
+-    bySingular = new HashMap<>(IngredientUnit.values().length);
+-    for (IngredientUnit unit : IngredientUnit.values()) {
+-      byShorthand.put(unit.getShorthand(), unit);
+-      byPlural.put(unit.getPlural(), unit);
+-      bySingular.put(unit.getSingular(), unit);
++    this.byShorthand = new HashMap<>(IngredientUnit.values().length);
++    this.byPlural = new HashMap<>(IngredientUnit.values().length);
++    this.bySingular = new HashMap<>(IngredientUnit.values().length);
++    for (final IngredientUnit unit : IngredientUnit.values()) {
++      this.byShorthand.put(unit.getShorthand(), unit);
++      this.byPlural.put(unit.getPlural(), unit);
++      this.bySingular.put(unit.getSingular(), unit);
+     }
+   }
+-  public IngredientUnit byShorthand(String shorthand) {
+-    IngredientUnit result = byShorthand.get(shorthand);
++  public IngredientUnit byShorthand(final String shorthand) {
++    IngredientUnit result = this.byShorthand.get(shorthand);
+     if (result == null) {
+       result = IngredientUnit.NULL;
+     }
+     return result;
+   }
+-  public IngredientUnit byPlural(String plural) {
+-    IngredientUnit result = byPlural.get(plural);
++  public IngredientUnit byPlural(final String plural) {
++    IngredientUnit result = this.byPlural.get(plural);
+     if (result == null) {
+       result = IngredientUnit.NULL;
+     }
+     return result;
+   }
+-  public IngredientUnit lookup(String search) {
+-    IngredientUnit result = byShorthand(search);
++  public IngredientUnit lookup(final String search) {
++    IngredientUnit result = this.byShorthand(search);
+     if (!result.equals(IngredientUnit.NULL)) {
+       return result;
+     }
+-    result = byPlural(search);
++    result = this.byPlural(search);
+     if (!result.equals(IngredientUnit.NULL)) {
+       return result;
+     } else {
+-      return bySingular(search);
++      return this.bySingular(search);
+     }
+   }
+-  public IngredientUnit bySingular(String search) {
+-    IngredientUnit result = bySingular.get(search);
++  public IngredientUnit bySingular(final String search) {
++    IngredientUnit result = this.bySingular.get(search);
+     if (result == null) {
+       result = IngredientUnit.NULL;
+     }
+diff --git a/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgParser.java b/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgParser.java
+index 2125cc3e..1f0379ab 100644
+--- a/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgParser.java
++++ b/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgParser.java
+@@ -10,12 +10,14 @@ public class SchemaOrgParser implements RecipeParser {
+     this.recipeScanner = recipeScanner;
+     this.ingredientScanner = ingredientScanner;
+   }
++  @Override
+   public Recipe parse(String source) {
+     List<Ingredient> ingredientList = ingredientScanner.parse(source);
+     Recipe recipe = recipeScanner.parse(source);
+     recipe.setIngredients(ingredientList);
+     return recipe;
+   }
++  @Override
+   public RecipeFormat getFormat() {
+     return RecipeFormat.SCHEMA_ORG;
+   }
+diff --git a/src/main/java/de/zuellich/meal_planner/config/SecurityConfiguration.java b/src/main/java/de/zuellich/meal_planner/config/SecurityConfiguration.java
+index cf6f18ce..7d7145be 100644
+--- a/src/main/java/de/zuellich/meal_planner/config/SecurityConfiguration.java
++++ b/src/main/java/de/zuellich/meal_planner/config/SecurityConfiguration.java
+@@ -7,6 +7,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+     super.configure(http);
+   }
+   @Bean
++  @Override
+   public UserDetailsService userDetailsService() {
+     InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+     manager.createUser(User.withUsername("test").password("test").roles("USER").build());
+diff --git a/src/main/java/de/zuellich/meal_planner/datatypes/RecipeFormat.java b/src/main/java/de/zuellich/meal_planner/datatypes/RecipeFormat.java
+index fa7d57b4..4af1166b 100644
+--- a/src/main/java/de/zuellich/meal_planner/datatypes/RecipeFormat.java
++++ b/src/main/java/de/zuellich/meal_planner/datatypes/RecipeFormat.java
+@@ -3,5 +3,6 @@ public enum RecipeFormat {
+   SCHEMA_ORG,
+   UNKNOWN,
+   SCHEMA_ORG_QUIRCKS_MODE,
++  SCHEMA_ORG_JSON_LD,
+   NULL
+ }
+diff --git a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java
+index 8f80f939..2368a58f 100644
+--- a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java
++++ b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java
+@@ -1,8 +1,8 @@
+ package de.zuellich.meal_planner.pinterest.datatypes;
+ public class Board {
+-  private String id;
+-  private String name;
+-  private String url;
++  private String id = "";
++  private String name = "";
++  private String url = "";
+   public String getId() {
+     return id;
+   }
+diff --git a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardList.java b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardList.java
+index 60980e0c..f5848396 100644
+--- a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardList.java
++++ b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardList.java
+@@ -1,7 +1,7 @@
+ package de.zuellich.meal_planner.pinterest.datatypes;
+ public class BoardList {
+   @JsonProperty(value = "data")
+-  private List<Board> boards;
++  private List<Board> boards = ImmutableList.of();
+   public List<Board> getBoards() {
+     return boards;
+   }
+diff --git a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardListing.java b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardListing.java
+index bd1751c4..8c3c2f9d 100644
+--- a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardListing.java
++++ b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardListing.java
+@@ -1,17 +1,17 @@
+ package de.zuellich.meal_planner.pinterest.datatypes;
+ public class BoardListing {
+-  private Board board;
+-  private List<Pin> pins;
++  private Board board = new Board();
++  private List<Pin> pins = ImmutableList.of();
+   public Board getBoard() {
+-    return board;
++    return this.board;
+   }
+-  public void setBoard(Board board) {
++  public void setBoard(final Board board) {
+     this.board = board;
+   }
+   public List<Pin> getPins() {
+-    return pins;
++    return this.pins;
+   }
+-  public void setPins(List<Pin> pins) {
++  public void setPins(final List<Pin> pins) {
+     this.pins = pins;
+   }
+ }
+diff --git a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardRequest.java b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardRequest.java
+index c570c32a..43cb6153 100644
+--- a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardRequest.java
++++ b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardRequest.java
+@@ -1,7 +1,7 @@
+ package de.zuellich.meal_planner.pinterest.datatypes;
+ public class BoardRequest {
+   @JsonProperty(value = "data")
+-  private Board board;
++  private Board board = new Board();
+   public Board getBoard() {
+     return board;
+   }
+diff --git a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PagingInformation.java b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PagingInformation.java
+index f33fa070..24794eec 100644
+--- a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PagingInformation.java
++++ b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PagingInformation.java
+@@ -1,8 +1,8 @@
+ package de.zuellich.meal_planner.pinterest.datatypes;
+ @JsonIgnoreProperties(ignoreUnknown = true)
+ public class PagingInformation {
+-  private String cursor;
+-  private String next;
++  private String cursor = "";
++  private String next = "";
+   public String getCursor() {
+     return cursor;
+   }
+diff --git a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java
+index a38fde88..86c3c9a5 100644
+--- a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java
++++ b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java
+@@ -1,26 +1,19 @@
+ package de.zuellich.meal_planner.pinterest.datatypes;
+ @JsonIgnoreProperties(ignoreUnknown = true)
+ public class Pin {
+-  private String id;
++  private String id = "";
+   @JsonProperty("original_link")
+-  private String originalLink;
+-  private String note;
+-  private String name;
++  private String originalLink = "";
++  private String note = "";
++  private String name = "";
+   public Pin() {}
+   @JsonCreator
+   public Pin(@JsonProperty("metadata") Map<String, Object> metadata) {
+     if (metadata == null || !metadata.containsKey("article")) {
+-      this.name = "";
+       return;
+     }
+-    String name = "";
+-    Map<String, Object> article = (Map<String, Object>) metadata.get("article");
+-    if (article.containsKey("name")) {
+-      name = article.get("name").toString();
+-    } else {
+-      name = "";
+-    }
+-    this.name = name;
++    Map<String, Object> article = (Map<String, Object>) metadata.getOrDefault("article", "");
++    this.name = String.valueOf(article.get("name"));
+   }
+   public String getId() {
+     return id;
+diff --git a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PinList.java b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PinList.java
+index 0bc6d4b2..dc99ddb7 100644
+--- a/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PinList.java
++++ b/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PinList.java
+@@ -2,9 +2,9 @@ package de.zuellich.meal_planner.pinterest.datatypes;
+ @JsonIgnoreProperties(ignoreUnknown = true)
+ public class PinList {
+   @JsonProperty(value = "data")
+-  private List<Pin> pins;
++  private List<Pin> pins = ImmutableList.of();
+   @JsonProperty(value = "page")
+-  private PagingInformation page;
++  private PagingInformation page = new PagingInformation();
+   public List<Pin> getPins() {
+     return pins;
+   }
+diff --git a/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java b/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java
+index ff269f40..d114216b 100644
+--- a/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java
++++ b/src/main/java/de/zuellich/meal_planner/pinterest/oauth2/ResourceConfiguration.java
+@@ -3,13 +3,13 @@ package de.zuellich.meal_planner.pinterest.oauth2;
+ @EnableOAuth2Client
+ public class ResourceConfiguration {
+   @Value("${meal_planner.oauth2.clientId}")
+-  private String clientId;
++  private String clientId = "";
+   @Value("${meal_planner.oauth2.clientSecret}")
+-  private String clientSecret;
++  private String clientSecret = "";
+   @Value("${meal_planner.oauth2.accessTokenUri}")
+-  private String accessTokenUri;
++  private String accessTokenUri = "";
+   @Value("${meal_planner.oauth2.authorizationUri}")
+-  private String authorizationUri;
++  private String authorizationUri = "";
+   @Bean
+   public OAuth2ProtectedResourceDetails pinterestOAuth2Configuration() {
+     AuthorizationCodeResourceDetails resourceDetails = new AuthorizationCodeResourceDetails();
+diff --git a/src/test/java/de/zuellich/meal_planner/SSLUtil.java b/src/test/java/de/zuellich/meal_planner/SSLUtil.java
+index 5342a841..d5d9e9b3 100644
+--- a/src/test/java/de/zuellich/meal_planner/SSLUtil.java
++++ b/src/test/java/de/zuellich/meal_planner/SSLUtil.java
+@@ -3,22 +3,25 @@ public final class SSLUtil {
+   private static final TrustManager[] UNQUESTIONING_TRUST_MANAGER =
+       new TrustManager[] {
+         new X509TrustManager() {
++          @Override
+           public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+             return null;
+           }
+-          public void checkClientTrusted(X509Certificate[] certs, String authType) {}
+-          public void checkServerTrusted(X509Certificate[] certs, String authType) {}
++          @Override
++          public void checkClientTrusted(final X509Certificate[] certs, final String authType) {}
++          @Override
++          public void checkServerTrusted(final X509Certificate[] certs, final String authType) {}
+         }
+       };
++  private SSLUtil() {
++    throw new UnsupportedOperationException("Do not instantiate libraries.");
++  }
+   public static void turnOffSslChecking() throws NoSuchAlgorithmException, KeyManagementException {
+     final SSLContext sc = SSLContext.getInstance("SSL");
+-    sc.init(null, UNQUESTIONING_TRUST_MANAGER, null);
++    sc.init(null, SSLUtil.UNQUESTIONING_TRUST_MANAGER, null);
+     HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+   }
+   public static void turnOnSslChecking() throws KeyManagementException, NoSuchAlgorithmException {
+     SSLContext.getInstance("SSL").init(null, null, null);
+   }
+-  private SSLUtil() {
+-    throw new UnsupportedOperationException("Do not instantiate libraries.");
+-  }
+ }

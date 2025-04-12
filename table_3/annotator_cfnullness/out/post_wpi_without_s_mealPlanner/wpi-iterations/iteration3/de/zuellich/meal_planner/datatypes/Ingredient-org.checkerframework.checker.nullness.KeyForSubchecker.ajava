@@ -1,0 +1,58 @@
+package de.zuellich.meal_planner.datatypes;
+
+import java.util.Objects;
+
+/**
+ * Represents an ingredient.
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public class Ingredient {
+
+    private  IngredientUnit unit;
+
+    private  String type;
+
+    private   float amount;
+
+    @org.checkerframework.dataflow.qual.SideEffectFree
+    public Ingredient( String type,   float amount,  IngredientUnit unit) {
+        this.type = type;
+        this.amount = amount;
+        this.unit = unit;
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  IngredientUnit getUnit( Ingredient this) {
+        return unit;
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  String getType( Ingredient this) {
+        return type;
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public   float getAmount( Ingredient this) {
+        return amount;
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public   boolean equals( Ingredient this,  Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Ingredient that = (Ingredient) o;
+        return Float.compare(that.getAmount(), getAmount()) == 0 && getUnit() == that.getUnit() && Objects.equals(getType(), that.getType());
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public   int hashCode( Ingredient this) {
+        return Objects.hash(getUnit(), getType(), getAmount());
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  String toString( Ingredient this) {
+        return "Ingredient{unit=" + unit + ", type='" + type + '\'' + ", amount=" + amount + '}';
+    }
+}

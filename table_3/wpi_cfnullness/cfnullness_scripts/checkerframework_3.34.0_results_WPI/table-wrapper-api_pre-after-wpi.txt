@@ -1,0 +1,75 @@
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:135: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 4584, 4607 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:143: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 4842, 4865 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:151: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5107, 5130 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:159: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5386, 5409 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:167: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5657, 5680 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:175: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 5927, 5950 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java:183: error: (argument) $$ 4 $$ obj $$ Objects.requireNonNull $$ C extends @Initialized @Nullable Object $$ C extends @Initialized @NonNull Object $$ ( 6218, 6241 ) $$ incompatible argument for parameter obj of Objects.requireNonNull.
+        C cell = requireNonNull(getCell(row, cellIndex), "Cell not found");
+                                       ^
+  found   : C extends @Initialized @Nullable Object
+  required: C extends @Initialized @NonNull Object
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:39: error: (unboxing.of.nullable) $$ 1 $$ getCellIndex(column) $$ ( 1658, 1678 ) $$ unboxing a possibly-null reference getCellIndex(column)
+        return getCell(getCellIndex(column));
+                                   ^
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:44: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 1755, 1758 ) $$ dereference of possibly-null reference row
+        return row.getCell(i);
+               ^
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:49: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 1836, 1839 ) $$ dereference of possibly-null reference row
+        return row.getRowNum();
+               ^
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:54: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 1924, 1927 ) $$ dereference of possibly-null reference row
+        return row.getFirstCellNum();
+               ^
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:59: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2017, 2020 ) $$ dereference of possibly-null reference row
+        return row.getLastCellNum();
+               ^
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:64: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2125, 2128 ) $$ dereference of possibly-null reference row
+        return row.rowContains(expected);
+               ^
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:69: error: (dereference.of.nullable) $$ 1 $$ row $$ ( 2232, 2235 ) $$ dereference of possibly-null reference row
+        return row.iterator();
+               ^
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/MutableTableRow.java:190: error: (assignment) $$ 2 $$ T extends @Initialized @NonNull ReportPageRow $$ T extends @FBCBottom @MonotonicNonNull ReportPageRow $$ ( 6366, 6369 ) $$ incompatible types in assignment.
+        this.row = row;
+                   ^
+  found   : T extends @Initialized @NonNull ReportPageRow
+  required: T extends @FBCBottom @MonotonicNonNull ReportPageRow
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/AbstractTable.java:89: error: (argument) $$ 4 $$ array $$ Arrays.stream $$ capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable [] $$ @Initialized @NonNull TableColumnDescription @Initialized @NonNull [] $$ ( 4248, 4284 ) $$ incompatible argument for parameter array of Arrays.stream.
+        TableColumn[] columns = Arrays.stream(headerDescription.getEnumConstants()).map(TableColumnDescription::getColumn).toArray(TableColumn[]::new);
+                                                                                ^
+  found   : capture#01 extends @Initialized @NonNull TableColumnDescription @Initialized @Nullable []
+  required: @Initialized @NonNull TableColumnDescription @Initialized @NonNull []
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:132: error: (dereference.of.nullable) $$ 1 $$ reportPage.getCell(tableNameCell) $$ ( 5920, 5953 ) $$ dereference of possibly-null reference reportPage.getCell(tableNameCell)
+                    tableName = reportPage.getCell(tableNameCell).getStringValue();
+                                                  ^
+../dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/TableFactory.java:159: error: (dereference.of.nullable) $$ 1 $$ reportPage.getCell(tableNameCell) $$ ( 7204, 7237 ) $$ dereference of possibly-null reference reportPage.getCell(tableNameCell)
+                    tableName = reportPage.getCell(tableNameCell).getStringValue();
+                                                  ^
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+18 errors

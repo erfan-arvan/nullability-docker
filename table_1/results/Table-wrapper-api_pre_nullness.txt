@@ -1,0 +1,207 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.spacious-team:table-wrapper-api[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Table Wrapper API 2022.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/ubuntu/table_1/cfnullness/dataset/table-wrapper-api_pre/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m @ [36mtable-wrapper-api[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module! :source
+[[1;34mINFO[m] Compiling 28 source files with javac [forked debug target 11] to target/classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;33mWARNING[m] COMPILATION WARNING : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;33mWARNING[m] The following options were not recognized by any processor: '[detailedmsgtex]'
+[[1;34mINFO[m] 1 warning
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] An exception has occurred in the compiler (11.0.22). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program and the following diagnostic in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.Error: Problem while parsing /tmp/WPITEMP-table-wrapper-api/org/spacious_team/table_wrapper/api/CellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_1/cfnullness/dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:832)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1371)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:973)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)
+Caused by: java.lang.Error: Problem while parsing /tmp/WPITEMP-table-wrapper-api/org/spacious_team/table_wrapper/api/CellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_1/cfnullness/dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1014)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:689)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1071)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)
+	... 8 more
+Caused by: org.checkerframework.javacutil.BugInCF: desynced trees: return requireNonNull(getValue(cell), "Not a string").toString(); [class com.sun.tools.javac.tree.JCTree$JCReturn], Object value = requireNonNull(getValue(cell), "Not a string"); [class org.checkerframework.com.github.javaparser.ast.stmt.ExpressionStmt (expected class org.checkerframework.com.github.javaparser.ast.stmt.ReturnStmt)] ---
+root(Type=ExpressionStmt): 
+    expression(Type=VariableDeclarationExpr): 
+        variables: 
+            - variable(Type=VariableDeclarator): 
+                initializer(Type=MethodCallExpr): 
+                    name(Type=SimpleName): 
+                        identifier: "requireNonNull"
+                    arguments: 
+                        - argument(Type=MethodCallExpr): 
+                            name(Type=SimpleName): 
+                                identifier: "getValue"
+                            arguments: 
+                                - argument(Type=NameExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "cell"
+                        - argument(Type=StringLiteralExpr): 
+                            value: "Not a string"
+                name(Type=SimpleName): 
+                    identifier: "value"
+                type(Type=ClassOrInterfaceType): 
+                    name(Type=SimpleName): 
+                        identifier: "Object"
+...
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.throwUnexpectedNodeType(JointJavacJavaParserVisitor.java:2381)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.castNode(JointJavacJavaParserVisitor.java:2335)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitReturn(JointJavacJavaParserVisitor.java:1280)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitReturn(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCReturn.accept(JCTree.java:1570)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.processStatements(JointJavacJavaParserVisitor.java:362)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitBlock(JointJavacJavaParserVisitor.java:310)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitBlock(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:1048)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitOptional(JointJavacJavaParserVisitor.java:2317)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitMethodForMethodDeclaration(JointJavacJavaParserVisitor.java:1035)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitMethod(JointJavacJavaParserVisitor.java:989)
+	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitMethod(AnnotationFileParser.java:3161)
+	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitMethod(AnnotationFileParser.java:3113)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:573)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:480)
+	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitClass(AnnotationFileParser.java:3123)
+	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitClass(AnnotationFileParser.java:3113)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:808)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2301)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:669)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processCompilationUnit(AnnotationFileParser.java:825)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processStubUnit(AnnotationFileParser.java:790)
+	at org.checkerframework.framework.stub.AnnotationFileParser.process(AnnotationFileParser.java:779)
+	at org.checkerframework.framework.stub.AnnotationFileParser.parseAjavaFile(AnnotationFileParser.java:696)
+	at org.checkerframework.framework.stub.AnnotationFileElementTypes.parseAjavaFileWithTree(AnnotationFileElementTypes.java:286)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1012)
+	... 17 more
+Caused by: java.lang.Throwable
+	at org.checkerframework.javacutil.BugInCF.<init>(BugInCF.java:38)
+	... 47 more
+
+[[1;34mINFO[m] 1 error
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  8.881 s
+[[1;34mINFO[m] Finished at: 2025-04-12T05:02:06Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m on project [36mtable-wrapper-api[m: [1;31mCompilation failure[m
+[[1;31mERROR[m] [1;31mAn exception has occurred in the compiler (11.0.22). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program and the following diagnostic in your report. Thank you.[m
+[[1;31mERROR[m] [1;31mcom.sun.tools.javac.util.ClientCodeException: java.lang.Error: Problem while parsing /tmp/WPITEMP-table-wrapper-api/org/spacious_team/table_wrapper/api/CellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_1/cfnullness/dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:832)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1371)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:973)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)[m
+[[1;31mERROR[m] [1;31mCaused by: java.lang.Error: Problem while parsing /tmp/WPITEMP-table-wrapper-api/org/spacious_team/table_wrapper/api/CellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to /home/ubuntu/table_1/cfnullness/dataset/table-wrapper-api_pre/src/main/java/org/spacious_team/table_wrapper/api/CellDataAccessObject.java[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1014)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:689)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1071)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)[m
+[[1;31mERROR[m] [1;31m	... 8 more[m
+[[1;31mERROR[m] [1;31mCaused by: org.checkerframework.javacutil.BugInCF: desynced trees: return requireNonNull(getValue(cell), "Not a string").toString(); [class com.sun.tools.javac.tree.JCTree$JCReturn], Object value = requireNonNull(getValue(cell), "Not a string"); [class org.checkerframework.com.github.javaparser.ast.stmt.ExpressionStmt (expected class org.checkerframework.com.github.javaparser.ast.stmt.ReturnStmt)] ---[m
+[[1;31mERROR[m] [1;31mroot(Type=ExpressionStmt): [m
+[[1;31mERROR[m] [1;31m    expression(Type=VariableDeclarationExpr): [m
+[[1;31mERROR[m] [1;31m        variables: [m
+[[1;31mERROR[m] [1;31m            - variable(Type=VariableDeclarator): [m
+[[1;31mERROR[m] [1;31m                initializer(Type=MethodCallExpr): [m
+[[1;31mERROR[m] [1;31m                    name(Type=SimpleName): [m
+[[1;31mERROR[m] [1;31m                        identifier: "requireNonNull"[m
+[[1;31mERROR[m] [1;31m                    arguments: [m
+[[1;31mERROR[m] [1;31m                        - argument(Type=MethodCallExpr): [m
+[[1;31mERROR[m] [1;31m                            name(Type=SimpleName): [m
+[[1;31mERROR[m] [1;31m                                identifier: "getValue"[m
+[[1;31mERROR[m] [1;31m                            arguments: [m
+[[1;31mERROR[m] [1;31m                                - argument(Type=NameExpr): [m
+[[1;31mERROR[m] [1;31m                                    name(Type=SimpleName): [m
+[[1;31mERROR[m] [1;31m                                        identifier: "cell"[m
+[[1;31mERROR[m] [1;31m                        - argument(Type=StringLiteralExpr): [m
+[[1;31mERROR[m] [1;31m                            value: "Not a string"[m
+[[1;31mERROR[m] [1;31m                name(Type=SimpleName): [m
+[[1;31mERROR[m] [1;31m                    identifier: "value"[m
+[[1;31mERROR[m] [1;31m                type(Type=ClassOrInterfaceType): [m
+[[1;31mERROR[m] [1;31m                    name(Type=SimpleName): [m
+[[1;31mERROR[m] [1;31m                        identifier: "Object"[m
+[[1;31mERROR[m] [1;31m...[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.throwUnexpectedNodeType(JointJavacJavaParserVisitor.java:2381)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.castNode(JointJavacJavaParserVisitor.java:2335)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitReturn(JointJavacJavaParserVisitor.java:1280)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitReturn(JointJavacJavaParserVisitor.java:189)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCReturn.accept(JCTree.java:1570)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.processStatements(JointJavacJavaParserVisitor.java:362)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitBlock(JointJavacJavaParserVisitor.java:310)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitBlock(JointJavacJavaParserVisitor.java:189)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:1048)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitOptional(JointJavacJavaParserVisitor.java:2317)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitMethodForMethodDeclaration(JointJavacJavaParserVisitor.java:1035)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitMethod(JointJavacJavaParserVisitor.java:989)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitMethod(AnnotationFileParser.java:3161)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitMethod(AnnotationFileParser.java:3113)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClassMembers(JointJavacJavaParserVisitor.java:573)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitClass(JointJavacJavaParserVisitor.java:480)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitClass(AnnotationFileParser.java:3123)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser$AjavaAnnotationCollectorVisitor.visitClass(AnnotationFileParser.java:3113)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:808)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2301)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:669)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:189)[m
+[[1;31mERROR[m] [1;31m	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.processCompilationUnit(AnnotationFileParser.java:825)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.processStubUnit(AnnotationFileParser.java:790)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.process(AnnotationFileParser.java:779)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileParser.parseAjavaFile(AnnotationFileParser.java:696)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.stub.AnnotationFileElementTypes.parseAjavaFileWithTree(AnnotationFileElementTypes.java:286)[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1012)[m
+[[1;31mERROR[m] [1;31m	... 17 more[m
+[[1;31mERROR[m] [1;31mCaused by: java.lang.Throwable[m
+[[1;31mERROR[m] [1;31m	at org.checkerframework.javacutil.BugInCF.<init>(BugInCF.java:38)[m
+[[1;31mERROR[m] [1;31m	... 47 more[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+==== Count Script Output ====
+
+61

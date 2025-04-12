@@ -1,0 +1,53 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< org.spacious-team:table-wrapper-csv-impl >--------------
+[INFO] Building Table Wrapper API CSV Implementation 2024.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (prepare-agent) @ table-wrapper-csv-impl ---
+[INFO] argLine set to -javaagent:/Users/erfanarvan/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-csv-impl/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ table-wrapper-csv-impl ---
+[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-csv-impl/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-csv-impl ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 9 source files with javac [forked debug deprecation release 11] to target/classes
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[100,52] [override.param] Incompatible parameter type for cellValuePredicate.
+  found   : @Initialized @NonNull Predicate<@Initialized @NonNull Object>
+  required: @Initialized @NonNull Predicate<@Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull CsvReportPage
+    @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @NonNull Object> p4)
+  cannot override method in @Initialized @NonNull ReportPage
+    @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[106,43] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable CsvTableRow
+  method return type: @Initialized @NonNull CsvTableRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[48,19] [return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[60,42] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[74,39] [override.param] Incompatible parameter type for value.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CsvTableRow
+    @Initialized @NonNull boolean rowContains(@Initialized @NonNull CsvTableRow this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull ReportPageRow
+    @Initialized @NonNull boolean rowContains(@Initialized @NonNull ReportPageRow this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[42,64] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/correct_branches/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[36,35] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.719 s
+[INFO] Finished at: 2024-08-29T01:36:15-04:00
+[INFO] ------------------------------------------------------------------------
+
+41 errors

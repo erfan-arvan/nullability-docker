@@ -1,0 +1,33 @@
+package de.zuellich.meal_planner.pinterest.datatypes;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+/**
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.KeyForSubchecker")
+public class PagingInformation {
+
+    private  String cursor = "";
+
+    private  String next = "";
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  String getCursor( PagingInformation this) {
+        return cursor;
+    }
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void setCursor(String cursor) {
+        this.cursor = cursor;
+    }
+
+    @org.checkerframework.dataflow.qual.Pure
+    public  String getNext() {
+        return next;
+    }
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void setNext(String next) {
+        this.next = next;
+    }
+}

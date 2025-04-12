@@ -1,0 +1,82 @@
+/*
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+package com.google.cloud.tools.jib.image;
+
+import com.google.cloud.tools.jib.blob.BlobDescriptor;
+import com.google.cloud.tools.jib.cache.CachedLayer;
+import java.util.Arrays;
+import java.util.List;
+import org.hamcrest.CoreMatchers;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+
+/**
+ * Tests for {@link ImageLayers}.
+ */
+@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+public class ImageLayersTest {
+
+    private @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.MonotonicNonNull CachedLayer mockCachedLayer;
+
+    private @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.MonotonicNonNull ReferenceLayer mockReferenceLayer;
+
+    private @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.MonotonicNonNull DigestOnlyLayer mockDigestOnlyLayer;
+
+    private @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.MonotonicNonNull UnwrittenLayer mockUnwrittenLayer;
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void setUpFakes() throws LayerPropertyNotFoundException {
+        DescriptorDigest mockDescriptorDigest1 = Mockito.mock(DescriptorDigest.class);
+        DescriptorDigest mockDescriptorDigest2 = Mockito.mock(DescriptorDigest.class);
+        DescriptorDigest mockDescriptorDigest3 = Mockito.mock(DescriptorDigest.class);
+        BlobDescriptor cachedLayerBlobDescriptor = new BlobDescriptor(0, mockDescriptorDigest1);
+        BlobDescriptor referenceLayerBlobDescriptor = new BlobDescriptor(0, mockDescriptorDigest2);
+        BlobDescriptor referenceNoDiffIdLayerBlobDescriptor = new BlobDescriptor(0, mockDescriptorDigest3);
+        // Intentionally the same digest as the mockCachedLayer.
+        BlobDescriptor unwrittenLayerBlobDescriptor = new BlobDescriptor(0, mockDescriptorDigest1);
+        Mockito.when(mockCachedLayer.getBlobDescriptor()).thenReturn(cachedLayerBlobDescriptor);
+        Mockito.when(mockReferenceLayer.getBlobDescriptor()).thenReturn(referenceLayerBlobDescriptor);
+        Mockito.when(mockDigestOnlyLayer.getBlobDescriptor()).thenReturn(referenceNoDiffIdLayerBlobDescriptor);
+        Mockito.when(mockUnwrittenLayer.getBlobDescriptor()).thenReturn(unwrittenLayerBlobDescriptor);
+    }
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void testAddLayer_success() throws LayerPropertyNotFoundException {
+        List<Layer> expectedLayers = Arrays.asList(mockCachedLayer, mockReferenceLayer, mockDigestOnlyLayer);
+        ImageLayers<Layer> imageLayers = new ImageLayers<>();
+        imageLayers.add(mockCachedLayer);
+        imageLayers.add(mockReferenceLayer);
+        imageLayers.add(mockDigestOnlyLayer);
+        Assert.assertThat(imageLayers.getLayers(), CoreMatchers.is(expectedLayers));
+    }
+
+    @org.checkerframework.dataflow.qual.Impure
+    public void testAddLayer_sameAsLastLayer() throws LayerPropertyNotFoundException {
+        List<Layer> expectedLayers = Arrays.asList(mockCachedLayer, mockReferenceLayer, mockDigestOnlyLayer, mockUnwrittenLayer);
+        ImageLayers<Layer> imageLayers = new ImageLayers<>();
+        imageLayers.add(mockCachedLayer);
+        imageLayers.add(mockReferenceLayer);
+        imageLayers.add(mockDigestOnlyLayer);
+        imageLayers.add(mockUnwrittenLayer);
+        imageLayers.add(mockCachedLayer);
+        Assert.assertEquals(expectedLayers, imageLayers.getLayers());
+    }
+}

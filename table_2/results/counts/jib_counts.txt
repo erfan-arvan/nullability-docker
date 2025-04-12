@@ -1,0 +1,50 @@
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 53
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 0
+
+Lines containing @SuppressWarnings:
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 105
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 0
+
+Lines containing @SuppressWarnings:
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 53
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 0
+
+Lines containing @SuppressWarnings:
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 105
+  @NonNull: 0
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 0
+
+Lines containing @SuppressWarnings:

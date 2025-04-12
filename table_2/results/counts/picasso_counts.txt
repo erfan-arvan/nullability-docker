@@ -1,0 +1,94 @@
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 45
+  @NonNull: 235
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 10
+
+Lines containing @SuppressWarnings:
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("unchecked") List<Action> batch = (List<Action>) msg.obj;
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public void setIndicatorsEnabled(boolean enabled) {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public boolean getIndicatorsEnabled() {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public StatsSnapshot getSnapshot() {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/StatsSnapshot.java: @SuppressWarnings("UnusedDeclaration") public void dump() {
+./src/main/java/com/squareup/picasso3/RequestCreator.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/NetworkPolicy.java: @SuppressWarnings("PointlessBitwiseExpression")
+./src/main/java/com/squareup/picasso3/MemoryPolicy.java: @SuppressWarnings("PointlessBitwiseExpression")
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 96
+  @NonNull: 238
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 12
+
+Lines containing @SuppressWarnings:
+./src/main/java/com/squareup/picasso3/BitmapHunter.java: @SuppressWarnings("NullAway")
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("unchecked") List<Action> batch = (List<Action>) msg.obj;
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public void setIndicatorsEnabled(boolean enabled) {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public boolean getIndicatorsEnabled() {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public StatsSnapshot getSnapshot() {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/StatsSnapshot.java: @SuppressWarnings("UnusedDeclaration") public void dump() {
+./src/main/java/com/squareup/picasso3/RequestCreator.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/RequestCreator.java: @SuppressWarnings("NullAway")
+./src/main/java/com/squareup/picasso3/NetworkPolicy.java: @SuppressWarnings("PointlessBitwiseExpression")
+./src/main/java/com/squareup/picasso3/MemoryPolicy.java: @SuppressWarnings("PointlessBitwiseExpression")
+pre_check
+
+Total annotation occurrences:
+  @Nullable: 45
+  @NonNull: 235
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 10
+
+Lines containing @SuppressWarnings:
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("unchecked") List<Action> batch = (List<Action>) msg.obj;
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public void setIndicatorsEnabled(boolean enabled) {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public boolean getIndicatorsEnabled() {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public StatsSnapshot getSnapshot() {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/StatsSnapshot.java: @SuppressWarnings("UnusedDeclaration") public void dump() {
+./src/main/java/com/squareup/picasso3/RequestCreator.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/NetworkPolicy.java: @SuppressWarnings("PointlessBitwiseExpression")
+./src/main/java/com/squareup/picasso3/MemoryPolicy.java: @SuppressWarnings("PointlessBitwiseExpression")
+
+post_check
+
+Total annotation occurrences:
+  @Nullable: 96
+  @NonNull: 238
+  @Nonnull: 0
+  @Notnull: 0
+  @NotNull: 0
+  @MonotonicNonNull: 0
+  @SuppressWarnings: 12
+
+Lines containing @SuppressWarnings:
+./src/main/java/com/squareup/picasso3/BitmapHunter.java: @SuppressWarnings("NullAway")
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("unchecked") List<Action> batch = (List<Action>) msg.obj;
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public void setIndicatorsEnabled(boolean enabled) {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public boolean getIndicatorsEnabled() {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") public StatsSnapshot getSnapshot() {
+./src/main/java/com/squareup/picasso3/Picasso.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/StatsSnapshot.java: @SuppressWarnings("UnusedDeclaration") public void dump() {
+./src/main/java/com/squareup/picasso3/RequestCreator.java: @SuppressWarnings("UnusedDeclaration") // Public API.
+./src/main/java/com/squareup/picasso3/RequestCreator.java: @SuppressWarnings("NullAway")
+./src/main/java/com/squareup/picasso3/NetworkPolicy.java: @SuppressWarnings("PointlessBitwiseExpression")
+./src/main/java/com/squareup/picasso3/MemoryPolicy.java: @SuppressWarnings("PointlessBitwiseExpression")
