@@ -11,7 +11,7 @@ COMPILED_CLASSES_FOLDER = "cf_classes"
 SRC_FILES = "cf_srcs.txt"
 CF_BINARY = "../scripts/tools/checker-framework-3.34.0/checker/bin/javac"
 CF_COMMAND = "-processor org.checkerframework.checker.nullness.NullnessChecker -Adetailedmsgtext -AassumePure"
-SKIP_COMPLETED = True  # skips if the output file is already there.
+SKIP_COMPLETED = False  # skips if the output file is already there.
 
 if not os.path.exists(RESULTS_FOLDER):
     os.mkdir(RESULTS_FOLDER)

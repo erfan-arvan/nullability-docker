@@ -11,7 +11,7 @@ COMPILED_CLASSES_FOLDER = "cf_classes"
 SRC_FILES = "cf_srcs.txt"
 CF_BINARY = "../scripts/tools/checker-framework-3.34.0/checker/bin/javac"
 CF_COMMAND = "-processor org.checkerframework.checker.nullness.NullnessChecker -Adetailedmsgtext -AassumePure"
-SKIP_COMPLETED = True
+SKIP_COMPLETED = False
 WPI_TIMEOUT = 6 * 60 * 60
 
 if not os.path.exists(RESULTS_FOLDER):
