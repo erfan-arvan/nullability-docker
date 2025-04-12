@@ -1,4 +1,4 @@
-!# /bin/bash
+#!/bin/bash
 
 # if fresh passed rerun nullaway.py
 if [ "$1" == "fresh" ]; then
