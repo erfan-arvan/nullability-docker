@@ -5,6 +5,7 @@ the top of the file before executing.
 '''
 import os
 import shutil
+import subprocess
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 BENCHMARKS_FOLDER = "../../NJR/original"
@@ -25,13 +26,14 @@ def prepare():
     os.makedirs(ANNOTATOR_OUT, exist_ok=True)
     with open(f'{ANNOTATOR_OUT}/paths.tsv', 'w') as o:
         o.write("{}\t{}\n".format(f'{ANNOTATOR_OUT}/nullaway.xml', f'{ANNOTATOR_OUT}/scanner.xml'))
+    # delete annotator_out/0
+    shutil.rmtree(ANNOTATOR_OUT + "/0", ignore_errors=True)
 
 #create the output folder if it doesn't exist
 if not os.path.exists(RESULTS_FOLDER):
     os.mkdir(RESULTS_FOLDER)
 
 #Loop through the benchmarks
-print("Completed Benchmarks")
 for benchmark in os.listdir(BENCHMARKS_FOLDER):
     # print(benchmark)
     if (SKIP_COMPLETED):
@@ -77,11 +79,8 @@ for benchmark in os.listdir(BENCHMARKS_FOLDER):
         + " 2> " +  RESULTS_FOLDER
         + "/" + benchmark + ".txt"
     )
-    # print(build_command)
-    # os.system(build_command)
     prepare()
     print("working on: " + benchmark)
-
     commands = []
     commands += ["java", "-jar", ANNOTATOR_JAR]
     commands += ['-d', ANNOTATOR_OUT]
@@ -89,10 +88,10 @@ for benchmark in os.listdir(BENCHMARKS_FOLDER):
     commands += ['-cp', f'{ANNOTATOR_OUT}/paths.tsv']
     commands += ['-i', 'com.uber.nullaway.annotations.Initializer']
     commands += ['-n', 'javax.annotation.Nullable']
-    commands += ['-cn', 'NullAway']
+    commands += ['-cn', 'NULLAWAY']
     commands += ["--depth", "10"]
 
-    os.system(" ".join(commands))
+    subprocess.call(commands)
 
     #remove the classes folder
     shutil.rmtree(COMPILED_CLASSES_FOLDER)
