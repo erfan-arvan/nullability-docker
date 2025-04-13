@@ -1,7 +1,7 @@
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Enseignant.java:10: error: (initialization.fields.uninitialized) $$ 1 $$ NotificationEmprunts $$ ( 186, 291 ) $$ the constructor does not initialize fields: NotificationEmprunts
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Enseignant.java:10: error: [initialization.fields.uninitialized] the constructor does not initialize fields: NotificationEmprunts
     public Enseignant(int i, String n, String p, String t, int nbEM) {
            ^
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Enseignant.java:15: error: (override.param) $$ 7 $$ media $$ @Initialized @NonNull Media $$ @Initialized @Nullable Media $$ @Initialized @NonNull Enseignant $$ @Initialized @NonNull int eligibilite(@Initialized @NonNull Enseignant this, @Initialized @NonNull Media p0) $$ @Initialized @NonNull Utilisateur $$ @Initialized @NonNull int eligibilite(@Initialized @NonNull Utilisateur this, @Initialized @Nullable Media p0) $$ ( 337, 348 ) $$ Incompatible parameter type for media.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Enseignant.java:15: error: [override.param] Incompatible parameter type for media.
     protected int eligibilite(Media media) {
                                     ^
   found   : @Initialized @NonNull Media
@@ -10,7 +10,7 @@
     @Initialized @NonNull int eligibilite(@Initialized @NonNull Enseignant this, @Initialized @NonNull Media p0)
   cannot override method in @Initialized @NonNull Utilisateur
     @Initialized @NonNull int eligibilite(@Initialized @NonNull Utilisateur this, @Initialized @Nullable Media p0)
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Enseignant.java:26: error: (override.param) $$ 7 $$ idEmprunt $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull Enseignant $$ @Initialized @NonNull int commenter(@Initialized @NonNull Enseignant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2) $$ @Initialized @NonNull Utilisateur $$ @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2) $$ ( 644, 657 ) $$ Incompatible parameter type for idEmprunt.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Enseignant.java:26: error: [override.param] Incompatible parameter type for idEmprunt.
     public int commenter(int idEmprunt, int n, String com) {
                              ^
   found   : @Initialized @NonNull int
@@ -19,7 +19,7 @@
     @Initialized @NonNull int commenter(@Initialized @NonNull Enseignant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2)
   cannot override method in @Initialized @NonNull Utilisateur
     @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2)
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Enseignant.java:26: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull Enseignant $$ @Initialized @NonNull int commenter(@Initialized @NonNull Enseignant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2) $$ @Initialized @NonNull Utilisateur $$ @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2) $$ ( 659, 664 ) $$ Incompatible parameter type for n.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Enseignant.java:26: error: [override.param] Incompatible parameter type for n.
     public int commenter(int idEmprunt, int n, String com) {
                                             ^
   found   : @Initialized @NonNull int
@@ -28,7 +28,7 @@
     @Initialized @NonNull int commenter(@Initialized @NonNull Enseignant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2)
   cannot override method in @Initialized @NonNull Utilisateur
     @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2)
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Enseignant.java:26: error: (override.param) $$ 7 $$ com $$ @Initialized @NonNull String $$ @Initialized @Nullable String $$ @Initialized @NonNull Enseignant $$ @Initialized @NonNull int commenter(@Initialized @NonNull Enseignant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2) $$ @Initialized @NonNull Utilisateur $$ @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2) $$ ( 666, 676 ) $$ Incompatible parameter type for com.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Enseignant.java:26: error: [override.param] Incompatible parameter type for com.
     public int commenter(int idEmprunt, int n, String com) {
                                                       ^
   found   : @Initialized @NonNull String
@@ -37,20 +37,20 @@
     @Initialized @NonNull int commenter(@Initialized @NonNull Enseignant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2)
   cannot override method in @Initialized @NonNull Utilisateur
     @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2)
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Utilisateur.java:180: error: (return) $$ 2 $$ @Initialized @Nullable Emprunt $$ @Initialized @NonNull Emprunt $$ ( 4432, 4440 ) $$ incompatible types in return.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Utilisateur.java:180: error: [return] incompatible types in return.
         return resultat;
                ^
   type of expression: @Initialized @Nullable Emprunt
   method return type: @Initialized @NonNull Emprunt
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/emprunt/Emprunt.java:27: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 482, 486 ) $$ incompatible types in assignment.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/emprunt/Emprunt.java:27: error: [assignment] incompatible types in assignment.
         commentaire = null;
                       ^
   found   : null (NullType)
   required: @Initialized @NonNull String
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/scolarite/Projet.java:24: error: (initialization.fields.uninitialized) $$ 1 $$ stage $$ ( 343, 660 ) $$ the constructor does not initialize fields: stage
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/scolarite/Projet.java:24: error: [initialization.fields.uninitialized] the constructor does not initialize fields: stage
     public Projet(Cours c, ArrayList<utilisateurs.Etudiant> e, int i, String n, String d, Date dd, Date df) {
            ^
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Etudiant.java:12: error: (override.param) $$ 7 $$ media $$ @Initialized @NonNull Media $$ @Initialized @Nullable Media $$ @Initialized @NonNull Etudiant $$ @Initialized @NonNull int eligibilite(@Initialized @NonNull Etudiant this, @Initialized @NonNull Media p0) $$ @Initialized @NonNull Utilisateur $$ @Initialized @NonNull int eligibilite(@Initialized @NonNull Utilisateur this, @Initialized @Nullable Media p0) $$ ( 243, 254 ) $$ Incompatible parameter type for media.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Etudiant.java:12: error: [override.param] Incompatible parameter type for media.
     protected int eligibilite(Media media) {
                                     ^
   found   : @Initialized @NonNull Media
@@ -59,7 +59,7 @@
     @Initialized @NonNull int eligibilite(@Initialized @NonNull Etudiant this, @Initialized @NonNull Media p0)
   cannot override method in @Initialized @NonNull Utilisateur
     @Initialized @NonNull int eligibilite(@Initialized @NonNull Utilisateur this, @Initialized @Nullable Media p0)
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Etudiant.java:27: error: (override.param) $$ 7 $$ idEmprunt $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull Etudiant $$ @Initialized @NonNull int commenter(@Initialized @NonNull Etudiant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2) $$ @Initialized @NonNull Utilisateur $$ @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2) $$ ( 753, 766 ) $$ Incompatible parameter type for idEmprunt.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Etudiant.java:27: error: [override.param] Incompatible parameter type for idEmprunt.
     public int commenter(int idEmprunt, int n, String com) {
                              ^
   found   : @Initialized @NonNull int
@@ -68,7 +68,7 @@
     @Initialized @NonNull int commenter(@Initialized @NonNull Etudiant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2)
   cannot override method in @Initialized @NonNull Utilisateur
     @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2)
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Etudiant.java:27: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull int $$ @Initialized @Nullable int $$ @Initialized @NonNull Etudiant $$ @Initialized @NonNull int commenter(@Initialized @NonNull Etudiant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2) $$ @Initialized @NonNull Utilisateur $$ @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2) $$ ( 768, 773 ) $$ Incompatible parameter type for n.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Etudiant.java:27: error: [override.param] Incompatible parameter type for n.
     public int commenter(int idEmprunt, int n, String com) {
                                             ^
   found   : @Initialized @NonNull int
@@ -77,7 +77,7 @@
     @Initialized @NonNull int commenter(@Initialized @NonNull Etudiant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2)
   cannot override method in @Initialized @NonNull Utilisateur
     @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2)
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Etudiant.java:27: error: (override.param) $$ 7 $$ com $$ @Initialized @NonNull String $$ @Initialized @Nullable String $$ @Initialized @NonNull Etudiant $$ @Initialized @NonNull int commenter(@Initialized @NonNull Etudiant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2) $$ @Initialized @NonNull Utilisateur $$ @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2) $$ ( 775, 785 ) $$ Incompatible parameter type for com.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Etudiant.java:27: error: [override.param] Incompatible parameter type for com.
     public int commenter(int idEmprunt, int n, String com) {
                                                       ^
   found   : @Initialized @NonNull String
@@ -86,22 +86,22 @@
     @Initialized @NonNull int commenter(@Initialized @NonNull Etudiant this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull String p2)
   cannot override method in @Initialized @NonNull Utilisateur
     @Initialized @NonNull int commenter(@Initialized @NonNull Utilisateur this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable String p2)
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/controleurs/ControleurUser.java:87: error: (argument) $$ 4 $$ prof $$ Cours.setProf $$ null (NullType) $$ @Initialized @NonNull Enseignant $$ ( 3182, 3186 ) $$ incompatible argument for parameter prof of Cours.setProf.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/controleurs/ControleurUser.java:87: error: [argument] incompatible argument for parameter prof of Cours.setProf.
         cours.setProf(null);
                       ^
   found   : null (NullType)
   required: @Initialized @NonNull Enseignant
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/controleurs/ControleurUser.java:151: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Utilisateur $$ ( 5294, 5298 ) $$ incompatible types in return.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/controleurs/ControleurUser.java:151: error: [return] incompatible types in return.
                 return null;
                        ^
   type of expression: null (NullType)
   method return type: @Initialized @NonNull Utilisateur
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/controleurs/ControleurProjet.java:34: error: (argument) $$ 4 $$ e $$ Projet constructor $$ null (NullType) $$ @Initialized @NonNull ArrayList<@Initialized @NonNull Etudiant> $$ ( 1094, 1098 ) $$ incompatible argument for parameter e of Projet constructor.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/controleurs/ControleurProjet.java:34: error: [argument] incompatible argument for parameter e of Projet constructor.
         Projet projet = new Projet(cours, null, idProjet, n, d, dd, df);
                                           ^
   found   : null (NullType)
   required: @Initialized @NonNull ArrayList<@Initialized @NonNull Etudiant>
-../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/test/Main.java:6: error: (argument) $$ 4 $$ args $$ Bdd.main $$ null (NullType) $$ @Initialized @NonNull String @Initialized @NonNull [] $$ ( 125, 129 ) $$ incompatible argument for parameter args of Bdd.main.
+../nullgtn/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/test/Main.java:6: error: [argument] incompatible argument for parameter args of Bdd.main.
         Bdd.main(null);
                  ^
   found   : null (NullType)

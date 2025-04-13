@@ -6,40 +6,28 @@
             store.voidSale(sale);
                  ^
     (see http://t.uber.com/nullaway )
-../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/sales/BasicSale.java:75: error: [NullAway] dereferenced expression customer is @Nullable
-        return customer.getGreeting(store);
-                       ^
+../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/Product.java:38: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.discount = null;
+                      ^
     (see http://t.uber.com/nullaway )
-../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/sales/BasicSale.java:80: error: [NullAway] dereferenced expression customer is @Nullable
-        return customer.getThankYou(store);
-                       ^
+../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/sales/BasicSale.java:36: error: [NullAway] assigning @Nullable expression to @NonNull field
+        customer = null;
+                 ^
     (see http://t.uber.com/nullaway )
-../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/PosRegister.java:172: error: [NullAway] dereferenced expression lineInput is @Nullable
-            PosEntryStrategy posEntry = lineInput.getInput();
-                                                 ^
+../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/customer/PreferredCustomer.java:39: error: [NullAway] assigning @Nullable expression to @NonNull field
+        discount = null;
+                 ^
     (see http://t.uber.com/nullaway )
-../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/customer/PreferredCustomer.java:161: error: [NullAway] dereferenced expression this.name is @Nullable
-        if (this.name.length() > 0) {
+../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/storage/FakePersistantCustomer.java:32: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.customer = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/storage/FakePersistantProduct.java:35: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.product = null;
                      ^
     (see http://t.uber.com/nullaway )
-../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/lineitem/BasicLineItem.java:42: error: [NullAway] dereferenced expression product is @Nullable
-        return product.getId();
+../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/storage/FakePersistantDiscount.java:35: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.discount = null;
                       ^
     (see http://t.uber.com/nullaway )
-../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/lineitem/BasicLineItem.java:47: error: [NullAway] dereferenced expression product is @Nullable
-        return product.getDescription();
-                      ^
-    (see http://t.uber.com/nullaway )
-../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/lineitem/BasicLineItem.java:65: error: [NullAway] dereferenced expression product is @Nullable
-        return product.getUnitPrice();
-                      ^
-    (see http://t.uber.com/nullaway )
-../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/lineitem/BasicLineItem.java:70: error: [NullAway] dereferenced expression product is @Nullable
-        return product.getDiscountAmount(quantity);
-                      ^
-    (see http://t.uber.com/nullaway )
-../wpi/url0c7746c72b_wsuetholz_DiscountStrategy_tgz-pJ8-net_suetholz_pos_MainJ8/src/net/suetholz/pos/lineitem/BasicLineItem.java:75: error: [NullAway] dereferenced expression product is @Nullable
-        return (product.getUnitPrice() * quantity);
-                       ^
-    (see http://t.uber.com/nullaway )
-11 errors
+8 errors
