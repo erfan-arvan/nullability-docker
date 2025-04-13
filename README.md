@@ -74,142 +74,164 @@ The script runs nullability checkers on both the pre- and post-check versions be
 
 ## Table 2: Manual Categorization of Code Changes
 
-This part of the artifact corresponds to **Table 2** of the paper and addresses **Research Question 1 (RQ1)**:
+This section corresponds to **Table 2** of the paper and addresses **Research Question 1 (RQ1)**:
 
 > When developers verify their code using a nullability checker, do they make code changes beyond adding annotations? If so, what kinds of changes do they make?
 
-### Procedure
+📁 **All scripts and files described below are located in** `./opt/table_2/`.
 
-Here are the steps we followed:
+---
 
-1. **Count Annotations:**
-   - Counted the occurrences of nullability annotations (`@Nullable`, `@NonNull`, etc.) and `@SuppressWarnings` in both pre- and post-check versions.
-   - Counts are available in:  
+### Overview
+
+To answer this question, we analyzed a set of open-source Java projects by comparing their **pre-check** (before nullability verification) and **post-check** (after verification) versions. The following steps summarize how we selected, processed, and analyzed these projects.
+
+---
+
+### Step-by-Step Process
+
+1. **Select Benchmarks:**
+   - We selected the projects from prior type reconstruction experiments, as described in Section 3.1.1 of the paper.
+   - These benchmarks include a diverse set of real-world Java projects where developers adopted nullability checking tools.
+
+2. **Identify Pre- and Post-Check Commits:**
+   - For each benchmark, we identified two representative commits:
+     - The **pre-check version**: before nullability-related annotations or suppressions were introduced.
+     - The **post-check version**: after the code was updated based on nullability checker feedback.
+   - When changes were spread across multiple commits, we manually selected the most representative pair.
+   - All selection decisions are documented in:
+     ```
+     Pre-And-Post-Commits-Decision.docx
+     ```
+   - Further methodological details are described in **Section 3.1.1** of the paper.
+
+3. **Count Annotations:**
+   - We counted occurrences of nullability annotations and `@SuppressWarnings` in both pre-check and post-check versions.
+   - Counts are saved in:
      ```
      ./results/counts/{project_name}_counts.txt
      ```
 
-2. **Annotation and Noise Removal:**
-   - Removed all nullability annotations and `@SuppressWarnings`.
-   - Also removed comments, empty lines, and import statements.
+4. **Clean Code for Diffing:**
+   - To focus on meaningful changes, we removed:
+     - All nullability annotations
+     - All `@SuppressWarnings`
+     - Comments, empty lines, and import statements
    - Scripts used:
      - `removeAnnotations.py`
      - `removeCommentsLinesImports.py`
 
-3. **Diff Generation:**
-   - Computed line-level diffs between the cleaned pre- and post-check versions using `diff`.
+5. **Compute Diffs:**
+   - Line-level diffs were generated between cleaned pre- and post-check versions using `diff`.
 
-4. **Manual Categorization:**
-   - Authors manually reviewed the diffs and categorized nullability-related changes.
-   - Annotated diffs are saved in:
-     ```
-     ./results/annotated_diffs/
-     ```
-   - Raw diffs are stored in:
-     ```
-     ./results/diffs/
-     ```
+6. **Manual Annotation of Diffs:**
+   - We manually inspected and labeled the diffs based on the type of nullability-related change.
+   - Outputs:
+     - Raw diffs: `./results/diffs/`
+     - Annotated diffs: `./results/annotated_diffs/`
 
-5. **Category Summary:**
-   - We summarized the number of changes per category for each project in:
+7. **Summarize Categories:**
+   - Each code change was assigned a category tag representing the type of modification.
+   - The final summary table is saved in:
      ```
      ./diff_categories.csv
      ```
-   - For a human-readable version, run:
+   - To view the results interactively:
      ```bash
      python3 scripts/show_results.py
      ```
 
-### Categories of Code Changes
+---
 
-Each change was labeled with a category tag representing the type of nullability-related code modification. The categories and their descriptions can be seen when running the result visualization script.
+### How Annotation Counts Were Calculated
 
-The summary file `./diff_categories.csv` aggregates the number of changes per category per project, and this data is used to produce Table 2 in the paper.
+Each `*_counts.txt` file under `./results/counts/` provides a breakdown of nullability-related annotations before and after nullability verification.
 
-### Annotation Count Interpretation
+We computed the following three metrics per project:
 
-Each `*_counts.txt` file under `./results/counts/` includes pre- and post-check counts of the following:
+- **Nul**  
+  Net increase in annotations that mark a value as *nullable*:
+  ```text
+  (Post-check @Nullable + @MonotonicNonNull)
+  − (Pre-check @Nullable + @MonotonicNonNull)
+  ```
+  > **Note:** `@MonotonicNonNull` is treated similarly to `@Nullable` because it also indicates that a variable may be null under certain conditions.
 
-- `@Nullable`
-- `@NonNull`, `@Nonnull`, `@NotNull`, `@Notnull` (treated as variations of NonNull)
-- `@MonotonicNonNull`
-- `@SuppressWarnings`
+- **Non**  
+  Net increase in annotations that mark a value as *non-null*:
+  ```text
+  (Post-check @NonNull + @Nonnull + @NotNull + @Notnull)
+  − (Pre-check @NonNull + @Nonnull + @NotNull + @Notnull)
+  ```
+  > **Note:** These annotations are semantically equivalent and used interchangeably across projects and tools, so we aggregate them under one category.
 
-#### Example: `butterknife_counts.txt`
+- **SW**  
+  Net increase in nullability-related suppressions:
+  ```text
+  (Post-check @SuppressWarnings) − (Pre-check @SuppressWarnings)
+  ```
+  > **Note:** We manually filtered to include only suppressions relevant to nullability (e.g., `@SuppressWarnings("nullness")`), though the count files list all suppressions.
 
+#### Example (`butterknife_counts.txt`)
 ```text
 pre_check
 
 Total annotation occurrences:
   @Nullable: 1
-  ...
   @SuppressWarnings: 0
 
 post_check
 
 Total annotation occurrences:
   @Nullable: 17
-  ...
   @SuppressWarnings: 2
 
 Lines containing @SuppressWarnings:
   ButterKnifeProcessor.java: @SuppressWarnings("NullAway")
   FieldResourceBinding.java: @SuppressWarnings("Immutable")
 ```
+From this, we compute:
+- **Nul = 17 - 1 = 16**
+- **Non = (computed from the four @NonNull variants)**
+- **SW = 2 - 0 = 2** (after filtering for nullability-related suppressions)
 
-### How to Calculate Table 2 Metrics
-
-For each project:
-
-- **Nul** = post-check `@Nullable` count - pre-check `@Nullable` count  
-  Example: `17 - 1 = 16` for ButterKnife
-- **Non** = Sum of added `@NonNull`, `@Nonnull`, `@NotNull`, `@Notnull`
-- **SW** = Increase in nullability-related `@SuppressWarnings`  
-  Note: We manually reviewed and counted only nullability-related suppressions (e.g., `@SuppressWarnings("nullness")`), even though the total shown in the count files includes all types.
+---
 
 ### Reproducing the Results
 
-To generate all results from scratch:
+To run the full pipeline from scratch:
 
 ```bash
 ./table_2.sh fresh
 ```
 
-This will:
+This command will:
 
-- Clone all benchmarks
-- Generate pre- and post-check versions
-- Run annotation removal, diff computation, and counting scripts
+- Use pre- and post-check versions defined in the selected commits  
+- Run the annotation removal and diff generation scripts  
+- Count annotations and compute category summaries  
+- Gather manual annotations on diff changes and count them  
+- Create the same results presented in **Table 2** of the paper  
 
-### Commit Selection
-
-For each project, we selected commits representing:
-
-- **Pre-check version:** The state of the project before nullability verification
-- **Post-check version:** The state after nullability verification
-
-In most cases, the commit just before nullability-related changes was chosen as the pre-check version. When changes were spread across multiple commits, we manually selected the best-matching commits and documented our decisions in:
-
-```
-Pre-And-Post-Commits-Decisions.docx
-```
-
-Further details are also in Section 3.1.1 of the paper.
-
-### Files Summary
-
-- `./results/diffs/` – Raw diffs between pre- and post-check versions  
-- `./results/annotated_diffs/` – Manually annotated diffs with category labels  
-- `./results/counts/` – Annotation and `@SuppressWarnings` statistics  
-- `./diff_categories.csv` – Summary of categorized changes used in Table 2  
-- `scripts/show_results.py` – Tool to view results in a structured, readable format
-
-### To Quickly View the Results
+To simply view the results without rerunning everything:
 
 ```bash
 ./table_2.sh
 python3 scripts/show_results.py
 ```
+
+---
+
+### Generated Files and Folders
+
+After running the pipeline, the following outputs will be available inside `./opt/table_2/results/`:
+
+- `counts/` – Contains `{project}_counts.txt` files with annotation statistics (pre vs. post)
+- `diffs/` – Contains raw diffs between pre- and post-check versions (after annotation and comment removal)
+- `annotated_diffs/` – Contains manually labeled diffs with change categories
+- `diff_categories.csv` – A summary table with the count of changes in each category, per project
+
+These files form the basis of **Table 2** in the paper.
 
 ---
 
