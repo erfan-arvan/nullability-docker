@@ -1,14 +1,13 @@
 #!/bin/bash
 
 # if fresh passed rerun nullaway.py
-if [ "$1" == "fresh" ]; then
+if [ "$1" == "--fresh" ]; then
     python3 nullaway.py
 fi
 
 # if fresh passed, run cfnullness and copy results
-if [ "$1" == "fresh" ]; then
-    cd cfnullness
-    ./run.sh
+if [ "$1" == "--fresh" ]; then
+    cd cfnullness && ./run.sh
     cp results/* ../results/
     cd ..
 fi
