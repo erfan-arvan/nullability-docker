@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scanner>
+    <serialization active="true" />
+    <uuid>20eaa4a8-6066-49d8-b427-d5ee1435881b</uuid>
+    <path>/opt/error-reduction/scripts/annotator-out/0</path>
+    <processor>
+        <LOMBOK active="true" />
+    </processor>
+    <annotations />
+</scanner>
