@@ -22,33 +22,46 @@ def read_error_count(benchmark, checker, version, tool):
     return "?"
     
 
-print("Benchmark, WPI-CF-Pre, WPI-CF-Post, WPI-NW-Pre, WPI-NW-Post, ANN-CF-Pre, ANN-CF-Post, ANN-NW-Pre, ANN-NW-Post", "NGT-CF-Pre, NGT-CF-Post, NGT-NW-Pre, NGT-NW-Post")
- 
+header = (
+    f"{'Benchmark':<30} | {'WPI-CF-Pre':>10} | {'WPI-CF-Post':>12} | {'WPI-NW-Pre':>11} | {'WPI-NW-Post':>12} | "
+    f"{'ANN-CF-Pre':>10} | {'ANN-CF-Post':>12} | {'ANN-NW-Pre':>11} | {'ANN-NW-Post':>12} | "
+    f"{'NGT-CF-Pre':>10} | {'NGT-CF-Post':>12} | {'NGT-NW-Pre':>11} | {'NGT-NW-Post':>12}"
+)
+
+# Separator
+separator = "-" * len(header)
+
+# Print header
+print(separator)
+print(header)
+print(separator)
+
+# Print each row
 for benchmark in benchmarks.keys():
     name = benchmarks[benchmark]
     
-    # ann for annotator
+    # Annotator
     nullness_pre_ann = read_error_count(name, "nullness", "pre", "ann")
     nullness_post_ann = read_error_count(name, "nullness", "post", "ann")
     nullaway_pre_ann = read_error_count(name, "nullaway", "pre", "ann")
     nullaway_post_ann = read_error_count(name, "nullaway", "post", "ann")
     
-    # wpi for wpi
+    # WPI
     nullness_pre_wpi = read_error_count(name, "nullness", "pre", "wpi")
     nullness_post_wpi = read_error_count(name, "nullness", "post", "wpi")
     nullaway_pre_wpi = read_error_count(name, "nullaway", "pre", "wpi")
     nullaway_post_wpi = read_error_count(name, "nullaway", "post", "wpi")
     
-    # ngt for nullgtn
+    # NullGTN
     nullness_pre_ngt = read_error_count(name, "nullness", "pre", "ngt")
     nullness_post_ngt = read_error_count(name, "nullness", "post", "ngt")
     nullaway_pre_ngt = read_error_count(name, "nullaway", "pre", "ngt")
     nullaway_post_ngt = read_error_count(name, "nullaway", "post", "ngt")
     
-    print(f"{name}, {nullness_pre_wpi}, {nullness_post_wpi}, {nullaway_pre_wpi}, {nullaway_post_wpi}, {nullness_pre_ann}, {nullness_post_ann}, {nullaway_pre_ann}, {nullaway_post_ann}, {nullness_pre_ngt}, {nullness_post_ngt}, {nullaway_pre_ngt}, {nullaway_post_ngt}")
-    
-    
-    
-    
-    
-
+    # Print row
+    row = (
+        f"{name:<30} | {nullness_pre_wpi:>10} | {nullness_post_wpi:>12} | {nullaway_pre_wpi:>11} | {nullaway_post_wpi:>12} | "
+        f"{nullness_pre_ann:>10} | {nullness_post_ann:>12} | {nullaway_pre_ann:>11} | {nullaway_post_ann:>12} | "
+        f"{nullness_pre_ngt:>10} | {nullness_post_ngt:>12} | {nullaway_pre_ngt:>11} | {nullaway_post_ngt:>12}"
+    )
+    print(row)

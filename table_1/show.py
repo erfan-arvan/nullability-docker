@@ -22,13 +22,21 @@ def read_error_count(benchmark, checker, version):
     return "?"
     
 
-print("Benchmark , CF PreV , CF PostV , NW PreV , NW PostV")    
+# Header and separator
+header = f"{'Project':<30} | {'CF PreV':>8} | {'CF PostV':>9} | {'NW PreV':>8} | {'NW PostV':>9}"
+separator = "-" * len(header)
+
+print(separator)
+print(header)
+print(separator)
+
+# Rows
 for benchmark in benchmarks.keys():
     name = benchmarks[benchmark]
     nullness_pre = read_error_count(name, "nullness", "pre")
     nullness_post = read_error_count(name, "nullness", "post")
     nullaway_pre = read_error_count(name, "nullaway", "pre")
     nullaway_post = read_error_count(name, "nullaway", "post")
-    print(f"{name} , {nullness_pre} , {nullness_post} , {nullaway_pre} , {nullaway_post}")
     
-
+    row = f"{name:<30} | {nullness_pre:>8} | {nullness_post:>9} | {nullaway_pre:>8} | {nullaway_post:>9}"
+    print(row)
