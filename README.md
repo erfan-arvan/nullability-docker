@@ -245,13 +245,31 @@ ErrorReduction/NJR Benchmarks - Reduction.csv
 
 ## Manual Investigation (Figure 4)
 
-Manual annotation comparison results are provided in two CSV files:
+This section presents the results of a manual investigation of the quality of annotations produced by all inference tools. It is divided into two parts. Section A reports on a comparison between tools where one marked a location as nullable while the others did not. Section B reports on a comparison between tools where one did not mark a location as nullable while the other did.
+
+The result of Section A can be found at:
+`manual-investigation/NJR Benchmarks - Annotation Analysis (1 v 2).csv`
+
+The result of Section B can be found at:
+`manual-investigation/NJR Benchmarks - Annotation Analysis (2 v 1).csv`
+
+#### Format
+Both files share the following columns:
+
 
 ```
-ManualInvestigation/NJR Benchmarks - Annotation Analysis (1 v 2).csv
-ManualInvestigation/NJR Benchmarks - Annotation Analysis (2 v 1).csv
+kind,class,method,param,index,Path,Tool,Status,Comment
+```
+The first six columns uniquely identify a program location that was marked as @Nullable. For example:
+
+```
+FIELD	hobo.Player	null	name	null	url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Player.java
+METHOD	hobo.Player	name()	null	null	url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Player.java
+PARAMETER	hobo.State	equals(java.lang.Object)	o	0	url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java
 ```
 
+The `Status` column indicates whether the tool that disagreed with the others made the correct or incorrect decision, using the values `correct` or`wrong`.
+The `Comment` column provides a brief justification for that judgment.
 ---
 
 ## Dynamic Nullability
@@ -268,7 +286,6 @@ Nullable location are serialized in tab separated value format, please see examp
 ```
 FIELD	hobo.Player	null	name	null	url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Player.java
 METHOD	hobo.Player	name()	null	null	url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Player.java
-METHOD	hobo.Player	toStr
 PARAMETER	hobo.State	equals(java.lang.Object)	o	0	url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java
 ```
 
