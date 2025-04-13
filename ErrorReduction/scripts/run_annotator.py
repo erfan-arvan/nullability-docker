@@ -77,9 +77,10 @@ for benchmark in os.listdir(BENCHMARKS_FOLDER):
         + " 2> " +  RESULTS_FOLDER
         + "/" + benchmark + ".txt"
     )
-    print(build_command)
-    os.system(build_command)
+    # print(build_command)
+    # os.system(build_command)
     prepare()
+    print("working on: " + benchmark)
 
     commands = []
     commands += ["java", "-jar", ANNOTATOR_JAR]
@@ -90,6 +91,8 @@ for benchmark in os.listdir(BENCHMARKS_FOLDER):
     commands += ['-n', 'javax.annotation.Nullable']
     commands += ['-cn', 'NullAway']
     commands += ["--depth", "10"]
+
+    os.system(" ".join(commands))
 
     #remove the classes folder
     shutil.rmtree(COMPILED_CLASSES_FOLDER)
