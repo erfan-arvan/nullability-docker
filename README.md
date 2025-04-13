@@ -193,8 +193,6 @@ Lines containing @SuppressWarnings:
 From this, we compute:
 - **Nul = 17 - 1 = 16**
 - **Non = (computed from the four @NonNull variants)**
-- **SW = 2 - 0 = 2** (after filtering for nullability-related suppressions)
-
 ---
 
 ### Reproducing the Results
