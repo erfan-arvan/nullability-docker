@@ -19,6 +19,7 @@ package org.cache2k.spi;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.Cache;
 import org.cache2k.CacheManager;
 import org.cache2k.config.Cache2kConfig;
@@ -29,70 +30,60 @@ import org.cache2k.config.Cache2kConfig;
  *
  * @author Jens Wilke; created: 2015-03-26
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface Cache2kCoreProvider {
 
-    /**
-     * @see CacheManager#setDefaultName(String)
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void setDefaultManagerName(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassLoader cl, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String s);
+  /**
+   * @see CacheManager#setDefaultName(String)
+   */
+  void setDefaultManagerName(ClassLoader cl, String s);
 
-    /**
-     * @see CacheManager#getDefaultName()
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    String getDefaultManagerName(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassLoader cl);
+  /**
+   * @see CacheManager#getDefaultName()
+   */
+  String getDefaultManagerName(ClassLoader cl);
 
-    /**
-     * @see CacheManager#getInstance(ClassLoader, String)
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    CacheManager getManager(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassLoader cl, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String name);
+  /**
+   * @see CacheManager#getInstance(ClassLoader, String)
+   */
+  CacheManager getManager(ClassLoader cl, String name);
 
-    /**
-     * Default class loader, this is the class loader used to load the cache implementation.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    ClassLoader getDefaultClassLoader();
+  /**
+   * Default class loader, this is the class loader used to load the cache implementation.
+   */
+  ClassLoader getDefaultClassLoader();
 
-    /**
-     * Close all cache2k cache managers.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void close();
+  /**
+   * Close all cache2k cache managers.
+   */
+  void close();
 
-    /**
-     * Close all cache manager associated to this class loader.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void close(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassLoader l);
+  /**
+   * Close all cache manager associated to this class loader.
+   */
+  void close(ClassLoader l);
 
-    /**
-     * Close a specific cache manager by its name.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void close(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ClassLoader l, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String managerName);
+  /**
+   * Close a specific cache manager by its name.
+   */
+  void close(ClassLoader l, String managerName);
 
-    /**
-     * Create a cache, apply external configuration before creating it.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    <K, V> Cache<K, V> createCache(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheManager m, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Cache2kConfig<K, V> cfg);
+  /**
+   * Create a cache, apply external configuration before creating it.
+   */
+  <K, V> Cache<K, V> createCache(CacheManager m, Cache2kConfig<K, V> cfg);
 
-    /**
-     * Return the effective default configuration for this manager. A different default
-     * configuration may be provided by the configuration system.
-     *
-     * @return mutable configuration instance containing the effective configuration defaults,
-     *         never {@code null}
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    Cache2kConfig getDefaultConfig(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheManager m);
+  /**
+   * Return the effective default configuration for this manager. A different default
+   * configuration may be provided by the configuration system.
+   *
+   * @return mutable configuration instance containing the effective configuration defaults,
+   *         never {@code null}
+   */
+  Cache2kConfig getDefaultConfig(CacheManager m);
 
-    /**
-     * @since 2
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    String getVersion();
+  /**
+   * @since 2
+   */
+  String getVersion();
+
 }

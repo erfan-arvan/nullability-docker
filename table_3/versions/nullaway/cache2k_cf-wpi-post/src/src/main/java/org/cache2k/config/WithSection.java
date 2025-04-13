@@ -19,6 +19,7 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.Customization;
 
 /**
@@ -26,9 +27,10 @@ import org.cache2k.Customization;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
-public interface WithSection<CFG extends ConfigSection<CFG, B>, B extends SectionBuilder<B, CFG>> {
+public interface WithSection
+    <CFG extends ConfigSection<CFG, B>,
+    B extends SectionBuilder<B, CFG>> {
 
-    @org.checkerframework.dataflow.qual.Pure
-    Class<CFG> getConfigClass();
+  Class<CFG> getConfigClass();
+
 }

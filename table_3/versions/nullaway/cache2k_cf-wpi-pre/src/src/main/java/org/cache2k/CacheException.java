@@ -19,30 +19,26 @@ package org.cache2k;
  * limitations under the License.
  * #L%
  */
+
 /**
  * Base class of all cache exceptions.
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public class CacheException extends RuntimeException {
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheException() {
-    }
+  public CacheException() { }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheException(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String message) {
-        super(message);
-    }
+  public CacheException(String message) {
+    super(message);
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheException(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String message, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Throwable cause) {
-        super(message, cause);
-    }
+  public CacheException(String message, Throwable cause) {
+    super(message, cause);
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheException(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Throwable cause) {
-        super(cause);
-    }
+  public CacheException(Throwable cause) {
+    super(cause);
+  }
+
 }

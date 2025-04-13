@@ -19,6 +19,7 @@ package org.cache2k.processor;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.DataAware;
 
 /**
@@ -27,12 +28,11 @@ import org.cache2k.DataAware;
  * @author Jens Wilke
  * @see EntryProcessor
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface EntryMutator<K, V> extends DataAware<K, V> {
 
-    /**
-     * @see EntryProcessor#process(MutableCacheEntry)
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void mutate(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull MutableCacheEntry<K, V> entry) throws Exception;
+  /**
+   * @see EntryProcessor#process(MutableCacheEntry)
+   */
+  void mutate(MutableCacheEntry<K, V> entry) throws Exception;
+
 }

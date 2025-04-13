@@ -3,7 +3,7 @@
  *
  * @author Jens Wilke
  */
-@NonNullApi
+@NonNullIsDefault
 package org.cache2k.expiry;
 
 /*
@@ -26,4 +26,4 @@ package org.cache2k.expiry;
  * #L%
  */
 
-import org.cache2k.annotation.NonNullApi;
+import org.cache2k.annotation.NonNullIsDefault;

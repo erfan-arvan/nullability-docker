@@ -4,8 +4,7 @@
  *
  * @author Jens Wilke
  */
-
-@NonNullApi
+@NonNullIsDefault
 package org.cache2k.spi;
 
 /*
@@ -28,4 +27,4 @@ package org.cache2k.spi;
  * #L%
  */
 
-import org.cache2k.annotation.NonNullApi;
+import org.cache2k.annotation.NonNullIsDefault;

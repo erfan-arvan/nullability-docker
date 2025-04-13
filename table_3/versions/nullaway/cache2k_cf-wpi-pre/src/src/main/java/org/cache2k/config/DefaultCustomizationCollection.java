@@ -19,6 +19,7 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 import java.util.AbstractCollection;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,37 +34,38 @@ import java.util.Iterator;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
-public final class DefaultCustomizationCollection<T> extends AbstractCollection<CustomizationSupplier<T>> implements CustomizationCollection<T> {
+public final class DefaultCustomizationCollection<T>
+  extends AbstractCollection<CustomizationSupplier<T>>
+  implements CustomizationCollection<T> {
 
-    private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Collection<CustomizationSupplier<T>> list = new ArrayList<CustomizationSupplier<T>>();
+  private Collection<CustomizationSupplier<T>> list = new ArrayList<CustomizationSupplier<T>>();
 
-    @org.checkerframework.dataflow.qual.Pure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int size(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull DefaultCustomizationCollection<T> this) {
-        return list.size();
+  @Override
+  public int size() {
+    return list.size();
+  }
+
+  @Override
+  public Iterator<CustomizationSupplier<T>> iterator() {
+    return list.iterator();
+  }
+
+  /**
+   * Adds a customization to the collection.
+   *
+   * @return always {@code true}
+   * @throws IllegalArgumentException if the entry is already existing.
+   */
+  @Override
+  public boolean add(final CustomizationSupplier<T> entry) {
+    if (list.contains(entry)) {
+      throw new IllegalArgumentException("duplicate entry");
     }
+    return list.add(entry);
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterator<CustomizationSupplier<T>> iterator(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull DefaultCustomizationCollection<T> this) {
-        return list.iterator();
-    }
+  public String toString() {
+    return getClass().getSimpleName() + list.toString();
+  }
 
-    /**
-     * Adds a customization to the collection.
-     *
-     * @return always {@code true}
-     * @throws IllegalArgumentException if the entry is already existing.
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean add(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull DefaultCustomizationCollection<T> this, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CustomizationSupplier<T> entry) {
-        if (list.contains(entry)) {
-            throw new IllegalArgumentException("duplicate entry");
-        }
-        return list.add(entry);
-    }
-
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String toString(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull DefaultCustomizationCollection<T> this) {
-        return getClass().getSimpleName() + list.toString();
-    }
 }

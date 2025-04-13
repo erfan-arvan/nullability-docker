@@ -19,6 +19,7 @@ package org.cache2k.event;
  * limitations under the License.
  * #L%
  */
+
 import java.util.EventListener;
 import java.util.concurrent.CompletableFuture;
 
@@ -27,27 +28,17 @@ import java.util.concurrent.CompletableFuture;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface CacheLifecycleListener extends EventListener {
 
-    /**
-     * Single instance of completed future.
-     */
-    @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CompletableFuture<Void> COMPLETE = new CompletableFuture<Void>() {
+  /**
+   * Single instance of completed future.
+   */
+  CompletableFuture<Void> COMPLETE = new CompletableFuture<Void>() {
+    public CompletableFuture<Void> newIncompleteFuture() {
+      return this;
+    }
+    public void obtrudeValue(Void value) { throw new UnsupportedOperationException(); }
+    public void obtrudeException(Throwable ex) { throw new UnsupportedOperationException(); }
+  };
 
-        @org.checkerframework.dataflow.qual.Pure
-        public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CompletableFuture<Void> newIncompleteFuture() {
-            return this;
-        }
-
-        @org.checkerframework.dataflow.qual.SideEffectFree
-        public void obtrudeValue(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Void value) {
-            throw new UnsupportedOperationException();
-        }
-
-        @org.checkerframework.dataflow.qual.SideEffectFree
-        public void obtrudeException(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Throwable ex) {
-            throw new UnsupportedOperationException();
-        }
-    };
 }

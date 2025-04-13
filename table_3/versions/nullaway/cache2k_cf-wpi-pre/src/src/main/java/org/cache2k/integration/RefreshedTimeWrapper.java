@@ -19,26 +19,26 @@ package org.cache2k.integration;
  * limitations under the License.
  * #L%
  */
+
 /**
  * @author Jens Wilke
  * @deprecated to be removed in version 2.2
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+@Deprecated
 public final class RefreshedTimeWrapper<V> extends LoadDetail<V> {
 
-    private final  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long refreshTime;
+  private final long refreshTime;
 
-    /**
-     * Use {@link Loaders#wrapRefreshedTime(Object, long)}
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public RefreshedTimeWrapper(final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Object value, final  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long refreshTime) {
-        super(value);
-        this.refreshTime = refreshTime;
-    }
+  /**
+   * Use {@link Loaders#wrapRefreshedTime(Object, long)}
+   */
+  public RefreshedTimeWrapper(final Object value, final long refreshTime) {
+    super(value);
+    this.refreshTime = refreshTime;
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long getRefreshTime() {
-        return refreshTime;
-    }
+  public long getRefreshTime() {
+    return refreshTime;
+  }
+
 }

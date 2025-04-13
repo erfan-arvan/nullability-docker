@@ -19,6 +19,7 @@ package org.cache2k.event;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.Cache;
 import org.cache2k.CacheEntry;
 
@@ -28,24 +29,24 @@ import org.cache2k.CacheEntry;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface CacheEntryUpdatedListener<K, V> extends CacheEntryOperationListener<K, V> {
 
-    /**
-     * Called after a mutation of a cache entry and after all cache writers ran successfully.
-     *
-     * <p>Exceptions thrown by asynchronous listeners will be propagated to the cache client
-     * directly.
-     *
-     * @param cache Reference to the cache that generated the event.
-     * @param currentEntry Entry containing the current data. It is only valid to access the object
-     *                     during the call of this method. The object value may become invalid
-     *                     afterwards.
-     * @param newEntry entry containing the data after the update operation was applied.
-     *                         The data will be visible after all synchronous events are processed.
-     *                         It is only valid to access the object during the
-     *                     call of this method. The object value may become invalid afterwards.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void onEntryUpdated(Cache<K, V> cache, CacheEntry<K, V> currentEntry, CacheEntry<K, V> newEntry);
+  /**
+   * Called after a mutation of a cache entry and after all cache writers ran successfully.
+   *
+   * <p>Exceptions thrown by asynchronous listeners will be propagated to the cache client
+   * directly.
+   *
+   * @param cache Reference to the cache that generated the event.
+   * @param currentEntry Entry containing the current data. It is only valid to access the object
+   *                     during the call of this method. The object value may become invalid
+   *                     afterwards.
+   * @param entryWithNewData entry containing the data after the update operation was applied.
+   *                         The data will be visible after all synchronous events are processed.
+   *                         It is only valid to access the object during the
+   *                     call of this method. The object value may become invalid afterwards.
+   */
+  void onEntryUpdated(
+    Cache<K, V> cache, CacheEntry<K, V> currentEntry, CacheEntry<K, V> entryWithNewData);
+
 }

@@ -1,8 +1,1 @@
 kind	class	method	param	index	uri
-METHOD	org.cache2k.Cache	invokeAll(java.lang.Iterable,org.cache2k.processor.EntryProcessor)	null	null	/Users/nima/Developer/annotator-run/src/main/java/org/cache2k/Cache.java
-METHOD	org.cache2k.config.Cache2kConfig	getListeners()	null	null	/Users/nima/Developer/annotator-run/src/main/java/org/cache2k/config/Cache2kConfig.java
-METHOD	org.cache2k.config.Cache2kConfig	getAsyncListeners()	null	null	/Users/nima/Developer/annotator-run/src/main/java/org/cache2k/config/Cache2kConfig.java
-METHOD	org.cache2k.config.Cache2kConfig	getLifecycleListeners()	null	null	/Users/nima/Developer/annotator-run/src/main/java/org/cache2k/config/Cache2kConfig.java
-PARAMETER	org.cache2k.config.Cache2kConfig	setLifecycleListeners(java.util.Collection)	c	0	/Users/nima/Developer/annotator-run/src/main/java/org/cache2k/config/Cache2kConfig.java
-METHOD	org.cache2k.config.Cache2kConfig	getFeatures()	null	null	/Users/nima/Developer/annotator-run/src/main/java/org/cache2k/config/Cache2kConfig.java
-PARAMETER	org.cache2k.config.Cache2kConfig	setFeatures(java.util.Set)	v	0	/Users/nima/Developer/annotator-run/src/main/java/org/cache2k/config/Cache2kConfig.java

@@ -1,1 +1,5 @@
 kind	class	method	param	index	uri	field
+METHOD	org.cache2k.Cache2kBuilder	withConfig(org.cache2k.config.Cache2kConfig)	null	null	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/cache2k_cf-wpi-pre/src/src/main/java/org/cache2k/Cache2kBuilder.java	config
+METHOD	org.cache2k.Cache2kBuilder	cfg()	null	null	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/cache2k_cf-wpi-pre/src/src/main/java/org/cache2k/Cache2kBuilder.java	config
+METHOD	org.cache2k.Cache2kBuilder	manager(org.cache2k.CacheManager)	null	null	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/cache2k_cf-wpi-pre/src/src/main/java/org/cache2k/Cache2kBuilder.java	manager
+METHOD	org.cache2k.Cache2kBuilder	getManager()	null	null	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/cache2k_cf-wpi-pre/src/src/main/java/org/cache2k/Cache2kBuilder.java	manager

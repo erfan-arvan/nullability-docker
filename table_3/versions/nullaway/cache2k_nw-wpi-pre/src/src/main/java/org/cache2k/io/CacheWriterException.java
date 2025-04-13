@@ -1,4 +1,4 @@
-package org.cache2k.integration;
+package org.cache2k.io;
 
 /*
  * #%L
@@ -19,18 +19,19 @@ package org.cache2k.integration;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.CustomizationException;
 
 /**
+ * Wraps an exception caused by a writer.
+ *
  * @author Jens Wilke
- * @deprecated Replaced with {@link org.cache2k.io.CacheWriterException},
- *             to be removed in version 2.2
+ * @since 2
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
-public class CacheWriterException extends org.cache2k.io.CacheWriterException {
+public class CacheWriterException extends CustomizationException {
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheWriterException(final Throwable cause) {
-        super(cause);
-    }
+  public CacheWriterException(final Throwable cause) {
+    super(cause);
+  }
+
 }

@@ -19,6 +19,7 @@ package org.cache2k.spi;
  * limitations under the License.
  * #L%
  */
+
 /**
  * Interface for a generic cache2k extension. The extension
  * {@link #registerCache2kExtension()} gets called before the first cache manager
@@ -26,9 +27,8 @@ package org.cache2k.spi;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface Cache2kExtensionProvider {
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void registerCache2kExtension();
+  void registerCache2kExtension();
+
 }

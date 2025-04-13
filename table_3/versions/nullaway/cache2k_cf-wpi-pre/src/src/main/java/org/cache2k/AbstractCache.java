@@ -19,9 +19,11 @@ package org.cache2k;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.annotation.Nullable;
 import org.cache2k.processor.EntryProcessingResult;
 import org.cache2k.processor.EntryProcessor;
+
 import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
@@ -33,196 +35,200 @@ import java.util.concurrent.ConcurrentMap;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public class AbstractCache<K, V> implements Cache<K, V> {
 
-    @org.checkerframework.dataflow.qual.Pure
-    public String getName(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public String getName() {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public V get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public  V get(K key) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public CacheEntry<K, V> getEntry(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public CacheEntry<K, V> getEntry(K key) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public V peek(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public V peek(K key) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public CacheEntry<K, V> peekEntry(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public CacheEntry<K, V> peekEntry(K key) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public boolean containsKey(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public boolean containsKey(K key) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public void put(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key, V value) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public void put(K key, V value) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public V computeIfAbsent(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Callable<V> callable) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public V computeIfAbsent(K key, Callable<V> callable) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public boolean putIfAbsent(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key, V value) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public boolean putIfAbsent(K key, V value) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public V peekAndReplace(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key, V value) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public V peekAndReplace(K key, V value) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public boolean replace(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key, V value) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public boolean replace(K key, V value) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public boolean replaceIfEquals(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key, V oldValue, V newValue) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public boolean replaceIfEquals(K key, V oldValue, V newValue) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public V peekAndRemove(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public V peekAndRemove(K key) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public boolean containsAndRemove(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public boolean containsAndRemove(K key) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public void remove(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public void remove(K key) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public boolean removeIfEquals(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key, V expectedValue) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public boolean removeIfEquals(K key, V expectedValue) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public void removeAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public void removeAll(Iterable<? extends K> keys) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public V peekAndPut(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key, V value) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public V peekAndPut(K key, V value) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public void expireAt(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long millis) {
-        throw new UnsupportedOperationException();
-    }
+  
+  @Override
+  public void expireAt(K key, long millis) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public void loadAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheOperationCompletionListener listener) {
-        throw new UnsupportedOperationException();
-    }
+  
+  @Override
+  public void loadAll(Iterable<? extends K> keys, CacheOperationCompletionListener listener) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public void reloadAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheOperationCompletionListener listener) {
-        throw new UnsupportedOperationException();
-    }
+  
+  @Override
+  public void reloadAll(Iterable<? extends K> keys, CacheOperationCompletionListener listener) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public CompletableFuture<Void> loadAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public CompletableFuture<Void> loadAll(Iterable<? extends K> keys) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public CompletableFuture<Void> reloadAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public CompletableFuture<Void> reloadAll(Iterable<? extends K> keys) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public <R> R invoke(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, K key, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull EntryProcessor<K, V, R> processor) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public <R> R invoke(K key, EntryProcessor<K, V, R> processor) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public <R> Map<K, EntryProcessingResult<R>> invokeAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull EntryProcessor<K, V, R> entryProcessor) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public <R> Map<K, EntryProcessingResult<R>> invokeAll(
+    Iterable<? extends K> keys, EntryProcessor<K, V, R> entryProcessor) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public Map<K, V> getAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public Map<K, V> getAll(Iterable<? extends K> keys) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public Map<K, V> peekAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public Map<K, V> peekAll(Iterable<? extends K> keys) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public void putAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<? extends K, ? extends V> valueMap) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public void putAll(Map<? extends K, ? extends V> valueMap) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public Iterable<K> keys(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public Iterable<K> keys() {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public Iterable<CacheEntry<K, V>> entries(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public Iterable<CacheEntry<K, V>> entries() {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public void removeAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public void removeAll() {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public void clear(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public void clear() {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public void close(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public void close() {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public CacheManager getCacheManager(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public CacheManager getCacheManager() {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public boolean isClosed(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public boolean isClosed() {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public ConcurrentMap<K, V> asMap(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public ConcurrentMap<K, V> asMap() {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public <X> X requestInterface(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<X> type) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public <X> X requestInterface(Class<X> type) {
+    throw new UnsupportedOperationException();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public String toString(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull AbstractCache<K, V> this) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public String toString() {
+    throw new UnsupportedOperationException();
+  }
+
 }

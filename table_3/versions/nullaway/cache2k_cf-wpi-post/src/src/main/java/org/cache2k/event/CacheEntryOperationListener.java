@@ -20,8 +20,6 @@ package org.cache2k.event;
  * #L%
  */
 
-import org.cache2k.DataAware;
-
 import java.util.EventListener;
 
 /**
@@ -29,5 +27,5 @@ import java.util.EventListener;
  *
  * @author Jens Wilke
  */
-public interface CacheEntryOperationListener<K, V> extends EventListener, DataAware<K, V> {
+public interface CacheEntryOperationListener<K, V> extends EventListener {
 }

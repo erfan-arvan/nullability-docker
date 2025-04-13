@@ -1,4 +1,4 @@
-package org.cache2k;
+package org.cache2k.processor;
 
 /*
  * #%L
@@ -20,11 +20,19 @@ package org.cache2k;
  * #L%
  */
 
+import org.cache2k.DataAware;
+
 /**
- * Parent for all customizations dealing with cached data.
+ * Identical to the processor but does not return a result.
  *
  * @author Jens Wilke
+ * @see EntryProcessor
  */
-public interface DataAwareCustomization<K, V>
-  extends Customization, DataAware<K, V> {
+public interface EntryMutator<K, V> extends DataAware<K, V> {
+
+  /**
+   * @see EntryProcessor#process(MutableCacheEntry)
+   */
+  void mutate(MutableCacheEntry<K, V> entry) throws Exception;
+
 }

@@ -19,21 +19,22 @@ package org.cache2k.integration;
  * limitations under the License.
  * #L%
  */
+
 /**
  * @author Jens Wilke
  * @deprecated Replaced with {@link org.cache2k.io.ExceptionPropagator},
  *   to be removed in version 2.2
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+@Deprecated
 public interface ExceptionPropagator<K> {
 
-    /**
-     * Generate runtime exception to throw. The original exception is passed in as information.
-     * Every returned exception should be filled with a stack trace based on the current
-     * method call. This is done by the exception constructor automatically.
-     *
-     * @param exceptionInformation information when the original exception occurred.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    RuntimeException propagateException(K key, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ExceptionInformation exceptionInformation);
+  /**
+   * Generate runtime exception to throw. The original exception is passed in as information.
+   * Every returned exception should be filled with a stack trace based on the current
+   * method call. This is done by the exception constructor automatically.
+   *
+   * @param exceptionInformation information when the original exception occurred.
+   */
+  RuntimeException propagateException(K key, ExceptionInformation exceptionInformation);
+
 }

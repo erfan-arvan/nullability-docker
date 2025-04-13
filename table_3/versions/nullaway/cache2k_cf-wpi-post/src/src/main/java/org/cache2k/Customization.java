@@ -32,4 +32,5 @@ package org.cache2k;
  *
  * @author Jens Wilke
  */
-public interface Customization { }
+public interface Customization<K, V> {
+}

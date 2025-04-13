@@ -19,6 +19,7 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 import java.io.Serializable;
 
 /**
@@ -35,14 +36,14 @@ import java.io.Serializable;
  *           {@link java.util.concurrent.Executor} as well
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+  @FunctionalInterface
 public interface CustomizationSupplier<T> {
 
-    /**
-     * Create or return an existing customization instance.
-     *
-     * @return created customization, never {@code null}
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    T supply(CacheBuildContext<?, ?> buildContext);
+  /**
+   * Create or return an existing customization instance.
+   *
+   * @return created customization, never {@code null}
+   */
+  T supply(CacheBuildContext<?, ?> buildContext);
+
 }

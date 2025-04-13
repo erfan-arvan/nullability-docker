@@ -19,8 +19,10 @@ package org.cache2k.event;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.Cache;
 import org.cache2k.CacheEntry;
+
 import java.util.concurrent.Callable;
 
 /**
@@ -35,16 +37,15 @@ import java.util.concurrent.Callable;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface CacheEntryExpiredListener<K, V> extends CacheEntryOperationListener<K, V> {
 
-    /**
-     * Called after the expiry of an entry.
-     *
-     * @param cache Reference to the cache that generated the event.
-     * @param entry Entry containing the last data. It is only valid to access the object during the
-     *              call of this method. The object value may become invalid afterwards.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void onEntryExpired(Cache<K, V> cache, CacheEntry<K, V> entry);
+  /**
+   * Called after the expiry of an entry.
+   *
+   * @param cache Reference to the cache that generated the event.
+   * @param entry Entry containing the last data. It is only valid to access the object during the
+   *              call of this method. The object value may become invalid afterwards.
+   */
+  void onEntryExpired(Cache<K, V> cache, CacheEntry<K, V> entry);
+
 }

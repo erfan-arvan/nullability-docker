@@ -19,8 +19,10 @@ package org.cache2k;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.config.Cache2kConfig;
 import org.cache2k.spi.Cache2kCoreProvider;
+
 import java.io.Closeable;
 import java.util.Iterator;
 import java.util.Properties;
@@ -42,212 +44,192 @@ import java.util.ServiceLoader;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public abstract class CacheManager implements Closeable {
 
-    /**
-     * Name of the default cache manager if not overridden, see {@link #setDefaultName(String)}.
-     * @since 1.4
-     */
-    public static final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String STANDARD_DEFAULT_MANAGER_NAME = "default";
+  /**
+   * Name of the default cache manager if not overridden, see {@link #setDefaultName(String)}.
+   * @since 1.4
+   */
+  public static final String STANDARD_DEFAULT_MANAGER_NAME = "default";
 
-    /**
-     * The singleton cache provider instance.
-     *
-     * @since 2
-     */
-    public static final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Cache2kCoreProvider PROVIDER;
+  /**
+   * The singleton cache provider instance.
+   *
+   * @since 2
+   */
+  public static final Cache2kCoreProvider PROVIDER;
 
-    static {
-        Iterator<Cache2kCoreProvider> it = ServiceLoader.load(Cache2kCoreProvider.class).iterator();
-        if (!it.hasNext()) {
-            throw new LinkageError("Cannot resolve cache2k core implementation");
-        }
-        PROVIDER = it.next();
+  static {
+    Iterator<Cache2kCoreProvider> it = ServiceLoader.load(Cache2kCoreProvider.class).iterator();
+    if (!it.hasNext()) {
+      throw new LinkageError("Cannot resolve cache2k core implementation");
     }
+    PROVIDER = it.next();
+  }
 
-    /**
-     * Name of the default cache manager, which is "{@value STANDARD_DEFAULT_MANAGER_NAME}" by
-     * default.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getDefaultName() {
-        return PROVIDER.getDefaultManagerName(PROVIDER.getDefaultClassLoader());
-    }
+  /**
+   * Name of the default cache manager, which is "{@value STANDARD_DEFAULT_MANAGER_NAME}" by
+   * default.
+   */
+  public static String getDefaultName() {
+    return PROVIDER.getDefaultManagerName(PROVIDER.getDefaultClassLoader());
+  }
 
-    /**
-     * Change the default manager name. The method can only be called once early in application
-     * startup, before the default manager instance is requested.
-     *
-     * <p>It is also possible to set a different default manager name via JNDI context
-     * "java:comp/env" and name "org.cache2k.CacheManager.defaultName" or via the XML configuration.
-     *
-     * <p>The allowed characters in a manager name are identical to the characters in a cache name,
-     * this is documented at {@link Cache2kBuilder#name(String)}
-     *
-     * @see Cache2kBuilder#name(String)
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public static void setDefaultName(String managerName) {
-        PROVIDER.setDefaultManagerName(PROVIDER.getDefaultClassLoader(), managerName);
-    }
+  /**
+   * Change the default manager name. The method can only be called once early in application
+   * startup, before the default manager instance is requested.
+   *
+   * <p>It is also possible to set a different default manager name via JNDI context
+   * "java:comp/env" and name "org.cache2k.CacheManager.defaultName" or via the XML configuration.
+   *
+   * <p>The allowed characters in a manager name are identical to the characters in a cache name,
+   * this is documented at {@link Cache2kBuilder#name(String)}
+   *
+   * @see Cache2kBuilder#name(String)
+   */
+  public static void setDefaultName(String managerName) {
+    PROVIDER.setDefaultManagerName(PROVIDER.getDefaultClassLoader(), managerName);
+  }
 
-    /**
-     * Get the default cache manager for the default class loader. The default class loader
-     * is the class loader used to load the cache2k implementation classes.
-     *
-     * <p>The name of default cache manager is "{@value STANDARD_DEFAULT_MANAGER_NAME}".
-     * This may be changed, by {@link #setDefaultName(String)}.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheManager getInstance() {
-        ClassLoader defaultClassLoader = PROVIDER.getDefaultClassLoader();
-        return PROVIDER.getManager(defaultClassLoader, PROVIDER.getDefaultManagerName(defaultClassLoader));
-    }
+  /**
+   * Get the default cache manager for the default class loader. The default class loader
+   * is the class loader used to load the cache2k implementation classes.
+   *
+   * <p>The name of default cache manager is "{@value STANDARD_DEFAULT_MANAGER_NAME}".
+   * This may be changed, by {@link #setDefaultName(String)}.
+   */
+  public static CacheManager getInstance() {
+    ClassLoader defaultClassLoader = PROVIDER.getDefaultClassLoader();
+    return PROVIDER.getManager(
+      defaultClassLoader, PROVIDER.getDefaultManagerName(defaultClassLoader));
+  }
 
-    /**
-     * Get the default cache manager for the specified class loader.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheManager getInstance(ClassLoader cl) {
-        return PROVIDER.getManager(cl, PROVIDER.getDefaultManagerName(cl));
-    }
+  /**
+   * Get the default cache manager for the specified class loader.
+   */
+  public static CacheManager getInstance(ClassLoader cl) {
+    return PROVIDER.getManager(cl, PROVIDER.getDefaultManagerName(cl));
+  }
 
-    /**
-     * Retrieve a cache manager with the specified name. If not existing, a manager with that name
-     * is created. The default class loader is used. The default class loader
-     * is the class loader used to load the cache2k implementation classes.
-     *
-     * <p>The allowed characters in a manager name are identical to the characters in a cache name,
-     * this is documented at {@link Cache2kBuilder#name(String)}
-     *
-     * @see Cache2kBuilder#name(String)
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheManager getInstance(String managerName) {
-        return PROVIDER.getManager(PROVIDER.getDefaultClassLoader(), managerName);
-    }
+  /**
+   * Retrieve a cache manager with the specified name. If not existing, a manager with that name
+   * is created. The default class loader is used. The default class loader
+   * is the class loader used to load the cache2k implementation classes.
+   *
+   * <p>The allowed characters in a manager name are identical to the characters in a cache name,
+   * this is documented at {@link Cache2kBuilder#name(String)}
+   *
+   * @see Cache2kBuilder#name(String)
+   */
+  public static CacheManager getInstance(String managerName) {
+    return PROVIDER.getManager(PROVIDER.getDefaultClassLoader(), managerName);
+  }
 
-    /**
-     * Retrieve a cache manager with the specified name using the specified classloader.
-     * If not existing, a manager with that name is created. Different cache managers are
-     * created for different class loaders. Manager names should be unique within one VM instance.
-     *
-     * <p>The allowed characters in a manager name are identical to the characters in a cache name,
-     * this is documented at {@link Cache2kBuilder#name(String)}
-     *
-     * @see Cache2kBuilder#name(String)
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheManager getInstance(ClassLoader cl, String managerName) {
-        return PROVIDER.getManager(cl, managerName);
-    }
+  /**
+   * Retrieve a cache manager with the specified name using the specified classloader.
+   * If not existing, a manager with that name is created. Different cache managers are
+   * created for different class loaders. Manager names should be unique within one VM instance.
+   *
+   * <p>The allowed characters in a manager name are identical to the characters in a cache name,
+   * this is documented at {@link Cache2kBuilder#name(String)}
+   *
+   * @see Cache2kBuilder#name(String)
+   */
+  public static CacheManager getInstance(ClassLoader cl, String managerName) {
+    return PROVIDER.getManager(cl, managerName);
+  }
 
-    /**
-     * Close all cache managers.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public static void closeAll() {
-        PROVIDER.close();
-    }
+  /**
+   * Close all cache managers.
+   */
+  public static void closeAll() {
+    PROVIDER.close();
+  }
 
-    /**
-     * Close all cache manager associated with this class loader.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public static void closeAll(ClassLoader cl) {
-        PROVIDER.close(cl);
-    }
+  /**
+   * Close all cache manager associated with this class loader.
+   */
+  public static void closeAll(ClassLoader cl) {
+    PROVIDER.close(cl);
+  }
 
-    /**
-     * Close the named cache manager.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public static void close(ClassLoader cl, String name) {
-        PROVIDER.close(cl, name);
-    }
+  /**
+   * Close the named cache manager.
+   */
+  public static void close(ClassLoader cl, String name) {
+    PROVIDER.close(cl, name);
+  }
 
-    /**
-     * True if this is the default manager of the application, returned by {@link #getInstance()}
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public abstract boolean isDefaultManager();
+  /**
+   * True if this is the default manager of the application, returned by {@link #getInstance()}
+   */
+  public abstract boolean isDefaultManager();
 
-    /**
-     * The name to uniquely identify the manager within a VM instance.
-     *
-     * @see CacheManager#getInstance(String)
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public abstract String getName();
+  /**
+   * The name to uniquely identify the manager within a VM instance.
+   *
+   * @see CacheManager#getInstance(String)
+   */
+  public abstract String getName();
 
-    /**
-     * Returns all open caches associated with this cache manager. A cache returned by the iteration
-     * was created via {@link #createCache(Cache2kConfig)} or
-     * {@link Cache2kBuilder#build()} and is not closed yet.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public abstract Iterable<Cache> getActiveCaches();
+  /**
+   * Returns all open caches associated with this cache manager. A cache returned by the iteration
+   * was created via {@link #createCache(Cache2kConfig)} or
+   * {@link Cache2kBuilder#build()} and is not closed yet.
+   */
+  public abstract Iterable<Cache> getActiveCaches();
 
-    /**
-     * Returns a list of caches that are found in the XML based configuration.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public abstract Iterable<String> getConfiguredCacheNames();
+  /**
+   * Returns a list of caches that are found in the XML based configuration.
+   */
+  public abstract Iterable<String> getConfiguredCacheNames();
 
-    /**
-     * Return a known cache that must be created before via the {@link Cache2kBuilder}
-     * or {@link #createCache(Cache2kConfig)}
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public abstract <K, V> Cache<K, V> getCache(String name);
+  /**
+   * Return a known cache that must be created before via the {@link Cache2kBuilder}
+   * or {@link #createCache(Cache2kConfig)}
+   */
+  public abstract <K, V> Cache<K, V> getCache(String name);
 
-    /**
-     * Create a new cache from the configuration. The recommended way is to use the
-     * {@link Cache2kBuilder} to create a new cache. This method is identical to and a shorthand to:
-     *
-     * <pre>{@code
-     *    CacheManager manager = ...
-     *    Cache2kConfiguration<K, V> config = ...
-     *    Cache<K, V> cache = Cache2kBuilder.of(config).manager(manager).build();
-     * }</pre>
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public abstract <K, V> Cache<K, V> createCache(Cache2kConfig<K, V> cfg);
+  /**
+   * Create a new cache from the configuration. The recommended way is to use the
+   * {@link Cache2kBuilder} to create a new cache. This method is identical to and a shorthand to:
+   *
+   * <pre>{@code
+   *    CacheManager manager = ...
+   *    Cache2kConfiguration<K, V> config = ...
+   *    Cache<K, V> cache = Cache2kBuilder.of(config).manager(manager).build();
+   * }</pre>
+   *
+   */
+  public abstract <K, V> Cache<K, V> createCache(Cache2kConfig<K, V> cfg);
 
-    /**
-     * Clear all currently active caches in this cache manager
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public abstract void clear();
+  /** Clear all currently active caches in this cache manager */
+  public abstract void clear();
 
-    /**
-     * Free all resources from managed caches. Same as calling all {@link org.cache2k.Cache#close()}
-     * methods. A closed manager cannot be used to create new caches. A new {@code CacheManager} with
-     * the same name may be requested via {@link #getInstance(String)}. Multiple calls to close have
-     * no effect.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public abstract void close();
+  /**
+   * Free all resources from managed caches. Same as calling all {@link org.cache2k.Cache#close()}
+   * methods. A closed manager cannot be used to create new caches. A new {@code CacheManager} with
+   * the same name may be requested via {@link #getInstance(String)}. Multiple calls to close have
+   * no effect.
+   */
+  public abstract void close();
 
-    /**
-     * Returns true if this cache manager was closed.
-     *
-     * @see #close()
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public abstract boolean isClosed();
+  /**
+   * Returns true if this cache manager was closed.
+   *
+   * @see #close()
+   */
+  public abstract boolean isClosed();
 
-    /**
-     * Properties for the cache manager, never null. By default the properties are empty.
-     * Cache clients may store arbitrary information.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public abstract Properties getProperties();
+  /**
+   * Properties for the cache manager, never null. By default the properties are empty.
+   * Cache clients may store arbitrary information.
+   */
+  public abstract Properties getProperties();
 
-    /**
-     * Class loader this manager is using to load additional classes, resources or configuration.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public abstract ClassLoader getClassLoader();
+  /**
+   * Class loader this manager is using to load additional classes, resources or configuration.
+   */
+  public abstract ClassLoader getClassLoader();
+
 }

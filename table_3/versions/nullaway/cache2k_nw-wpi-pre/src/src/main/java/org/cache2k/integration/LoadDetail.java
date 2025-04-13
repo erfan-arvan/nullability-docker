@@ -19,33 +19,36 @@ package org.cache2k.integration;
  * limitations under the License.
  * #L%
  */
+
+import org.cache2k.annotation.Nullable;
+
 /**
  * @author Jens Wilke
  * @deprecated to be removed in version 2.2
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+@Deprecated
 public abstract class LoadDetail<V> {
 
-    private @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Object value;
+  private Object value;
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public LoadDetail(final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Object valueOrWrapper) {
-        value = valueOrWrapper;
-    }
+  public LoadDetail(final Object valueOrWrapper) {
+    value = valueOrWrapper;
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public V getValue() {
-        if (value instanceof LoadDetail) {
-            return ((LoadDetail<V>) value).getValue();
-        }
-        return (V) value;
+  
+  public V getValue() {
+    if (value instanceof LoadDetail) {
+      return ((LoadDetail<V>) value).getValue();
     }
+    return (V) value;
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable LoadDetail<V> getNextInChain() {
-        if (value instanceof LoadDetail) {
-            return ((LoadDetail<V>) value);
-        }
-        return null;
+  
+  @Nullable public  LoadDetail<V> getNextInChain() {
+    if (value instanceof LoadDetail) {
+      return ((LoadDetail<V>) value);
     }
+    return null;
+  }
+
 }

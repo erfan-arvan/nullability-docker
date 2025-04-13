@@ -19,11 +19,12 @@ package org.cache2k;
  * limitations under the License.
  * #L%
  */
-import org.checkerframework.checker.nullness.qual.NonNull;
-import org.checkerframework.checker.nullness.qual.Nullable;
+
+import org.cache2k.annotation.Nullable;
 import org.cache2k.processor.EntryMutator;
 import org.cache2k.processor.EntryProcessingResult;
 import org.cache2k.processor.EntryProcessor;
+
 import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
@@ -35,216 +36,219 @@ import java.util.concurrent.ConcurrentMap;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public abstract class ForwardingCache<K, V> implements Cache<K, V> {
 
-    /**
-     * Subclasses need to implement this method which specifies the delegation
-     * target.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    protected abstract Cache<K, V> delegate();
+  /**
+   * Subclasses need to implement this method which specifies the delegation
+   * target.
+   */
+  protected abstract Cache<K, V> delegate();
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getName(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this) {
-        return delegate().getName();
-    }
+  @Override
+  public String getName() {
+    return delegate().getName();
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public V get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key) {
-        return delegate().get(key);
-    }
+  @Override
+  public  V get(K key) {
+    return delegate().get(key);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheEntry<K, V> getEntry(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key) {
-        return delegate().getEntry(key);
-    }
+  @Override
+  public  CacheEntry<K, V> getEntry(K key) {
+    return delegate().getEntry(key);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public V peek(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key) {
-        return delegate().peek(key);
-    }
+  @Override
+  public  V peek(K key) {
+    return delegate().peek(key);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheEntry<K, V> peekEntry(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key) {
-        return delegate().peekEntry(key);
-    }
+  @Override
+  public  CacheEntry<K, V> peekEntry(K key) {
+    return delegate().peekEntry(key);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean containsKey(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key) {
-        return delegate().containsKey(key);
-    }
+  @Override
+  public boolean containsKey(K key) {
+    return delegate().containsKey(key);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void put(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key, V value) {
-        delegate().put(key, value);
-    }
+  @Override
+  public void put(K key, V value) {
+    delegate().put(key, value);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public V computeIfAbsent(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Callable<V> callable) {
-        return delegate().computeIfAbsent(key, callable);
-    }
+  @Override
+  public V computeIfAbsent(K key, Callable<V> callable) {
+    return delegate().computeIfAbsent(key, callable);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean putIfAbsent(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key, V value) {
-        return delegate().putIfAbsent(key, value);
-    }
+  @Override
+  public boolean putIfAbsent(K key, V value) {
+    return delegate().putIfAbsent(key, value);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public V peekAndReplace(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key, V value) {
-        return delegate().peekAndReplace(key, value);
-    }
+  @Override
+  public V peekAndReplace(K key, V value) {
+    return delegate().peekAndReplace(key, value);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean replace(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key, V value) {
-        return delegate().replace(key, value);
-    }
+  @Override
+  public boolean replace(K key, V value) {
+    return delegate().replace(key, value);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean replaceIfEquals(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key, V oldValue, V newValue) {
-        return delegate().replaceIfEquals(key, oldValue, newValue);
-    }
+  @Override
+  public boolean replaceIfEquals(K key, V oldValue, V newValue) {
+    return delegate().replaceIfEquals(key, oldValue, newValue);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public V peekAndRemove(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key) {
-        return delegate().peekAndRemove(key);
-    }
+  @Override
+  public  V peekAndRemove(K key) {
+    return delegate().peekAndRemove(key);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean containsAndRemove(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key) {
-        return delegate().containsAndRemove(key);
-    }
+  @Override
+  public boolean containsAndRemove(K key) {
+    return delegate().containsAndRemove(key);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void remove(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key) {
-        delegate().remove(key);
-    }
+  @Override
+  public void remove(K key) {
+    delegate().remove(key);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean removeIfEquals(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key, V expectedValue) {
-        return delegate().removeIfEquals(key, expectedValue);
-    }
+  @Override
+  public boolean removeIfEquals(K key, V expectedValue) {
+    return delegate().removeIfEquals(key, expectedValue);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void removeAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys) {
-        delegate().removeAll(keys);
-    }
+  @Override
+  public void removeAll(Iterable<? extends K> keys) {
+    delegate().removeAll(keys);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public V peekAndPut(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key, V value) {
-        return delegate().peekAndPut(key, value);
-    }
+  @Override
+  public  V peekAndPut(K key, V value) {
+    return delegate().peekAndPut(key, value);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void expireAt(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long millis) {
-        delegate().expireAt(key, millis);
-    }
+  
+  @Override
+  public void expireAt(K key, long millis) {
+    delegate().expireAt(key, millis);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void loadAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheOperationCompletionListener listener) {
-        delegate().loadAll(keys, listener);
-    }
+  
+  @Override
+  public void loadAll(Iterable<? extends K> keys, CacheOperationCompletionListener listener) {
+    delegate().loadAll(keys, listener);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void reloadAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheOperationCompletionListener listener) {
-        delegate().reloadAll(keys, listener);
-    }
+  
+  @Override
+  public void reloadAll(Iterable<? extends K> keys, CacheOperationCompletionListener listener) {
+    delegate().reloadAll(keys, listener);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CompletableFuture<Void> loadAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys) {
-        return delegate().loadAll(keys);
-    }
+  @Override
+  public CompletableFuture<Void> loadAll(Iterable<? extends K> keys) {
+    return delegate().loadAll(keys);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CompletableFuture<Void> reloadAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys) {
-        return delegate().reloadAll(keys);
-    }
+  @Override
+  public CompletableFuture<Void> reloadAll(Iterable<? extends K> keys) {
+    return delegate().reloadAll(keys);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public <R> R invoke(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull EntryProcessor<K, V, R> processor) {
-        return delegate().invoke(key, processor);
-    }
+  @Override
+  public <R> R invoke(K key, EntryProcessor<K, V, R> processor) {
+    return delegate().invoke(key, processor);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void mutate(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, K key, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull EntryMutator<K, V> mutator) {
-        delegate().mutate(key, mutator);
-    }
+  @Override
+  public void mutate(K key, EntryMutator<K, V> mutator) {
+    delegate().mutate(key, mutator);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public <R> @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<K, EntryProcessingResult<R>> invokeAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull EntryProcessor<K, V, R> entryProcessor) {
-        return delegate().invokeAll(keys, entryProcessor);
-    }
+  @Override
+  public <R> Map<K, EntryProcessingResult<R>> invokeAll(
+    Iterable<? extends K> keys, EntryProcessor<K, V, R> entryProcessor) {
+    return delegate().invokeAll(keys, entryProcessor);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void mutateAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull EntryMutator<K, V> mutator) {
-        delegate().mutateAll(keys, mutator);
-    }
+  @Override
+  public void mutateAll(Iterable<? extends K> keys, EntryMutator<K, V> mutator) {
+    delegate().mutateAll(keys, mutator);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<K, V> getAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys) {
-        return delegate().getAll(keys);
-    }
+  @Override
+  public Map<K, V> getAll(Iterable<? extends K> keys) {
+    return delegate().getAll(keys);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<K, V> peekAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<? extends K> keys) {
-        return delegate().peekAll(keys);
-    }
+  @Override
+  public Map<K, V> peekAll(Iterable<? extends K> keys) {
+    return delegate().peekAll(keys);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void putAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<? extends K, ? extends V> valueMap) {
-        delegate().putAll(valueMap);
-    }
+  @Override
+  public void putAll(Map<? extends K, ? extends V> valueMap) {
+    delegate().putAll(valueMap);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<K> keys(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this) {
-        return delegate().keys();
-    }
+  @Override
+  public Iterable<K> keys() {
+    return delegate().keys();
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterable<CacheEntry<K, V>> entries(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this) {
-        return delegate().entries();
-    }
+  @Override
+  public Iterable<CacheEntry<K, V>> entries() {
+    return delegate().entries();
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void removeAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this) {
-        delegate().removeAll();
-    }
+  @Override
+  public void removeAll() {
+    delegate().removeAll();
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void clear(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this) {
-        delegate().clear();
-    }
+  @Override
+  public void clear() {
+    delegate().clear();
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public void close(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this) {
-        delegate().close();
-    }
+  @Override
+  public void close() {
+    delegate().close();
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheManager getCacheManager(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this) {
-        return delegate().getCacheManager();
-    }
+  @Override
+  public CacheManager getCacheManager() {
+    return delegate().getCacheManager();
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isClosed(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this) {
-        return delegate().isClosed();
-    }
+  @Override
+  public boolean isClosed() {
+    return delegate().isClosed();
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public <X> X requestInterface(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<X> type) {
-        return delegate().requestInterface(type);
-    }
+  @Override
+  public <X> X requestInterface(Class<X> type) {
+    return delegate().requestInterface(type);
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ConcurrentMap<K, V> asMap(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this) {
-        return delegate().asMap();
-    }
+  @Override
+  public ConcurrentMap<K, V> asMap() {
+    return delegate().asMap();
+  }
 
-    /**
-     * Forwards to delegate but adds the simple class name to the output.
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String toString(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ForwardingCache<K, V> this) {
-        return this.getClass().getSimpleName() + "!" + delegate().toString();
-    }
+  /**
+   * Forwards to delegate but adds the simple class name to the output.
+   */
+  @Override
+  public String toString() {
+    return this.getClass().getSimpleName() + "!" + delegate().toString();
+  }
+
 }

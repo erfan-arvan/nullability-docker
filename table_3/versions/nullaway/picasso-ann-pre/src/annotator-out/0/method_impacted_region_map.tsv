@@ -1520,4 +1520,3 @@ com.squareup.picasso3.MediaStoreRequestHandler$PicassoKind	MICRO	PicassoKind(int
 com.squareup.picasso3.MediaStoreRequestHandler$PicassoKind	MINI	PicassoKind(int,int,int)	com.squareup.picasso3.MediaStoreRequestHandler$PicassoKind	SOURCE
 com.squareup.picasso3.MediaStoreRequestHandler$PicassoKind	FULL	PicassoKind(int,int,int)	com.squareup.picasso3.MediaStoreRequestHandler$PicassoKind	SOURCE
 com.squareup.picasso3.MediaStoreRequestHandler$PicassoKind	PicassoKind(int,int,int)	Enum(java.lang.String,int)	java.lang.Enum	SOURCE
-org.example.BuildConfig	DEBUG	parseBoolean(java.lang.String)	java.lang.Boolean	SOURCE

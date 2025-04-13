@@ -19,6 +19,7 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 /**
  * If the configuration bean has additional sub configuration beans, then it implements this
  * interface. Sections are essentially Java beans. The mechanism is intended to allow extension
@@ -28,9 +29,8 @@ package org.cache2k.config;
  * @author Jens Wilke
  * @see org.cache2k.Cache2kBuilder#with(SectionBuilder[])
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface ConfigWithSections {
 
-    @org.checkerframework.dataflow.qual.Impure
-    @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull SectionContainer getSections();
+  SectionContainer getSections();
+
 }

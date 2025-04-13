@@ -19,6 +19,9 @@ package org.cache2k;
  * limitations under the License.
  * #L%
  */
+
+import org.cache2k.annotation.Nullable;
+
 /**
  * Reduced interface to return a value selected by a key object. Cache users
  * of a read-through cache may choose this simple interface for requesting data
@@ -26,14 +29,13 @@ package org.cache2k;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface KeyValueSource<K, V> {
 
-    /**
-     * Returns a value associated with this key.
-     *
-     * @see Cache#get(Object)
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    V get(K key);
+  /**
+   * Returns a value associated with this key.
+   *
+   * @see Cache#get(Object)
+   */
+   V get(K key);
+
 }

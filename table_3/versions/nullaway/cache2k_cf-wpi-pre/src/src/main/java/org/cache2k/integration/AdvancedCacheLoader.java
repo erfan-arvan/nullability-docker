@@ -19,6 +19,7 @@ package org.cache2k.integration;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.Cache2kBuilder;
 import org.cache2k.CacheEntry;
 import org.cache2k.annotation.Nullable;
@@ -27,27 +28,29 @@ import org.cache2k.annotation.Nullable;
  * @deprecated Replaced with {@link org.cache2k.io.AdvancedCacheLoader},
  *   to be removed in version 2.2
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
-public abstract class AdvancedCacheLoader<K, V> implements org.cache2k.io.AdvancedCacheLoader<K, V> {
+@Deprecated
+public abstract class AdvancedCacheLoader<K, V>
+  implements org.cache2k.io.AdvancedCacheLoader<K, V> {
 
-    /**
-     * Retrieves or generates data based on the key parameter.
-     *
-     * @param key The non-null key to provide the value for.
-     * @param startTime Time in millis, retrieved before the call.
-     * @param currentEntry Current entry in the cache. The entry is available if the load is caused
-     *                     by a reload or refresh. If expired before, this is null {@code null}.
-     *                     If {@link Cache2kBuilder#keepDataAfterExpired(boolean)} is enabled, also
-     *                     an expired entry is provided to the loader for optimization purposes.
-     *                     If the previous load had thrown an excetion, this is {@code null}.
-     *                     See also the description of
-     *                     {@link Cache2kBuilder#keepDataAfterExpired(boolean)} and
-     *                     {@link Cache2kBuilder#refreshAhead(boolean)}.
-     * @return value to be associated with the key. If the cache permits {@code null} values
-     *         a {@code null} is associated with the key.
-     * @throws Exception Unhandled exception from the loader. Exceptions are suppressed or
-     *                   wrapped and rethrown via a {@link CacheLoaderException}
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public abstract V load(K key, long startTime, CacheEntry<K, V> currentEntry) throws Exception;
+  /**
+   * Retrieves or generates data based on the key parameter.
+   *
+   * @param key The non-null key to provide the value for.
+   * @param startTime Time in millis, retrieved before the call.
+   * @param currentEntry Current entry in the cache. The entry is available if the load is caused
+   *                     by a reload or refresh. If expired before, this is null {@code null}.
+   *                     If {@link Cache2kBuilder#keepDataAfterExpired(boolean)} is enabled, also
+   *                     an expired entry is provided to the loader for optimization purposes.
+   *                     If the previous load had thrown an excetion, this is {@code null}.
+   *                     See also the description of
+   *                     {@link Cache2kBuilder#keepDataAfterExpired(boolean)} and
+   *                     {@link Cache2kBuilder#refreshAhead(boolean)}.
+   * @return value to be associated with the key. If the cache permits {@code null} values
+   *         a {@code null} is associated with the key.
+   * @throws Exception Unhandled exception from the loader. Exceptions are suppressed or
+   *                   wrapped and rethrown via a {@link CacheLoaderException}
+   */
+  @Override
+  public abstract V load(K key, long startTime,  CacheEntry<K, V> currentEntry) throws Exception;
+
 }

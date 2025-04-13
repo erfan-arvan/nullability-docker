@@ -19,7 +19,8 @@ package org.cache2k;
  * limitations under the License.
  * #L%
  */
-import org.checkerframework.checker.nullness.qual.Nullable;
+
+import org.cache2k.annotation.Nullable;
 
 /**
  * Reduced interface to return a value selected by a key object. Cache users
@@ -28,14 +29,13 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
-public interface KeyValueSource<K, V> extends DataAware<K, V> {
+public interface KeyValueSource<K, V> {
 
-    /**
-     * Returns a value associated with this key.
-     *
-     * @see Cache#get(Object)
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    V get(K key);
+  /**
+   * Returns a value associated with this key.
+   *
+   * @see Cache#get(Object)
+   */
+   V get(K key);
+
 }

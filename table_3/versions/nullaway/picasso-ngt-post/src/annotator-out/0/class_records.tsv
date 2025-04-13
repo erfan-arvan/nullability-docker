@@ -75,4 +75,4 @@ com.squareup.picasso3.GetAction	/home/nima/Desktop/nullability-docker/table_3/ve
 com.squareup.picasso3.Initializer	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/picasso-ngt-post/src/src/main/java/com/squareup/picasso3/Initializer.java
 com.squareup.picasso3.MediaStoreRequestHandler	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/picasso-ngt-post/src/src/main/java/com/squareup/picasso3/MediaStoreRequestHandler.java
 com.squareup.picasso3.MediaStoreRequestHandler$PicassoKind	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/picasso-ngt-post/src/src/main/java/com/squareup/picasso3/MediaStoreRequestHandler.java
-org.example.BuildConfig	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/picasso-ngt-post/src/build/generated/source/buildConfig/release/org/example/BuildConfig.java
+org.example.BuildConfig	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/picasso-ngt-post/src/build/generated/source/buildConfig/debug/org/example/BuildConfig.java

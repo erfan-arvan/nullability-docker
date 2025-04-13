@@ -19,12 +19,14 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 import java.io.Serializable;
 import java.util.AbstractCollection;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import javax.annotation.Nullable;
 
 /**
  * Container for configuration objects. The container preserves the order of the sections
@@ -33,53 +35,53 @@ import java.util.Map;
  * @author Jens Wilke
  * @see ConfigWithSections
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
-public class SectionContainer extends AbstractCollection<ConfigSection> implements Collection<ConfigSection>, Serializable {
+public class SectionContainer extends AbstractCollection<ConfigSection>
+  implements Collection<ConfigSection>, Serializable {
 
-    private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<Class<? extends ConfigSection>, ConfigSection> class2section = new HashMap<>();
+  private final Map<Class<? extends ConfigSection>, ConfigSection> class2section = new HashMap<>();
 
-    /**
-     * Add a new configuration section to the container.
-     *
-     * @throws IllegalArgumentException if same type is already present and a singleton
-     * @return always {@code true}
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean add(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull SectionContainer this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ConfigSection section) {
-        if (getSection(section.getClass()) != null) {
-            throw new IllegalArgumentException("Section of same type already inserted: " + section.getClass().getName());
-        }
-        class2section.put(section.getClass(), section);
-        return true;
+  /**
+   * Add a new configuration section to the container.
+   *
+   * @throws IllegalArgumentException if same type is already present and a singleton
+   * @return always {@code true}
+   */
+  @Override
+  public boolean add(ConfigSection section) {
+    if (getSection(section.getClass()) !=  null) {
+      throw new IllegalArgumentException(
+        "Section of same type already inserted: " + section.getClass().getName());
     }
+    class2section.put(section.getClass(), section);
+    return true;
+  }
 
-    /**
-     * Retrieve a single section from the container.
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    public <T extends ConfigSection> T getSection(Class<T> sectionType, T defaultFallback) {
-        ConfigSection section = class2section.get(sectionType);
-        return section != null ? sectionType.cast(section) : defaultFallback;
-    }
+  /**
+   * Retrieve a single section from the container.
+   */
+  public <T extends ConfigSection> T getSection(Class<T> sectionType, T defaultFallback) {
+    ConfigSection section = class2section.get(sectionType);
+    return section != null ? sectionType.cast(section) : defaultFallback;
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public <T extends ConfigSection> @org.checkerframework.checker.nullness.qual.Nullable T getSection(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<T> sectionType) {
-        ConfigSection section = class2section.get(sectionType);
-        return sectionType.cast(section);
-    }
+  @Nullable public <T extends ConfigSection> T getSection(Class<T> sectionType) {
+    ConfigSection section = class2section.get(sectionType);
+    return sectionType.cast(section);
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterator<ConfigSection> iterator(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull SectionContainer this) {
-        return class2section.values().iterator();
-    }
+  @Override
+  public Iterator<ConfigSection> iterator() {
+    return class2section.values().iterator();
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int size(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull SectionContainer this) {
-        return class2section.size();
-    }
+  @Override
+  public int size() {
+    return class2section.size();
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String toString(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull SectionContainer this) {
-        return getClass().getSimpleName() + class2section.values().toString();
-    }
+  public String toString() {
+    return getClass().getSimpleName() + class2section.values().toString();
+  }
+
 }
+

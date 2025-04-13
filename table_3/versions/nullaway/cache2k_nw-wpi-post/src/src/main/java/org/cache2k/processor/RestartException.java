@@ -19,6 +19,7 @@ package org.cache2k.processor;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.CacheException;
 
 /**
@@ -27,6 +28,5 @@ import org.cache2k.CacheException;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public class RestartException extends CacheException {
 }

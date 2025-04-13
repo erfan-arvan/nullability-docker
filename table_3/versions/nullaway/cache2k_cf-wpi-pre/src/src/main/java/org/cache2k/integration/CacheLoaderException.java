@@ -19,26 +19,25 @@ package org.cache2k.integration;
  * limitations under the License.
  * #L%
  */
+
 /**
  * @author Jens Wilke
  * @deprecated Replaced with {@link org.cache2k.io.CacheLoaderException},
  *   to be removed in version 2.2
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+@Deprecated
 public class CacheLoaderException extends org.cache2k.io.CacheLoaderException {
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheLoaderException(String message) {
-        super(message);
-    }
+  public CacheLoaderException(String message) {
+    super(message);
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheLoaderException(String message, Throwable ex) {
-        super(message, ex);
-    }
+  public CacheLoaderException(String message, Throwable ex) {
+    super(message, ex);
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheLoaderException(Throwable ex) {
-        super(ex);
-    }
+  public CacheLoaderException(Throwable ex) {
+    super(ex);
+  }
+
 }

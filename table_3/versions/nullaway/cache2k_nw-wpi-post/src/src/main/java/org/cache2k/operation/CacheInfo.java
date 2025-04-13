@@ -19,8 +19,10 @@ package org.cache2k.operation;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.Cache;
 import org.cache2k.Cache2kBuilder;
+
 import java.util.Date;
 
 /**
@@ -37,118 +39,100 @@ import java.util.Date;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface CacheInfo {
 
-    /**
-     * Request an instance for the given cache.
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheInfo of(Cache<?, ?> cache) {
-        return cache.requestInterface(CacheInfo.class);
-    }
+  /**
+   * Request an instance for the given cache.
+   */
+  static CacheInfo of(Cache<?, ?> cache) { return cache.requestInterface(CacheInfo.class); }
 
-    @org.checkerframework.dataflow.qual.Pure
-    String getName();
+  String getName();
 
-    @org.checkerframework.dataflow.qual.Pure
-    String getManagerName();
+  String getManagerName();
 
-    /**
-     * Type of the cache key.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    String getKeyType();
+  /**
+   * Type of the cache key.
+   */
+  String getKeyType();
 
-    /**
-     * Type of the cache value.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    String getValueType();
+  /**
+   * Type of the cache value.
+   */
+  String getValueType();
 
-    /**
-     * The current number of entries within the cache, starting with 0. This value is an
-     * estimate, when iterating the entries the cache will always return less or an
-     * identical number of entries.
-     *
-     * <p>Expired entries may stay in the cache {@link Cache2kBuilder#keepDataAfterExpired(boolean)}.
-     * These entries will be counted, but will not be returned by the iterator or a {@code peek}
-     * operation
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    long getSize();
+  /**
+   * The current number of entries within the cache, starting with 0. This value is an
+   * estimate, when iterating the entries the cache will always return less or an
+   * identical number of entries.
+   *
+   * <p>Expired entries may stay in the cache {@link Cache2kBuilder#keepDataAfterExpired(boolean)}.
+   * These entries will be counted, but will not be returned by the iterator or a {@code peek}
+   * operation
+   */
+  long getSize();
 
-    /**
-     * The configured maximum number of entries in the cache.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    long getEntryCapacity();
+  /**
+   * The configured maximum number of entries in the cache.
+   */
+  long getEntryCapacity();
 
-    /**
-     * Configured maximum weight or -1.
-     *
-     * @see org.cache2k.Weigher
-     * @see Cache2kBuilder#maximumWeight(long)
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    long getMaximumWeight();
+  /**
+   * Configured maximum weight or -1.
+   *
+   * @see org.cache2k.Weigher
+   * @see Cache2kBuilder#maximumWeight(long)
+   */
+  long getMaximumWeight();
 
-    /**
-     * Total weight of all entries in the cache.
-     *
-     * @see org.cache2k.Weigher
-     * @see Cache2kBuilder#maximumWeight(long)
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    long getTotalWeight();
+  /**
+   * Total weight of all entries in the cache.
+   *
+   * @see org.cache2k.Weigher
+   * @see Cache2kBuilder#maximumWeight(long)
+   */
+  long getTotalWeight();
 
-    /**
-     * Either {@link #getMaximumWeight()} or {@link #getEntryCapacity()} depending
-     * on whether a weigher is present or not.
-     *
-     * @see org.cache2k.Weigher
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    long getCapacityLimit();
+  /**
+   * Either {@link #getMaximumWeight()} or {@link #getEntryCapacity()} depending
+   * on whether a weigher is present or not.
+   *
+   * @see org.cache2k.Weigher
+   */
+  long getCapacityLimit();
 
-    /**
-     * Descriptor of cache implementation in use. Either a class name or multiple class names.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    String getImplementation();
+  /**
+   * Descriptor of cache implementation in use. Either a class name or multiple class names.
+   */
+  String getImplementation();
 
-    /**
-     * A loader is configured. This can be used to determine, whether it makes sense to
-     * send the report/monitor the loader metrics.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    boolean isLoaderPresent();
+  /**
+   * A loader is configured. This can be used to determine, whether it makes sense to
+   * send the report/monitor the loader metrics.
+   */
+  boolean isLoaderPresent();
 
-    /**
-     * A weigher is configured. This can be used to determine, whether it makes sense to
-     * send the report/monitor the weigher metrics.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    boolean isWeigherPresent();
+  /**
+   * A weigher is configured. This can be used to determine, whether it makes sense to
+   * send the report/monitor the weigher metrics.
+   */
+  boolean isWeigherPresent();
 
-    /**
-     * This cache supports statistics.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    boolean isStatisticsEnabled();
+  /**
+   * This cache supports statistics.
+   */
+  boolean isStatisticsEnabled();
 
-    /**
-     * Time when the cache was created.
-     *
-     * <p>We use the old type {@code Date} and not {@code Instant} here in order to make this interface
-     * usable for JMX directly, which does not support {@code Instant}.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    Date getCreatedTime();
+  /**
+   * Time when the cache was created.
+   *
+   * <p>We use the old type {@code Date} and not {@code Instant} here in order to make this interface
+   * usable for JMX directly, which does not support {@code Instant}.
+   */
+  Date getCreatedTime();
 
-    /**
-     * Time of the most recent {@link org.cache2k.Cache#clear} operation.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    Date getClearedTime();
+  /**
+   * Time of the most recent {@link org.cache2k.Cache#clear} operation.
+   */
+  Date getClearedTime();
+
 }

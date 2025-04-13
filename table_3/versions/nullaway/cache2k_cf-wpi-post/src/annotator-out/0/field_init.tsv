@@ -1,1 +1,3 @@
 kind	class	method	param	index	uri	field
+METHOD	org.cache2k.config.Cache2kConfig	setName(java.lang.String)	null	null	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/cache2k_cf-wpi-post/src/src/main/java/org/cache2k/config/Cache2kConfig.java	name
+METHOD	org.cache2k.config.Cache2kConfig	setLoaderExecutor(org.cache2k.config.CustomizationSupplier)	null	null	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/cache2k_cf-wpi-post/src/src/main/java/org/cache2k/config/Cache2kConfig.java	loaderExecutor

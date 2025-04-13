@@ -14,7 +14,7 @@ names = {
     "table_csv" : "Table-wrapper-csv-impl",
 }
 
-OUTPUT_DIR = "/opt/table_3/results"
+OUTPUT_DIR = "/home/nima/Desktop/nullability-docker/table_3/results"
 
 def append_count_of_nullaway_errors(path):
     # start from last line stop at line with format regex "X errors" and extract the number

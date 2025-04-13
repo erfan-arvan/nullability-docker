@@ -1,0 +1,33 @@
+/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/floating-ann-pre/src/library/src/main/java/com/leinardi/android/speeddial/UiUtils.java:233: warning: [deprecation] BitmapDrawable(Bitmap) in BitmapDrawable has been deprecated
+            return new BitmapDrawable(bitmap);
+                   ^
+/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/floating-ann-pre/src/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:62: error: [NullAway] initializer method does not guarantee @NonNull fields mSpeedDialActionItem (line 57), mOnActionSelectedListener (line 58) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public FabWithLabelView(Context context) {
+           ^
+    (see http://t.uber.com/nullaway )
+/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/floating-ann-pre/src/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:67: error: [NullAway] initializer method does not guarantee @NonNull fields mSpeedDialActionItem (line 57), mOnActionSelectedListener (line 58) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public FabWithLabelView(Context context, AttributeSet attrs) {
+           ^
+    (see http://t.uber.com/nullaway )
+/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/floating-ann-pre/src/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:72: error: [NullAway] initializer method does not guarantee @NonNull fields mSpeedDialActionItem (line 57), mOnActionSelectedListener (line 58) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public FabWithLabelView(Context context,  @Nullable AttributeSet attrs, int defStyleAttr) {
+           ^
+    (see http://t.uber.com/nullaway )
+3 errors
+1 warning
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':library:compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 7s
+3

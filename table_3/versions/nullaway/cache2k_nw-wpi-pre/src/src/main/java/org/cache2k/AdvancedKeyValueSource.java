@@ -19,6 +19,7 @@ package org.cache2k;
  * limitations under the License.
  * #L%
  */
+
 import java.util.Map;
 
 /**
@@ -27,15 +28,14 @@ import java.util.Map;
  * @author Jens Wilke
  * @since 1.0
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface AdvancedKeyValueSource<K, V> extends KeyValueSource<K, V> {
 
-    /**
-     * Retrieves all values for the given keys. For a more detailed description see
-     * the cache interface.
-     *
-     * @see Cache#getAll(Iterable)
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<K, V> getAll(Iterable<? extends K> keys);
+  /**
+   * Retrieves all values for the given keys. For a more detailed description see
+   * the cache interface.
+   *
+   * @see Cache#getAll(Iterable)
+   */
+  Map<K, V> getAll(Iterable<? extends K> keys);
+
 }

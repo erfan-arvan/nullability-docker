@@ -19,12 +19,13 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 /**
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
-public interface ConfigBuilder<SELF extends ConfigBuilder<SELF, T>, T extends ConfigBean<T, SELF>> {
+public interface ConfigBuilder
+  <SELF extends ConfigBuilder<SELF, T>, T extends ConfigBean<T, SELF>> {
 
-    @org.checkerframework.dataflow.qual.Impure
-    T config();
+  T config();
+
 }

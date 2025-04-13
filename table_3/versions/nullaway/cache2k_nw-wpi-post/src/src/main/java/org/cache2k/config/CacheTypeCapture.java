@@ -19,8 +19,10 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.Cache2kBuilder;
 import org.cache2k.annotation.Nullable;
+
 import java.lang.reflect.ParameterizedType;
 import java.util.Arrays;
 
@@ -40,285 +42,279 @@ import java.util.Arrays;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public class CacheTypeCapture<T> implements CacheType<T> {
 
-    private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheType<T> descriptor = (CacheType<T>) CacheType.of(((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[0]);
+  
+  private final CacheType<T> descriptor =
+    (CacheType<T>) CacheType.of(
+      ((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[0]);
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    protected CacheTypeCapture() {
+  protected CacheTypeCapture() { }
+
+  @Override
+  public  CacheType<?> getComponentType() {
+    return descriptor.getComponentType();
+  }
+
+  @Nullable @Override
+  public  Class<T> getType() {
+    return descriptor.getType();
+  }
+
+  @Nullable @Override
+  public  CacheType<?>[] getTypeArguments() {
+    return descriptor.getTypeArguments();
+  }
+
+  @Override
+  public String getTypeName() {
+    return descriptor.getTypeName();
+  }
+
+  @Override
+  public boolean hasTypeArguments() {
+    return descriptor.hasTypeArguments();
+  }
+
+  @Override
+  public boolean isArray() {
+    return descriptor.isArray();
+  }
+
+  
+  @Override
+  public boolean equals(Object o) {
+    return descriptor.equals(o);
+  }
+
+  @Override
+  public int hashCode() {
+    return descriptor.hashCode();
+  }
+
+  @Override
+  public String toString() {
+    return descriptor.toString();
+  }
+
+  private abstract static class BaseType<T> implements CacheType<T> {
+
+    @Nullable @Override
+    public  CacheType<?> getComponentType() {
+      return null;
     }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable CacheType<?> getComponentType(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheTypeCapture<T> this) {
-        return descriptor.getComponentType();
+    @Nullable @Override
+     public Class<T> getType() {
+      return null;
     }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Class<T> getType(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheTypeCapture<T> this) {
-        return descriptor.getType();
+    @Nullable @Override
+    public  CacheType<?>[] getTypeArguments() {
+      return null;
     }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheType<?> @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable [] getTypeArguments(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheTypeCapture<T> this) {
-        return descriptor.getTypeArguments();
+    @Override
+    public boolean hasTypeArguments() {
+      return false;
     }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getTypeName(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheTypeCapture<T> this) {
-        return descriptor.getTypeName();
+    @Override
+    public boolean isArray() {
+      return false;
     }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean hasTypeArguments(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheTypeCapture<T> this) {
-        return descriptor.hasTypeArguments();
+    @Override
+    public final String toString() {
+      return DESCRIPTOR_TO_STRING_PREFIX + getTypeName();
     }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isArray(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheTypeCapture<T> this) {
-        return descriptor.isArray();
+  }
+
+  /**
+   * CacheType representing a class.
+   */
+  public static class OfClass<T> extends BaseType<T> {
+
+    private final Class<T> type;
+
+    public OfClass(Class<T> type) {
+      if (type.isArray()) {
+        throw new IllegalArgumentException("array is not a regular class");
+      }
+      this.type = type;
     }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean equals(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheTypeCapture<T> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object o) {
-        return descriptor.equals(o);
+    @Override
+    public Class<T> getType() {
+      return type;
     }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int hashCode(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheTypeCapture<T> this) {
-        return descriptor.hashCode();
+    static String shortenName(String s) {
+      final String langPrefix = "java.lang.";
+      if (s.startsWith(langPrefix)) {
+        return s.substring(langPrefix.length());
+      }
+      return s;
     }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String toString(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheTypeCapture<T> this) {
-        return descriptor.toString();
+    @Override
+    public String getTypeName() {
+      return shortenName(type.getCanonicalName());
     }
 
-    private abstract static class BaseType<T> implements CacheType<T> {
-
-        @org.checkerframework.dataflow.qual.Pure
-        public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable CacheType<?> getComponentType(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BaseType<T> this) {
-            return null;
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Class<T> getType(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BaseType<T> this) {
-            return null;
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheType<?> @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable [] getTypeArguments(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BaseType<T> this) {
-            return null;
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean hasTypeArguments(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BaseType<T> this) {
-            return false;
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isArray(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BaseType<T> this) {
-            return false;
-        }
-
-        @org.checkerframework.dataflow.qual.Impure
-        public final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String toString(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BaseType<T> this) {
-            return DESCRIPTOR_TO_STRING_PREFIX + getTypeName();
-        }
+    @Override
+    public boolean equals(Object o) {
+      if (this == o) {
+        return true;
+      }
+      if (o == null || getClass() != o.getClass()) {
+        return false;
+      }
+      OfClass<?> classType = (OfClass<?>) o;
+      return type.equals(classType.type);
     }
 
-    /**
-     * CacheType representing a class.
-     */
-    public static class OfClass<T> extends BaseType<T> {
-
-        private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<T> type;
-
-        @org.checkerframework.dataflow.qual.Impure
-        public OfClass(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<T> type) {
-            if (type.isArray()) {
-                throw new IllegalArgumentException("array is not a regular class");
-            }
-            this.type = type;
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<T> getType(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfClass<T> this) {
-            return type;
-        }
-
-        @org.checkerframework.checker.nullness.qual.EnsuresNonNull({ "#1" })
-        @org.checkerframework.dataflow.qual.Pure
-        static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String shortenName(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String s) {
-            final String langPrefix = "java.lang.";
-            if (s.startsWith(langPrefix)) {
-                return s.substring(langPrefix.length());
-            }
-            return s;
-        }
-
-        @org.checkerframework.dataflow.qual.Impure
-        public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getTypeName(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfClass<T> this) {
-            return shortenName(type.getCanonicalName());
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean equals(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfClass<T> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (o == null || getClass() != o.getClass()) {
-                return false;
-            }
-            OfClass<?> classType = (OfClass<?>) o;
-            return type.equals(classType.type);
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int hashCode(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfClass<T> this) {
-            return type.hashCode();
-        }
+    @Override
+    public int hashCode() {
+      return type.hashCode();
     }
 
-    /**
-     * CacheType representing an array.
-     */
-    public static class OfArray extends BaseType<Void> {
+  }
 
-        private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheType<?> componentType;
+  /**
+   * CacheType representing an array.
+   */
+  public static class OfArray extends BaseType<Void> {
 
-        @org.checkerframework.dataflow.qual.Impure
-        public OfArray(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheType<?> componentType) {
-            this.componentType = componentType;
-        }
+    private final CacheType<?> componentType;
 
-        @org.checkerframework.dataflow.qual.Pure
-        public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isArray(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfArray this) {
-            return true;
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheType<?> getComponentType(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfArray this) {
-            return componentType;
-        }
-
-        @org.checkerframework.dataflow.qual.Impure
-        private static  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int countDimensions(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable CacheType<?> td) {
-            int cnt = 0;
-            while (td.isArray()) {
-                td = td.getComponentType();
-                cnt++;
-            }
-            return cnt;
-        }
-
-        @org.checkerframework.dataflow.qual.Impure
-        static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Class<?> finalPrimitiveType(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable CacheType<?> td) {
-            while (td.isArray()) {
-                td = td.getComponentType();
-            }
-            return td.getType();
-        }
-
-        @org.checkerframework.dataflow.qual.Impure
-        public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getTypeName(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfArray this) {
-            StringBuilder sb = new StringBuilder();
-            int dimensions = countDimensions(this);
-            if (dimensions > 1) {
-                sb.append(finalPrimitiveType(this));
-            } else {
-                sb.append(getComponentType().getTypeName());
-            }
-            for (int i = 0; i < dimensions; i++) {
-                sb.append("[]");
-            }
-            return sb.toString();
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean equals(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfArray this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (o == null || getClass() != o.getClass()) {
-                return false;
-            }
-            OfArray arrayType = (OfArray) o;
-            return componentType.equals(arrayType.componentType);
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int hashCode(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfArray this) {
-            return componentType.hashCode();
-        }
+    public OfArray(CacheType<?> componentType) {
+      this.componentType = componentType;
     }
 
-    /**
-     * CacheType representing a generic type.
-     */
-    public static class OfGeneric<T> extends BaseType<T> {
-
-        private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheType<?> @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull [] typeArguments;
-
-        private final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<T> type;
-
-        @org.checkerframework.dataflow.qual.Impure
-        public OfGeneric(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<T> type, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheType<?> @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull [] typeArguments) {
-            this.typeArguments = typeArguments;
-            this.type = type;
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<T> getType(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfGeneric<T> this) {
-            return type;
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean hasTypeArguments(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfGeneric<T> this) {
-            return true;
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheType<?> @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull [] getTypeArguments(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfGeneric<T> this) {
-            return typeArguments;
-        }
-
-        @org.checkerframework.dataflow.qual.Impure
-        public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getTypeName(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfGeneric<T> this) {
-            return OfClass.shortenName(type.getCanonicalName()) + "<" + arrayToString(typeArguments) + '>';
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean equals(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfGeneric<T> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object o) {
-            if (this == o)
-                return true;
-            if (o == null || getClass() != o.getClass()) {
-                return false;
-            }
-            OfGeneric<?> that = (OfGeneric<?>) o;
-            return Arrays.equals(typeArguments, that.typeArguments) && type.equals(that.type);
-        }
-
-        @org.checkerframework.dataflow.qual.Pure
-        public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int hashCode(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull OfGeneric<T> this) {
-            int result = Arrays.hashCode(typeArguments);
-            result = 31 * result + type.hashCode();
-            return result;
-        }
+    @Override
+    public boolean isArray() {
+      return true;
     }
 
-    @org.checkerframework.dataflow.qual.Impure
-    static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String arrayToString(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheType<?> @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull [] a) {
-        if (a.length < 1) {
-            throw new IllegalArgumentException();
-        }
-        StringBuilder sb = new StringBuilder();
-        int l = a.length - 1;
-        for (int i = 0; ; i++) {
-            sb.append(a[i].getTypeName());
-            if (i == l)
-                return sb.toString();
-            sb.append(',');
-        }
+    @Override
+    public CacheType<?> getComponentType() {
+      return componentType;
     }
+
+    
+    private static int countDimensions(CacheType<?> td) {
+      int cnt = 0;
+      while (td.isArray()) {
+        td = td.getComponentType();
+        cnt++;
+      }
+      return cnt;
+    }
+
+    
+    @Nullable static Class<?> finalPrimitiveType(CacheType<?> td) {
+      while (td.isArray()) {
+        td = td.getComponentType();
+      }
+      return td.getType();
+    }
+
+    @Override
+    public String getTypeName() {
+      StringBuilder sb = new StringBuilder();
+      int dimensions = countDimensions(this);
+      if (dimensions > 1) {
+        sb.append(finalPrimitiveType(this));
+      } else {
+        sb.append(getComponentType().getTypeName());
+      }
+      for (int i = 0; i < dimensions; i++) {
+        sb.append("[]");
+      }
+      return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+      if (this == o) { return true; }
+      if (o == null || getClass() != o.getClass()) { return false; }
+      OfArray arrayType = (OfArray) o;
+      return componentType.equals(arrayType.componentType);
+    }
+
+    @Override
+    public int hashCode() {
+      return componentType.hashCode();
+    }
+  }
+
+  /**
+   * CacheType representing a generic type.
+   */
+  public static class OfGeneric<T> extends BaseType<T> {
+
+    private final CacheType<?>[] typeArguments;
+    private final Class<T> type;
+
+    public OfGeneric(Class<T> type, CacheType<?>[] typeArguments) {
+      this.typeArguments = typeArguments;
+      this.type = type;
+    }
+
+    @Override
+    public Class<T> getType() {
+      return type;
+    }
+
+    @Override
+    public boolean hasTypeArguments() {
+      return true;
+    }
+
+    @Override
+    public CacheType<?>[] getTypeArguments() {
+      return typeArguments;
+    }
+
+    @Override
+    public String getTypeName() {
+      return
+        OfClass.shortenName(type.getCanonicalName()) + "<" + arrayToString(typeArguments) + '>';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+      if (this == o) return true;
+      if (o == null || getClass() != o.getClass()) {
+        return false;
+      }
+      OfGeneric<?> that = (OfGeneric<?>) o;
+      return Arrays.equals(typeArguments, that.typeArguments) && type.equals(that.type);
+    }
+
+    @Override
+    public int hashCode() {
+      int result = Arrays.hashCode(typeArguments);
+      result = 31 * result + type.hashCode();
+      return result;
+    }
+
+  }
+
+  static String arrayToString(CacheType<?>[] a) {
+    if (a.length < 1) {
+      throw new IllegalArgumentException();
+    }
+    StringBuilder sb = new StringBuilder();
+    int l = a.length - 1;
+    for (int i = 0; ; i++) {
+      sb.append(a[i].getTypeName());
+      if (i == l)
+        return sb.toString();
+      sb.append(',');
+    }
+  }
+
 }

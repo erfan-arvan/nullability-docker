@@ -19,6 +19,7 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.CacheManager;
 
 /**
@@ -27,30 +28,26 @@ import org.cache2k.CacheManager;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface CacheBuildContext<K, V> {
 
-    /**
-     * Assigned cache manager. This can be useful to retrieve resources
-     * via the properties {@link CacheManager#getProperties()}
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    CacheManager getCacheManager();
+  /**
+   * Assigned cache manager. This can be useful to retrieve resources
+   * via the properties {@link CacheManager#getProperties()}
+   */
+  CacheManager getCacheManager();
 
-    /**
-     * The cache name. Always identical to {@link Cache2kConfig#getName()}
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    String getName();
+  /**
+   * The cache name. Always identical to {@link Cache2kConfig#getName()}
+   */
+  String getName();
 
-    /**
-     * The effective cache configuration. The data is only valid within the call.
-     * Customizations must copy the relevant configuration parameters and not hold a
-     * reference to the configuration object.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    Cache2kConfig<K, V> getConfig();
+  /**
+   * The effective cache configuration. The data is only valid within the call.
+   * Customizations must copy the relevant configuration parameters and not hold a
+   * reference to the configuration object.
+   */
+  Cache2kConfig<K, V> getConfig();
 
-    @org.checkerframework.dataflow.qual.Pure
-    <T> T createCustomization(CustomizationSupplier<T> supplier);
+  <T> T createCustomization(CustomizationSupplier<T> supplier);
+
 }

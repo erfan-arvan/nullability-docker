@@ -19,5 +19,5 @@ Run with --stacktrace option to get the stack trace. Run with --info or --debug 
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 815ms
+BUILD FAILED in 911ms
 2

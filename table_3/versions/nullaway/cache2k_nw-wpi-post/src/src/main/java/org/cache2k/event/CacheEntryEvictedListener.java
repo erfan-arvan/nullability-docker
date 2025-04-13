@@ -19,6 +19,7 @@ package org.cache2k.event;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.Cache;
 import org.cache2k.CacheEntry;
 
@@ -28,16 +29,15 @@ import org.cache2k.CacheEntry;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface CacheEntryEvictedListener<K, V> extends CacheEntryOperationListener<K, V> {
 
-    /**
-     * Called upon eviction of a cache entry. When used as synchronous listener other cache
-     * operations can still proceed except for this entry or {@link Cache#removeAll()}.
-     *
-     * @param cache The cache that generated the event
-     * @param entry Entry containing the recent data
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void onEntryEvicted(Cache<K, V> cache, CacheEntry<K, V> entry);
+  /**
+   * Called upon eviction of a cache entry. When used as synchronous listener other cache
+   * operations can still proceed except for this entry or {@link Cache#removeAll()}.
+   *
+   * @param cache The cache that generated the event
+   * @param entry Entry containing the recent data
+   */
+  void onEntryEvicted(Cache<K, V> cache, CacheEntry<K, V> entry);
+
 }

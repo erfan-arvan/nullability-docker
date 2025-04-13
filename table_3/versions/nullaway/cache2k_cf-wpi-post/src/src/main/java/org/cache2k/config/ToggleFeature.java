@@ -19,8 +19,10 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.Cache2kBuilder;
-import org.checkerframework.checker.nullness.qual.Nullable;
+import org.cache2k.annotation.Nullable;
+
 import java.util.Iterator;
 
 /**
@@ -35,121 +37,115 @@ import java.util.Iterator;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public abstract class ToggleFeature implements SingleFeature {
 
-    /**
-     * Enable the feature in the main configuration. If the feature is
-     * already existing it is replaced by a newly created one.
-     *
-     * @return the created feature to set additional parameters
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    public static <T extends ToggleFeature> T enable(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Cache2kBuilder<?, ?> builder, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<T> featureType) {
-        try {
-            T feature = featureType.getConstructor().newInstance();
-            builder.config().getFeatures().add(feature);
-            return feature;
-        } catch (Exception e) {
-            throw new LinkageError("Instantiation failed", e);
-        }
+  /**
+   * Enable the feature in the main configuration. If the feature is
+   * already existing it is replaced by a newly created one.
+   *
+   * @return the created feature to set additional parameters
+   */
+  public static <T extends ToggleFeature> T enable(Cache2kBuilder<?, ?> builder,
+                                                   Class<T> featureType) {
+    try {
+      T feature = featureType.getConstructor().newInstance();
+      builder.config().getFeatures().add(feature);
+      return feature;
+    } catch (Exception e) {
+      throw new LinkageError("Instantiation failed", e);
     }
+  }
 
-    /**
-     * Disable the feature by removing it from the configuration.
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    public static void disable(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Cache2kBuilder<?, ?> builder, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<? extends ToggleFeature> featureType) {
-        Iterator<Feature> it = builder.config().getFeatures().iterator();
-        while (it.hasNext()) {
-            if (it.next().getClass().equals(featureType)) {
-                it.remove();
-            }
-        }
+  /**
+   * Disable the feature by removing it from the configuration.
+   */
+  public static void disable(Cache2kBuilder<?, ?> builder,
+                            Class<? extends ToggleFeature> featureType) {
+    Iterator<Feature> it = builder.config().getFeatures().iterator();
+    while (it.hasNext()) {
+      if (it.next().getClass().equals(featureType)) {
+        it.remove();
+      }
     }
+  }
 
-    /**
-     * Returns the feature instance, if present.
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    public static <T extends ToggleFeature> @org.checkerframework.checker.nullness.qual.Nullable T extract(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Cache2kBuilder<?, ?> builder, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Class<T> featureType) {
-        Iterator<Feature> it = builder.config().getFeatures().iterator();
-        while (it.hasNext()) {
-            Feature feature = it.next();
-            if (feature.getClass().equals(featureType)) {
-                return (T) feature;
-            }
-        }
-        return null;
+  /**
+   * Returns the feature instance, if present.
+   */
+  
+  @Nullable public static <T extends ToggleFeature>  T extract(Cache2kBuilder<?, ?> builder,
+                                                              Class<T> featureType) {
+    Iterator<Feature> it = builder.config().getFeatures().iterator();
+    while (it.hasNext()) {
+      Feature feature = it.next();
+      if (feature.getClass().equals(featureType)) {
+        return (T) feature;
+      }
     }
+    return null;
+  }
 
-    /**
-     * Returns true if the feature is enabled. Meaning, the feature instance is present
-     * and enabled.
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    public static  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isEnabled(Cache2kBuilder<?, ?> builder, Class<? extends ToggleFeature> featureType) {
-        ToggleFeature f = extract(builder, featureType);
-        return f != null ? f.isEnabled() : false;
+  /**
+   * Returns true if the feature is enabled. Meaning, the feature instance is present
+   * and enabled.
+   */
+  
+  public static boolean isEnabled(Cache2kBuilder<?, ?> builder,
+                                  Class<? extends ToggleFeature> featureType) {
+    ToggleFeature f = extract(builder, featureType);
+    return f != null ? f.isEnabled() : false;
+  }
+
+  private boolean enabled = true;
+
+  /**
+   * Check whether enabled and call implementations' doEnlist method.
+   */
+  @Override
+  public final void enlist(CacheBuildContext<?, ?> ctx) {
+    if (enabled) {
+      doEnlist(ctx);
     }
+  }
 
-    private  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean enabled = true;
+  protected abstract void doEnlist(CacheBuildContext<?, ?> ctx);
 
-    /**
-     * Check whether enabled and call implementations' doEnlist method.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public final void enlist(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ToggleFeature this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheBuildContext<?, ?> ctx) {
-        if (enabled) {
-            doEnlist(ctx);
-        }
-    }
+  public final boolean isEnabled() {
+    return enabled;
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    protected abstract void doEnlist(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheBuildContext<?, ?> ctx);
+  public final void setEnabled(boolean v) {
+    this.enabled = v;
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public final  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean isEnabled() {
-        return enabled;
-    }
+  /**
+   * Alternate setter for spelling flexibility in XML configuration.
+   */
+  public final void setEnable(boolean v) {
+    this.enabled = v;
+  }
 
-    @org.checkerframework.dataflow.qual.Impure
-    public final void setEnabled(boolean v) {
-        this.enabled = v;
-    }
+  /**
+   * Identical if its the same implementation class.
+   */
+  @Override
+  public final boolean equals(Object o) {
+    return getClass().equals(o);
+  }
 
-    /**
-     * Alternate setter for spelling flexibility in XML configuration.
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    public final void setEnable(boolean v) {
-        this.enabled = v;
-    }
+  /**
+   * Hashcode from the implementation class.
+   */
+  @Override
+  public final int hashCode() {
+    return getClass().hashCode();
+  }
 
-    /**
-     * Identical if its the same implementation class.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public final  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean equals(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ToggleFeature this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object o) {
-        if (o == null) {
-            return false;
-        }
-        return getClass().equals(o.getClass());
-    }
-
-    /**
-     * Hashcode from the implementation class.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public final  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int hashCode(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ToggleFeature this) {
-        return getClass().hashCode();
-    }
-
-    /**
-     * Override if this takes additional parameters.
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String toString(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull ToggleFeature this) {
-        return getClass().getSimpleName() + '{' + (enabled ? "enabled" : "disabled") + '}';
-    }
+  /**
+   * Override if this takes additional parameters.
+   */
+  @Override
+  public String toString() {
+    return getClass().getSimpleName() + '{' + (enabled ? "enabled" : "disabled") + '}';
+  }
 }

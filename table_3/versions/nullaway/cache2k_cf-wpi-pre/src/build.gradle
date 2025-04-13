@@ -61,8 +61,6 @@ dependencies {
     compileOnly "com.google.code.findbugs:jsr305:3.0.2"
     compileOnly "com.uber.nullaway:nullaway-annotations:0.10.20"
 
-    compileOnly 'org.checkerframework:checker-qual:3.42.0'
-
     // checkerFramework 'org.checkerframework:checker:3.43.0'
 }
 

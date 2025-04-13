@@ -19,31 +19,32 @@ package org.cache2k.integration;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.CacheEntry;
 import org.cache2k.io.AdvancedCacheLoader;
 import org.cache2k.io.CacheLoader;
-import org.checkerframework.checker.nullness.qual.NonNull;
 
 /**
  * @author Jens Wilke
  * @deprecated to be removed in version 2.2
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+@Deprecated
 public class Loaders {
 
-    /**
-     * Wraps a loaded value to add the refreshed value.
-     *
-     * @see CacheLoader#load(Object)
-     * @see AdvancedCacheLoader#load(Object, long, CacheEntry)
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    public static <V> @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull LoadDetail<V> wrapRefreshedTime(V value, long refreshedTimeInMillis) {
-        return new RefreshedTimeWrapper<V>(value, refreshedTimeInMillis);
-    }
+  /**
+   * Wraps a loaded value to add the refreshed value.
+   *
+   * @see CacheLoader#load(Object)
+   * @see AdvancedCacheLoader#load(Object, long, CacheEntry)
+   */
+  
+  public static <V> LoadDetail<V> wrapRefreshedTime(V value, long refreshedTimeInMillis) {
+    return new RefreshedTimeWrapper<V>(value, refreshedTimeInMillis);
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public static <V> @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull LoadDetail<V> wrapRefreshedTime(LoadDetail<V> value, long refreshedTimeInMillis) {
-        return new RefreshedTimeWrapper<V>(value, refreshedTimeInMillis);
-    }
+  public static <V> LoadDetail<V> wrapRefreshedTime(
+    LoadDetail<V> value, long refreshedTimeInMillis) {
+    return new RefreshedTimeWrapper<V>(value, refreshedTimeInMillis);
+  }
+
 }

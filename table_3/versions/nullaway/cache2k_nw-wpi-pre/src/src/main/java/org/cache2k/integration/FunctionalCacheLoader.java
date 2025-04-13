@@ -19,16 +19,17 @@ package org.cache2k.integration;
  * limitations under the License.
  * #L%
  */
+
 /**
  * @deprecated Replaced with {@link org.cache2k.io.CacheLoader},
  *   to be removed in version 2.2
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+@Deprecated
 public interface FunctionalCacheLoader<K, V> extends org.cache2k.io.CacheLoader<K, V> {
 
-    /**
-     * @see CacheLoader#load(Object)
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    V load(K key) throws Exception;
+  /**
+   * @see CacheLoader#load(Object)
+   */
+  V load(K key) throws Exception;
+
 }

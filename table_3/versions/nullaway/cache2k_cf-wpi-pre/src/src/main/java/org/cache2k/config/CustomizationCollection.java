@@ -19,6 +19,7 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 import java.io.Serializable;
 import java.util.Collection;
 
@@ -31,24 +32,25 @@ import java.util.Collection;
  * @author Jens Wilke
  * @see DefaultCustomizationCollection
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
-public interface CustomizationCollection<T> extends Collection<CustomizationSupplier<T>>, Serializable {
+public interface CustomizationCollection<T> extends
+  Collection<CustomizationSupplier<T>>, Serializable {
 
-    /**
-     * Adds a customization to the collection.
-     *
-     * @return always {@code true}
-     * @throws IllegalArgumentException if the entry is already existing.
-     */
-    @org.checkerframework.dataflow.qual.Impure
-     @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean add(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CustomizationSupplier<T> e);
+  /**
+   * Adds a customization to the collection.
+   *
+   * @return always {@code true}
+   * @throws IllegalArgumentException if the entry is already existing.
+   */
+  @Override
+  boolean add(CustomizationSupplier<T> e);
 
-    /**
-     * Adds all customizations to the collection.
-     *
-     * @return always {@code true}
-     * @throws IllegalArgumentException if an entry is already existing.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    boolean addAll(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Collection<? extends CustomizationSupplier<T>> c);
+  /**
+   * Adds all customizations to the collection.
+   *
+   * @return always {@code true}
+   * @throws IllegalArgumentException if an entry is already existing.
+   */
+  @Override
+  boolean addAll(Collection<? extends CustomizationSupplier<T>> c);
+
 }

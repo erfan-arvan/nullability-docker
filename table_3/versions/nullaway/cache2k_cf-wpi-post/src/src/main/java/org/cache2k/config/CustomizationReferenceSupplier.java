@@ -19,9 +19,6 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
-import org.checkerframework.checker.nullness.qual.NonNull;
-import org.checkerframework.checker.nullness.qual.Nullable;
-import java.util.Objects;
 
 /**
  * A reference to the customization to be used is set while building the cache.
@@ -29,41 +26,40 @@ import java.util.Objects;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public final class CustomizationReferenceSupplier<T> implements CustomizationSupplier<T> {
 
-    private final @org.checkerframework.checker.nullness.qual.NonNull T object;
+  private final T object;
 
-    /**
-     * Construct a customization factory that returns always the same object instance.
-     *
-     * @param obj reference to a customization. Not null.
-     */
-    @org.checkerframework.dataflow.qual.Impure
-    public CustomizationReferenceSupplier(T obj) {
-        Objects.requireNonNull(obj);
-        object = obj;
-    }
+  /**
+   * Construct a customization factory that returns always the same object instance.
+   *
+   * @param obj reference to a customization. Not null.
+   */
+  public CustomizationReferenceSupplier(T obj) {
+    Cache2kConfig.checkNull(obj);
+    object = obj;
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public T supply(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CustomizationReferenceSupplier<T> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CacheBuildContext ignored) {
-        return object;
-    }
+  @Override
+  public T supply(CacheBuildContext ignored) {
+    return object;
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean equals(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CustomizationReferenceSupplier<T> this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object other) {
-        if (this == other) {
-            return true;
-        }
-        if (!(other instanceof CustomizationReferenceSupplier)) {
-            return false;
-        }
-        CustomizationReferenceSupplier<?> obj = (CustomizationReferenceSupplier<?>) other;
-        return object.equals(obj.object);
+  @Override
+  public boolean equals(Object other) {
+    if (this == other) {
+      return true;
     }
+    if (!(other instanceof CustomizationReferenceSupplier)) {
+      return false;
+    }
+    CustomizationReferenceSupplier<?> obj = (CustomizationReferenceSupplier<?>) other;
+    return object.equals(obj.object);
+  }
 
-    @org.checkerframework.dataflow.qual.Pure
-    public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int hashCode(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CustomizationReferenceSupplier<T> this) {
-        return object.hashCode();
-    }
+  @Override
+  public int hashCode() {
+    return object.hashCode();
+  }
+
 }

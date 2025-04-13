@@ -19,6 +19,7 @@ package org.cache2k.processor;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.CacheException;
 
 /**
@@ -26,11 +27,10 @@ import org.cache2k.CacheException;
  *
  * @author Jens Wilke; created: 2015-05-02
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public class EntryProcessingException extends CacheException {
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public EntryProcessingException(Throwable cause) {
-        super(cause);
-    }
+  public EntryProcessingException(Throwable cause) {
+    super(cause);
+  }
+
 }

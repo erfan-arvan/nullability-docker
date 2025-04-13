@@ -19,6 +19,7 @@ package org.cache2k;
  * limitations under the License.
  * #L%
  */
+
 import java.util.EventListener;
 
 /**
@@ -29,23 +30,22 @@ import java.util.EventListener;
  * @see Cache#loadAll(Iterable, CacheOperationCompletionListener)
  * @deprecated to be removed in 2.2
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+@Deprecated
 public interface CacheOperationCompletionListener extends EventListener {
 
-    /**
-     * Signals the completion of a {@link Cache#loadAll}, {@link Cache#reloadAll} or
-     * {@link Cache#prefetchAll} operation.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void onCompleted();
+  /**
+   * Signals the completion of a {@link Cache#loadAll}, {@link Cache#reloadAll} or
+   * {@link Cache#prefetchAll} operation.
+   */
+  void onCompleted();
 
-    /**
-     * The operation could not completed, because of an error.
-     *
-     * <p>In the current implementation, there is no condition which raises a call to this method.
-     * Errors while loading a value, will be delayed and propagated when the respective key
-     * is accessed. This is subject to the resilience configuration.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void onException(Throwable exception);
+  /**
+   * The operation could not completed, because of an error.
+   *
+   * <p>In the current implementation, there is no condition which raises a call to this method.
+   * Errors while loading a value, will be delayed and propagated when the respective key
+   * is accessed. This is subject to the resilience configuration.
+   */
+  void onException(Throwable exception);
+
 }

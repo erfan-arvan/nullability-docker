@@ -1,4 +1,4 @@
-package org.cache2k.integration;
+package org.cache2k.io;
 
 /*
  * #%L
@@ -19,26 +19,39 @@ package org.cache2k.integration;
  * limitations under the License.
  * #L%
  */
+
+import org.cache2k.CustomizationException;
+
 /**
+ * Exception to wrap a loader exception. When an exception is thrown by the loader
+ * and rethrown to the application it is wrapped in this exception.
+ *
+ * <p>It is possible to register a custom behavior how exceptions are rethrown (propagated)
+ * with the {@link ExceptionPropagator}.
+ *
+ * <p>A single loader exception may be thrown multiple times to the application, if
+ * the exception is cached. On the other hand, it is possible to suppress a loader
+ * exception if the cache still contains data. This is controlled by the{@link ResiliencePolicy}.
+ *
+ * <p>In case one cached exception is thrown many times with in a timespan, it contains
+ * the string {@code expiry=<timestamp>}. This is the behavior of the standard
+ * {@link ExceptionPropagator}
+ *
  * @author Jens Wilke
- * @deprecated Replaced with {@link org.cache2k.io.CacheLoaderException},
- *   to be removed in version 2.2
+ * @since 2
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
-public class CacheLoaderException extends org.cache2k.io.CacheLoaderException {
+public class CacheLoaderException extends CustomizationException {
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheLoaderException(String message) {
-        super(message);
-    }
+  public CacheLoaderException(String message) {
+    super(message);
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheLoaderException(String message, Throwable ex) {
-        super(message, ex);
-    }
+  public CacheLoaderException(String message, Throwable ex) {
+    super(message, ex);
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheLoaderException(Throwable ex) {
-        super(ex);
-    }
+  public CacheLoaderException(Throwable ex) {
+    super(ex);
+  }
+
 }

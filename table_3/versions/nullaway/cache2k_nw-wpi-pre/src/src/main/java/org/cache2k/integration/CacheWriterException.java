@@ -19,6 +19,7 @@ package org.cache2k.integration;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.CustomizationException;
 
 /**
@@ -26,11 +27,11 @@ import org.cache2k.CustomizationException;
  * @deprecated Replaced with {@link org.cache2k.io.CacheWriterException},
  *             to be removed in version 2.2
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+@Deprecated
 public class CacheWriterException extends org.cache2k.io.CacheWriterException {
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CacheWriterException(final Throwable cause) {
-        super(cause);
-    }
+  public CacheWriterException(final Throwable cause) {
+    super(cause);
+  }
+
 }

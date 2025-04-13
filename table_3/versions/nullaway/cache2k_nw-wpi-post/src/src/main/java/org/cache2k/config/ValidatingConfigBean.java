@@ -19,20 +19,21 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 /**
  * Configuration bean that is able to validate itself.
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
+
 public interface ValidatingConfigBean extends ConfigBean {
 
-    /**
-     * Check whether the configuration is valid, especially whether mandatory fields
-     * are set.
-     *
-     * @throws IllegalStateException if configuration is not valid
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void validate();
+  /**
+   * Check whether the configuration is valid, especially whether mandatory fields
+   * are set.
+   *
+   * @throws IllegalStateException if configuration is not valid
+   */
+  void validate();
+
 }

@@ -1,1 +1,5 @@
 kind	class	method	param	index	uri	field
+METHOD	org.cache2k.config.Cache2kConfig	getListeners()	null	null	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/cache2k_nw-wpi-post/src/src/main/java/org/cache2k/config/Cache2kConfig.java	listeners
+METHOD	org.cache2k.config.Cache2kConfig	getAsyncListeners()	null	null	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/cache2k_nw-wpi-post/src/src/main/java/org/cache2k/config/Cache2kConfig.java	asyncListeners
+METHOD	org.cache2k.config.Cache2kConfig	setLoaderExecutor(org.cache2k.config.CustomizationSupplier)	null	null	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/cache2k_nw-wpi-post/src/src/main/java/org/cache2k/config/Cache2kConfig.java	loaderExecutor
+METHOD	org.cache2k.config.Cache2kConfig	setRefreshExecutor(org.cache2k.config.CustomizationSupplier)	null	null	/home/nima/Desktop/nullability-docker/table_3/versions/nullaway/cache2k_nw-wpi-post/src/src/main/java/org/cache2k/config/Cache2kConfig.java	refreshExecutor

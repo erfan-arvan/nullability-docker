@@ -19,7 +19,10 @@ package org.cache2k.event;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.Cache;
+import org.cache2k.annotation.Nullable;
+
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -28,16 +31,17 @@ import java.util.concurrent.CompletableFuture;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface CacheClosedListener extends CacheLifecycleListener {
 
-    /**
-     * Called when cache is closed.
-     *
-     * @param cache The cache that is closed. The cache object can be used
-     *              to retrieve the name and the associated manager.
-     *              No operations are allowed.
-     */
-    @org.checkerframework.dataflow.qual.Pure
-    CompletableFuture<Void> onCacheClosed(Cache<?, ?> cache);
+  /**
+   * Called when cache is closed.
+   *
+   * @param cache The cache that is closed. The cache object can be used
+   *              to retrieve the name and the associated manager.
+   *              No operations are allowed.
+   * @return {@code null} or a CompletableFuture, if this method uses async
+   *         processing
+   */
+  CompletableFuture<Void> onCacheClosed(Cache<?, ?> cache);
+
 }

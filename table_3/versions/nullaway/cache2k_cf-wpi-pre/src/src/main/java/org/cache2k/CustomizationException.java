@@ -19,6 +19,7 @@ package org.cache2k;
  * limitations under the License.
  * #L%
  */
+
 import org.cache2k.expiry.ExpiryPolicy;
 import org.cache2k.io.CacheLoader;
 
@@ -28,21 +29,18 @@ import org.cache2k.io.CacheLoader;
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public class CustomizationException extends CacheException {
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CustomizationException(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String message) {
-        super(message);
-    }
+  public CustomizationException(String message) {
+    super(message);
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CustomizationException(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Throwable cause) {
-        super(cause);
-    }
+  public CustomizationException(Throwable cause) {
+    super(cause);
+  }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    public CustomizationException(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String message, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Throwable cause) {
-        super(message, cause);
-    }
+  public CustomizationException(String message, Throwable cause) {
+    super(message, cause);
+  }
+
 }

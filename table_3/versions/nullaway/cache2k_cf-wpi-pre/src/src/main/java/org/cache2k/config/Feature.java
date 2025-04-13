@@ -19,19 +19,19 @@ package org.cache2k.config;
  * limitations under the License.
  * #L%
  */
+
 /**
  * Features need to properly implement {@code equals()} and {@code hashCode()}
  *
  * @author Jens Wilke
  */
-@org.checkerframework.framework.qual.AnnotatedFor("org.checkerframework.checker.nullness.NullnessChecker")
 public interface Feature {
 
-    /**
-     * The feature enables itself by augmenting the cache config.
-     * Called when {@link org.cache2k.Cache2kBuilder#build} is called
-     * before the actual cache creation.
-     */
-    @org.checkerframework.dataflow.qual.SideEffectFree
-    void enlist(CacheBuildContext<?, ?> ctx);
+  /**
+   * The feature enables itself by augmenting the cache config.
+   * Called when {@link org.cache2k.Cache2kBuilder#build} is called
+   * before the actual cache creation.
+   */
+  void enlist(CacheBuildContext<?, ?> ctx);
+
 }
