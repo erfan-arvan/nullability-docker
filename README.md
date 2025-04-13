@@ -50,25 +50,35 @@ Inside `/opt`, you will find the following folders:
 
 ---
 
+---
+
 ## Table 1
 
-To view results:
+This section corresponds to **Table 1** of the paper and addresses **Research Question 2 (RQ2)**:
 
-- Quick run:
+> Do the code changes, if they exist, improve the effectiveness of nullability checkers?
 
-  ```bash
-  ./table_1.sh
-  ```
+To answer this, we compare the number of errors emitted by nullability checkers on the **pre-check** and **post-check** versions of each benchmark. Unlike Table 3, no inference tools are used in this experiment. We simply run the checkers on the original code before and after developers made changes for nullability verification.
 
-- Rebuild from scratch:
+All nullability annotations and `@SuppressWarnings` are removed beforehand to ensure that the results reflect the effect of **structural code changes** rather than added annotations.
 
-  ```bash
-  ./table_1.sh fresh
-  ```
+> In this setup, we only run the checkers on the **raw pre-check and post-check versions** (after removing annotations), without any inferred annotations.
 
-  This can take up to 1 hour.
+---
 
-The script runs nullability checkers on both the pre- and post-check versions before applying any inference tools. As stated in the paper, all nullability annotations and `@SuppressWarnings` have been removed to isolate meaningful code changes.
+### To View Results:
+
+```bash
+./table_1.sh
+```
+
+### To Rebuild from Scratch:
+
+```bash
+./table_1.sh fresh
+```
+
+Running from scratch can take up to 1 hour. It will reprocess all benchmarks, strip annotations and suppressions, and rerun the checkers on both code versions to measure the number of emitted errors.
 
 ---
 
@@ -233,9 +243,56 @@ These files form the basis of **Table 2** in the paper.
 
 ---
 
+---
+
 ## Table 3
 
-This section evaluates the performance of inference tools and their generated annotations, corresponding to Table 3 of the paper.
+This section corresponds to **Table 3** of the paper and addresses **Research Question 3 (RQ3)**:
+
+> Do the code changes, if they exist, improve the effectiveness of nullability inference tools?
+
+To answer this, we evaluate how well inference tools perform on both the **pre-check** and **post-check** versions of each benchmark, after removing all nullability annotations and suppressions. This setup allows us to isolate the effect of **code changes**, independent of manually added annotations, on the performance of inference tools.
+
+---
+
+### Procedure
+
+For both the **pre-check** and **post-check** versions of each benchmark, we perform the following steps:
+
+1. **Remove all existing nullability annotations**, including `@Nullable`, `@NonNull` variants, and `@SuppressWarnings`.
+2. **Run inference tools** on the unannotated code to generate inferred annotations.
+3. **Run nullability checkers** on the annotated code produced by each inference tool.
+4. **Record the number of errors** emitted by each checker on the inferred code.
+
+> 📌 The numbers reported in Table 3 represent the **number of errors** emitted by the checkers after inference—based on running the tools on cleaned (annotation-free) versions of the pre- and post-check code. A lower number indicates better inference performance.
+
+---
+
+### Tool and Checker Combinations
+
+We evaluate three different **inference tools**:
+- **WPI** – Whole-Program Inference
+- **ANN** – Annotator (used in prior type reconstruction work)
+- **NGT** – NullGTN (a graph-based inference tool)
+
+Each inference tool is evaluated with two different **nullability checkers**:
+- **CF** – The Checker Framework’s Nullness Checker
+- **NW** – NullAway
+
+This results in six inference-checker combinations per benchmark:
+
+| Abbreviation    | Meaning                                           |
+|-----------------|---------------------------------------------------|
+| **WPI + CF**    | WPI inference + Checker Framework                 |
+| **WPI + NW**    | WPI inference + NullAway                          |
+| **ANN + CF**    | Annotator inference + Checker Framework           |
+| **ANN + NW**    | Annotator inference + NullAway                    |
+| **NGT + CF**    | NullGTN inference + Checker Framework             |
+| **NGT + NW**    | NullGTN inference + NullAway                      |
+
+Each combination is run on both the **pre-check** and **post-check** versions of the code, and the resulting **error counts** are reported in Table 3.
+
+---
 
 ### To Run:
 
@@ -249,8 +306,9 @@ This section evaluates the performance of inference tools and their generated an
 ./table_3.sh fresh
 ```
 
-Like Table 1, annotations and `@SuppressWarnings` are removed before running inference tools. Then, nullability checkers are executed on the inferred code.
+This will remove existing annotations, run all inference tools, apply both checkers to the inferred versions, and record the number of emitted **errors**—exactly as reported in **Table 3** of the paper.
 
+---
 ---
 
 ## Error Reduction (Figure 5)
