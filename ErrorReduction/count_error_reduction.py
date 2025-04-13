@@ -25,6 +25,11 @@ def reduction_percentage(original, new):
     original = int(original)
     new = int(new)
     return str(round((original - new) / original * 100, 2)) + "%"
+
+
+def append(row):
+    with open("reduction.csv", "a") as f:
+        f.write(row)
     
 
 reductions = {}
@@ -38,9 +43,8 @@ reductions["NullAway"]["Annotator"] = []
 reductions["NullAway"]["NullGTN"] = []
 row = "Benchmark,CFNullness_Original,CFNullness_WPI,reduction,CFNullness_Annotator,reduction,CFNullness_NullGTN,reduction,NullAway_Original,NullAway_WPI,reduction,NullAway_Annotator,reduction,NullAway_NullGTN,reduction\n"
 print(row)
-total = 0
+append(row)
 for benchmark in os.listdir("../NJR/original"):
-    total += 1
     cf_original = append_count_of_nullaway_errors(f"scripts/checkers/cfnullness/original/{benchmark}.txt")
     cf_wpi = append_count_of_nullaway_errors(f"scripts/checkers/cfnullness/wpi/{benchmark}.txt")
     cf_wpi_reduction = reduction_percentage(cf_original, cf_wpi)
@@ -70,15 +74,13 @@ for benchmark in os.listdir("../NJR/original"):
     if(nw_nullgtn_reduction != "X"):
         reductions["NullAway"]["NullGTN"].append(nw_nullgtn_reduction)
 
-
-
-
     row = f"{benchmark},{cf_original},{cf_wpi},{reduction_percentage(cf_original, cf_wpi)},{cf_annotator},{reduction_percentage(cf_original, cf_annotator)},{cf_nullgtn},{reduction_percentage(cf_original, cf_nullgtn)},{nw_original},{nw_wpi},{reduction_percentage(nw_original, nw_wpi)},{nw_annotator},{reduction_percentage(nw_original, nw_annotator)},{nw_nullgtn},{reduction_percentage(nw_original, nw_nullgtn)}"
+    append(row + "\n")
     print(row)
 
-print("CFNullness WPI Average reduction: " + str(round(sum([float(x[:-1]) for x in reductions["CFNullness"]["WPI"]]) / total, 2)) + "%")
-print("CFNullness Annotator Average reduction: " + str(round(sum([float(x[:-1]) for x in reductions["CFNullness"]["Annotator"]]) / total, 2)) + "%")
-print("CFNullness NullGTN Average reduction: " + str(round(sum([float(x[:-1]) for x in reductions["CFNullness"]["NullGTN"]]) / total, 2)) + "%")
+print("CFNullness WPI Average reduction: " + str(round(sum([float(x[:-1]) for x in reductions["CFNullness"]["WPI"]]) / len(reductions["CFNullness"]["WPI"]), 2)) + "%")
+print("CFNullness Annotator Average reduction: " + str(round(sum([float(x[:-1]) for x in reductions["CFNullness"]["Annotator"]]) / len(reductions["CFNullness"]["Annotator"]), 2)) + "%")
+print("CFNullness NullGTN Average reduction: " + str(round(sum([float(x[:-1]) for x in reductions["CFNullness"]["NullGTN"]]) / len(reductions["CFNullness"]["NullGTN"]), 2)) + "%")
 
 print("NullAway WPI Average reduction: " + str(round(sum([float(x[:-1]) for x in reductions["NullAway"]["WPI"]]) / len(reductions["NullAway"]["WPI"]), 2)) + "%")
 print("NullAway Annotator Average reduction: " + str(round(sum([float(x[:-1]) for x in reductions["NullAway"]["Annotator"]]) / len(reductions["NullAway"]["Annotator"]), 2)) + "%")
